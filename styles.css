@@ -15,13 +15,12 @@ body {
 }
 
 .container {
-    max-width: 75%;
+    max-width: 90%;
     width: 100%;
     background: rgba(15, 15, 35, 0.95);
     backdrop-filter: blur(20px);
     padding: 3rem;
     border-radius: 20px;
-    animation: slideUpFade 1s ease-out;
 
     border: 2px solid transparent;
     background-clip: padding-box;
@@ -76,4 +75,12 @@ body {
 .container li:hover {
     color: #e6e6fa;
     transition: color 0.3s ease;
+}
+
+.container p {
+    color: #ffffff;
+}
+
+.container a {
+    color: #8356ff;
 }
