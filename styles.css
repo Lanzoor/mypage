@@ -26,9 +26,7 @@ body {
     border: 2px solid transparent;
     background-clip: padding-box;
     position: relative;
-    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.6),
-        0 0 0 4px rgba(138, 43, 226, 0.3), 0 25px 50px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.6), 0 0 0 4px rgba(138, 43, 226, 0.3), 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     color: #ffffff;
     line-height: 1.6; /* BASELINE - RESPONSIVE */
 }
@@ -125,8 +123,7 @@ body {
     color: rgb(170, 190, 220) !important;
     padding: 0.1em 0.2em;
     border-radius: 6px;
-    font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New',
-        monospace;
+    font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
 }
 
 .container p,
@@ -169,4 +166,12 @@ body {
         line-height: 1.35 !important;
         padding: 0 0.5rem;
     }
+}
+
+.container #profile-pic {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px white;
+    object-fit: cover;
 }
