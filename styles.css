@@ -169,3 +169,13 @@ body {
     box-shadow: 0 0 5px white;
     object-fit: cover;
 }
+
+.profile-block {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
