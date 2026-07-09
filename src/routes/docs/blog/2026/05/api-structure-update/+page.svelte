@@ -1,0 +1,79 @@
+<svelte:head>
+    <title>API Structure Update Notice</title>
+
+    <meta
+        name="description"
+        content="a notice regarding several important changes to the API structure"
+    />
+
+    <meta name="tags" content="important, announcement, core-api" />
+</svelte:head>
+
+<section>
+    <a href="/docs/blog">../ Go back to blogs page</a>
+
+    <header>
+        <h1>API Structure Update Notice</h1>
+
+        <p>
+            This announcement serves as a notice regarding several important changes to the API
+            structure of this website.
+        </p>
+    </header>
+
+    <h2>Complete Separation</h2>
+
+    <p>
+        The API directories have been fully moved from <code>core</code> to <code>core-api</code>, a
+        completely separate git repository.<br />
+        <b>
+            This change was made to ensure that all API routes are now hosted on
+            <code>api.lanzoor.dev</code> instead of
+            <code>lanzoor.dev/api</code>.
+        </b><br />
+        A redirect from <code>lanzoor.dev/api/*</code>
+        to <code>api.lanzoor.dev/*</code> has been implemented for compatibility.<br />
+    </p>
+
+    <blockquote class="error">
+        <s class="dim">
+            However, starting on <i>June 1st, 2026</i>,
+            <b
+                ><code>lanzoor.dev/api/*</code> will be officially deprecated and will no longer be supported.</b
+            >
+
+            If you are currently using any of my API services, please make sure to update your
+            routes before the deadline.
+        </s><br /><br />
+
+        <b class="col bright red">
+            This action has officially been cancelled. <i>The redirect won't be removed.</i>
+        </b><br />
+    </blockquote>
+
+    <h2>Route Changes</h2>
+
+    <blockquote class="info">
+        The following routes have been updated and moved.
+        <b>
+            Previous routes will still remain functional until <i>June 1st, 2026</i>,
+        </b>
+        but they won't be maintained / updated.<br /><br />
+
+        <span class="col bright green">
+            <s class="dim">
+                This action has officially been confirmed, and will take place at <i
+                    >June 1st, 2026</i
+                >.
+            </s><br />
+
+            <b> The routes have been successfully updated. </b>
+        </span>
+    </blockquote>
+
+    <ul>
+        <li>
+            <code>discord-status</code> -> <code>status/discord</code>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,7 @@
+* {
+    outline: 2px solid var(--debug-primary) !important;
+}
+
+*:not(div) {
+    outline: 2px solid var(--debug-secondary) !important;
+}

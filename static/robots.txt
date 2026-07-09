@@ -1,0 +1,10 @@
+
+User-agent: *
+Disallow: /legacy/
+
+# panic routes (might save my ass when i actually maek these)
+
+Disallow: /private/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.env
