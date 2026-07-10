@@ -9,7 +9,9 @@ function formatBlogEntryDate(blogEntry: BlogEntry) {
     try {
         blogEntryDate = new Date(Number(blogEntry.date.year), Number(blogEntry.date.month) - 1);
     } catch (error) {
-        console.warn(`failed to convert date format whilst parsing ${blogEntry.path}:\n\t${blogEntry.date}\n\t${error}`);
+        console.warn(
+            `failed to convert date format whilst parsing ${blogEntry.path}:\n\t${blogEntry.date}\n\t${error}`
+        );
         return;
     }
 
@@ -54,10 +56,7 @@ function BlogEntry({ blogEntry }: { blogEntry: BlogEntry }) {
                                 <span className="tags">
                                     {blogEntry.tags.map((be, i) => {
                                         return (
-                                            <span
-                                                className={'tag ' + be}
-                                                key={i}
-                                            >
+                                            <span className={'tag ' + be} key={i}>
                                                 {be}
                                             </span>
                                         );
@@ -81,7 +80,8 @@ function BlogRoot({ blogEntries }: { blogEntries: BlogEntry[] }) {
             <p>
                 <b>Found {blogEntries.length} blog entries.</b>{' '}
                 <i>
-                    Some entries may be ignored if crucial information <span className="dim">(such as the title)</span> are missing.
+                    Some entries may be ignored if crucial information{' '}
+                    <span className="dim">(such as the title)</span> are missing.
                 </i>
             </p>
             {blogEntries.map((be, i) => {
