@@ -1,3 +1,46 @@
+<script lang="ts">
+    import { onMount } from 'svelte';
+
+    let frontendVersion: string = $state('...');
+    let backendVersion: string = $state('...');
+
+    onMount(() => {
+        const cleanFunc = () => {
+            frontendVersion = '...';
+            backendVersion = '...';
+        };
+
+        async function loadVersions() {
+            const result = await fetch('https://api.lanzoor.dev/status');
+
+            if (!result.ok) {
+                console.error(
+                    `failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
+                    Error(result.statusText)
+                );
+
+                return cleanFunc;
+            }
+
+            const jsonResult = await result.json();
+
+            if (jsonResult.success === true) {
+                frontendVersion = jsonResult?.data.versions.frontend;
+                backendVersion = jsonResult?.data.versions.backend;
+            } else {
+                console.error(
+                    `failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
+                    Error(jsonResult)
+                );
+            }
+        }
+
+        loadVersions();
+
+        return cleanFunc;
+    });
+</script>
+
 <section id="footer-panel" class="no-padding">
     <section id="navigation">
         <nav id="navigation-links">
@@ -35,7 +78,14 @@
             <h1 class="logo">
                 <span class="head">lanzoor</span>.<span class="tail">dev</span>
             </h1>
-            A website by Lanzoor, including projects, showcases, documents, and more!
+
+            <p>
+                A website by Lanzoor, including projects, showcases, documents, and more!<br />
+
+                <span class="dim">
+                    frontend <code>{frontendVersion}</code> | backend <code>{backendVersion}</code>
+                </span>
+            </p>
         </div>
 
         <hr />

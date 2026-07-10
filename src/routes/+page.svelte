@@ -51,8 +51,7 @@
             <span class="col cyan">science</span>,
             <span class="col blue">languages</span> and more.<br />
 
-            You'll find projects, language experiments, tools, and whatever else that managed to
-            escape my brain.
+            You'll find projects, showcases, tools, and more.
         </p>
     </header>
 
