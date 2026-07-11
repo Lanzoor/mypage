@@ -1,6 +1,20 @@
+<script lang="ts" module>
+    export const metadata = {
+        title: 'Retirement of the Old Profile Website',
+        tags: ['important', 'announcement', 'core'],
+        published: '2026-02',
+    };
+</script>
+
 <script lang="ts">
     import Outdated from '$lib/components/Warnings/Outdated.svelte';
 </script>
+
+<svelte:head>
+    <title>{metadata.title}</title>
+
+    <meta name="tags" content={metadata.tags.join(', ')} />
+</svelte:head>
 
 <section>
     <a href="/docs/blog">../ Go back to blogs page</a>

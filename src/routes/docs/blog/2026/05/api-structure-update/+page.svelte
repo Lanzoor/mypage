@@ -1,12 +1,18 @@
+<script lang="ts" module>
+    export const metadata = {
+        title: 'API Structure Update Notice',
+        description: 'A notice regarding several important changes to the API structure.',
+        tags: ['important', 'announcement', 'core-api'],
+        published: '2026-05-12',
+    };
+</script>
+
 <svelte:head>
-    <title>API Structure Update Notice</title>
+    <title>{metadata.title}</title>
 
-    <meta
-        name="description"
-        content="a notice regarding several important changes to the API structure"
-    />
+    <meta name="description" content={metadata.description} />
 
-    <meta name="tags" content="important, announcement, core-api" />
+    <meta name="tags" content={metadata.tags.join(', ')} />
 </svelte:head>
 
 <section>

@@ -1,3 +1,12 @@
+<script lang="ts" module>
+    export const metadata = {
+        title: 'Monthly Recap | May 2026',
+        description: 'A monthly recap for May 2026',
+        tags: ['blog', 'monthly-recap', 'core'],
+        published: '2026-05-30',
+    };
+</script>
+
 <script lang="ts">
     import oldImage from './assets/old.png';
     import newImage from './assets/new.png';
@@ -7,11 +16,11 @@
 </script>
 
 <svelte:head>
-    <meta name="description" content="a monthly recap for May 2026" />
+    <title>{metadata.title}</title>
 
-    <meta name="tags" content="blog, monthly-recap" />
+    <meta name="description" content={metadata.description} />
 
-    <title>Monthly Recap | May 2026</title>
+    <meta name="tags" content={metadata.tags.join(', ')} />
 </svelte:head>
 
 <section>

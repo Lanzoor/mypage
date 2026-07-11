@@ -79,6 +79,10 @@
             padding-top: calc(var(--top-panel-max-height) + 4em);
         }
 
+        :global(main) {
+            min-height: 100vh;
+        }
+
         #top-panel,
         #top-panel * {
             border-radius: 0;

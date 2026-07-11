@@ -1,7 +1,15 @@
-<svelte:head>
-    <title>What happened to light mode?</title>
+<script lang="ts" module>
+    export const metadata = {
+        title: 'What Happened to Light Mode?',
+        tags: ['announcement', 'core'],
+        published: '2026-05-30',
+    };
+</script>
 
-    <meta name="tags" content="announcement, core" />
+<svelte:head>
+    <title>{metadata.title}</title>
+
+    <meta name="tags" content={metadata.tags.join(', ')} />
 </svelte:head>
 
 <section>

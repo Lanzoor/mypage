@@ -1,7 +1,15 @@
-<svelte:head>
-    <title>Alias Updates</title>
+<script lang="ts" module>
+    export const metadata = {
+        title: 'Alias Updates',
+        tags: ['important', 'blog', 'personal'],
+        published: '2026-07-10',
+    };
+</script>
 
-    <meta name="tags" content="announcement, personal" />
+<svelte:head>
+    <title>{metadata.title}</title>
+
+    <meta name="tags" content={metadata.tags.join(', ')} />
 </svelte:head>
 
 <section>

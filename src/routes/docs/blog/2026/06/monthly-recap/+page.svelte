@@ -1,3 +1,12 @@
+<script lang="ts" module>
+    export const metadata = {
+        title: 'Monthly Recap | June 2026',
+        description: 'A monthly recap for June 2026',
+        tags: ['blog', 'monthly-recap', 'core'],
+        published: '2026-06-30',
+    };
+</script>
+
 <script lang="ts">
     import footerOld from './assets/footer-old.png';
     import footerNew from './assets/footer-new.png';
@@ -7,11 +16,11 @@
 </script>
 
 <svelte:head>
-    <meta name="description" content="A monthly recap for June 2026" />
+    <title>{metadata.title}</title>
 
-    <meta name="tags" content="blog, monthly-recap" />
+    <meta name="description" content={metadata.description} />
 
-    <title>Monthly Recap | June 2026</title>
+    <meta name="tags" content={metadata.tags.join(', ')} />
 </svelte:head>
 
 <section>
@@ -58,6 +67,15 @@
         outdated font. The new overhaul fixed this by applying the correct font, improving the styles,
         and even improving compatiability for mobile devices.
     </div>
+
+    <blockquote class="warning">
+        For this specific section,
+
+        <b
+            >it's highly recommended that you refer to
+            <a href="/docs/blog/2026/07/svelte-migration">this article</a> instead.
+        </b>
+    </blockquote>
 
     <h2 id="svelte">A Major Change for <code>core</code></h2>
 
