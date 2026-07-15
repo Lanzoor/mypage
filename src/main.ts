@@ -7,12 +7,18 @@ export namespace Core {
      * @returns {Promise<any | undefined>}
      */
 
-    export async function pingServer(route: string, options?: RequestInit): Promise<any | undefined> {
+    export async function pingServer(
+        route: string,
+        options?: RequestInit
+    ): Promise<any | undefined> {
         try {
             const result = await fetch(route, options);
 
             if (!result.ok) {
-                console.error(`failed to ping ${route}: ${route} responded with an error\n\t`, Error(result.statusText));
+                console.error(
+                    `failed to ping ${route}: ${route} responded with an error\n\t`,
+                    Error(result.statusText)
+                );
                 return;
             }
 
@@ -21,7 +27,10 @@ export namespace Core {
             if (jsonResult.ok === true) {
                 return jsonResult;
             } else {
-                console.error(`failed to ping ${route}: ${route} responded with an error\n\t`, Error(jsonResult));
+                console.error(
+                    `failed to ping ${route}: ${route} responded with an error\n\t`,
+                    Error(jsonResult)
+                );
                 return jsonResult;
             }
         } catch (error) {
@@ -43,7 +52,11 @@ export namespace Core {
 
     export namespace DOM {
         export function isMobileDevice() {
-            return (navigator as any).userAgentData?.mobile || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || ('ontouchstart' in window && navigator.maxTouchPoints > 0);
+            return (
+                (navigator as any).userAgentData?.mobile ||
+                /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+                ('ontouchstart' in window && navigator.maxTouchPoints > 0)
+            );
         }
 
         export function loadCSS(href: string) {
@@ -60,7 +73,12 @@ if the styles somehow don't load, please ensure that the correct CSS file is inj
                     cssInjectionMessage
                 );
             } catch (error) {
-                console.error(`failed to inject <link> tag for ${href}:\n\t`, error, `\nthis may cause weird styles when components are loaded`, cssInjectionMessage);
+                console.error(
+                    `failed to inject <link> tag for ${href}:\n\t`,
+                    error,
+                    `\nthis may cause weird styles when components are loaded`,
+                    cssInjectionMessage
+                );
             }
         }
 
