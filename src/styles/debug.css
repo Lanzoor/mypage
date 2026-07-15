@@ -1,3 +1,8 @@
+:root {
+    --debug-primary: rgb(255, 0, 0);
+    --debug-secondary: rgb(255, 129, 129);
+}
+
 * {
     outline: 2px solid var(--debug-primary) !important;
 }

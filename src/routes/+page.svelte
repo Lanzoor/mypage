@@ -1,15 +1,3 @@
-<script lang="ts">
-    import { onMount } from 'svelte';
-
-    onMount(() => {
-        document.body.classList.add('iris-bg');
-
-        return () => {
-            document.body.classList.remove('iris-bg');
-        };
-    });
-</script>
-
 <svelte:head>
     <title>Welcome! | lanzoor.dev</title>
 
@@ -23,53 +11,55 @@
     <meta name="theme-color" content="#6f27f5" />
 </svelte:head>
 
-<section class="fixed-bg centered" id="welcome--intro">
-    <header>
-        <h1 class="logo" style="min-height: calc(var(--logo-font-size) * 1.5)">
-            <span class="head">lanzoor</span><span>.</span><span class="tail">dev</span>
-        </h1>
+<section class="disable-initial-padding no-padding" id="iris-background">
+    <section class="enable-initial-padding fixed-bg centered" id="welcome--intro">
+        <header>
+            <h1 class="logo">
+                <span class="head">lanzoor</span><span>.</span><span class="tail">dev</span>
+            </h1>
 
-        <p class="adaptive-text-shadow">
-            <span class="col black">//</span>
-            <span class="col purple"> portfolio </span>
-            <span class="col black">//</span>
-            <span class="col blue"> archive </span>
-            <span class="col black">//</span>
-            <span class="col cyan"> projects </span>
-            <span class="col black">//</span>
-            <span class="col green"> showcases </span>
-            <span class="col black">//</span>
-        </p>
+            <p class="adaptive-text-shadow">
+                <span class="col black">//</span>
+                <span class="col purple"> portfolio </span>
+                <span class="col black">//</span>
+                <span class="col blue"> archive </span>
+                <span class="col black">//</span>
+                <span class="col cyan"> projects </span>
+                <span class="col black">//</span>
+                <span class="col green"> showcases </span>
+                <span class="col black">//</span>
+            </p>
+
+            <p>
+                <b>Hello! 👋</b><br />
+                I'm
+                <i class="col bright purple">Lanzoor</i>, a student from
+                <span class="col bright blue">South</span>
+                <span class="col bright red">Korea</span> who likes
+                <span class="col green">programming</span>,
+                <span class="col cyan">science</span>,
+                <span class="col blue">languages</span> and more.<br />
+
+                You'll find projects, showcases, tools, and more.
+            </p>
+        </header>
 
         <p>
-            <b>Hello! 👋</b><br />
-            I'm
-            <i class="col bright purple">Lanzoor</i>, a student from
-            <span class="col bright blue">South</span>
-            <span class="col bright red">Korea</span> who likes
-            <span class="col green">programming</span>,
-            <span class="col cyan">science</span>,
-            <span class="col blue">languages</span> and more.<br />
-
-            You'll find projects, showcases, tools, and more.
+            <b>
+                Make yourself at home, explore things at your own pace and
+                <span class="col bright purple">have fun!</span> ♥
+            </b>
         </p>
-    </header>
 
-    <p>
-        <b>
-            Make yourself at home, explore things at your own pace and
-            <span class="col bright purple">have fun!</span> ♥
-        </b>
-    </p>
+        <blockquote class="warning">
+            <b class="col bright yellow"> This site is still under construction! </b><br />
 
-    <blockquote class="warning">
-        <b class="col bright yellow"> This site is still under construction! </b><br />
+            You will often stumble upon
+            <span class="col bright red">incomplete or broken</span> pages / features.<br />
 
-        You will often stumble upon
-        <span class="col bright red">incomplete or broken</span> pages / features.<br />
-
-        <b class="col bright cyan">Thank you for your understanding!</b>
-    </blockquote>
+            <b class="col bright cyan">Thank you for your understanding!</b>
+        </blockquote>
+    </section>
 </section>
 
 <style lang="css">
@@ -77,7 +67,11 @@
         --logo-font-size: 100px;
     }
 
-    :global(body.iris-bg) {
+    #welcome--intro .logo {
+        min-height: calc(var(--logo-font-size) * 1.5);
+    }
+
+    #iris-background {
         background-image: url('/assets/backgrounds/iris.jpg');
         background-position: center center;
         background-repeat: no-repeat;

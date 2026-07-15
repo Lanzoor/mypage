@@ -34,21 +34,15 @@
 
             <div class="links">
                 <div class="link">
-                    <div class="name">project</div>
-
-                    <a href="/"> link </a>
+                    Project: <a href="/"> lanzoor.dev </a>
                 </div>
 
                 <div class="link">
-                    <div class="name">showcase</div>
-
-                    <a href="/projects/core"> link </a>
+                    Showcase: <a href="/projects/core"> /projects/core </a>
                 </div>
 
                 <div class="link">
-                    <div class="name">changelog</div>
-
-                    <a href="/projects/core/changelog"> link </a>
+                    Changelog: <a href="/projects/core/changelog"> /projects/core/changelog </a>
                 </div>
             </div>
         </div>
@@ -68,20 +62,28 @@
 
             <div class="links">
                 <div class="link">
-                    <div class="name">project</div>
+                    Project:
 
-                    <a href="https://api.lanzoor.dev" target="_blank"> link </a>
+                    <a href="https://api.lanzoor.dev" target="_blank" rel="noopener noreferrer">
+                        api.lanzoor.dev
+                    </a>
                 </div>
 
                 <div class="link">
-                    <div class="name">changelog</div>
+                    Changelog:
 
-                    <a href="https://api.lanzoor.dev/docs/changelog" target="_blank"> link </a>
+                    <a
+                        href="/projects/core-api/changelog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        /projects/core-api/changelog
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="project">
+        <!-- <div class="project">
             <h1>core-status</h1>
 
             <p class="description">The status page for all of my services. Built with NextJS!</p>
@@ -97,12 +99,10 @@
 
             <div class="links">
                 <div class="link">
-                    <div class="name">project</div>
-
-                    <a href="https://status.lanzoor.dev" target="_blank"> link </a>
+                    Project: <a href="https://status.lanzoor.dev" target="_blank"> link </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="project">
             <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>
@@ -118,9 +118,15 @@
 
             <div class="links">
                 <div class="link">
-                    <div class="name">project</div>
+                    Project:
 
-                    <a href="https://github.com/Lanzoor/BHOJ" target="_blank"> link </a>
+                    <a
+                        href="https://github.com/Lanzoor/BHOJ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github.com/Lanzoor/BHOJ
+                    </a>
                 </div>
             </div>
         </div>
@@ -140,9 +146,15 @@
 
             <div class="links">
                 <div class="link">
-                    <div class="name">project</div>
+                    Project:
 
-                    <a href="https://github.com/Lanzoor/periodica" target="_blank"> link </a>
+                    <a
+                        href="https://github.com/Lanzoor/periodica"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github.com/Lanzoor/periodica
+                    </a>
                 </div>
             </div>
         </div>
@@ -221,15 +233,13 @@
         flex-wrap: wrap;
         justify-content: center;
 
-        gap: 24px;
+        gap: 2em;
 
         width: 100%;
         margin: 2% 0;
     }
 
     .project {
-        position: relative;
-
         display: flex;
         flex-direction: column;
 
@@ -257,12 +267,19 @@
     .project h1 {
         font-size: 40px;
         margin: 0 0 10px 0;
+        letter-spacing: 0.05em;
 
         font-family: 'JetBrains Mono';
 
         color: rgb(220, 245, 255);
 
         text-shadow: 0 0 12px rgba(0, 180, 255, 0.3);
+
+        transition: letter-spacing 0.5s ease;
+    }
+
+    .project h1:hover {
+        letter-spacing: 0.1em;
     }
 
     .project .description {
@@ -369,10 +386,6 @@
     }
 
     .project .link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
         padding: 10px 14px;
 
         background: rgba(255, 255, 255, 0.03);
@@ -389,16 +402,11 @@
         transform: translateX(4px);
     }
 
-    .project .link .name {
-        color: rgba(255, 255, 255, 0.75);
-        font-weight: 500;
-    }
-
     .project .link a {
         color: rgb(100, 210, 255);
 
         text-decoration: none;
-        font-weight: 700;
+        text-shadow: 0 0 10px rgba(52, 130, 255, 0.5);
     }
 
     .project .link a:hover {

@@ -9,7 +9,7 @@
         "prepare": "svelte-kit sync || echo ''",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-        "generate:blog": "tsx scripts/generate-entries.ts"
+        "generate:blog": "tsx scripts/generate:blog.ts"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "^7.0.1",

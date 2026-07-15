@@ -15,7 +15,7 @@
 
             if (!result.ok) {
                 console.error(
-                    `failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
+                    `error: failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
                     Error(result.statusText)
                 );
 
@@ -29,7 +29,7 @@
                 backendVersion = jsonResult?.data.versions.backend;
             } else {
                 console.error(
-                    `failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
+                    `error: failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
                     Error(jsonResult)
                 );
             }
@@ -60,7 +60,7 @@
                 <h2>Projects</h2>
                 <a href="/projects">Projects</a>
                 <a href="/tools">Tools</a>
-                <a href="https://www.youtube.com/@lanzoormakesvideos">Videos</a>
+                <a href="/projects/videos" target="_blank" rel="noopener noreferrer">Videos</a>
                 <a href="/projects/conlangs">Conlangs</a>
             </div>
             <div class="group">
@@ -73,8 +73,8 @@
         </nav>
     </section>
 
-    <section class="spacing" id="bottom">
-        <div class="spacing">
+    <section class="enable-spacing" id="bottom">
+        <div class="enable-spacing">
             <h1 class="logo">
                 <span class="head">lanzoor</span>.<span class="tail">dev</span>
             </h1>
@@ -92,23 +92,35 @@
 
         <div id="footer">
             <div id="connections">
-                <a href="https://www.discord.com" target="_blank">
+                <a href="https://www.discord.com" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/icons/socials/discord.svg" alt="Discord" />
                 </a>
 
-                <a href="https://www.reddit.com/user/Lanzoor/" target="_blank">
+                <a
+                    href="https://www.reddit.com/user/Lanzoor/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <img src="/assets/icons/socials/reddit.svg" alt="Reddit" />
                 </a>
 
-                <a href="https://github.com/Lanzoor" target="_blank">
+                <a href="https://github.com/Lanzoor" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
                 </a>
 
-                <a href="https://steamcommunity.com/id/lanzoor/" target="_blank">
+                <a
+                    href="https://steamcommunity.com/id/lanzoor/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <img src="/assets/icons/socials/steam.svg" alt="steam" />
                 </a>
 
-                <a href="https://www.youtube.com/@lanzoorgaming" target="_blank">
+                <a
+                    href="https://www.youtube.com/@lanzoorgaming"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <img src="/assets/icons/socials/youtube.svg" alt="YouTube" />
                 </a>
 
@@ -117,7 +129,11 @@
                 </a>
             </div>
 
-            <footer>© 2026 | Lanzaforge</footer>
+            <footer>
+                © 2026 | <a href="https://lanzaforge.org" target="_blank" rel="noopener noreferrer"
+                    >Lanzaforge</a
+                >
+            </footer>
         </div>
     </section>
 </section>

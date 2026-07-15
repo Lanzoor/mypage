@@ -47,6 +47,14 @@
         <b>v3.0</b><br />
     </p>
 
+    <blockquote class="warning">
+        <b class="col bright yellow">
+            As a side effect of the <a href="/docs/blog/2026/07/svelte-migration">Svelte port</a> + Cloudflare
+            integration, data collection is currently broken.
+        </b>
+        You can safely ignore and
+        <a href="#third-party">skip this section</a>.
+    </blockquote>
     <h2>Data Collection</h2>
 
     <p>
@@ -161,7 +169,7 @@
         </b>
     </p>
 
-    <h2>Third-Party Services</h2>
+    <h2 id="third-party">Third-Party Services</h2>
 
     <h3>Cloudflare</h3>
 
@@ -170,7 +178,11 @@
             We use Cloudflare to provide DNS, content delivery, and email routing services. As part
             of providing these services, Cloudflare may process technical information such as IP
             addresses. For more information, please refer to
-            <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">
+            <a
+                href="https://www.cloudflare.com/privacypolicy/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Cloudflare's privacy policy
             </a>.
         </b>
@@ -183,7 +195,11 @@
             This website is hosted via Vercel. As part of normal operation, Vercel may collect
             technical information such as IP addresses, request logs, and performance metrics. For
             more information, please refer to
-            <a href="https://vercel.com/legal/privacy-notice#how-we-use-info" target="_blank">
+            <a
+                href="https://vercel.com/legal/privacy-notice#how-we-use-info"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Vercel's privacy policy
             </a>.
         </b>
@@ -194,7 +210,11 @@
     <p>
         <b>
             This website loads fonts via Google Fonts. For more information, please refer to
-            <a href="https://developers.google.com/fonts/faq/privacy" target="_blank">
+            <a
+                href="https://developers.google.com/fonts/faq/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Google Fonts' privacy policy
             </a>.
         </b>

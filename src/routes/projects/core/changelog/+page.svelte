@@ -4,6 +4,7 @@
     let searchDescription = $state('Search for a version!');
 
     const versionIds = [
+        'v26-25-0',
         'v26-25-2147483648',
         'v26-24-2147483647',
         'v26-24-0',
@@ -88,6 +89,54 @@
     </blockquote>
 </section>
 
+<section id="v26-25-0">
+    <h1>v26.25.0: The Svelte Migration</h1>
+
+    <p class="dim">
+        Release date: <b>July 15th, 2026</b>
+    </p>
+
+    <p>
+        <b>The Svelte migration process has been fully completed!</b><br />
+        We have migrated every page <span class="dim">(excluding deletions)</span> and feature to the
+        new version. Although the process was tedious, the migration was definitely worth it.
+    </p>
+
+    <p>
+        <b>
+            Anyways, we've decided to make a few changes here and there. We hope you like it! Thanks
+            as always.
+        </b>
+    </p>
+
+    <ul>
+        <li>
+            <span class="col bright green">+</span>
+            Added selection styles by the <code>::selection</code> pseudo-element.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Migrated the <a href="/credits/assets">asset credits</a> page.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Reworked the design of the <a href="/projects">projects page</a>.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Added <code>rel="noopener noreferrer"</code> attributes to external links.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Split global styles into multiple stylesheet documents.
+        </li>
+        <li>
+            <span class="col bright red">-</span>
+            Removed some unnecessary and now irrelevant information.
+        </li>
+    </ul>
+</section>
+
 <section id="v26-25-2147483648">
     <h2>Minor update v26.25.2147483648</h2>
 
@@ -96,8 +145,13 @@
     </p>
 
     <p>
-        This is the pre-release version of the Svelte port, since I had to make a few important
-        posts, as well as a few changes.
+        <b>This is the pre-release version of the Svelte port.</b><br />
+        Although the Svelte port is not complete, we decided to release this version earlier since we
+        had to make a few important posts, as well as a few changes.
+    </p>
+
+    <p class="dim">
+        <i> Changelog unavailable. </i>
     </p>
 </section>
 

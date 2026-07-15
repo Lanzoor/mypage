@@ -1,0 +1,35 @@
+@layer base {
+    :root {
+        --text: #ccc;
+        --text-bold: #ddd;
+
+        --base-font-size: 25px;
+    }
+
+    body {
+        font-size: var(--base-font-size);
+
+        color: var(--text);
+    }
+
+    b,
+    strong {
+        font-weight: 500;
+
+        color: var(--text-bold);
+        transition:
+            text-shadow 0.2s,
+            color 0.2s;
+    }
+
+    @media (max-width: 768px) {
+        :root {
+            --base-font-size: 15px;
+        }
+    }
+
+    ::selection {
+        color: color-mix(in oklab, currentColor 60%, white);
+        background: rgba(255, 255, 255, 0.15);
+    }
+}

@@ -40,12 +40,11 @@
             <a href={attemptedPath}>↩ Try again</a>
         </div>
     </section>
-{:else}
-    <!-- 500 / Other errors -->
+    <!-- {:else}
     <section class="stretched">
         <h1>{status} - Internal Server Error</h1>
         <p>An unexpected error occurred. Please try again later.</p>
-    </section>
+    </section> -->
 {/if}
 
 <style lang="css">

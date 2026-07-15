@@ -1,0 +1,379 @@
+<svelte:head>
+    <title>Asset Credits | lanzoor.dev</title>
+</svelte:head>
+
+<section>
+    <span class="breadcrumbs">
+        <a href="/">Home</a>
+
+        <span class="separator">›</span>
+
+        <a href="/credits">Credits</a>
+
+        <span class="separator">›</span>
+
+        <a href="/credits/assets">Asset Credits</a>
+    </span>
+
+    <h1>Icon Credits</h1>
+
+    <p>
+        This section contains the credits for all of the icons used in this website.<br />
+        <b
+            >Thank you <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer"
+                >SVG Repo</a
+            >
+            and
+            <a href="https://svgstack.com/" target="_blank" rel="noopener noreferrer">SVG Stack</a> for
+            providing the icons below,</b
+        >
+        they are both great sources!<br />
+        <i>Click on an icon to warp into their links.</i>
+        If you have any concerns, feel free to <a href="#connections"> get in touch </a>.<br />
+    </p>
+
+    <blockquote>
+        Some icons may be grouped together if they
+        <b>
+            share the same author, published on the same platform, and published with the same
+            license.
+        </b>
+    </blockquote>
+
+    <blockquote class="warning">
+        <b class="col bright yellow">
+            Some assets had to be modified in order to match the background colors!
+        </b>
+
+        For example, most of the social media icons had a darker accent color, which made it hard to
+        read on darker backgrounds.
+    </blockquote>
+
+    <hr />
+
+    <h1 class="toc-track" id="country-icons">Country Icons</h1>
+
+    <div class="icon-group">
+        <a
+            href="https://www.svgrepo.com/svg/401752/flag-for-south-korea"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/countries/south-korea.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform: <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer"
+                >SVG Repo</a
+            >
+        </li>
+        <li>
+            Author: <a
+                href="https://github.com/joypixels/emojione?ref=svgrepo.com"
+                target="_blank"
+                rel="noopener noreferrer">Joypixels</a
+            >
+        </li>
+        <li>
+            License: <a
+                href="https://www.svgrepo.com/page/licensing/#MIT"
+                target="_blank"
+                rel="noopener noreferrer">MIT License</a
+            >
+        </li>
+    </ul>
+
+    <div class="icon-group">
+        <a
+            href="https://www.svgrepo.com/svg/242307/united-states-of-america-united-states"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/countries/united-states.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/242294/japan"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/countries/japan.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/242353/china"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/countries/china.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/242257/netherlands-holland"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/countries/netherlands.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform: <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer"
+                >SVG Repo</a
+            >
+        </li>
+        <li>
+            Author: <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer"
+                >SVG Repo</a
+            >
+        </li>
+        <li>
+            License: <a
+                href="https://www.svgrepo.com/page/licensing/#CC0"
+                target="_blank"
+                rel="noopener noreferrer">Public Domain / CC0 License</a
+            >
+        </li>
+    </ul>
+
+    <hr />
+
+    <h1 id="interactive-icons">Interactive Icons</h1>
+
+    <div class="icon-group">
+        <a
+            href="https://www.svgrepo.com/svg/458610/color-mode"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/color-mode.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform:
+            <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">
+                SVG Repo
+            </a>
+        </li>
+        <li>
+            Author:
+            <a
+                href="https://www.figma.com/@leonid?ref=svgrepo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Leonid Tsvetkov
+            </a>
+        </li>
+        <li>
+            License:
+            <a
+                href="https://www.svgrepo.com/page/licensing/#CC%20Attribution"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                CC Attribution License
+            </a>
+        </li>
+    </ul>
+
+    <span id="krystonschwarze"></span>
+
+    <div class="icon-group">
+        <a
+            href="https://www.svgrepo.com/svg/511004/hamburger-md"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/hamburger.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/510924/close-md"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/close.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/511122/settings"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/settings.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/510874/caret-down-md"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/caret-down.svg" />
+        </a>
+
+        <a
+            href="https://www.svgrepo.com/svg/510970/external-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/external-link.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform:
+            <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">
+                SVG Repo
+            </a>
+        </li>
+        <li>
+            Author:
+            <a
+                href="https://github.com/krystonschwarze/coolicons?ref=svgrepo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Krystonschwarze
+            </a>
+        </li>
+        <li>
+            License:
+            <a
+                href="https://www.svgrepo.com/page/licensing/#CC%20Attribution"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                CC Attribution License
+            </a>
+        </li>
+    </ul>
+
+    <span id="noah-jacobus"></span>
+
+    <div class="icon-group">
+        <a href="https://www.svgrepo.com/svg/535437/home" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/icons/home.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform:
+            <a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">
+                SVG Repo
+            </a>
+        </li>
+        <li>
+            Author:
+            <a
+                href="https://noahjacob.us/?ref=svgrepo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Noah Jacobus
+            </a>
+        </li>
+        <li>
+            License:
+            <a
+                href="https://www.svgrepo.com/page/licensing#PD"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                PD License
+            </a>
+        </li>
+    </ul>
+
+    <h1 class="toc-track" id="social-icons">Social Icons</h1>
+
+    <div class="icon-group">
+        <a
+            href="https://svgstack.com/icon/outline-reddit-logo-468"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/reddit.svg" />
+        </a>
+
+        <a
+            href="https://svgstack.com/icon/github-logo-5036"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/github.svg" />
+        </a>
+
+        <a
+            href="https://svgstack.com/icon/steam-logo-3053"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/steam.svg" />
+        </a>
+
+        <a
+            href="https://svgstack.com/icon/youtube-outline-logo-471"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/youtube.svg" />
+        </a>
+
+        <a
+            href="https://svgstack.com/icon/outline-discord-logo-508"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/discord.svg" />
+        </a>
+
+        <a
+            href="https://svgstack.com/icon/email-icon-1629"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="/assets/icons/socials/email.svg" />
+        </a>
+    </div>
+
+    <ul>
+        <li>
+            Platform: <a href="https://svgstack.com" target="_blank" rel="noopener noreferrer"
+                >SVG Stack</a
+            >
+        </li>
+        <li>
+            Author: <a href="https://svgstack.com" target="_blank" rel="noopener noreferrer"
+                >SVG Stack</a
+            >
+        </li>
+        <li>
+            License: <a
+                href="https://svgstack.com/page/license"
+                target="_blank"
+                rel="noopener noreferrer">Creative Commons BY 4.0 license</a
+            >
+        </li>
+    </ul>
+</section>
+
+<style>
+    .icon-group {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .icon-group img {
+        width: 4em;
+        height: 4em;
+    }
+</style>

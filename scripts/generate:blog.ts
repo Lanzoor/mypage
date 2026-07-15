@@ -12,6 +12,10 @@ type Entry = {
     published: string;
 };
 
+async function sleep(timeMs: number): Promise<any> {
+    return new Promise((p) => setTimeout(p, timeMs));
+}
+
 const entries: Entry[] = [];
 
 async function walk(dir: string): Promise<void> {
@@ -22,10 +26,12 @@ async function walk(dir: string): Promise<void> {
 
         if (item.isDirectory()) {
             console.log(`info: parsing directory ${target}`);
+            await sleep(10);
             await walk(target);
             continue;
         } else {
             console.log(`info: parsing file ${target}`);
+            await sleep(10);
         }
 
         if (item.name !== '+page.svelte' || path.dirname(target) === BLOG_ROOT) continue;
