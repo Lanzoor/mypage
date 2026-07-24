@@ -1,6 +1,7 @@
 @import './styles/fonts.css';
 @import './styles/text-colors.css';
 @import './styles/text-styles.css';
+@import './styles/blocks.css';
 @import './styles/inline-blocks.css';
 @import './styles/global-styles.css';
 
@@ -47,9 +48,6 @@
         --bg: #111;
 
         --header: #ddd;
-
-        --th-bg: rgba(255, 255, 255, 0.15);
-        --hr-bg: rgba(255, 255, 255, 0.1);
     }
 
     *,
@@ -83,25 +81,6 @@
         min-height: 100vh;
     }
 
-    main table:not(.plain),
-    main th:not(.plain),
-    main td:not(.plain) {
-        align-self: flex-start;
-
-        text-align: center;
-        border-collapse: collapse;
-        padding: 0.5em;
-        transition:
-            background-color 0.2s,
-            box-shadow 0.2s;
-        border: 2px solid var(--primary-25);
-    }
-
-    main th:not(.plain) {
-        background: var(--th-bg);
-        color: var(--text-bold);
-    }
-
     /* ==================== Headers ==================== */
 
     h1,
@@ -131,52 +110,6 @@
     .small-header {
         text-transform: uppercase;
         color: #777;
-    }
-
-    main blockquote:not(.plain) {
-        border-left: 4px solid rgb(59, 56, 160);
-        margin-left: 0;
-        background: rgba(255, 255, 255, 0.08);
-
-        padding: 0.5em 1em;
-    }
-
-    main blockquote:not(.plain).info {
-        border-left-color: rgb(92, 255, 97);
-        background: rgba(21, 255, 0, 0.08);
-    }
-
-    main blockquote:not(.plain).warning {
-        border-left-color: rgb(255, 222, 92);
-        background: rgba(255, 255, 0, 0.08);
-    }
-
-    main blockquote:not(.plain).error {
-        border-left-color: rgb(255, 92, 92);
-        background: rgba(255, 0, 0, 0.08);
-    }
-
-    main ul:not(.plain),
-    main ol:not(.plain) {
-        margin: 0 2em;
-        /* background-color: rgba(255, 255, 255, 0.04);
-        border-radius: 1em;
-
-        padding: 0.5em 2em; */
-    }
-
-    main li:not(.plain) {
-        margin-right: 1em;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-        line-height: 1.6;
-    }
-
-    main ul:not(.plain) ul:not(.plain),
-    main ol:not(.plain) ol:not(.plain) {
-        list-style-type: circle;
-        margin-top: 0.5em;
-        margin-left: 1em;
     }
 
     hr {

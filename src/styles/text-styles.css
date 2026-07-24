@@ -27,6 +27,11 @@
             --base-font-size: 15px;
         }
     }
+    @media (max-width: 500px) {
+        :root {
+            --base-font-size: 10px;
+        }
+    }
 
     ::selection {
         color: color-mix(in oklab, currentColor 60%, white);

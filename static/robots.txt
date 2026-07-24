@@ -1,6 +1,8 @@
 
 User-agent: *
 Disallow: /legacy/
+Disallow: /assets/
+Disallow: /docs/blog/
 
 # panic routes (might save my ass when i actually decide to maek these)
 

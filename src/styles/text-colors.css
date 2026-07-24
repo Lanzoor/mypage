@@ -8,29 +8,33 @@
         --red: #e05555;
         --bright-red: #ff7070;
 
-        --dark-green: #1f4f1f;
-        --green: #4ec94e;
-        --bright-green: #70e870;
+        --dark-orange: #6b3a1a;
+        --orange: #e07a2d;
+        --bright-orange: #ffad5a;
 
         --dark-yellow: #5a4a18;
         --yellow: #e0c060;
         --bright-yellow: #ffe070;
 
+        --dark-green: #1f4f1f;
+        --green: #4ec94e;
+        --bright-green: #70e870;
+
+        --dark-cyan: #154040;
+        --cyan: #40bfbf;
+        --bright-cyan: #70e8e8;
+
         --dark-blue: #1f3666;
         --blue: #5588e0;
         --bright-blue: #77aaff;
-
-        --dark-magenta: #4a2457;
-        --magenta: #b060d0;
-        --bright-magenta: #dd88ff;
 
         --dark-purple: #3a2457;
         --purple: #8d60d0;
         --bright-purple: #b584ff;
 
-        --dark-cyan: #154040;
-        --cyan: #40bfbf;
-        --bright-cyan: #70e8e8;
+        --dark-magenta: #4a2457;
+        --magenta: #b060d0;
+        --bright-magenta: #dd88ff;
     }
 
     .col.black,
@@ -51,13 +55,13 @@
         color: var(--bright-red);
     }
 
-    .col.green,
-    .col.green * {
-        color: var(--green);
+    .col.orange,
+    .col.orange * {
+        color: var(--orange);
     }
-    .col.bright.green,
-    .col.bright.green * {
-        color: var(--bright-green);
+    .col.bright.orange,
+    .col.bright.orange * {
+        color: var(--bright-orange);
     }
 
     .col.yellow,
@@ -69,30 +73,13 @@
         color: var(--bright-yellow);
     }
 
-    .col.blue,
-    .col.blue * {
-        color: var(--blue);
+    .col.green,
+    .col.green * {
+        color: var(--green);
     }
-    .col.bright.blue,
-    .col.bright.blue * {
-        color: var(--bright-blue);
-    }
-
-    .col.magenta,
-    .col.magenta * {
-        color: var(--magenta);
-    }
-    .col.bright.magenta,
-    .col.bright.magenta * {
-        color: var(--bright-magenta);
-    }
-    .col.purple,
-    .col.purple * {
-        color: var(--purple);
-    }
-    .col.bright.purple,
-    .col.bright.purple * {
-        color: var(--bright-purple);
+    .col.bright.green,
+    .col.bright.green * {
+        color: var(--bright-green);
     }
 
     .col.cyan,
@@ -102,6 +89,33 @@
     .col.bright.cyan,
     .col.bright.cyan * {
         color: var(--bright-cyan);
+    }
+
+    .col.blue,
+    .col.blue * {
+        color: var(--blue);
+    }
+    .col.bright.blue,
+    .col.bright.blue * {
+        color: var(--bright-blue);
+    }
+
+    .col.purple,
+    .col.purple * {
+        color: var(--purple);
+    }
+    .col.bright.purple,
+    .col.bright.purple * {
+        color: var(--bright-purple);
+    }
+
+    .col.magenta,
+    .col.magenta * {
+        color: var(--magenta);
+    }
+    .col.bright.magenta,
+    .col.bright.magenta * {
+        color: var(--bright-magenta);
     }
 
     .adaptive-text-shadow,

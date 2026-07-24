@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
     let visible = $state(false);
     let searchValue = $state('');
     let searchDescription = $state('Search for a version!');
@@ -53,6 +55,20 @@
             visible = false;
         }, 750);
     }
+
+    onMount(() => {
+        const handler = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                visible = false;
+            }
+        };
+
+        document.addEventListener('keydown', handler);
+
+        return () => {
+            document.removeEventListener('keydown', handler);
+        };
+    });
 </script>
 
 <svelte:head>
@@ -84,9 +100,99 @@
     </p>
 
     <blockquote class="warning">
-        <b class="col bright yellow">Not all changes warrant a new changelog!</b>
-        When a change is very small and/or urgent, it may not show up here.
+        <b class="col bright yellow">Not all changes warrant a new changelog!</b><br />
+        If a change is very small and/or urgent, or was not assigned a version tag, it may not show up
+        here.
     </blockquote>
+</section>
+
+<section id="v26-26-0">
+    <h2>v26.26.0: The Legal Update</h2>
+
+    <p class="dim">
+        Release date: <b>July 25th, 2026</b>
+    </p>
+
+    <p>
+        <b>Here's a surprise update! You definitely weren't expecting this, right?</b>
+    </p>
+
+    <ul>
+        <li>
+            <span class="col bright green">+</span>
+            <b>Added the <a href="/tos">Terms of Service</a> page.</b>
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            <b>
+                Added a notice panel that notifies you whether the Legal Information changes, or you
+                first visit the website.
+            </b>
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added the ability to exit the search screen within the
+            <a href="/projects/core/changelog/">changelogs</a> by pressing the
+            <kbd>Escape</kbd> key.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added <a href="/conlangs/">conlangs</a> as a collection within the
+            <a href="/projects">projects page</a>.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added the internal change marker (<span class="col bright orange">i</span>) for
+            changelog entries.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added new navigation entries to the footer panel.
+        </li>
+        <li>
+            <span class="col bright green">+</span><span class="col bright orange">i</span>
+            <b>Added automatic cleanup of outdated localStorage data.</b><br />
+            Previously stored keys that are no longer used may now be automatically removed.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Improved style definitions for <code>{'<kbd>'}</code>, <code>{'<ul>'}</code>,
+            <code>{'<ol>'}</code>, as well as some block elements.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Improved color palette.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Updated <a href="/about">/about</a> to match the new changes.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Changed layout of the footer panel.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            Renamed long selector identifiers.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            Split <code>app.css</code> into even more stylesheets.
+        </li>
+        <li>
+            <span class="col bright red">-</span>
+            <b>Completely removed intentional data collection. Period.</b>
+        </li>
+        <li>
+            <span class="col bright red">-</span>
+            Completely removed the analytics notice panel, in favor of the new one.
+        </li>
+        <li>
+            <span class="col bright red">-</span>
+            Added clear visuals in the Privacy Policy page to indicate that data collection has been temporarily
+            disabled.
+        </li>
+    </ul>
 </section>
 
 <section id="v26-25-0">
@@ -116,18 +222,31 @@
         </li>
         <li>
             <span class="col bright green">+</span>
+            Added the <a href="/tools/">tools</a> project collection.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added the <a href="/tools/">tools</a> as a collection within the
+            <a href="/projects">projects page</a>.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
             Migrated the <a href="/credits/assets">asset credits</a> page.
+        </li>
+        <li>
+            <span class="col bright yellow">+</span><span class="col bright orange">i</span>
+            Added proper <code>robots.txt</code> definitions and restrictions.
         </li>
         <li>
             <span class="col bright yellow">~</span>
             Reworked the design of the <a href="/projects">projects page</a>.
         </li>
         <li>
-            <span class="col bright yellow">~</span>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
             Added <code>rel="noopener noreferrer"</code> attributes to external links.
         </li>
         <li>
-            <span class="col bright yellow">~</span>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
             Split global styles into multiple stylesheet documents.
         </li>
         <li>
@@ -230,7 +349,7 @@
             Improved the design of breadcrumbs navigation.
         </li>
         <li>
-            <span class="col bright yellow">~</span>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
             Renamed some unintuitive internal names.
         </li>
         <li>
@@ -333,7 +452,7 @@
         </li>
 
         <li>
-            <span class="col bright yellow">~</span>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
             <b>
                 Reworked the current font size convention to use <code>em</code> units instead of
                 <code>px</code>.
@@ -349,7 +468,7 @@
         </li>
 
         <li>
-            <span class="col bright yellow">~</span>
+            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
             Renamed the frontpage stylesheet from <code>styles.css</code> to
             <code>welcome.css</code> in order to match the new conventions.
         </li>
@@ -428,7 +547,7 @@
 
         <li>
             <span class="col bright green">+</span>
-            Added a completely alternate layout to the warning panel for mobile devices.
+            Added a completely alternate layout for the warning panel for mobile devices.
         </li>
 
         <li>
@@ -510,7 +629,7 @@
         <li>
             <span class="col bright yellow">~</span>
             <b>
-                The <a href="/legacy/anti-JPA">anti-JPA project</a> has been moved to the legacy category.
+                Moved the <a href="/legacy/anti-JPA">anti-JPA project</a> to the legacy category.
             </b>
             This project will be archived for a while, and will be deleted eventually.
         </li>
@@ -578,6 +697,12 @@
             may appear after the symbol. This means the change is provisional and may be reverted in the
             future.
         </li>
+
+        <li>
+            In some cases, a orange
+            <span class="col bright orange">i</span> may appear after the symbol. This means the change
+            is internal and does not affect the user experience.
+        </li>
     </ul>
 
     <blockquote class="warning">
@@ -593,7 +718,10 @@
 </section>
 
 <div id="search-overlay" class:visible>
-    <p id="search-description">{searchDescription}</p>
+    <p id="search-description">
+        <b>{searchDescription}</b><br />
+        Press the <kbd class="plain">Escape</kbd> key to cancel
+    </p>
 
     <div id="search-options">
         <input
@@ -677,6 +805,7 @@
     }
 
     #search-description {
+        text-align: center;
         font-size: 0.75em;
         letter-spacing: 0.1em;
     }
@@ -697,7 +826,12 @@
         color: white;
         font-size: 1em;
         transition: 0.2s ease;
-        width: min(600px, 80vw);
+        width: 600px;
+        max-width: 75vw;
+    }
+
+    #search-options {
+        max-width: 75vw;
     }
 
     #search-bar::placeholder {

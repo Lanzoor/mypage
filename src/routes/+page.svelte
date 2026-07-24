@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section class="disable-initial-padding no-padding" id="iris-background">
-    <section class="enable-initial-padding fixed-bg centered" id="welcome--intro">
+    <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
             <h1 class="logo">
                 <span class="head">lanzoor</span><span>.</span><span class="tail">dev</span>
@@ -67,7 +67,7 @@
         --logo-font-size: 100px;
     }
 
-    #welcome--intro .logo {
+    #intro .logo {
         min-height: calc(var(--logo-font-size) * 1.5);
     }
 
@@ -79,7 +79,7 @@
         background-attachment: fixed;
     }
 
-    #welcome--intro {
+    #intro {
         background: rgba(0, 0, 0, 0.8);
     }
 
@@ -97,13 +97,13 @@
         }
     }
 
-    #welcome--intro header .logo {
+    #intro header .logo {
         font-size: var(--logo-font-size);
         user-select: none;
         position: relative;
     }
 
-    #welcome--intro header .logo::after {
+    #intro header .logo::after {
         position: absolute;
         left: auto;
         bottom: 4px;
@@ -111,18 +111,18 @@
         animation: cursorBlink 1s none infinite;
     }
 
-    #welcome--profile {
+    #profile {
         background: black;
     }
 
-    #welcome--profile #name {
+    #profile #name {
         background:
             radial-gradient(circle at 20% 30%, rgba(104, 4, 192, 0.25), transparent 40%),
             radial-gradient(circle at 80% 70%, rgba(0, 100, 255, 0.2), transparent 50%),
             radial-gradient(circle at 50% 50%, #02010a, #000 80%);
     }
 
-    #welcome--profile #name-display {
+    #profile #name-display {
         user-select: none;
 
         height: 750px;
@@ -137,7 +137,7 @@
         overflow: hidden;
     }
 
-    #welcome--profile #name-display #lanzoor-letters span {
+    #profile #name-display #lanzoor-letters span {
         font-family: 'Geist';
         font-style: italic;
         font-weight: 200;
@@ -152,7 +152,7 @@
         transform-origin: center;
     }
 
-    #welcome--profile #name-display #optimization-indicator {
+    #profile #name-display #optimization-indicator {
         position: absolute;
 
         left: 2%;
@@ -162,11 +162,11 @@
         transition: opacity 0.5s ease;
     }
 
-    #welcome--profile #name-display #optimization-indicator.active {
+    #profile #name-display #optimization-indicator.active {
         opacity: 0.6;
     }
 
-    #welcome--profile #name-display button {
+    #profile #name-display button {
         position: absolute;
 
         padding: 20px 40px;
@@ -194,19 +194,19 @@
         z-index: 101;
     }
 
-    #welcome--profile #name-display button:hover {
+    #profile #name-display button:hover {
         background-position: right center;
         box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
     }
 
-    #welcome--profile #name-display button:active {
+    #profile #name-display button:active {
         transform: scale(0.8);
         box-shadow:
             0 0 10px rgba(123, 0, 255, 0.6),
             inset 0 0 10px rgba(0, 0, 0, 0.6);
     }
 
-    #welcome--profile #name-display canvas {
+    #profile #name-display canvas {
         position: absolute;
         top: 0;
         left: 0;
@@ -216,7 +216,7 @@
         z-index: 0;
     }
 
-    #welcome--profile #profile-wrapper {
+    #profile #profile-wrapper {
         max-width: 30%;
 
         display: flex;
@@ -227,17 +227,17 @@
         text-align: center;
     }
 
-    #welcome--profile #profile-picture {
+    #profile #profile-picture {
         max-width: 50%;
         max-height: auto;
     }
 
-    #welcome--profile #hobbies #programming {
+    #profile #hobbies #programming {
         background:
             radial-gradient(circle at top left, rgba(0, 195, 255, 0.1) 0%, transparent 30%), black;
     }
 
-    #welcome--profile #hobbies #programming .stack-group {
+    #profile #hobbies #programming .stack-group {
         background: #111;
         border: 3px solid #333;
         border-radius: 30px;
@@ -250,7 +250,7 @@
         flex-wrap: wrap;
     }
 
-    #welcome--profile #hobbies #programming .stack-group .stack {
+    #profile #hobbies #programming .stack-group .stack {
         background: #222;
         border: 3px solid #666;
         border-radius: 30px;
@@ -268,23 +268,23 @@
     }
 
     @media (max-width: 768px) {
-        #welcome--intro {
+        #intro {
             backdrop-filter: none;
         }
 
-        #welcome--intro #buttons {
+        #intro #buttons {
             flex-direction: column;
             margin: 100px 0;
         }
 
-        #welcome--profile #name-description {
+        #profile #name-description {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             gap: var(--div-padding);
         }
 
-        #welcome--profile #profile-wrapper {
+        #profile #profile-wrapper {
             max-width: none;
         }
 
@@ -303,11 +303,11 @@
             --logo-font-size: 50px;
         }
 
-        #welcome--profile #name-display {
+        #profile #name-display {
             height: 500px;
         }
 
-        #welcome--profile #nationality #localtime-clock {
+        #profile #nationality #localtime-clock {
             padding: 4%;
             margin: 4% 0;
         }

@@ -171,6 +171,11 @@
             Tools - <a href="/tools">/tools</a><br />
             A collection of some handy tools designed for everyone to use.
         </li>
+
+        <li>
+            Conlangs - <a href="/conlangs">/conlangs</a><br />
+            A collection of my constructed languages.
+        </li>
     </ul>
 </section>
 

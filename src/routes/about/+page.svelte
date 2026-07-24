@@ -2,7 +2,7 @@
     <title>About | lanzoor.dev</title>
 </svelte:head>
 
-<section class="faq">
+<section id="faq">
     <span class="breadcrumbs">
         <a href="/">Home</a>
 
@@ -33,8 +33,14 @@
 
     <p>
         <b>
-            The website is hosted on Vercel and built using HTML, CSS, JavaScript, TypeScript,
-            React, and Vite.
+            The website is hosted on
+            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>
+            and built using
+            <a
+                href="https://svelte.dev/tutorial/kit/introducing-sveltekit"
+                target="_blank"
+                rel="noopener noreferrer">SvelteKit</a
+            >.
         </b>
     </p>
 
@@ -51,7 +57,7 @@
     </p>
 </section>
 
-<section class="contact">
+<section id="contact">
     <h1>Contact</h1>
 
     <p>
@@ -101,8 +107,8 @@
     </blockquote>
 </section>
 
-<section class="domain">
-    <h1>Domain</h1>
+<section id="domain">
+    <h1>Domains</h1>
 
     <h2>Registered Domains</h2>
 
@@ -115,24 +121,56 @@
             <code>lanzoor.dev</code> (the main website)
         </li>
         <li>
-            <code>lanzoor.xyz</code> (redirects to <code>lanzoor.dev</code>, for now)
+            <code>lanzoor.xyz</code> (the website for my profile)
         </li>
         <li>
             <code>lanzaforge.com</code> (redirects to <code>lanzaforge.org</code>)
         </li>
         <li>
-            <code>lanzaforge.org</code> (nothing yet)
+            <code>lanzaforge.org</code> (nothing yet :c)
         </li>
     </ul>
 
     <p>
         If you see any other domain that's not on the list above,
-        <i>it's not affiliated with me, nor Lanzaforge.</i>
+        <i>it's not affiliated with me, nor Lanzaforge.</i><br />
+        I also do not own <code>lanzoor.com</code>. I don't even know what it is about.
     </p>
 
     <h2>Registrar</h2>
 
     <p>
         <b>All of my domains were registered via Porkbun.</b>
+    </p>
+</section>
+
+<section id="legal">
+    <h1>Legal Information</h1>
+
+    <h2>Definition</h2>
+
+    <p>
+        As stated in our <a href="/tos#definitions">Terms of Service</a>, <b>Legal Information</b> refers
+        to the Terms of Service and the Privacy Policy.
+    </p>
+
+    <h2>Notices</h2>
+
+    <p>
+        When you first visit the website, or when existing Legal Information is updated, a notice
+        will appear asking you to accept the Legal Information.<br />
+        <b>Clicking "I Accept" means that you accept the Legal Information.</b>
+        This notice intentionally does not appear on any Legal Information pages, including this page.
+    </p>
+
+    <p>
+        This feature uses the <code>acceptedLegalInfo</code> value stored in your browser's
+        <code>localStorage</code>, which contains the versions of the Legal Information you have
+        previously accepted.
+    </p>
+
+    <p>
+        Since this information is stored in your browser's <code>localStorage</code>, using a
+        different browser or clearing <code>localStorage</code> may cause this notice to appear again.
     </p>
 </section>

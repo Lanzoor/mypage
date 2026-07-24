@@ -1,5 +1,11 @@
 <svelte:head>
-    <title>Lanzoor's Conlangs</title>
+    <title>Conlangs | lanzoor.dev</title>
+
+    <meta
+        property="og:description"
+        content="
+            A collection of my constructed languages."
+    />
 </svelte:head>
 
 <section>
@@ -24,6 +30,13 @@
             <i>Click one of the links below to warp into that page.</i>
         </p>
     </header>
+
+    <blockquote class="error">
+        <b class="col bright red">I am currently taking a break from conlang development.</b><br />
+        I haven't made any progress in my conlangs, and I do not intend to do so until this website is
+        somewhat completed.<br />
+        Please do note that the documents below haven't been maintained.
+    </blockquote>
 
     <ul>
         <li>

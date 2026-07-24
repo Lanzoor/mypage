@@ -16,6 +16,11 @@ h1.logo .head {
     color: #777;
 }
 
+.logo,
+.logo * {
+    transition: 0.5s ease;
+}
+
 .breadcrumbs {
     display: flex;
     flex-wrap: wrap;

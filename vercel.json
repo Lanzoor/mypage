@@ -22,6 +22,11 @@
             "source": "/docs/math/googology/CIN/:path*",
             "destination": "/docs/math/googology/consistent-illion-notation/:path*",
             "permanent": false
+        },
+        {
+            "source": "/profile/:path*",
+            "destination": "https://www.lanzoor.xyz/:path*",
+            "permanent": false
         }
     ]
 }

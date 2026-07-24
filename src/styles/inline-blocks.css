@@ -5,7 +5,7 @@
     }
 
     code,
-    kbd {
+    kbd:not(.plain) {
         display: inline-block;
         font-family: 'JetBrains Mono';
         padding: 4px 8px;
@@ -18,10 +18,24 @@
         padding: 2px 6px;
     }
 
-    kbd {
+    kbd:not(.plain) {
         background: rgb(0, 18, 20);
         color: rgb(140, 249, 255);
         padding: 2px 6px;
+    }
+
+    kbd.plain {
+        display: inline-block;
+        font-family: 'JetBrains Mono';
+        color: #777;
+    }
+
+    kbd.plain::before {
+        content: '<';
+    }
+
+    kbd.plain::after {
+        content: '>';
     }
 
     pre {

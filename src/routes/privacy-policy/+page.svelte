@@ -1,20 +1,7 @@
 <script>
-    import { Analytics } from '$lib';
-    import { onMount } from 'svelte';
+    import { Legal } from '$lib';
 
-    let isEnabled = $state(false);
-    let visitorId = $state('...');
-
-    onMount(() => {
-        isEnabled = Analytics.isEnabled();
-        visitorId = Analytics.getVisitorId() ?? '...';
-    });
-
-    function toggleAnalytics() {
-        Analytics.toggleEnabled();
-        isEnabled = Analytics.isEnabled();
-        visitorId = Analytics.getVisitorId() ?? '...';
-    }
+    const privacyPolicy = Legal.LegalInfo.privacyPolicy;
 </script>
 
 <svelte:head>
@@ -43,133 +30,39 @@
     </header>
 
     <p class="dim">
-        Last updated @ <b>June 29th, 2026</b> | Current version:
-        <b>v3.0</b><br />
+        Last updated @ <b>{privacyPolicy.lastUpdated}</b> | Current version:
+        <b>{privacyPolicy.version}</b><br />
     </p>
 
-    <blockquote class="warning">
-        <b class="col bright yellow">
-            As a side effect of the <a href="/docs/blog/2026/07/svelte-migration">Svelte port</a> + Cloudflare
-            integration, data collection is currently broken.
-        </b>
-        You can safely ignore and
-        <a href="#third-party">skip this section</a>.
-    </blockquote>
-    <h2>Data Collection</h2>
+    <h2 id="data-collection">Data Collection</h2>
 
     <p>
         <b>
-            This website collects a small amount of information about visits for analytics and
-            troubleshooting purposes.
-        </b>
-        The information collected is <i>limited</i> to the following:
-    </p>
-
-    <h2>What We Store</h2>
-
-    <ul>
-        <li>
-            <b>The pathname of your visit.</b><br />
-            This is used to measure page views and understand which pages are visited most frequently.
-        </li>
-
-        <li>
-            <b>The country associated with your visit.</b><br />
-            This is used to understand the geographic distribution of visitors and identify which regions
-            are using the website.
-        </li>
-
-        <li>
-            <b>The timestamp of your visit.</b><br />
-            This is used to determine when visits occurred and to assist with troubleshooting issues that
-            may be related to specific website versions or deployments.
-        </li>
-
-        <li>
-            <b>The referrer.</b><br />
-            This indicates which page or website led you to this website. It is used to understand how
-            visitors discover the website and which external sources are directing traffic to it.
-        </li>
-
-        <li>
-            <b>The user-agent of your visit.</b><br />
-            This is used to determine whether the request was authentic or not.
-        </li>
-
-        <li>
-            <b>The visitor ID.</b><br />
-            The visitor ID is a random anonymous identifier. This is used to distinguish unique visitors,
-            and provide support for data deletion.
-            <i> We do not collect real IP addresses. </i>
-            <b>
-                The visitor ID is not linked to any accounts or a personal identity. Users can clear
-                it by clearing site data / localStorage.
-            </b>
-            We strongly recommend not touching the visitor ID, though; server-based features will stop
-            working unless you know what you're doing.
-            <br /><br />
-
-            Your visitor ID is <code id="visitor-id">{visitorId}</code>. If you don't see a visitor
-            ID, that means you do not have data collection enabled, and the site hasn't generated a
-            user ID for you yet.
-            <b>
-                Alternatively, you can check for the <code>visitorId</code> field in your browser's localStorage.
-            </b>
-        </li>
-    </ul>
-
-    <p>
-        No advertising cookies are used, and no user accounts are required to access the website.
-        <b>The collected data is not sold, shared, or used for advertising purposes.</b>
-    </p>
-
-    <p>
-        This website's analytics system is open source. You may review the implementation in
-        <a href="https://github.com/Lanzoor/core-api/blob/main/app/api/analytics/route.ts"
-            >the source code</a
-        >.
-    </p>
-
-    <h2>How to Opt Out</h2>
-
-    <p>
-        <b>On your first visit, an information panel will appear.</b>
-        Analytics collection is disabled by default and will remain disabled until you make a choice.
-        If you choose to enable analytics, anonymous visit information will be collected according to
-        this privacy policy. If you choose to disable analytics, no analytics data will be collected.
-        Once you have made a choice, the panel will not appear again unless you reset your preference.<br
-        /><br />
-
-        <b>You can change your preference at any time using the button below.</b>
-        Your current choice is stored locally in your browser and can be updated whenever you wish.
-    </p>
-
-    <blockquote>
-        <b>Note:</b> This preference is stored in your browser's localStorage. Clearing your browser data,
-        using a different browser, or using a different device may reset this setting.
-    </blockquote>
-
-    <button
-        id="analytics-toggle"
-        onclick={toggleAnalytics}
-        class:enabled={isEnabled}
-        class:disabled={!isEnabled}
-    >
-        {isEnabled ? 'Disable' : 'Enable'} Analytics
-    </button>
-
-    <h2>How to Request Data Deletion</h2>
-
-    <p>
-        If you would like data associated with your visits to be removed, feel free to
-        <a href="#connections"> get in touch </a> and
-        <b>
-            provide information such as the <a href="#visitor-id">visitor ID</a>, your country, your
-            browser, and more.
+            This website does not intentionally collect or use personal data or use analytics
+            services. Period.
         </b>
     </p>
 
     <h2 id="third-party">Third-Party Services</h2>
+
+    <blockquote>
+        Although we strive to minimize the use of third-party services, some services may be
+        required for the operation, security, and delivery of this website. Please understand!
+    </blockquote>
+
+    <p>
+        These third-party services may process limited information necessary to provide their
+        services. The website does not intentionally share personal information with third parties
+        for advertising, analytics, or tracking purposes.
+    </p>
+
+    <p>
+        <b>
+            Lanzaforge is not affiliated with the services listed below. Lanzaforge does not control
+            how these services process information, and does not access or use information collected
+            by these services for its own purposes.
+        </b>
+    </p>
 
     <h3>Cloudflare</h3>
 
@@ -219,41 +112,4 @@
             </a>.
         </b>
     </p>
-
-    <p>
-        This information is controlled by the hosting provider. It is not accessed or used by the
-        website owner.
-    </p>
 </section>
-
-<style lang="css">
-    #analytics-toggle {
-        border: none;
-        padding: 20px !important;
-        font-size: 30px;
-        font-family: 'JetBrains Mono';
-        margin: 20px 0;
-        border-radius: 5px;
-        cursor: pointer;
-
-        transition: 0.5s ease;
-    }
-
-    #analytics-toggle.enabled {
-        color: rgba(100, 255, 100);
-        background: rgba(25, 100, 25, 0.25);
-    }
-
-    #analytics-toggle.enabled:hover {
-        background: rgba(25, 100, 25, 0.5);
-    }
-
-    #analytics-toggle.disabled {
-        color: rgb(255, 100, 100);
-        background: rgba(100, 25, 25, 0.25);
-    }
-
-    #analytics-toggle.disabled:hover {
-        background: rgba(100, 25, 25, 0.5);
-    }
-</style>

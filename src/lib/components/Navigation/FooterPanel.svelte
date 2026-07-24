@@ -47,8 +47,8 @@
             <div class="group">
                 <h2>General</h2>
                 <a href="/">Frontpage</a>
+                <a href="/profile">Profile</a>
                 <a href="/about">About</a>
-                <a href="/privacy-policy">Privacy Policy</a>
                 <a href="/map">Site map</a>
             </div>
             <div class="group">
@@ -64,11 +64,14 @@
                 <a href="/projects/conlangs">Conlangs</a>
             </div>
             <div class="group">
-                <h2>Credits</h2>
+                <h2>Meta</h2>
+                <a href="/projects/core/changelog">Changelog</a>
                 <a href="/credits">Credits</a>
-                <a href="/credits/contributors">Contributors</a>
-                <a href="/credits/fonts">Font credits</a>
-                <a href="/credits/assets">Asset credits</a>
+            </div>
+            <div class="group">
+                <h2>Legal</h2>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/tos">Terms of Service</a>
             </div>
         </nav>
     </section>
@@ -168,35 +171,29 @@
         }
 
         #footer-panel #navigation #navigation-links {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            gap: 6em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 2.5em;
         }
 
         #footer-panel #navigation #navigation-links .group {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: flex-start;
             gap: 5px;
         }
 
         #footer-panel #navigation #navigation-links .group h2 {
             margin: 0.25em 0 0.5em 0;
             font-family: 'JetBrains Mono';
-            font-size: 30px;
-
+            font-size: 1em;
             color: rgb(123, 61, 255);
         }
 
         #footer-panel #navigation #navigation-links a {
             display: inline-block;
-
             color: #bbb;
+            font-size: 0.8em;
         }
 
         #footer-panel #navigation #navigation-links a:hover {

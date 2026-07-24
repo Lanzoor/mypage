@@ -38,12 +38,12 @@
     });
 </script>
 
-<div id="top-panel" class:hidden class:at-top={atTop}>
+<div id="top-panel" class:hidden aria-hidden={hidden} class:at-top={atTop}>
     <a href="/" class="logo plain">
         <span class="head">lanzoor</span>.<span class="tail">dev</span>
     </a>
 
-    <nav id="top-panel--links">
+    <nav class="links">
         {#each topPanelDestinations as destination}
             <a
                 href={destination.href}
@@ -56,7 +56,7 @@
         {/each}
     </nav>
 
-    <div id="top-panel--buttons">
+    <div class="buttons">
         <img
             src="/assets/icons/hamburger.svg"
             alt="☰"
@@ -79,11 +79,6 @@
         #top-panel * {
             border-radius: 0;
             user-select: none;
-        }
-
-        #top-panel-root a {
-            position: relative;
-            display: inline-block;
         }
 
         #top-panel {
@@ -132,11 +127,6 @@
                 text-shadow 0.5s ease;
         }
 
-        #top-panel .logo,
-        #top-panel .logo * {
-            transition: all 0.5s ease;
-        }
-
         #top-panel .logo:hover {
             text-shadow: 0 0 20px white;
         }
@@ -150,7 +140,7 @@
             text-shadow: 0 0 20px #777;
         }
 
-        #top-panel--buttons {
+        #top-panel .buttons {
             padding: 0;
             margin: 0;
 
@@ -161,7 +151,7 @@
             height: 100%;
         }
 
-        #top-panel--links {
+        #top-panel .links {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -179,7 +169,7 @@
             pointer-events: none;
         }
 
-        #top-panel--links a {
+        #top-panel .links a {
             text-decoration: none;
 
             font-family: 'JetBrains Mono';
@@ -193,17 +183,17 @@
             transition: 0.5s ease;
         }
 
-        #top-panel--links a.current {
+        #top-panel .links a.current {
             background: rgb(28, 4, 78);
             color: rgb(141, 83, 255);
         }
 
-        #top-panel--links a.current:hover {
+        #top-panel .links a.current:hover {
             color: rgb(168, 124, 255);
             text-shadow: 0 0 10px rgb(168, 124, 255, 0.5);
         }
 
-        #top-panel--links a:not(.current):hover {
+        #top-panel .links a:not(.current):hover {
             color: rgba(220, 220, 220);
             text-shadow: 0 0 10px rgba(220, 220, 220, 0.5);
         }
@@ -234,7 +224,7 @@
         }
 
         @media (max-width: 1200px) {
-            #top-panel--links {
+            #top-panel .links {
                 display: none;
             }
         }
@@ -243,7 +233,7 @@
             #top-panel .logo {
                 font-size: 1.5em;
             }
-            #top-panel--links a {
+            #top-panel .links a {
                 font-size: 0.5em;
             }
         }

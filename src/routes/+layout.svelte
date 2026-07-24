@@ -1,13 +1,14 @@
 <script lang="ts">
     import '../app.css';
 
-    import { Analytics } from '$lib';
-    import Notice from '$lib/components/Analytics/Notice.svelte';
-
+    // import { Analytics } from '$lib';
     import { onMount } from 'svelte';
 
     import TopPanel from '$lib/components/Navigation/TopPanel.svelte';
     import FooterPanel from '$lib/components/Navigation/FooterPanel.svelte';
+    import Notice from '$lib/components/Legal/Notice.svelte';
+
+    import { cleanupOldData } from '$lib/cleanup';
 
     let { children } = $props();
 
@@ -16,8 +17,9 @@
     let hydrated = $state(false);
 
     onMount(() => {
-        Analytics.initialize();
+        // Analytics.initialize();
         hydrated = true;
+        cleanupOldData();
     });
 </script>
 
@@ -26,11 +28,6 @@
 <Notice />
 
 <!-- <Navbar /> -->
-
-<!-- <svelte:head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</svelte:head> -->
 
 {#if !hydrated}
     <div id="hydration">
