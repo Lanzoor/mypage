@@ -110,7 +110,7 @@
     <h2>v26.26.0: The Legal Update</h2>
 
     <p class="dim">
-        Release date: <b>July 25th, 2026</b>
+        Release date: <b>July 24th, 2026</b>
     </p>
 
     <p>
