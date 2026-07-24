@@ -1,17 +1,15 @@
-> **Warning**: This repository will soon be permanently merged into `core`. For more information, refer to <>. This file will be updated when the change happens.
+# core
 
-# core-svelte
-
-a Svelte port of `core`, the frontend source code for <https://lanzoor.dev>.
+the frontend source code for <https://lanzoor.dev>.
 
 ## Download
 
 Clone the repository using one of the following commands:
 
 ```sh
-git clone https://github.com/Lanzoor/core-svelte.git
+git clone https://github.com/Lanzoor/core.git
 # or
-gh repo clone Lanzoor/core-svelte
+gh repo clone Lanzoor/core
 ```
 
 ## Install
