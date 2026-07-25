@@ -106,6 +106,22 @@
     </blockquote>
 </section>
 
+<section id="v26-26-1">
+    <h2>Minor update v26.26.1</h2>
+
+    <p class="dim">
+        Release date: <b>July 25th, 2026</b>
+    </p>
+
+    <ul>
+        <li>
+            <span class="col bright green">+</span>
+            Added a link to
+            <a href="https://www.lanzoor.xyz" target="_blank" rel="noopener noreferrer">core-xyz</a>
+            within the <a href="/projects">projects</a> page.
+        </li>
+    </ul>
+</section>
 <section id="v26-26-0">
     <h2>v26.26.0: The Legal Update</h2>
 

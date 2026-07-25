@@ -83,15 +83,14 @@
             </div>
         </div>
 
-        <!-- <div class="project">
-            <h1>core-status</h1>
+        <div class="project">
+            <h1>core-xyz</h1>
 
-            <p class="description">The status page for all of my services. Built with NextJS!</p>
+            <p class="description">The website for my profile.</p>
 
             <div class="tags">
                 <div class="tag wip">wip</div>
                 <div class="tag frontend">frontend</div>
-                <div class="tag backend">backend</div>
                 <div class="tag webpage">webpage</div>
             </div>
 
@@ -99,10 +98,44 @@
 
             <div class="links">
                 <div class="link">
-                    Project: <a href="https://status.lanzoor.dev" target="_blank"> link </a>
+                    Project:
+
+                    <a href="https://lanzoor.xyz" target="_blank" rel="noopener noreferrer">
+                        lanzoor.xyz
+                    </a>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+        <div class="project">
+            <h1>tzepak</h1>
+
+            <p class="description">
+                A strong deterministic password generator that creates unique, reproducible
+                passwords, written in Python.
+            </p>
+
+            <div class="tags">
+                <div class="tag program">program</div>
+                <div class="tag cli">cli</div>
+            </div>
+
+            <hr />
+
+            <div class="links">
+                <div class="link">
+                    Project:
+
+                    <a
+                        href="https://github.com/Lanzoor/tzepak"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github.com/Lanzoor/tzepak
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <div class="project">
             <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>
@@ -292,6 +325,7 @@
 
         line-height: 1.6;
         font-size: 20px;
+        max-width: 25em;
 
         color: rgba(255, 255, 255, 0.7);
     }
