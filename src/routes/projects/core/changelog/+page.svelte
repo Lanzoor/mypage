@@ -1,74 +1,7 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-
-    let visible = $state(false);
-    let searchValue = $state('');
-    let searchDescription = $state('Search for a version!');
-
-    const versionIds = [
-        'v26-25-0',
-        'v26-25-2147483648',
-        'v26-24-2147483647',
-        'v26-24-0',
-        'v26-23-9',
-        'v26-23-8',
-        'v26-23-7',
-        'v26-23-6',
-        'v26-23-5',
-        'v26-23-4',
-        'v26-23-3',
-    ];
-
-    function toggleVisibility(force?: boolean) {
-        visible = force ?? !visible;
-    }
-
-    function handleSearch() {
-        let version = searchValue.trim().toLowerCase();
-
-        if (!version.startsWith('v')) {
-            version = 'v' + version;
-        }
-
-        if (!/^v?\d+(\.\d+)*$/i.test(version)) {
-            searchDescription = 'Invalid version format! Please try again.';
-            return;
-        }
-
-        const targetId = version.replaceAll('.', '-');
-
-        if (!versionIds.includes(targetId)) {
-            searchDescription = "Sorry, we couldn't find that version!";
-            return;
-        }
-
-        document.getElementById(targetId)?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-
-        history.replaceState(null, '', `#${targetId}`);
-
-        searchDescription = `Successfully found version ${version}!`;
-
-        setTimeout(() => {
-            visible = false;
-        }, 750);
-    }
-
-    onMount(() => {
-        const handler = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                visible = false;
-            }
-        };
-
-        document.addEventListener('keydown', handler);
-
-        return () => {
-            document.removeEventListener('keydown', handler);
-        };
-    });
+    import External from '$lib/components/Links/External.svelte';
+    import ChangelogSearch from '$lib/components/Overlays/ChangelogSearch.svelte';
+    import { changelogSearchOverlay } from '$lib/overlays.svelte';
 </script>
 
 <svelte:head>
@@ -85,7 +18,7 @@
 
         <span class="separator">›</span>
 
-        <a href="/projects/core">Core</a>
+        <a href="/projects/core">core</a>
 
         <span class="separator">›</span>
 
@@ -106,22 +39,82 @@
     </blockquote>
 </section>
 
-<section id="v26-26-1">
-    <h2>Minor update v26.26.1</h2>
+<section id="v26-27-0">
+    <h1>v26.27.0: Overly Overhauled Overlays</h1>
 
     <p class="dim">
-        Release date: <b>July 25th, 2026</b>
+        Release date: <b>July 29th, 2026</b>
     </p>
 
     <ul>
         <li>
+            <span class="col bright green">+</span><span class="col bright yellow">~</span>
+            <b>
+                Added a proper overlays system, and migrated all of the existing overlays into the
+                new system.
+            </b><br />
+            The new overlays system supports toggle key-bindings, priorities when rendering / interacting,
+            and escape handlers for all components.<br />
+            This makes it easier to manage or build new overlays.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            <b>Implemented the navigation panel.</b>
+            Only the true OGs will remember the first design for this panel.
+        </li>
+        <li>
             <span class="col bright green">+</span>
             Added a link to
-            <a href="https://www.lanzoor.xyz" target="_blank" rel="noopener noreferrer">core-xyz</a>
+            <External href="https://www.lanzoor.xyz">core-xyz</External>
             within the <a href="/projects">projects</a> page.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added section numbering within legal documents.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added back some legacy pages. This includes
+            <a href="/legacy/profile-old">the old profile</a>.
+        </li>
+        <li>
+            <span class="col bright green">+</span><span class="col bright orange">i</span>
+            Added syntactic sugar components for frequently used elements.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            <b
+                >Changed the Terms Of Service link from <code>/tos</code> to
+                <code>/terms-of-service</code>, and configured a redirect from <code>/tos</code> to
+                <code>/terms-of-service</code>.</b
+            ><br />
+            When referring to the Terms Of Service, feel free to use the shorthand URL
+            <code>/tos</code>. In fact, the in-site links already do this!
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Completely overhauled the <a href="/projects">projects page</a>.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Improved compatibility for devices with smaller widths.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Improved accessibility via adding ARIA roles and reworking on interactive elements whenever
+            possible.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Improved and extended the color palette.
+        </li>
+        <li>
+            <span class="col bright red">-</span>
+            Removed styles within the <a href="/">frontpage</a> that are now irrelevant.
         </li>
     </ul>
 </section>
+
 <section id="v26-26-0">
     <h2>v26.26.0: The Legal Update</h2>
 
@@ -733,25 +726,9 @@
     </blockquote>
 </section>
 
-<div id="search-overlay" class:visible>
-    <p id="search-description">
-        <b>{searchDescription}</b><br />
-        Press the <kbd class="plain">Escape</kbd> key to cancel
-    </p>
+<button id="search-toggle" onclick={() => (changelogSearchOverlay.open = true)}> 🔍 </button>
 
-    <div id="search-options">
-        <input
-            bind:value={searchValue}
-            id="search-bar"
-            placeholder="Enter a version (e.g. v26.1.0)"
-            onkeydown={(e) => e.key === 'Enter' && handleSearch()}
-        />
-
-        <button id="search-button" onclick={handleSearch}> Search </button>
-    </div>
-</div>
-
-<button id="search-toggle" onclick={() => toggleVisibility()}> 🔍 </button>
+<ChangelogSearch />
 
 <style lang="css">
     :root {
@@ -763,8 +740,13 @@
     }
 
     section {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding: 2em 6em;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            padding: 2em;
+        }
     }
 
     #search-toggle {
@@ -788,97 +770,5 @@
         background: #a689ff;
         box-shadow: 0 0 10px #8156ff;
         cursor: pointer;
-    }
-
-    #search-overlay {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(50%);
-
-        position: fixed;
-        inset: 0;
-
-        padding: 2em 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 1em;
-
-        background: var(--search-overlay-bg);
-        z-index: 999;
-
-        transition:
-            opacity 0.5s ease,
-            transform 0.5s ease;
-    }
-
-    #search-overlay.visible {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-
-    #search-description {
-        text-align: center;
-        font-size: 0.75em;
-        letter-spacing: 0.1em;
-    }
-
-    #search-options {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #search-bar {
-        font-family: 'JetBrains Mono';
-
-        padding: 0.5em;
-        border: 1px solid #7155ff;
-        background-color: #1e1e1e;
-        box-shadow: 0 0 20px rgba(84, 25, 153, 0.6);
-        color: white;
-        font-size: 1em;
-        transition: 0.2s ease;
-        width: 600px;
-        max-width: 75vw;
-    }
-
-    #search-options {
-        max-width: 75vw;
-    }
-
-    #search-bar::placeholder {
-        color: #888;
-    }
-
-    #search-bar:focus {
-        outline: none;
-        border-color: #825dff;
-    }
-
-    #search-button {
-        font-family: 'JetBrains Mono';
-
-        background: #7155ff;
-        border: none;
-        color: white;
-
-        padding: 0 10px;
-
-        transition: 0.5s ease;
-    }
-
-    #search-button:hover {
-        background: #aa91ff;
-        cursor: pointer;
-    }
-
-    @media (max-width: 1080px) {
-        :root {
-            --search-overlay-bg: radial-gradient(circle at bottom, rgb(0, 0, 0), transparent 75%);
-        }
     }
 </style>

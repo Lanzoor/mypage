@@ -2,12 +2,12 @@
     import { page } from '$app/state';
     import { Legal, setFrozen } from '$lib';
     import { LegalInfo } from '$lib/legal';
+    import { legalNoticeOverlay } from '$lib/overlays.svelte';
 
     const legalPaths = new Set(['/privacy-policy', '/tos', '/about']);
 
     let isLegalPage = $derived(legalPaths.has(page.url.pathname));
 
-    let isNoticeOpen = $state(false);
     let acceptedLegalInfo = $state(Legal.getAcceptedLegalInfo());
 
     let isPrivacyPolicyUpToDate = $derived(
@@ -20,10 +20,10 @@
 
     $effect(() => {
         if ((!isPrivacyPolicyUpToDate || !isTermsOfServiceUpToDate) && !isLegalPage) {
-            isNoticeOpen = true;
+            legalNoticeOverlay.open = true;
             setFrozen(true);
         } else {
-            isNoticeOpen = false;
+            legalNoticeOverlay.open = false;
             setFrozen(false);
         }
     });
@@ -37,13 +37,17 @@
         Legal.setAcceptedLegalInfo(newConf);
 
         acceptedLegalInfo = newConf;
-        isNoticeOpen = false;
+        legalNoticeOverlay.open = false;
         setFrozen(false);
     }
 </script>
 
 {#if !isLegalPage}
-    <div id="legal-notice" class:open={isNoticeOpen} aria-hidden={!isNoticeOpen}>
+    <div
+        id="legal-notice"
+        class:open={legalNoticeOverlay.open}
+        aria-hidden={!legalNoticeOverlay.open}
+    >
         <h1>[ notice ]</h1>
 
         {#if !acceptedLegalInfo}
@@ -143,7 +147,7 @@
 
         overflow-y: auto;
         transition: opacity 0.3s ease;
-        z-index: 2147483647; /* Very high z-index */
+        z-index: 2147483649;
     }
 
     #legal-notice.open {

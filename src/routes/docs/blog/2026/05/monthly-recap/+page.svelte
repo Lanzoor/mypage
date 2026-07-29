@@ -10,7 +10,7 @@
 <script lang="ts">
     import oldImage from './assets/old.png';
     import newImage from './assets/new.png';
-    import Deleted from '$lib/components/Warnings/Deleted.svelte';
+    import Deleted from '$lib/components/Information/Deleted.svelte';
 </script>
 
 <svelte:head>

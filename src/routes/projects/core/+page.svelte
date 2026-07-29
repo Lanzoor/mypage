@@ -3,7 +3,7 @@
 </svelte:head>
 
 <section id="intro" class="stretched">
-    <span class="structure">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
         <span class="separator">›</span>
@@ -13,7 +13,7 @@
         <span class="separator">›</span>
 
         <a href="/projects/core">core</a>
-    </span>
+    </div>
 
     <header>
         <h1>core</h1>

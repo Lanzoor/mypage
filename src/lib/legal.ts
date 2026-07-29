@@ -45,12 +45,12 @@ class LegalInformation {
 
 export namespace LegalInfo {
     export const privacyPolicy = new LegalInformation(
-        new Date('2026-07-23T10:25:00+09:00'),
-        new Version(4, 0)
+        new Date('2026-07-29T11:37:00+09:00'),
+        new Version(4, 1)
     );
 
     export const termsOfService = new LegalInformation(
-        new Date('2026-07-24T09:30:00+09:00'),
-        new Version(1, 1)
+        new Date('2026-07-29T11:35:00+09:00'),
+        new Version(1, 2)
     );
 }

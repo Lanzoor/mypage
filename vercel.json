@@ -27,6 +27,16 @@
             "source": "/profile/:path*",
             "destination": "https://www.lanzoor.xyz/:path*",
             "permanent": false
+        },
+        {
+            "source": "/terms-of-service/:path*",
+            "destination": "/tos:path*",
+            "permanent": false
+        },
+        {
+            "source": "/test/:path*",
+            "destination": "/testing/:path*",
+            "permanent": false
         }
     ]
 }

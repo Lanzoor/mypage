@@ -1,3 +1,7 @@
+<script>
+    import External from '$lib/components/Links/External.svelte';
+</script>
+
 <svelte:head>
     <title>About | lanzoor.dev</title>
 </svelte:head>
@@ -34,13 +38,9 @@
     <p>
         <b>
             The website is hosted on
-            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>
+            <External href="https://vercel.com">Vercel</External>
             and built using
-            <a
-                href="https://svelte.dev/tutorial/kit/introducing-sveltekit"
-                target="_blank"
-                rel="noopener noreferrer">SvelteKit</a
-            >.
+            <External href="https://svelte.dev/docs/kit/introduction">SvelteKit</External>.
         </b>
     </p>
 
@@ -48,12 +48,11 @@
 
     <p>
         <b>
-            This website is maintained by
+            This website is currently maintained by
             <span class="col bright purple">Lanzoor</span>, an individual developer from Korea,
+            under the organization
+            <External href="https://www.lanzaforge.org/">Lanzaforge</External>.
         </b>
-        as well as an amazing group of contributors who help with development, testing, feedback and much
-        more. If you're curious about the contributors, please check out
-        <a href="/credits/contributors">this page</a>!
     </p>
 </section>
 
@@ -75,7 +74,7 @@
         <div class="contact-item">
             Discord
 
-            <a href="https://discord.com/users/1160164047111606292" target="_blank"> lanzoor </a>
+            <External href="https://discord.com/users/1160164047111606292">@lanzoor</External>
         </div>
         <div class="contact-item">
             Email

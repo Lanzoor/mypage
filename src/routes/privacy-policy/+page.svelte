@@ -1,5 +1,6 @@
 <script>
     import { Legal } from '$lib';
+    import External from '$lib/components/Links/External.svelte';
 
     const privacyPolicy = Legal.LegalInfo.privacyPolicy;
 </script>
@@ -34,7 +35,7 @@
         <b>{privacyPolicy.version}</b><br />
     </p>
 
-    <h2 id="data-collection">Data Collection</h2>
+    <h2 id="data-collection">α. Data Collection</h2>
 
     <p>
         <b>
@@ -43,12 +44,14 @@
         </b>
     </p>
 
-    <h2 id="third-party">Third-Party Services</h2>
+    <h2 id="third-party">β. Third-Party Services</h2>
 
     <blockquote>
         Although we strive to minimize the use of third-party services, some services may be
         required for the operation, security, and delivery of this website. Please understand!
     </blockquote>
+
+    <h3>Information</h3>
 
     <p>
         These third-party services may process limited information necessary to provide their
@@ -67,49 +70,39 @@
     <h3>Cloudflare</h3>
 
     <p>
-        <b>
-            We use Cloudflare to provide DNS, content delivery, and email routing services. As part
-            of providing these services, Cloudflare may process technical information such as IP
-            addresses. For more information, please refer to
-            <a
-                href="https://www.cloudflare.com/privacypolicy/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Cloudflare's privacy policy
-            </a>.
-        </b>
+        <b
+            >Cloudflare provides DNS, content delivery, and email routing services for this website.</b
+        ><br />
+        As part of providing these services, Cloudflare may process technical information such as IP addresses.<br
+        />
+        For more information, please refer to
+        <External href="https://www.cloudflare.com/privacypolicy/">
+            Cloudflare's privacy policy
+        </External>.
     </p>
 
     <h3>Vercel</h3>
 
     <p>
-        <b>
-            This website is hosted via Vercel. As part of normal operation, Vercel may collect
-            technical information such as IP addresses, request logs, and performance metrics. For
-            more information, please refer to
-            <a
-                href="https://vercel.com/legal/privacy-notice#how-we-use-info"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Vercel's privacy policy
-            </a>.
-        </b>
+        <b>This website is hosted via Vercel.</b><br />
+        As part of normal operation, Vercel may collect technical information such as IP addresses, request
+        logs, and performance metrics.<br />For more information, please refer to
+        <External href="https://vercel.com/legal/privacy-notice#how-we-use-info">
+            Vercel's privacy policy
+        </External>.
     </p>
 
     <h3>Google Fonts</h3>
 
     <p>
-        <b>
-            This website loads fonts via Google Fonts. For more information, please refer to
-            <a
-                href="https://developers.google.com/fonts/faq/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Google Fonts' privacy policy
-            </a>.
-        </b>
+        <b>This website loads fonts via Google Fonts.</b><br />
+        For more information, please refer to
+        <a
+            href="https://developers.google.com/fonts/faq/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Google Fonts' privacy policy
+        </a>.
     </p>
 </section>

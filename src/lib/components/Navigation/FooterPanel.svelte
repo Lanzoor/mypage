@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import External from '../Links/External.svelte';
 
     let frontendVersion: string = $state('...');
     let backendVersion: string = $state('...');
@@ -60,7 +61,7 @@
                 <h2>Projects</h2>
                 <a href="/projects">Projects</a>
                 <a href="/tools">Tools</a>
-                <a href="/projects/videos" target="_blank" rel="noopener noreferrer">Videos</a>
+                <External href="/projects/videos">Videos</External>
                 <a href="/projects/conlangs">Conlangs</a>
             </div>
             <div class="group">
@@ -95,37 +96,25 @@
 
         <div id="footer">
             <div id="connections">
-                <a href="https://www.discord.com" target="_blank" rel="noopener noreferrer">
+                <External href="https://www.discord.com" showArrow={false}>
                     <img src="/assets/icons/socials/discord.svg" alt="Discord" />
-                </a>
+                </External>
 
-                <a
-                    href="https://www.reddit.com/user/Lanzoor/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <External href="https://www.reddit.com/user/Lanzoor/" showArrow={false}>
                     <img src="/assets/icons/socials/reddit.svg" alt="Reddit" />
-                </a>
+                </External>
 
-                <a href="https://github.com/Lanzoor" target="_blank" rel="noopener noreferrer">
+                <External href="https://github.com/Lanzoor" showArrow={false}>
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
-                </a>
+                </External>
 
-                <a
-                    href="https://steamcommunity.com/id/lanzoor/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <External href="https://steamcommunity.com/id/lanzoor/" showArrow={false}>
                     <img src="/assets/icons/socials/steam.svg" alt="steam" />
-                </a>
+                </External>
 
-                <a
-                    href="https://www.youtube.com/@lanzoorgaming"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <External href="https://www.youtube.com/@lanzoorgaming" showArrow={false}>
                     <img src="/assets/icons/socials/youtube.svg" alt="YouTube" />
-                </a>
+                </External>
 
                 <a href="mailto:mail@lanzoor.dev">
                     <img src="/assets/icons/socials/email.svg" alt="Email" />
@@ -133,133 +122,119 @@
             </div>
 
             <footer>
-                © 2026 | <a href="https://lanzaforge.org" target="_blank" rel="noopener noreferrer"
-                    >Lanzaforge</a
-                >
+                © 2026 | <External href="https://lanzaforge.org">Lanzaforge</External>
             </footer>
         </div>
     </section>
 </section>
 
 <style lang="css">
-    @layer component {
-        :root {
-            --footer-panel-bg: radial-gradient(circle at 50% -25%, #22054d 0%, #000 100%);
-        }
+    :root {
+        --footer-panel-bg: radial-gradient(circle at 50% -25%, #22054d 0%, #000 100%);
+    }
 
-        #footer-panel {
-            padding: auto 10%;
-            background: var(--footer-panel-bg);
-            border-top: 3px solid rgba(133, 91, 224, 0.5);
+    #footer-panel {
+        padding: auto 10%;
+        background: var(--footer-panel-bg);
+        border-top: 3px solid rgba(133, 91, 224, 0.5);
 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2%;
 
-            font-family: 'JetBrains Mono';
-        }
+        font-family: 'JetBrains Mono';
+    }
 
-        #footer-panel section {
-            width: 100%;
-        }
+    #footer-panel section {
+        width: 100%;
+    }
 
-        #footer-panel #navigation {
-            padding: 4% 10%;
-            border-bottom: 3px solid rgba(133, 91, 224, 0.5);
-        }
+    #footer-panel #navigation {
+        padding: 4em;
+        border-bottom: 3px solid rgba(133, 91, 224, 0.5);
+    }
 
-        #footer-panel #navigation #navigation-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 2.5em;
-        }
+    #footer-panel #navigation #navigation-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5em;
+    }
 
-        #footer-panel #navigation #navigation-links .group {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
-        }
+    #footer-panel #navigation #navigation-links .group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-        #footer-panel #navigation #navigation-links .group h2 {
-            margin: 0.25em 0 0.5em 0;
-            font-family: 'JetBrains Mono';
-            font-size: 1em;
-            color: rgb(123, 61, 255);
-        }
+    #footer-panel #navigation #navigation-links .group h2 {
+        margin: 0.25em 0 0.5em 0;
+        font-family: 'JetBrains Mono';
+        font-size: 1em;
+        color: rgb(123, 61, 255);
+    }
 
-        #footer-panel #navigation #navigation-links a {
-            display: inline-block;
-            color: #bbb;
-            font-size: 0.8em;
-        }
+    #footer-panel #footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
 
-        #footer-panel #navigation #navigation-links a:hover {
-            color: #eee;
-            text-decoration: none;
-        }
-
+    @media (max-width: 768px) {
         #footer-panel #footer {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            #footer-panel #footer {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 1em;
-            }
-
-            #footer-panel #footer footer {
-                align-self: flex-end;
-            }
-        }
-
-        #footer-panel #connections {
-            display: flex;
             flex-direction: column;
-        }
-
-        #footer-panel #connections {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0.75em;
-        }
-
-        #footer-panel #connections img {
-            width: 1.75em;
-            height: 1.75em;
-            opacity: 0.6;
-
-            transition: 0.5s ease;
-        }
-
-        #footer-panel #connections img:hover {
-            opacity: 1;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1em;
         }
 
         #footer-panel #footer footer {
-            opacity: 0.75;
+            align-self: flex-end;
+        }
+    }
+
+    #footer-panel #connections {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-panel #connections {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75em;
+    }
+
+    #footer-panel #connections img {
+        width: 1.75em;
+        height: 1.75em;
+        opacity: 0.6;
+
+        transition: 0.5s ease;
+    }
+
+    #footer-panel #connections img:hover {
+        opacity: 1;
+    }
+
+    #footer-panel #footer footer {
+        opacity: 0.75;
+    }
+
+    @media (max-width: 1080px) {
+        #footer-panel #navigation #navigation-links {
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 1080px) {
-            #footer-panel #navigation #navigation-links {
-                flex-wrap: wrap;
-            }
-
-            #footer-panel #footer footer {
-                font-size: 0.75em;
-            }
+        #footer-panel #footer footer {
+            font-size: 0.75em;
         }
     }
 </style>

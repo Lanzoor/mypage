@@ -6,9 +6,12 @@
 
     import TopPanel from '$lib/components/Navigation/TopPanel.svelte';
     import FooterPanel from '$lib/components/Navigation/FooterPanel.svelte';
-    import Notice from '$lib/components/Legal/Notice.svelte';
+    import NavigationPanel from '$lib/components/Overlays/NavigationPanel.svelte';
+    import Notice from '$lib/components/Overlays/LegalNotice.svelte';
 
     import { cleanupOldData } from '$lib/cleanup';
+    import WarpPanel from '$lib/components/Overlays/WarpPanel.svelte';
+    import { handleEscape } from '$lib/overlays.svelte';
 
     let { children } = $props();
 
@@ -20,14 +23,18 @@
         // Analytics.initialize();
         hydrated = true;
         cleanupOldData();
+
+        const listener = handleEscape();
+        document.addEventListener('keydown', listener);
+        return () => {
+            document.removeEventListener('keydown', listener);
+        };
     });
 </script>
 
 <TopPanel />
 
 <Notice />
-
-<!-- <Navbar /> -->
 
 {#if !hydrated}
     <div id="hydration">
@@ -45,3 +52,7 @@
 </main>
 
 <FooterPanel />
+
+<NavigationPanel />
+
+<WarpPanel />

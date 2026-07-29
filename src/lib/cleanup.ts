@@ -1,4 +1,4 @@
-const keysToRemove = ['hasSeenNotice', 'isTrackingAllowed', 'legalConf', 'visitorId'];
+const keysToRemove = ['hasSeenNotice', 'isTrackingAllowed', 'legalConf'];
 
 export function cleanupOldData() {
     if (typeof window === 'undefined') return;

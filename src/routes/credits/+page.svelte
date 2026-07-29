@@ -17,8 +17,9 @@
 
     <blockquote class="warning">
         <b class="col bright yellow">
-            This page is currently being moved to Lanzaforge, where credits and attribution
-            information will be maintained across all projects.
+            This page, as well as every page under <code>/credits</code>, is currently being moved
+            to Lanzaforge, where credits and attribution information will be maintained across all
+            projects.
         </b>
         <br />
         Some information here may be outdated during the migration. Thanks for your patience!

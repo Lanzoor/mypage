@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-    import Outdated from '$lib/components/Warnings/Outdated.svelte';
+    import Outdated from '$lib/components/Information/Outdated.svelte';
 </script>
 
 <svelte:head>

@@ -63,14 +63,6 @@
 </section>
 
 <style lang="css">
-    :root {
-        --logo-font-size: 100px;
-    }
-
-    #intro .logo {
-        min-height: calc(var(--logo-font-size) * 1.5);
-    }
-
     #iris-background {
         background-image: url('/assets/backgrounds/iris.jpg');
         background-position: center center;
@@ -98,218 +90,30 @@
     }
 
     #intro header .logo {
-        font-size: var(--logo-font-size);
+        font-size: 4em;
+        height: 1em;
+
         user-select: none;
         position: relative;
+        line-height: 0;
+    }
+
+    @media (max-width: 768px) {
+        #intro header .logo {
+            font-size: 3em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #intro header .logo {
+            font-size: 2em;
+        }
     }
 
     #intro header .logo::after {
         position: absolute;
         left: auto;
-        bottom: 4px;
         content: '_';
         animation: cursorBlink 1s none infinite;
-    }
-
-    #profile {
-        background: black;
-    }
-
-    #profile #name {
-        background:
-            radial-gradient(circle at 20% 30%, rgba(104, 4, 192, 0.25), transparent 40%),
-            radial-gradient(circle at 80% 70%, rgba(0, 100, 255, 0.2), transparent 50%),
-            radial-gradient(circle at 50% 50%, #02010a, #000 80%);
-    }
-
-    #profile #name-display {
-        user-select: none;
-
-        height: 750px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        transition: all 0.5s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #profile #name-display #lanzoor-letters span {
-        font-family: 'Geist';
-        font-style: italic;
-        font-weight: 200;
-        font-size: 4%;
-        color: white;
-
-        text-shadow: 0 0 20px rgb(121, 137, 255);
-
-        line-height: 1;
-        white-space: nowrap;
-        display: inline-block;
-        transform-origin: center;
-    }
-
-    #profile #name-display #optimization-indicator {
-        position: absolute;
-
-        left: 2%;
-        bottom: 2%;
-        opacity: 0;
-
-        transition: opacity 0.5s ease;
-    }
-
-    #profile #name-display #optimization-indicator.active {
-        opacity: 0.6;
-    }
-
-    #profile #name-display button {
-        position: absolute;
-
-        padding: 20px 40px;
-        border-radius: 999px;
-
-        right: 2%;
-        bottom: 2%;
-
-        font-family: 'JetBrains Mono';
-        font-size: 20px;
-
-        color: white;
-        border: none;
-        cursor: pointer;
-
-        background: linear-gradient(135deg, #7b00ffaa, #008cffaa);
-        background-size: 200% 200%;
-        backdrop-filter: blur(4px);
-
-        box-shadow: 0 0 20px rgba(87, 41, 255, 0.5);
-        animation: floatAnimation ease-in-out 2s infinite;
-
-        transition: all 0.2s ease;
-
-        z-index: 101;
-    }
-
-    #profile #name-display button:hover {
-        background-position: right center;
-        box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-    }
-
-    #profile #name-display button:active {
-        transform: scale(0.8);
-        box-shadow:
-            0 0 10px rgba(123, 0, 255, 0.6),
-            inset 0 0 10px rgba(0, 0, 0, 0.6);
-    }
-
-    #profile #name-display canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    #profile #profile-wrapper {
-        max-width: 30%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-    }
-
-    #profile #profile-picture {
-        max-width: 50%;
-        max-height: auto;
-    }
-
-    #profile #hobbies #programming {
-        background:
-            radial-gradient(circle at top left, rgba(0, 195, 255, 0.1) 0%, transparent 30%), black;
-    }
-
-    #profile #hobbies #programming .stack-group {
-        background: #111;
-        border: 3px solid #333;
-        border-radius: 30px;
-        padding: 3%;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    #profile #hobbies #programming .stack-group .stack {
-        background: #222;
-        border: 3px solid #666;
-        border-radius: 30px;
-
-        margin: 1%;
-        padding: 3%;
-    }
-
-    .stack-group .stack .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 20px;
-    }
-
-    @media (max-width: 768px) {
-        #intro {
-            backdrop-filter: none;
-        }
-
-        #intro #buttons {
-            flex-direction: column;
-            margin: 100px 0;
-        }
-
-        #profile #name-description {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            gap: var(--div-padding);
-        }
-
-        #profile #profile-wrapper {
-            max-width: none;
-        }
-
-        #connections #social-icons {
-            gap: 5px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-        }
-    }
-
-    @media (max-width: 1080px) {
-        :root {
-            --logo-font-size: 50px;
-        }
-
-        #profile #name-display {
-            height: 500px;
-        }
-
-        #profile #nationality #localtime-clock {
-            padding: 4%;
-            margin: 4% 0;
-        }
     }
 </style>
