@@ -1,0 +1,290 @@
+<script lang="ts">
+    import './styles.css';
+</script>
+
+<div class="container">
+    <h1 id="top">Welcome to my profile!</h1>
+
+    <div id="profile-block">
+        <img id="profile-pic" src="/assets/contributors/iris-modern.png" alt="Profile picture" />
+        <p style="text-align: center; margin-top: 10px">
+            Original character <b>Iris</b> made by me
+        </p>
+    </div>
+
+    <blockquote>
+        <h2>Notice</h2>
+
+        <b>This website is being replaced by the new profile website.</b><br />
+        Head to <a href="/profile/index.html">lanzoor.dev/profile</a> for the new website!
+        <b>However, it's still incomplete right now.</b><br />
+        Please read <a href="/docs/announcements/0004.html">announcement 0004</a> for more details.<br
+        />
+        Thank you for your understanding!<br /><br />
+
+        This website, as well as the websites included below, is meant to be supported for modern
+        browsers on PC.<br />
+        If you see any issues on your device, please <a href="#connections">contact me</a>
+        with your device information and let me know!<br />
+        Hover over
+
+        <span class="tooltip">
+            <span class="tooltip-label">purple</span>
+            <span class="tooltip-text">Yep, just like this! :D</span>
+        </span>
+        text for additional information. <b>Have a nice day! 👋</b>
+    </blockquote>
+
+    <h2>The Portal</h2>
+
+    <p>
+        Check out my works! <span class="dim"
+            >(There's not a lot here, but I promise I am working on them!!)</span
+        ><br />
+    </p>
+
+    <hr />
+    <br />
+
+    <b>My document archive</b> -
+    <a href="https://lanzoor.github.io/documents/">lanzoor.github.io/documents/</a><br />
+    <b>VSCode Tweaks</b> -
+    <a href="https://github.com/Lanzoor/vscode-tweaks/">github.com/Lanzoor/vscode-tweaks/</a><br />
+
+    <h2>About me</h2>
+
+    <div id="status-bar">
+        <b>Status:</b> 😭 The trip ended ALREADY, so I'm back to Korea! 🇰🇷
+    </div>
+
+    <hr />
+    <br />
+
+    <p>
+        <b>Hello there!</b> 👋<br />
+
+        I go by the name of
+
+        <span class="tooltip">
+            <span class="tooltip-label">Lanzoor</span>
+            <span class="tooltip-text">
+                There's no specific origin in this name, <br />I just thought of it when I was very
+                young.<br />
+                My name is pronounced <b>/lɑn'zɔəɹ/</b>,<br />and the <b>oo</b> in my name is NOT
+                pronounced like
+                <i>/u/</i>.
+            </span>
+        </span>, but you can also call me <b>Lanzy</b>!<br />
+
+        My Japanese name is
+
+        <span class="tooltip">
+            <span class="tooltip-label">光星 蘭蒼瑠 (こうせい らんそうる)</span>
+            <span class="tooltip-text">
+                The primary name means <b>glowing star</b>,<br />
+                and the secondary name means<br />
+                <b>orchid + teal/blue/cyan + lapis lazuli</b>.<br />
+            </span>
+        </span>
+        but you can still call me ランジョア.
+
+        <span class="tooltip">
+            <span class="tooltip-label">Here</span>
+            <span class="tooltip-text">
+                German, Dutch - <b>Lanzo</b><br />
+                toki pona - jan <b>Lanso</b><br />
+                Greek - <b>Κόσει Λάνσο</b><br />
+                Russian - <b>Косей Лансо</b>
+            </span>
+        </span>
+        are my names in other languages!<br />
+        I also have a few more aliases, but they are not used anymore. If you want a new language added,
+        feel free to contact me.<br />
+
+        My pronouns are <b>he/him</b>, and I live in <b>South Korea</b> 🇰🇷!
+        <span class="dim"
+            >(UTC+9 / GMT+9, my local time is <code id="time-text">HH:MM:SS</code>!)</span
+        ><br />
+
+        I am usually active on Discord most of the time. My birthday is <b>November 2nd</b> 🎂, and
+        my favorite colors are
+        <b id="favorite-color">Blue / Indigo / Purple</b>. My MBTI is
+
+        <span class="tooltip">
+            <span class="tooltip-label">INTP</span>
+            <span class="tooltip-text">
+                I - Introverted<br />
+                N - Overthinks<br />
+                T - Thinks before empathizing<br />
+                P - Prefers the flow
+            </span>
+        </span>!<br />
+
+        I enjoy doing lots of activities, so here's a very detailed explanation for each one of
+        them!
+    </p>
+
+    <ul>
+        <li>
+            <h3>💻 Making random programs and learning programming languages</h3>
+
+            I use<b>Linux Mint</b>, and a
+
+            <span class="tooltip">
+                <span class="tooltip-label">custom modification</span>
+                <span class="tooltip-text">
+                    I wrote code for it as well! Check out vscode-tweaks from the portal above.
+                </span>
+            </span>
+            of <b>VSCode</b> for programming. Please do not judge me for this!! I do not want to
+            force myself into intense programming work, so I usually make small projects in my free
+            time.<br /><br />
+
+            First off, I really like making documents and webpages (like this!) using
+            <b>HTML, CSS, and occasionally JavaScript</b>. I am usually expected to write code in
+            <b>Python</b>, because it suits the best for me. I am also able to write some code in
+            <b>JavaScript</b>
+            and <b>TypeScript</b> using <b>Node</b>.<br /><br />
+
+            I am familiar with most vanilla features in Python, and I started learning some
+            libraries for my projects. I can create GUI programs via <code>pygame</code>, and I
+            usually use Python to make interactive CLIs and TUIs with dynamic output or utility
+            scripts.<br /><br />
+
+            When I was first starting programming, I started by learning JavaScript, so I know lots
+            of rather
+            <i>random</i> things about JavaScript. I don't know whether this was a good choice or
+            not, since I did not have any goal due to me being really young. However, I still suck
+            at actual web development, so I try to improve myself in web development by making
+            simple games and webpages.<br /><br />
+
+            <span class="dim"
+                >(I can also write some Markdown code, and a bit of LaTeX. But they're not actual
+                programming languages, right?)</span
+            >
+        </li>
+
+        <li>
+            <h3>🌐 Studying languages, linguistics, and making conlangs</h3>
+
+            I want to study and experience many languages for my conlangs and for fun. It's really
+            fun studying the linguistic features of a language, and it really helps me learn new
+            languages both faster and more efficiently.<br /><br />
+
+            I can speak <b>Korean (C1)</b>, <b>English (B2 ~ C1)</b> and
+            <b>Japanese (B1, N4 ~ N3)</b>
+            somewhat fluently! I can have most conversations in the languages above without lots of troubles.
+            I'm also currently studying <b>Dutch (A2), German (A1)</b> and
+            <b>Chinese (A2)</b>. I am really interested in studying <b>Greek</b>, though!<br /><br
+            />
+
+            For learning English, I used the <i>immersion method</i>™. I talked to a lot of online
+            friends, and consumed a HECK TON of English content. This was really effective for me,
+            because it was both fun and beneficial. English is one of the hardest languages to
+            learn, so if you ever feel stuck,
+            <b>you should definitely try out the immersion method!</b><br /><br />
+
+            I started learning Japanese some-time around <b>March 2025</b> because I discovered
+            Japanese music and anime. I really like talking to my friends in Japanese, as well as
+            comparing the language with Korean.
+            <span class="dim">(They actually share grammar and vocabulary roots!)</span><br /><br />
+
+            I used to be <b>somewhat decent</b> at Chinese <i>(HSK 2~3)</i> when I was younger, but
+            <b>I forgot most of it</b> due to dismotivation. Recently, I got motivated to learn Chinese
+            again for some reason, so I'm trying my best to remember all the vocabulary. I blame my younger
+            self for this, Chinese vocab is way too stressful to learn aaa
+        </li>
+
+        <li>
+            <h3>🔬 Studying science and its various sub-branches</h3>
+
+            I like most sub-branches of science, but I especially like<b
+                >🔭 astronomy, ⚛️ physics, and 🧪 chemistry.</b
+            ><br />
+            <b>I especially love astronomy,</b> because I had interest in it ever since I was really
+            young.<br />
+            Studying science isn't in my top priorities anymore, but when someone brings up the topic,
+            I am still going to like it.
+        </li>
+
+        <hr />
+
+        <li>
+            <h3>🎮 Playing games</h3>
+
+            I especially like<b
+                >idle/clicker/incremental games, rhythm games, puzzle games, space simulation games,
+                and platformer games.</b
+            ><br />
+            However, I don't really like horror games, adventure games, resource-management heavy games
+            and RPG games, though.<br />
+            I play games everytime I'm bored or I'm overwhelmed by everything, but lately I have been
+            returning back to programming.
+        </li>
+
+        <li>
+            <h3>🎧 Listening to music, and playing instruments</h3>
+
+            I really,<i>really</i> like Japanese music. I mostly enjoy
+            <b>Project Sekai and vocaloid</b>
+            songs, as well as general J-pop.<br />
+            I also listen to electronic music occasionally. I always put music on when programming or
+            working on anything.<br />
+            I can also play the drum, but I'm not really that good at it. I used to be able to play the
+            piano, but I didn't find fun in playing the piano so I quit.<br />
+            I love music theory, <b>and I want to make music someday as well!</b>
+        </li>
+
+        <li>
+            <h3>🎬 Watching anime and shows</h3>
+
+            I really like watching anime in my free time, it really helps motivate myself for
+            everything.<br />
+            I enjoy most genres of anime, but my favorites include
+            <b>comedy, tragedy, slice-of-life, romance, iyashikei, and gore.</b>
+            (please don't judge btw 😭)<br />
+            Recently, I wasn't able to watch anime because my schedule was occupied, but now that things
+            are starting to clear up, I may return to binge-watching anime!
+        </li>
+
+        <li>
+            <h3>🧊 Solving Rubik's cubes</h3>
+
+            I can speedcube somewhat decently, but I also like solving lots of different types of
+            cubes. My PB /
+
+            <span class="tooltip">
+                <span class="tooltip-label">PR</span>
+                <span class="tooltip-text">Yup, it was in an official WCA competition!</span>
+            </span>
+            on the 3x3 cube is <b>14.6 seconds</b>.<br />
+            I would really like to participate in more of those fun cubing competitions!<br />
+            I don't find fun in cubing compared to what I used to before, but I used to know a lot of
+            things about cubing.
+        </li>
+
+        <li>
+            <h3>...and more!</h3>
+
+            I also have some other small interests and hobbies, but I'd really like to try out other
+            things as well!
+        </li>
+    </ul>
+
+    <hr />
+    <br />
+
+    <p>
+        That said, if you have any suggestions for any of my conlangs or my works, feel free to <a
+            href="#connections"
+            >contact me
+        </a>
+        and ask me about your inquiry!<br />
+    </p>
+</div>
+
+<style>
+    .container {
+        margin-bottom: 300px;
+    }
+</style>

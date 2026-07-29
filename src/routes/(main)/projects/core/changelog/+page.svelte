@@ -50,17 +50,16 @@
         <li>
             <span class="col bright green">+</span><span class="col bright yellow">~</span>
             <b>
-                Added a proper overlays system, and migrated all of the existing overlays into the
-                new system.
+                Added a proper overlays system and migrated all existing overlays to the new system.
             </b><br />
-            The new overlays system supports toggle key-bindings, priorities when rendering / interacting,
+            The new overlays system supports toggle keybindings, interaction and rendering priorities,
             and escape handlers for all components.<br />
-            This makes it easier to manage or build new overlays.
+            This makes managing existing overlays and creating new ones much easier.
         </li>
         <li>
             <span class="col bright green">+</span>
             <b>Implemented the navigation panel.</b>
-            Only the true OGs will remember the first design for this panel.
+            Only the true OGs remember its first design.
         </li>
         <li>
             <span class="col bright green">+</span>
@@ -70,26 +69,27 @@
         </li>
         <li>
             <span class="col bright green">+</span>
-            Added section numbering within legal documents.
+            Added section numbering for legal documents.
         </li>
         <li>
             <span class="col bright green">+</span>
-            Added back some legacy pages. This includes
+            Added back several legacy pages, including
             <a href="/legacy/profile-old">the old profile</a>.
         </li>
         <li>
             <span class="col bright green">+</span><span class="col bright orange">i</span>
-            Added syntactic sugar components for frequently used elements.
+            <b>Added the <code>External</code> component, and its appropriate styles.</b><br />
+            This component is used when referencing external links.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            <b
-                >Changed the Terms Of Service link from <code>/tos</code> to
-                <code>/terms-of-service</code>, and configured a redirect from <code>/tos</code> to
-                <code>/terms-of-service</code>.</b
-            ><br />
-            When referring to the Terms Of Service, feel free to use the shorthand URL
-            <code>/tos</code>. In fact, the in-site links already do this!
+            <b>
+                Changed the Terms Of Service URL from <code>/tos</code> to
+                <code>/terms-of-service</code>, and added a redirect from <code>/tos</code> to
+                <code>/terms-of-service</code>.
+            </b><br />
+            The shorthand URL <code>/tos</code> can still be used when referring to the Terms Of Service.
+            In fact, all in-site links already use it.
         </li>
         <li>
             <span class="col bright yellow">~</span>
@@ -97,20 +97,19 @@
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved compatibility for devices with smaller widths.
+            Improved compatibility with devices with smaller screen widths.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved accessibility via adding ARIA roles and reworking on interactive elements whenever
-            possible.
+            Improved accessibility by adding ARIA roles and reworking interactive elements where possible.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved and extended the color palette.
+            Improved and expanded the color palette.
         </li>
         <li>
             <span class="col bright red">-</span>
-            Removed styles within the <a href="/">frontpage</a> that are now irrelevant.
+            Removed irrelevant styles from the <a href="/">front page</a>.
         </li>
     </ul>
 </section>
