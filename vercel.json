@@ -29,8 +29,8 @@
             "permanent": false
         },
         {
-            "source": "/terms-of-service/:path*",
-            "destination": "/tos:path*",
+            "source": "/tos/:path*",
+            "destination": "/terms-of-service/:path*",
             "permanent": false
         },
         {
