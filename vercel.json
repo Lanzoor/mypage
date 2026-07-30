@@ -41,7 +41,7 @@
         {
             "source": "/legacy/:path*",
             "destination": "https://legacy.lanzoor.dev/:path*",
-            "permanent": false
+            "permanent": true
         }
     ]
 }
