@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '../../app.css';
+    import '../app.css';
 
     // import { Analytics } from '$lib';
     import { onMount } from 'svelte';

@@ -105,6 +105,33 @@
 
         <div class="project">
             <div class="header">
+                <h1>core-legacy</h1>
+
+                <div class="status complete">complete</div>
+            </div>
+
+            <p class="description">
+                An archive containing previous documents related to me that are no longer actively
+                maintained.
+            </p>
+
+            <div class="tags">
+                <div class="tag frontend">frontend</div>
+                <div class="tag webpage">webpage</div>
+            </div>
+
+            <hr />
+
+            <div class="links">
+                links:
+
+                <External href="https://legacy.lanzoor.dev">project</External>
+                <External href="https://github.com/Lanzoor/core-legacy">source</External>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="header">
                 <h1>tzepak</h1>
 
                 <div class="status wip">wip</div>
@@ -151,30 +178,12 @@
                 <External href="https://github.com/Lanzoor/BHOJ">source</External>
             </div>
         </div>
-
-        <div class="project">
-            <div class="header">
-                <h1>periodica</h1>
-
-                <div class="status archived">archived</div>
-            </div>
-
-            <p class="description">A periodic table CLI made in python.</p>
-
-            <div class="tags">
-                <div class="tag program">program</div>
-                <div class="tag cli">cli</div>
-            </div>
-
-            <hr />
-
-            <div class="links">
-                links:
-
-                <External href="https://github.com/Lanzoor/periodica">source</External>
-            </div>
-        </div>
     </div>
+
+    <p>
+        For archived projects, please refer to
+        <External href="https://legacy.lanzoor.dev">legacy.lanzoor.dev</External>.
+    </p>
 </section>
 
 <section id="portal">
@@ -293,11 +302,6 @@
     .project .header .status.wip {
         color: var(--bright-yellow);
         background: color-mix(in oklch, black, var(--bright-yellow) 25%);
-    }
-
-    .project .header .status.archived {
-        color: var(--bright-red);
-        background: color-mix(in oklch, black, var(--bright-red) 25%);
     }
 
     .project .description {

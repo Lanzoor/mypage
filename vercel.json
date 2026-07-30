@@ -37,6 +37,11 @@
             "source": "/test/:path*",
             "destination": "/testing/:path*",
             "permanent": false
+        },
+        {
+            "source": "/legacy/:path*",
+            "destination": "https://legacy.lanzoor.dev/:path*",
+            "permanent": false
         }
     ]
 }
