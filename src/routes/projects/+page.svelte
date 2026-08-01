@@ -10,13 +10,13 @@
 </svelte:head>
 
 <section id="projects">
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects">Projects</a>
-    </span>
+    </div>
 
     <h1>Featured Projects</h1>
 
@@ -60,7 +60,7 @@
             </div>
 
             <p class="description">
-                The frontend & backend source code for api.lanzoor.dev, built with NextJS.
+                The source code for api.lanzoor.dev, which powers the backend of this site.
             </p>
 
             <div class="tags">
@@ -74,6 +74,7 @@
                 links:
 
                 <External href="https://api.lanzoor.dev">project</External>
+                <a href="/projects/core-api"> showcase </a>
                 <External href="/projects/core-api/changelog">changelog</External>
                 <External href="https://github.com/Lanzoor/core-api">source</External>
             </div>
@@ -99,6 +100,7 @@
                 links:
 
                 <External href="https://lanzoor.xyz">project</External>
+                <a href="/projects/core-xyz"> showcase </a>
                 <External href="https://github.com/Lanzoor/core-xyz">source</External>
             </div>
         </div>
@@ -181,7 +183,8 @@
     </div>
 
     <p>
-        For archived projects, please refer to
+        For archived projects (such as <code>periodica</code> and <code>profile-old</code>), please
+        refer to
         <External href="https://legacy.lanzoor.dev">legacy.lanzoor.dev</External>.
     </p>
 </section>
@@ -225,7 +228,7 @@
                 transparent 25%,
                 transparent 100%
             ),
-            black;
+            rgb(4, 0, 8);
     }
 
     #projects {
@@ -255,9 +258,9 @@
 
         padding: 2em;
 
-        background: black;
+        background: rgb(6, 2, 11);
         border: 2px solid #222;
-        border-radius: 2em;
+        border-radius: 1em;
     }
 
     .project h1 {

@@ -9,17 +9,17 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects">Projects</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects/conlangs">Conlangs</a>
-    </span>
+    </div>
 
     <header>
         <h1>Conlang Portal</h1>

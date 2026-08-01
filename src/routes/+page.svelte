@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#6f27f5" />
 </svelte:head>
 
-<section class="disable-initial-padding no-padding" id="iris-background">
+<section class="disable-initial-padding disable-padding" id="iris-background">
     <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
             <h1 class="logo">
@@ -32,7 +32,7 @@
 
             <p>
                 <b>Hello! 👋</b><br />
-                I'm
+                My name is
                 <i class="col bright purple">Lanzoor</i>, a student from
                 <span class="col bright blue">South</span>
                 <span class="col bright red">Korea</span> who likes
@@ -40,7 +40,7 @@
                 <span class="col cyan">science</span>,
                 <span class="col blue">languages</span> and more.<br />
 
-                You'll find projects, showcases, tools, and more.
+                You'll find projects, showcases, tools, and whatever my brain decided to finish.
             </p>
         </header>
 
@@ -59,6 +59,53 @@
 
             <b class="col bright cyan">Thank you for your understanding!</b>
         </blockquote>
+    </section>
+</section>
+
+<section id="strawberry-jam-bg">
+    <section id="quick-links">
+        <h1>Quick Links</h1>
+
+        <p>
+            <b>
+                <span class="col bright magenta">Not sure where to start?</span> Here are a few places
+                worth checking out.
+            </b>
+        </p>
+
+        <div class="links">
+            <a class="link" href="/about">
+                <h2>🌐 About</h2>
+                <p>
+                    <b>Learn more about this website,</b> including its goals, and how it was built.
+                </p>
+            </a>
+            <a class="link" href="/projects">
+                <h2>💻 Projects</h2>
+                <p>
+                    <b>Explore the projects I've been working on,</b> from experiments, simple tools,
+                    to larger creations.
+                </p>
+            </a>
+            <a class="link" href="https://www.lanzoor.xyz">
+                <h2>👤 Profile</h2>
+                <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
+            </a>
+            <a class="link" href="/docs/blog">
+                <h2>📝 Blog</h2>
+                <p>Read announcements, development updates and life updates.</p>
+            </a>
+            <a class="link" href="/projects/core/changelog">
+                <h2>🔄 Changelog</h2>
+                <p>See what's changed, what's new, and what's been improved.</p>
+            </a>
+            <a class="link" href="/docs">
+                <h2>📄 Documents</h2>
+                <p>
+                    <b>Browse my documents and guides.</b> I really like talking about random stuff there!
+                </p>
+            </a>
+        </div>
     </section>
 </section>
 
@@ -115,5 +162,61 @@
         left: auto;
         content: '_';
         animation: cursorBlink 1s none infinite;
+    }
+
+    #strawberry-jam-bg {
+        background-image: url('/assets/backgrounds/strawberry-jam.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #quick-links {
+        background: rgba(15, 15, 20, 0.55);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        backdrop-filter: blur(12px);
+
+        border-radius: 2em;
+    }
+
+    #quick-links .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 1em;
+    }
+
+    #quick-links .links .link {
+        display: block;
+
+        padding: 1.5em;
+        border-radius: 1em;
+
+        text-decoration: none;
+        color: inherit;
+
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        transition: 200ms ease;
+    }
+
+    #quick-links .links .link:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #quick-links .links .link h2 {
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+    }
+
+    #quick-links .links .link p {
+        margin: 0;
+        opacity: 0.9;
     }
 </style>

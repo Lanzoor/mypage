@@ -42,7 +42,7 @@
     });
 </script>
 
-<section id="footer-panel" class="no-padding">
+<section id="footer-panel" class="disable-padding">
     <section id="navigation">
         <nav id="navigation-links">
             <div class="group">

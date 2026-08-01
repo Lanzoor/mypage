@@ -9,13 +9,13 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/tools">Tools</a>
-    </span>
+    </div>
 
     <header>
         <h1>Tools Portal</h1>

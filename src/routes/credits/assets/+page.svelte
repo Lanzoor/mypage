@@ -3,17 +3,17 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/credits">Credits</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/credits/assets">Asset Credits</a>
-    </span>
+    </div>
 
     <h1>Icon Credits</h1>
 

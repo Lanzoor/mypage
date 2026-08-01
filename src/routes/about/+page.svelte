@@ -7,13 +7,13 @@
 </svelte:head>
 
 <section id="faq">
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/about">About</a>
-    </span>
+    </div>
 
     <h1>About lanzoor.dev</h1>
 
@@ -132,8 +132,10 @@
 
     <p>
         If you see any other domain that's not on the list above,
-        <i>it's not affiliated with me, nor Lanzaforge.</i><br />
-        I also do not own <code>lanzoor.com</code>. I don't even know what it is about.
+        <i class="col bright red"><b>it's not affiliated with me, nor Lanzaforge.</b></i><br />
+        <span class="dim"
+            >I also do not own <code>lanzoor.com</code>. I don't even know what it's about.</span
+        >
     </p>
 
     <h2>Registrar</h2>

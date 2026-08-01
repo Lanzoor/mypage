@@ -34,6 +34,10 @@
     margin: 0;
 }
 
+html {
+    font-optical-sizing: auto;
+}
+
 body {
     font-family: 'JetBrains Mono';
     font-weight: 300;
@@ -42,10 +46,6 @@ body {
 
     background: var(--bg);
 }
-
-/* p {
-        line-height: 1.75;
-    } */
 
 main {
     min-height: 100vh;
@@ -56,6 +56,7 @@ main.frozen {
     touch-action: none;
     pointer-events: none;
     user-select: none;
+    overflow: hidden;
 }
 
 hr {

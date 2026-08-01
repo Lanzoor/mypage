@@ -3,13 +3,13 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs">Documents</a>
-    </span>
+    </div>
 
     <header>
         <h1>Document Portal</h1>
@@ -31,7 +31,15 @@
         </li>
     </ul>
 
-    <p>
-        
-    </p>
+    <h2>Topics</h2>
+
+    <ul>
+        <li>
+            <b>Math</b> - <a href="/docs/math">./math/</a> - My documents related to math.
+        </li>
+        <li>
+            <b>Linguistics</b> - <a href="/docs/linguistics">./linguistics/</a> - My documents related
+            to linguistics.
+        </li>
+    </ul>
 </section>

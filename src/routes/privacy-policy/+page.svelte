@@ -18,13 +18,13 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/privacy-policy">Privacy Policy</a>
-    </span>
+    </div>
 
     <header>
         <h1>Privacy Policy</h1>

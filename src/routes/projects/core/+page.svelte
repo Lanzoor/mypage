@@ -1,86 +1,83 @@
+<script>
+    import External from '$lib/components/Links/External.svelte';
+</script>
+
 <svelte:head>
-    <title>core | lanzoor.dev</title>
+    <title>Showcase | core</title>
 </svelte:head>
 
-<section id="intro" class="stretched">
+<section id="intro">
     <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects">Projects</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects/core">core</a>
     </div>
 
     <header>
         <h1>core</h1>
-        <p class="dim">the frontend codebase behind <b>lanzoor.dev</b></p>
+
+        <blockquote>
+            the frontend source code for <code>lanzoor.dev</code>, which is the website you're
+            looking at right now.
+        </blockquote>
     </header>
 
-    <blockquote>
-        <p>
-            <code>core</code> is the name for the repository that provides pretty much
-            <i>everything</i> you see on this website.
-        </p>
-    </blockquote>
+    <h1>What is core?</h1>
+
+    <p>
+        <b
+            ><code>core</code> is the name of the repository that contains the frontend source code
+            for
+            <code>lanzoor.dev</code>, which is the website you're looking at right now.</b
+        >
+        <code>core</code> powers pretty much everything you see on this website.
+    </p>
+
+    <h1>How is core built?</h1>
+
+    <p>
+        <b>
+            <code>core</code> is built using <External
+                href="https://svelte.dev/docs/kit/introduction">SvelteKit</External
+            >,</b
+        > an amazing framework for developing web applications like this.
+    </p>
 </section>
 
-<section id="stack">
-    <div class="header">
-        <h2>The stack behind core</h2>
-        <h1>How was core built?</h1>
-    </div>
+<section id="information">
+    <h1>Information</h1>
+
+    <ul>
+        <li>
+            Tags: <span class="col bright green">frontend</span>,
+            <span class="col bright cyan">webpage</span>
+        </li>
+        <li>
+            <b>Status: <span class="col bright yellow">WIP</span></b><br />
+            This project is almost completed!
+        </li>
+    </ul>
+
+    <h2>Links</h2>
+
+    <ul>
+        <li>
+            <a href="https://lanzoor.dev">Project</a><br />
+            <code>core</code> is deployed to <a href="https://lanzoor.dev">https://lanzoor.dev</a>.
+        </li>
+        <li>
+            <a href="/projects/core/changelog">Changelog</a><br />
+            A list of changes made to <code>core</code>.
+        </li>
+        <li>
+            <External href="https://github.com/Lanzoor/core">Source</External><br />
+            Everything you see on this website is open source and available for everyone to see or contribute.
+        </li>
+    </ul>
 </section>
-
-<section id="open-source">
-    <h1>Everything is open source.</h1>
-
-    <div class="buttons">
-        <button> View source code </button>
-    </div>
-</section>
-
-<style lang="css">
-    #intro {
-        background:
-            radial-gradient(ellipse at top center, rgba(90, 0, 200, 0.5), transparent 75%), black;
-    }
-
-    #intro header {
-        text-align: center;
-    }
-
-    #intro header h1 {
-        font-family: 'JetBrains Mono';
-        font-size: 3em;
-
-        color: rgb(164, 90, 255);
-        text-shadow: 0 10px 20px rgba(129, 25, 255, 0.5);
-        letter-spacing: 0.05em;
-
-        transition: 0.5s ease;
-    }
-
-    #intro header h1:hover {
-        color: rgb(199, 152, 255);
-
-        letter-spacing: 0.01em;
-        cursor: pointer;
-
-        transform: translateY(-0.1em);
-    }
-
-    #stack {
-        background:
-            radial-gradient(ellipse at top center, rgba(47, 199, 255, 0.25), transparent 45%),
-            radial-gradient(ellipse at bottom center, rgba(47, 199, 255, 0.25), transparent 45%),
-            black;
-    }
-
-    #stack .header h2 {
-        color: rgb(47, 199, 255);
-    }
-</style>

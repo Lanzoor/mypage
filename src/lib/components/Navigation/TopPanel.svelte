@@ -72,7 +72,7 @@
     </nav>
 
     <div class="buttons">
-        <button class="plain" onclick={() => (navigationOverlay.open = !navigationOverlay.open)}>
+        <button onclick={() => (navigationOverlay.open = !navigationOverlay.open)}>
             <img src="/assets/icons/hamburger.svg" alt="☰" class="panel-icon" /></button
         >
     </div>

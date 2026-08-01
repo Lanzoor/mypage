@@ -42,6 +42,11 @@
             "source": "/legacy/:path*",
             "destination": "https://legacy.lanzoor.dev/:path*",
             "permanent": true
+        },
+        {
+            "source": "/projects/conlangs/:path*",
+            "destination": "/conlangs/:path*",
+            "permanent": false
         }
     ]
 }

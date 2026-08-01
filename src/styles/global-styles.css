@@ -136,6 +136,10 @@ main section.enable-initial-padding {
     padding-top: calc(20vh + 4em);
 }
 
+main section.enable-padding {
+    padding: 4em;
+}
+
 .enable-spacing {
     display: flex;
     flex-direction: column;
@@ -225,11 +229,11 @@ main section.enable-initial-padding {
     white-space: nowrap;
 }
 
-.no-padding {
+.disable-padding {
     padding: 0;
 }
 
-.no-margin {
+.disable-margin {
     margin: 0;
 }
 
@@ -413,10 +417,14 @@ details[open] summary::marker {
     content: '< ';
 }
 
-button.plain {
+button:not(.initial) {
     background: none;
     border: none;
     padding: 0;
     margin: 0;
     border-radius: 0;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
 }

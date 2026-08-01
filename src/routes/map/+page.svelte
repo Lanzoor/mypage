@@ -4,13 +4,13 @@
 </script>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/map">Site Map</a>
-    </span>
+    </div>
 
     <h1>Site Map</h1>
 

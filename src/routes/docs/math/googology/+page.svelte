@@ -3,21 +3,21 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs">Documents</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs/math">Math</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
-        <a href="/docs/docs/googology">Googology</a>
-    </span>
+        <a href="/docs/math/googology">Googology</a>
+    </div>
 
     <header>
         <h1>Googology</h1>

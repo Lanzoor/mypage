@@ -19,13 +19,13 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/tos">Terms of Service</a>
-    </span>
+    </div>
 
     <header>
         <h1>Terms of Service</h1>

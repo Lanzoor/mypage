@@ -10,25 +10,25 @@
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs">Documents</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs/math">Math</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs/math/googology">Googology</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/docs/math/googology/CIN">Consistent Illion Notation</a>
-    </span>
+    </div>
 
     <header>
         <h1>Consistent Illion Notation (CIN)</h1>

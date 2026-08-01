@@ -29,7 +29,7 @@
                     <span class="head">lanzoor</span>.<span class="tail">dev</span>
                 </h1>
 
-                <button class="plain" onclick={() => (navigationOverlay.open = false)}>
+                <button onclick={() => (navigationOverlay.open = false)}>
                     <img src="/assets/icons/close.svg" alt="x" />
                 </button>
             </div>

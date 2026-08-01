@@ -5,25 +5,25 @@
 </script>
 
 <svelte:head>
-    <title>core Changelog | lanzoor.dev</title>
+    <title>Changelog | core</title>
 </svelte:head>
 
 <section>
-    <span class="breadcrumbs">
+    <div class="breadcrumbs">
         <a href="/">Home</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects">Projects</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects/core">core</a>
 
-        <span class="separator">›</span>
+        <div class="separator">›</div>
 
         <a href="/projects/core/changelog">Changelog</a>
-    </span>
+    </div>
 
     <h1>Changelog</h1>
 
@@ -37,6 +37,39 @@
         If a change is very small and/or urgent, or was not assigned a version tag, it may not show up
         here.
     </blockquote>
+</section>
+
+<section id="v26-27-1">
+    <h1>Minor update v26.27.1</h1>
+
+    <p class="dim">
+        Release date: <b>August 1st, 2026</b>
+    </p>
+
+    <ul>
+        <li>
+            <span class="col bright purple">ƒ</span>
+            Fixed an issue where some links would take you to the 404 page.
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            <b>Added the Quick Links section in the <a href="/">frontpage</a>.</b>
+        </li>
+        <li>
+            <span class="col bright green">+</span>
+            Added showcase pages to some projects.
+        </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Moved the <a href="/conlangs">conlangs</a> section from <code>/projects/conlangs</code>
+            to
+            <code>/conlangs</code>.<br />
+            <b
+                >A redirect from <code>/projects/conlangs</code> to
+                <code>/conlangs</code> has been implemented for compatibility purposes.</b
+            >
+        </li>
+    </ul>
 </section>
 
 <section id="v26-27-0">

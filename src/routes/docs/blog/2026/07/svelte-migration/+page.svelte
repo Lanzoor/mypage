@@ -21,6 +21,7 @@
         The Svelte migration has been completed as of July 15th. For more information, please refer to
         <a href="/projects/core/changelog#v26-25-0">the changelog</a>.
     </blockquote>
+
     <h1 id="svelte">A Major Change for <code>core</code></h1>
 
     <meta name="description" content={metadata.description} />
