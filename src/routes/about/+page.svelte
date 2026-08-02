@@ -66,22 +66,43 @@
             <span class="col bright yellow">suggestions</span>, or
             <span class="col bright red">concerns</span>,
         </b>
-        use the connections below to get in touch!
-        <b>I strongly recommend using either Discord or Email, since I check them quite often.</b>
+        feel free use the connections below to get in touch!
     </p>
 
-    <div class="contact-list">
-        <div class="contact-item">
-            Discord
+    <ul>
+        <li>
+            <b>
+                Discord
 
-            <External href="https://discord.com/users/1160164047111606292">@lanzoor</External>
-        </div>
-        <div class="contact-item">
-            Email
+                <External href="https://discord.com/users/1160164047111606292">@lanzoor</External>
+            </b><br />
 
-            <a href="mailto:mail@lanzoor.dev">mail@lanzoor.dev</a>
-        </div>
-    </div>
+            I strongly recommend using Discord since I check it quite often.
+        </li>
+        <li>
+            <b>
+                Email
+
+                <a href="mailto:mail@lanzoor.dev">mail@lanzoor.dev</a>
+                <span class="dim">+3 others</span>
+            </b><br />
+
+            Emails sent to
+            <b>mail@lanzoor.dev</b>,
+            <b>noreply@lanzoor.dev</b>,
+            <b>hello@lanzoor.dev</b>, or
+            <b>support@lanzoor.dev</b>
+            are forwarded to my personal email address,
+            <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>.
+            <br />
+
+            <b>
+                Replies will currently come from
+                <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>, not the
+                <code>@lanzoor.dev</code> addresses. Thank you for your understanding.
+            </b>
+        </li>
+    </ul>
 
     <blockquote class="warning">
         <b class="col bright yellow"> ⚠ Please use this contact method responsibly. </b><br /><br />
@@ -131,11 +152,12 @@
     </ul>
 
     <p>
-        If you see any other domain that's not on the list above,
-        <i class="col bright red"><b>it's not affiliated with me, nor Lanzaforge.</b></i><br />
-        <span class="dim"
-            >I also do not own <code>lanzoor.com</code>. I don't even know what it's about.</span
-        >
+        If you see ANY other domain that's not on the list above,
+        <i class="col bright red"><b>it's not affiliated with me, nor Lanzaforge.</b></i>
+    </p>
+
+    <p class="dim">
+        I also do not own <code>lanzoor.com</code>. I don't even know what it's about.
     </p>
 
     <h2>Registrar</h2>

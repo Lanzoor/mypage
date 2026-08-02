@@ -1,52 +1,5 @@
 {
     "github": {
         "silent": true
-    },
-    "redirects": [
-        {
-            "source": "/api/:path*",
-            "destination": "https://api.lanzoor.dev/:path*",
-            "permanent": true
-        },
-        {
-            "source": "/site-map/:path*",
-            "destination": "/map/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/projects/core-api/changelog/:path*",
-            "destination": "https://api.lanzoor.dev/docs/changelog/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/docs/math/googology/CIN/:path*",
-            "destination": "/docs/math/googology/consistent-illion-notation/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/profile/:path*",
-            "destination": "https://www.lanzoor.xyz/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/tos/:path*",
-            "destination": "/terms-of-service/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/test/:path*",
-            "destination": "/testing/:path*",
-            "permanent": false
-        },
-        {
-            "source": "/legacy/:path*",
-            "destination": "https://legacy.lanzoor.dev/:path*",
-            "permanent": true
-        },
-        {
-            "source": "/projects/conlangs/:path*",
-            "destination": "/conlangs/:path*",
-            "permanent": false
-        }
-    ]
+    }
 }

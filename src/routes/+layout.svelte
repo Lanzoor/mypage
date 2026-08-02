@@ -1,11 +1,13 @@
 <script lang="ts">
+    export const trailingSlash = 'always';
+
     import '../app.css';
 
     // import { Analytics } from '$lib';
     import { onMount } from 'svelte';
 
-    import TopPanel from '$lib/components/Navigation/TopPanel.svelte';
-    import FooterPanel from '$lib/components/Navigation/FooterPanel.svelte';
+    import TopPanel from '$lib/components/Panels/TopPanel.svelte';
+    import FooterPanel from '$lib/components/Panels/FooterPanel.svelte';
     import NavigationPanel from '$lib/components/Overlays/NavigationPanel.svelte';
     import Notice from '$lib/components/Overlays/LegalNotice.svelte';
 

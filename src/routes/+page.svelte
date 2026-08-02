@@ -67,10 +67,8 @@
         <h1>Quick Links</h1>
 
         <p>
-            <b>
-                <span class="col bright magenta">Not sure where to start?</span> Here are a few places
-                worth checking out.
-            </b>
+            <i class="col bright magenta">Not sure where to start?</i><br />
+            Here are a few places worth checking out.
         </p>
 
         <div class="links">
@@ -80,6 +78,10 @@
                     <b>Learn more about this website,</b> including its goals, and how it was built.
                 </p>
             </a>
+            <a class="link" href="https://www.lanzoor.xyz">
+                <h2>👤 Profile</h2>
+                <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
+            </a>
             <a class="link" href="/projects">
                 <h2>💻 Projects</h2>
                 <p>
@@ -87,9 +89,11 @@
                     to larger creations.
                 </p>
             </a>
-            <a class="link" href="https://www.lanzoor.xyz">
-                <h2>👤 Profile</h2>
-                <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
+            <a class="link" href="/docs">
+                <h2>📄 Documents</h2>
+                <p>
+                    <b>Browse my documents and guides.</b> I really like talking about random stuff there!
+                </p>
             </a>
             <a class="link" href="/docs/blog">
                 <h2>📝 Blog</h2>
@@ -98,12 +102,6 @@
             <a class="link" href="/projects/core/changelog">
                 <h2>🔄 Changelog</h2>
                 <p>See what's changed, what's new, and what's been improved.</p>
-            </a>
-            <a class="link" href="/docs">
-                <h2>📄 Documents</h2>
-                <p>
-                    <b>Browse my documents and guides.</b> I really like talking about random stuff there!
-                </p>
             </a>
         </div>
     </section>

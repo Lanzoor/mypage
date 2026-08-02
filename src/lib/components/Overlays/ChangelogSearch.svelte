@@ -5,6 +5,7 @@
     let searchDescription = $state('Search for a version!');
 
     const versionIds = [
+        'v26-27-2',
         'v26-27-1',
         'v26-27-0',
         'v26-26-0',

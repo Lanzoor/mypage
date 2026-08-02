@@ -111,31 +111,6 @@
                             </ul>
                         </details>
                     </li>
-                    <li>
-                        <details>
-                            <summary> Test </summary>
-                            <ul>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                                <li>
-                                    <a href="/test">Test</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -213,9 +188,11 @@
     #navigation .panel .links li:not(:has(details))::before {
         content: '- ';
     }
-    #navigation .panel .links li summary {
-        padding-bottom: 0.2em;
+    #navigation .panel .links li details > summary {
         user-select: none;
+    }
+    #navigation .panel .links li details > ul {
+        padding: 0 2em 0.5em 2em;
     }
     #navigation .panel .links li {
         padding: 0.1em 0;

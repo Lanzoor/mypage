@@ -97,12 +97,8 @@
     <p>
         <b>This website loads fonts via Google Fonts.</b><br />
         For more information, please refer to
-        <a
-            href="https://developers.google.com/fonts/faq/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <External href="https://developers.google.com/fonts/faq/privacy">
             Google Fonts' privacy policy
-        </a>.
+        </External>.
     </p>
 </section>

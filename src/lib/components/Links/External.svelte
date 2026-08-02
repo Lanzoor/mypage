@@ -30,19 +30,3 @@
         />
     {/if}
 </a>
-
-<style lang="css">
-    a:has(> .external-link--arrow) {
-        display: inline-flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5em;
-
-        color: white;
-    }
-
-    a > img.external-link--arrow {
-        width: 1em;
-        height: 1em;
-    }
-</style>
