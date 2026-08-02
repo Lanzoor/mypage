@@ -8,6 +8,7 @@
 
     const topPanelDestinations: TopPanelDestination[] = [
         { href: '/', name: 'welcome!' },
+        { href: '/profile', name: 'profile' },
         { href: '/about', name: 'about' },
         { href: '/projects', name: 'projects' },
         { href: '/docs', name: 'documents' },
@@ -15,6 +16,12 @@
 
     const HIDE_THRESHOLD = 100;
     let hidden = $state(false);
+
+    function isCurrent(destination: TopPanelDestination) {
+        return destination.href === '/'
+            ? page.url.pathname === '/'
+            : page.url.pathname.startsWith(destination.href);
+    }
 
     onMount(() => {
         let lastY = window.scrollY;
@@ -46,25 +53,11 @@
     <nav class="links">
         {#each topPanelDestinations as destination}
             {#if destination.external}
-                <External
-                    href={destination.href}
-                    class={(
-                        destination.href === '/'
-                            ? page.url.pathname === '/'
-                            : page.url.pathname.startsWith(destination.href)
-                    )
-                        ? 'current'
-                        : ''}
-                >
+                <External href={destination.href} class={isCurrent(destination) ? 'current' : ''}>
                     [ {destination.name} ]
                 </External>
             {:else}
-                <a
-                    href={destination.href}
-                    class:current={destination.href === '/'
-                        ? page.url.pathname === '/'
-                        : page.url.pathname.startsWith(destination.href)}
-                >
+                <a href={destination.href} class:current={isCurrent(destination)}>
                     [ {destination.name} ]
                 </a>
             {/if}

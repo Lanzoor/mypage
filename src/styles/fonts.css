@@ -23,6 +23,7 @@
 .noto-sans,
 .noto-sans * {
     font-family: 'Noto Sans', sans-serif;
+    color: var(--bright-purple);
 }
 
 .noto-sans-mono,

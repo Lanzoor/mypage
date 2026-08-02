@@ -22,10 +22,6 @@ const redirects: CoreRedirect[] = [
         to: '/map',
     },
     {
-        from: ['/profile'],
-        to: 'https://www.lanzoor.xyz',
-    },
-    {
         from: ['/testing', '/tests'],
         to: '/test',
     },
@@ -38,16 +34,16 @@ const redirects: CoreRedirect[] = [
         to: '/terms-of-service',
     },
     {
-        from: ['/api/:path*'],
-        to: 'https://api.lanzoor.dev/:path*',
+        from: ['/api'],
+        to: 'https://api.lanzoor.dev',
     },
     {
-        from: ['/projects/core-api/changelog/:path*'],
-        to: 'https://api.lanzoor.dev/docs/changelog/:path*',
+        from: ['/projects/core-api/changelog'],
+        to: 'https://api.lanzoor.dev/docs/changelog',
     },
     {
-        from: ['/projects/conlangs/:path*'],
-        to: '/conlangs/:path*',
+        from: ['/projects/conlangs'],
+        to: '/conlangs',
     },
 ];
 

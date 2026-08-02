@@ -82,31 +82,6 @@
 
         <div class="project">
             <div class="header">
-                <h1>core-xyz</h1>
-
-                <div class="status wip">wip</div>
-            </div>
-
-            <p class="description">A small website dedicated to my profile.</p>
-
-            <div class="tags">
-                <div class="tag frontend">frontend</div>
-                <div class="tag webpage">webpage</div>
-            </div>
-
-            <hr />
-
-            <div class="links">
-                links:
-
-                <External href="https://lanzoor.xyz">project</External>
-                <a href="/projects/core-xyz"> showcase </a>
-                <External href="https://github.com/Lanzoor/core-xyz">source</External>
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="header">
                 <h1>core-legacy</h1>
 
                 <div class="status complete">complete</div>

@@ -78,7 +78,7 @@
                     <b>Learn more about this website,</b> including its goals, and how it was built.
                 </p>
             </a>
-            <a class="link" href="https://www.lanzoor.xyz">
+            <a class="link" href="/profile">
                 <h2>👤 Profile</h2>
                 <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
             </a>

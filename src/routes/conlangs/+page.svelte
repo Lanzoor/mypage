@@ -40,7 +40,7 @@
 
     <ul>
         <li>
-            Proto Lanzavel - <a href="/projects/conlangs/proto-lanzavel/">./proto-lanzavel</a>
+            Proto Lanzavel - <a href="/conlangs/proto-lanzavel/">./proto-lanzavel</a>
             | Status:
             <b>Planning</b>
         </li>
