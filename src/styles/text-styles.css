@@ -4,7 +4,7 @@
 
     --heading: #ddd;
 
-    --base-font-size: 20px;
+    --base-font-size: 25px;
 }
 
 body {
@@ -23,9 +23,15 @@ strong {
         color 0.2s;
 }
 
+@media (max-width: 1024px) {
+    :root {
+        --base-font-size: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     :root {
-        --base-font-size: 15px;
+        --base-font-size: 10px;
     }
 }
 

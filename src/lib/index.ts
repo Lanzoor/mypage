@@ -5,3 +5,7 @@ export function setFrozen(value?: boolean) {
     if (!main) return;
     main.classList.toggle('frozen', value);
 }
+
+export async function sleep(timeMs: number): Promise<any> {
+    return new Promise((p) => setTimeout(p, timeMs));
+}

@@ -94,35 +94,71 @@
 
         <hr />
 
-        <div id="footer">
+        <div id="footer" class="enable-spacing">
             <div id="connections">
-                <External href="https://www.discord.com" showArrow={false}>
+                <External href="https://www.discord.com" showArrow={false} class="link">
                     <img src="/assets/icons/socials/discord.svg" alt="Discord" />
+
+                    <span class="handle">
+                        @<span class="col bright purple">lanzoor</span>
+                    </span>
                 </External>
 
-                <External href="https://www.reddit.com/user/Lanzoor/" showArrow={false}>
+                <External
+                    href="https://www.reddit.com/user/Lanzoor/"
+                    showArrow={false}
+                    class="link"
+                >
                     <img src="/assets/icons/socials/reddit.svg" alt="Reddit" />
+
+                    <span class="handle">
+                        u/<span class="col bright purple">Lanzoor</span>
+                    </span>
                 </External>
 
-                <External href="https://github.com/Lanzoor" showArrow={false}>
+                <External href="https://github.com/Lanzoor" showArrow={false} class="link">
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
+
+                    <span class="handle">
+                        <span class="col bright purple">Lanzoor</span>
+                    </span>
                 </External>
 
-                <External href="https://steamcommunity.com/id/lanzoor/" showArrow={false}>
+                <External
+                    href="https://steamcommunity.com/id/lanzoor/"
+                    showArrow={false}
+                    class="link"
+                >
                     <img src="/assets/icons/socials/steam.svg" alt="steam" />
+
+                    <span class="handle">
+                        <span class="col bright purple">Lanzoor</span>
+                    </span>
                 </External>
 
-                <External href="https://www.youtube.com/@lanzoorgaming" showArrow={false}>
+                <External
+                    href="https://www.youtube.com/@lanzoormakesvideos"
+                    showArrow={false}
+                    class="link"
+                >
                     <img src="/assets/icons/socials/youtube.svg" alt="YouTube" />
+
+                    <span class="handle">
+                        @<span class="col bright purple">lanzoor</span>makesvideos
+                    </span>
                 </External>
 
-                <a href="mailto:mail@lanzoor.dev">
+                <a href="mailto:mail@lanzoor.dev" class="link">
                     <img src="/assets/icons/socials/email.svg" alt="Email" />
+
+                    <span class="handle">
+                        mail@<span class="col bright purple">lanzoor</span>.dev
+                    </span>
                 </a>
             </div>
 
             <footer>
-                © 2026 | <External href="https://lanzaforge.org">Lanzaforge</External>
+                © 2026 <External href="https://lanzaforge.org">Lanzaforge</External> ⬩ built with ♡
             </footer>
         </div>
     </section>
@@ -157,75 +193,54 @@
     }
 
     #footer-panel #navigation #navigation-links {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 5em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2em;
     }
 
     #footer-panel #navigation #navigation-links .group {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
+        gap: 0.25em;
     }
 
     #footer-panel #navigation #navigation-links .group h2 {
         margin: 0.25em 0 0.5em 0;
         font-family: 'JetBrains Mono';
-        font-size: 1em;
+        font-size: 1.1em;
         color: rgb(123, 61, 255);
     }
 
-    #footer-panel #footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        #footer-panel #footer {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 1em;
-        }
-
-        #footer-panel #footer footer {
-            align-self: flex-end;
-        }
-    }
-
-    #footer-panel #connections {
-        display: flex;
-        flex-direction: column;
-    }
-
     #footer-panel #connections {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: flex-start;
-        gap: 0.75em;
+        justify-content: center;
+        column-gap: 1.5em;
+        row-gap: 0.5em;
+
+        margin: 0 2em;
     }
 
-    #footer-panel #connections img {
-        width: 1.75em;
-        height: 1.75em;
-        opacity: 0.6;
-
-        transition: 0.5s ease;
-    }
-
-    #footer-panel #connections img:hover {
-        opacity: 1;
-    }
-
-    #footer-panel #footer footer {
+    :global(#footer-panel #connections a:not(.plain):has(> img)) {
         opacity: 0.75;
+    }
+
+    :global(#footer-panel #connections a:not(.plain):has(> img):hover) {
+        opacity: 1;
+        text-decoration: none;
+    }
+
+    #footer-panel #connections .handle {
+        color: rgb(110, 55, 192);
+    }
+
+    #footer-panel footer {
+        font-size: 0.75em;
+        opacity: 0.5;
+        text-align: center;
     }
 
     @media (max-width: 1080px) {

@@ -1,6 +1,4 @@
 <script lang="ts">
-    export const trailingSlash = 'always';
-
     import '../app.css';
 
     // import { Analytics } from '$lib';
@@ -17,17 +15,17 @@
 
     let { children } = $props();
 
-    // import Navbar from '$lib/components/Navigation/Navbar.svelte';
-
     let hydrated = $state(false);
 
     onMount(() => {
-        // Analytics.initialize();
         hydrated = true;
+
         cleanupOldData();
 
         const listener = handleEscape();
+
         document.addEventListener('keydown', listener);
+
         return () => {
             document.removeEventListener('keydown', listener);
         };

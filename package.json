@@ -3,13 +3,15 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite dev",
-        "build": "vite build",
+        "dev": "pnpm generate && vite dev",
+        "build": "pnpm generate && vite build",
         "preview": "vite preview",
         "prepare": "svelte-kit sync || echo ''",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-        "generate:blog": "tsx scripts/generate:blog.ts"
+        "generate": "pnpm generate:blog && pnpm generate:changelog",
+        "generate:blog": "tsx scripts/generate:blog.ts",
+        "generate:changelog": "tsx scripts/generate:changelog.ts"
     },
     "devDependencies": {
         "@sveltejs/adapter-auto": "^7.0.1",
@@ -27,5 +29,6 @@
     "dependencies": {
         "decimal.js": "^10.6.0",
         "katex": "^0.18.1"
-    }
+    },
+    "packageManager": "pnpm@11.18.0+sha512.33d83c77da82f49fba836925c6f1b841181ec3132b670639bd012f7075f5c7cf634c5f870147c19aae7478fac01df09d8892e880454896edd23ee9b33757563c"
 }

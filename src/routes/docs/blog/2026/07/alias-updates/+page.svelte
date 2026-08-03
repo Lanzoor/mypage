@@ -2,7 +2,7 @@
     export const metadata = {
         title: 'Alias Updates',
         tags: ['important', 'blog', 'personal'],
-        published: '2026-07-10',
+        published: new Date('2026-07-10T00:00:00+09:00'),
     };
 </script>
 

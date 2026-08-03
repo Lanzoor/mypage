@@ -93,7 +93,8 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: 2em;
+        gap: 3em;
+        padding: 1.5em;
 
         max-height: var(--top-panel-max-height);
 
@@ -104,8 +105,6 @@
 
         color: #ccc;
 
-        overflow-x: hidden;
-        overflow-y: hidden;
         transition:
             transform 0.3s ease-in-out,
             background 0.3s ease,
@@ -142,19 +141,10 @@
     }
 
     #top-panel .buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100%;
+        display: none;
     }
 
     #top-panel .links {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-
-        width: 100%;
         height: 100%;
 
         gap: 0.5em;
@@ -165,6 +155,7 @@
         justify-content: center;
 
         pointer-events: none;
+        white-space: nowrap;
     }
 
     #top-panel .links a {
@@ -196,32 +187,31 @@
         text-shadow: 0 0 10px rgb(168, 124, 255, 0.5);
     }
 
-    .panel-icon {
+    #top-panel img {
         margin: 0;
         padding: 0;
 
-        max-width: 3em;
-        max-height: 3em;
+        max-width: 2em;
+        max-height: 2em;
         transition: filter 200ms ease;
     }
 
-    .panel-icon:hover {
+    #top-panel img:hover {
         filter: drop-shadow(0 0 10px #bbb);
         cursor: pointer;
     }
 
     @media (max-width: 1200px) {
+        #top-panel .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+
         #top-panel .links {
             display: none;
-        }
-    }
-
-    @media (max-width: 1600px) {
-        #top-panel .logo {
-            font-size: 1.75em;
-        }
-        #top-panel .links a {
-            font-size: 0.75em;
         }
     }
 </style>

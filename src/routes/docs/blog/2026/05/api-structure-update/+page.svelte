@@ -3,7 +3,7 @@
         title: 'API Structure Update Notice',
         description: 'A notice regarding several important changes to the API structure.',
         tags: ['important', 'announcement', 'core-api'],
-        published: '2026-05-12',
+        published: new Date('2026-05-12T00:00:00+09:00'),
     };
 </script>
 

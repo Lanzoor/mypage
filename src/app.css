@@ -7,26 +7,6 @@
 
 /* @import './styles/debug.css'; */
 
-/* this stylesheet used to use @layer's but it works weird with svelte so i removed it */
-
-:root {
-    --primary: white;
-    --primary-75: rgba(255, 255, 255, 0.75);
-    --primary-50: rgba(255, 255, 255, 0.5);
-    --primary-25: rgba(255, 255, 255, 0.25);
-    --primary-10: rgba(255, 255, 255, 0.1);
-    --primary-05: rgba(255, 255, 255, 0.05);
-
-    --secondary: black;
-    --secondary-75: rgba(0, 0, 0, 0.75);
-    --secondary-50: rgba(0, 0, 0, 0.5);
-    --secondary-25: rgba(0, 0, 0, 0.25);
-    --secondary-10: rgba(0, 0, 0, 0.1);
-    --secondary-05: rgba(0, 0, 0, 0.05);
-
-    --bg: #111;
-}
-
 *,
 *::before,
 *::after {
@@ -36,6 +16,10 @@
 
 html {
     font-optical-sizing: auto;
+}
+
+:root {
+    --bg: #111;
 }
 
 body {
@@ -65,12 +49,6 @@ hr {
     background-color: var(--hr-bg);
 }
 
-.tooltip {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-}
-
 section {
     position: relative;
 
@@ -91,4 +69,10 @@ section.fixed-bg {
 
 section.stretched {
     min-height: calc(100vh);
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2em;
+    }
 }

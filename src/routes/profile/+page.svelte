@@ -132,14 +132,21 @@
         </p>
 
         <p>
-            Although I loved programming ever since I was around ten years old, it wasn't until <b
-                >late 2024</b
-            >
-            that I actually started taking programming seriously.<br />
+            Although I loved programming ever since I was around ten years old,
+            <b>
+                it wasn't until <span class="col bright green">late 2024</span>
+                that I actually started taking programming seriously.
+            </b><br />
             <b>Since then, it's become one of the things I spend the most time doing.</b>
         </p>
 
         <h2>🌐 Web Development</h2>
+
+        <p>
+            <b>Most of my projects are web-based because I love how accessible the web is.</b> If
+            someone has a browser, <i>they can use what I build instantly.</i> That makes it the perfect
+            platform for experimenting with ideas.
+        </p>
 
         <h3>Frameworks</h3>
 
@@ -161,17 +168,16 @@
         </div>
 
         <p>
-            <b>Most of my projects are web-based because I love how accessible the web is.</b> If
-            someone has a browser, <i>they can use what I build instantly.</i> That makes it the perfect
-            platform for experimenting with ideas.
+            I have experience with <span class="col bright green">frontend</span> development. I
+            primarily use
+            <b class="col bright red">SvelteKit</b>
+            for new web projects, although I also have experience with
+            <b>Next.js</b>.<br />
         </p>
 
         <p>
-            I primarily use <b class="col bright red">SvelteKit</b> for new web projects, although I
-            also have experience with
-            <b>Next.js</b>.<br />
-            I enjoy working across the entire stack, from designing user interfaces to building backend
-            APIs.
+            I also have experience with <span class="col bright orange">backend</span> development as
+            well.
         </p>
 
         <h2>🖥️ General Programming</h2>
@@ -181,6 +187,17 @@
             <div class="stack c">C</div>
             <div class="stack rust">Rust</div>
         </div>
+
+        <p>
+            <b
+                >I usually write scripts in <span class="col bright blue">Python</span>, since it
+                suits me well.</b
+            >
+            I have made a few CLI, TUI and GUI programs using Python before, and I have experience with
+            most general libraries.<br />
+            Nowadays, though, I use Python to automate repetitive tasks. (e.g. making backups, running
+            long commands repeatedly)
+        </p>
 
         <h3>Scripting</h3>
 
@@ -218,12 +235,9 @@
         <p>
             I enjoy learning about the principles that make the Internet work, which is why
             networking fascinates me so much. I'm also really interested in OSINT and operational
-            security (OPSEC).
+            security.
         </p>
     </section>
-
-    %TODO: add languages, science, gaming and music sections<br />
-    %TODO: improve bio %TODO: also tol actually write the sections because wtf is this english
 </section>
 
 <style lang="css">

@@ -9,7 +9,7 @@ type Entry = {
     title: string;
     description?: string;
     tags?: string[];
-    published: string;
+    published: Date;
 };
 
 async function sleep(timeMs: number): Promise<any> {
@@ -26,23 +26,23 @@ async function walk(dir: string): Promise<void> {
 
         if (item.isDirectory()) {
             console.log(`info: parsing directory ${target}`);
-            await sleep(10);
+            await sleep(5);
             await walk(target);
             continue;
         } else {
             console.log(`info: parsing file ${target}`);
-            await sleep(10);
+            await sleep(5);
         }
 
         if (item.name !== '+page.svelte' || path.dirname(target) === BLOG_ROOT) continue;
 
         const source = await fs.readFile(target, 'utf8');
 
-        const match = source.match(/export\s+const\s+metadata\s*=\s*({[\s\S]*?});/);
+        const match = source.match(/export\s+const\s+metadata\s*=\s*({[\s\S]*?})\s*;?/);
 
         if (!match) continue;
 
-        const metadata = Function(`return (${match[1]})`)();
+        const metadata = Function(`return (${match[1]})`)() as Partial<Entry>;
 
         if (!metadata.title) {
             console.log(`warn: ${target}: missing metadata.title`);
@@ -62,14 +62,14 @@ async function walk(dir: string): Promise<void> {
         entries.push({
             ...metadata,
             slug: path.relative(BLOG_ROOT, path.dirname(target)).replace(/\\/g, '/'),
-        });
+        } as Entry);
     }
 }
 
 await walk(BLOG_ROOT);
 
-entries.sort((a, b) => b.published.localeCompare(a.published));
+entries.sort((a, b) => Number(b.published) - Number(a.published));
 
 await fs.writeFile(OUTPUT, JSON.stringify(entries, null, 4));
 
-console.log(`successfully generated ${entries.length} blog entries @ src/docs/blog/entries.json`);
+console.log(`successfully generated ${entries.length} blog entries @ /docs/blog/entries.json`);

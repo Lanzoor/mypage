@@ -1,15 +1,6 @@
 <script lang="ts">
     import entries from './entries.json';
 
-    function formatDate(published: string) {
-        const [year, month] = published.split('-').map(Number);
-
-        return new Intl.DateTimeFormat('en-US', {
-            month: 'short',
-            year: 'numeric',
-        }).format(new Date(year, month - 1));
-    }
-
     const sortedEntries = [...entries].sort((a, b) => b.published.localeCompare(a.published));
 
     const groups = Object.values(
@@ -52,55 +43,63 @@
         </p>
     </header>
 
-    <div id="blogs">Loading blog entries...</div>
-
     <p>
         <b>Found {sortedEntries.length} blog entries.</b>
     </p>
 
     {#each groups as group}
-        <h1>{formatDate(group[0].published)}</h1>
+        <h1>
+            {new Date(group[0].published).toLocaleString('en-US', {
+                timeZone: 'Asia/Seoul',
+                month: 'long',
+                year: 'numeric',
+            })}
+        </h1>
 
-        {#each group as blog}
-            <div class="blog spacing">
-                <h2>
-                    <a href={`/docs/blog/${blog.slug}`}>
-                        {blog.title}
-                    </a>
-                </h2>
+        <ul>
+            {#each group as blog}
+                <li>
+                    <h2>
+                        <a href={`/docs/blog/${blog.slug}`}>
+                            {blog.title}
+                        </a>
+                    </h2>
 
-                <hr />
+                    <p>
+                        {#if blog.description}
+                            {blog.description}
+                        {:else}
+                            <i>No description provided.</i>
+                        {/if}<br />
+                        <span class="dim">
+                            published on <b
+                                >{new Date(blog.published).toLocaleString('en-US', {
+                                    timeZone: 'Asia/Seoul',
+                                    dateStyle: 'long',
+                                })}</b
+                            ><br />
+                            tags:
 
-                <p>
-                    {blog.description || 'No description provided.'}
-                </p>
-
-                <span class="dim">
-                    published @ <b>{formatDate(blog.published)}</b><br />
-                    tags:
-
-                    {#if blog.tags.length}
-                        <span class="tags">
-                            {#each blog.tags as tag}
-                                <span class={`tag ${tag}`}>
-                                    {tag}
+                            {#if blog.tags.length}
+                                <span class="tags">
+                                    {#each blog.tags as tag}
+                                        <span class={`tag ${tag}`}>
+                                            {tag}
+                                        </span>
+                                    {/each}
                                 </span>
-                            {/each}
+                            {:else}
+                                <i>No tags provided.</i>
+                            {/if}
                         </span>
-                    {:else}
-                        <p>No tags provided.</p>
-                    {/if}
-                </span>
-            </div>
-        {/each}
+                    </p>
+                </li>
+            {/each}
+        </ul>
     {/each}
 </section>
 
 <style lang="css">
-    .blog {
-        margin: 2% 0;
-    }
-
     .tags {
         display: inline-flex;
         flex-direction: row;

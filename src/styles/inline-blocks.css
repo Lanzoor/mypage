@@ -71,20 +71,22 @@ a:not(.plain):hover {
     color: var(--anchor-hover);
 }
 
-a:has(> .external-link--arrow) {
+a:not(.plain):has(> img) {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 0.5em;
 
     color: white;
 }
 
-a:has(> .external-link--arrow):hover {
+a:not(.plain):has(> img):hover {
+    text-decoration: none;
     color: #ddd;
 }
 
-a > img.external-link--arrow {
+a:not(.plain) > img {
     width: 1em;
     height: 1em;
 }

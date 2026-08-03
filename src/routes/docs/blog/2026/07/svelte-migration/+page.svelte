@@ -3,7 +3,7 @@
         title: 'Svelte Migration',
         description: 'A notice regarding the core migration',
         tags: ['important', 'announcement', 'core'],
-        published: '2026-07-11',
+        published: new Date('2026-07-11T00:00:00+09:00'),
     };
 </script>
 

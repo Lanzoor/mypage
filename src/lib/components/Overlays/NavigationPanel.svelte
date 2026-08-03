@@ -31,6 +31,8 @@
 
                 <button onclick={() => (navigationOverlay.open = false)}>
                     <img src="/assets/icons/close.svg" alt="x" />
+
+                    <p class="mobile-failsafe">Close</p>
                 </button>
             </div>
             <hr />
@@ -147,7 +149,8 @@
         background: rgba(0, 0, 0, 0.75);
         min-width: 40%;
         max-width: 100vw;
-        padding: 2em;
+
+        padding: 1.5em;
     }
 
     #navigation .panel .header {
@@ -164,8 +167,8 @@
     }
 
     #navigation .panel .header img {
-        max-width: 3em;
-        max-height: 3em;
+        max-width: 2em;
+        max-height: 2em;
 
         transition: filter 200ms ease;
     }
@@ -173,9 +176,23 @@
     #navigation .panel .header img:hover {
         filter: drop-shadow(0 0 10px #bbb);
     }
-
+    #navigation .panel .header button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: flex-end;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    #navigation .panel .header button .mobile-failsafe {
+        display: none;
+    }
     #navigation .panel .header button:hover {
         cursor: pointer;
+    }
+
+    #navigation .panel .header .logo {
+        font-size: 1.5em;
     }
 
     #navigation .panel .links {
@@ -212,8 +229,8 @@
             height: 1.5em;
         }
 
-        #navigation .panel .header button::after {
-            content: ' Close';
+        #navigation .panel .header button .mobile-failsafe {
+            display: inline-block;
         }
     }
 </style>

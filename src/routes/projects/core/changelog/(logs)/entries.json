@@ -1,0 +1,70 @@
+[
+    {
+        "published": "2026-08-02T15:00:00.000Z",
+        "version": "v26-27-3"
+    },
+    {
+        "published": "2026-08-01T15:00:00.000Z",
+        "version": "v26-27-2"
+    },
+    {
+        "published": "2026-07-31T15:00:00.000Z",
+        "version": "v26-27-1"
+    },
+    {
+        "title": "Overly Overhauled Overlays",
+        "published": "2026-07-28T15:00:00.000Z",
+        "version": "v26-27-0"
+    },
+    {
+        "title": "The Legal Update",
+        "published": "2026-07-23T15:00:00.000Z",
+        "version": "v26-26-0"
+    },
+    {
+        "title": "The Svelte Migration",
+        "published": "2026-07-14T15:00:00.000Z",
+        "version": "v26-25-0"
+    },
+    {
+        "published": "2026-07-08T15:00:00.000Z",
+        "version": "v26-25-2147483648"
+    },
+    {
+        "published": "2026-06-27T15:00:00.000Z",
+        "version": "v26-24-2147483647"
+    },
+    {
+        "title": "The Navigation Overhaul",
+        "published": "2026-06-18T15:00:00.000Z",
+        "version": "v26-24-0"
+    },
+    {
+        "published": "2026-06-15T15:00:00.000Z",
+        "version": "v26-23-9"
+    },
+    {
+        "published": "2026-06-14T15:00:00.000Z",
+        "version": "v26-23-8"
+    },
+    {
+        "published": "2026-06-13T15:00:00.000Z",
+        "version": "v26-23-7"
+    },
+    {
+        "published": "2026-06-12T15:00:00.000Z",
+        "version": "v26-23-6"
+    },
+    {
+        "published": "2026-06-11T15:00:00.000Z",
+        "version": "v26-23-5"
+    },
+    {
+        "published": "2026-06-09T15:00:00.000Z",
+        "version": "v26-23-4"
+    },
+    {
+        "published": "2026-06-08T15:00:00.000Z",
+        "version": "v26-23-3"
+    }
+]

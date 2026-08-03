@@ -1,5 +1,14 @@
 [
     {
+        "title": "My Opinion on Vibe Coding",
+        "description": "My detailed opinion on vibe coding and using AI to code.",
+        "tags": [
+            "blog"
+        ],
+        "published": "2026-08-02T15:00:00.000Z",
+        "slug": "2026/08/my-opinion-on-vibe-coding"
+    },
+    {
         "title": "Svelte Migration",
         "description": "A notice regarding the core migration",
         "tags": [
@@ -7,7 +16,7 @@
             "announcement",
             "core"
         ],
-        "published": "2026-07-11",
+        "published": "2026-07-10T15:00:00.000Z",
         "slug": "2026/07/svelte-migration"
     },
     {
@@ -17,7 +26,7 @@
             "blog",
             "personal"
         ],
-        "published": "2026-07-10",
+        "published": "2026-07-09T15:00:00.000Z",
         "slug": "2026/07/alias-updates"
     },
     {
@@ -28,7 +37,7 @@
             "monthly-recap",
             "core"
         ],
-        "published": "2026-06-30",
+        "published": "2026-06-29T15:00:00.000Z",
         "slug": "2026/06/monthly-recap"
     },
     {
@@ -39,7 +48,7 @@
             "monthly-recap",
             "core"
         ],
-        "published": "2026-05-30",
+        "published": "2026-05-29T15:00:00.000Z",
         "slug": "2026/05/monthly-recap"
     },
     {
@@ -48,7 +57,7 @@
             "announcement",
             "core"
         ],
-        "published": "2026-05-30",
+        "published": "2026-05-29T15:00:00.000Z",
         "slug": "2026/05/what-happened-to-light-mode"
     },
     {
@@ -59,7 +68,7 @@
             "announcement",
             "core-api"
         ],
-        "published": "2026-05-12",
+        "published": "2026-05-11T15:00:00.000Z",
         "slug": "2026/05/api-structure-update"
     },
     {
@@ -69,7 +78,7 @@
             "announcement",
             "core"
         ],
-        "published": "2026-02",
+        "published": "2026-02-06T15:00:00.000Z",
         "slug": "2026/02/domain-registration-notice"
     },
     {
@@ -79,7 +88,7 @@
             "announcement",
             "core"
         ],
-        "published": "2026-02",
+        "published": "2026-02-06T15:00:00.000Z",
         "slug": "2026/02/retirement-of-the-old-profile-website"
     }
 ]

@@ -25,9 +25,9 @@
     <div id="container">
         <div class="project">
             <div class="header">
-                <h1>core</h1>
-
                 <div class="status wip">wip</div>
+
+                <h1>core</h1>
             </div>
 
             <p class="description">
@@ -35,56 +35,56 @@
                 right now.
             </p>
 
-            <div class="tags">
-                <div class="tag frontend">frontend</div>
-                <div class="tag webpage">webpage</div>
-            </div>
+            <div class="information">
+                <div class="tags">
+                    <div class="tag frontend">frontend</div>
+                    <div class="tag webpage">webpage</div>
+                </div>
 
-            <hr />
+                <div class="links">
+                    links:
 
-            <div class="links">
-                links:
-
-                <a href="/"> project </a>
-                <a href="/projects/core"> showcase </a>
-                <a href="/projects/core/changelog"> changelog </a>
-                <External href="https://github.com/Lanzoor/core">source</External>
+                    <a href="/"> project </a>
+                    <a href="/projects/core"> showcase </a>
+                    <a href="/projects/core/changelog"> changelog </a>
+                    <External href="https://github.com/Lanzoor/core">source</External>
+                </div>
             </div>
         </div>
 
         <div class="project">
             <div class="header">
-                <h1>core-api</h1>
-
                 <div class="status wip">wip</div>
+
+                <h1>core-api</h1>
             </div>
 
             <p class="description">
                 The source code for api.lanzoor.dev, which powers the backend of this site.
             </p>
 
-            <div class="tags">
-                <div class="tag backend">backend</div>
-                <div class="tag webpage">webpage</div>
-            </div>
+            <div class="information">
+                <div class="tags">
+                    <div class="tag backend">backend</div>
+                    <div class="tag webpage">webpage</div>
+                </div>
 
-            <hr />
+                <div class="links">
+                    links:
 
-            <div class="links">
-                links:
-
-                <External href="https://api.lanzoor.dev">project</External>
-                <a href="/projects/core-api"> showcase </a>
-                <External href="/projects/core-api/changelog">changelog</External>
-                <External href="https://github.com/Lanzoor/core-api">source</External>
+                    <External href="https://api.lanzoor.dev">project</External>
+                    <a href="/projects/core-api"> showcase </a>
+                    <External href="/projects/core-api/changelog">changelog</External>
+                    <External href="https://github.com/Lanzoor/core-api">source</External>
+                </div>
             </div>
         </div>
 
         <div class="project">
             <div class="header">
-                <h1>core-legacy</h1>
-
                 <div class="status complete">complete</div>
+
+                <h1>core-legacy</h1>
             </div>
 
             <p class="description">
@@ -92,26 +92,26 @@
                 maintained.
             </p>
 
-            <div class="tags">
-                <div class="tag frontend">frontend</div>
-                <div class="tag webpage">webpage</div>
-            </div>
+            <div class="information">
+                <div class="tags">
+                    <div class="tag frontend">frontend</div>
+                    <div class="tag webpage">webpage</div>
+                </div>
 
-            <hr />
+                <div class="links">
+                    links:
 
-            <div class="links">
-                links:
-
-                <External href="https://legacy.lanzoor.dev">project</External>
-                <External href="https://github.com/Lanzoor/core-legacy">source</External>
+                    <External href="https://legacy.lanzoor.dev">project</External>
+                    <External href="https://github.com/Lanzoor/core-legacy">source</External>
+                </div>
             </div>
         </div>
 
         <div class="project">
             <div class="header">
-                <h1>tzepak</h1>
-
                 <div class="status wip">wip</div>
+
+                <h1>tzepak</h1>
             </div>
 
             <p class="description">
@@ -119,40 +119,40 @@
                 passwords, written in Python.
             </p>
 
-            <div class="tags">
-                <div class="tag program">program</div>
-                <div class="tag cli">cli</div>
-            </div>
+            <div class="information">
+                <div class="tags">
+                    <div class="tag program">program</div>
+                    <div class="tag cli">cli</div>
+                </div>
 
-            <hr />
+                <div class="links">
+                    links:
 
-            <div class="links">
-                links
-
-                <External href="https://github.com/Lanzoor/tzepak">source</External>
+                    <External href="https://github.com/Lanzoor/tzepak">source</External>
+                </div>
             </div>
         </div>
 
         <div class="project">
             <div class="header">
-                <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>
-
                 <div class="status complete">complete</div>
+
+                <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>
             </div>
 
             <p class="description">An esoteric programming language compiler, written in Python.</p>
 
-            <div class="tags">
-                <div class="tag program">program</div>
-                <div class="tag cli">cli</div>
-            </div>
+            <div class="information">
+                <div class="tags">
+                    <div class="tag program">program</div>
+                    <div class="tag cli">cli</div>
+                </div>
 
-            <hr />
+                <div class="links">
+                    links:
 
-            <div class="links">
-                links:
-
-                <External href="https://github.com/Lanzoor/BHOJ">source</External>
+                    <External href="https://github.com/Lanzoor/BHOJ">source</External>
+                </div>
             </div>
         </div>
     </div>
@@ -215,11 +215,8 @@
     }
 
     #container {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 3em;
 
         width: 100%;
@@ -229,66 +226,113 @@
     .project {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        align-items: flex-start;
+        gap: 2em;
 
         padding: 2em;
 
         background: rgb(6, 2, 11);
         border: 2px solid #222;
         border-radius: 1em;
+
+        transition: 2s ease;
+
+        position: relative;
+        overflow: hidden;
     }
 
-    .project h1 {
-        font-size: 2em;
+    .project::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+            160deg,
+            transparent,
+            transparent 20%,
+            rgba(166, 131, 255, 0.25) 40%,
+            transparent 60%,
+            transparent 100%
+        );
+
+        opacity: 0;
+        transition: opacity 500ms ease;
+        pointer-events: none;
+    }
+
+    .project:hover {
+        transform: scale(1.025) translateY(-4px);
+        cursor: pointer;
+
+        background: rgb(28, 13, 69);
+        border-color: rgb(144, 92, 255);
+        box-shadow: 0 10px 25px rgba(111, 16, 255, 0.5);
+
+        transition: 500ms ease;
+    }
+
+    .project:hover::after {
+        opacity: 1;
+    }
+
+    .project .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .project .header h1 {
+        font-size: 1.75em;
         letter-spacing: 0.05em;
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 
         font-family: 'JetBrains Mono';
 
-        transition: letter-spacing 0.5s ease;
+        transition: 200ms ease;
     }
 
-    .project h1:hover {
+    .project .header h1:hover {
         letter-spacing: 0.1em;
     }
 
-    .project .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .project .header .status {
+    .project .status {
         background: #111;
         padding: 0.3em 0.5em;
+        font-size: 0.75em;
     }
 
-    .project .header .status::before {
+    .project .status::before {
         content: '[ ';
     }
 
-    .project .header .status::after {
+    .project .status::after {
         content: ' ]';
     }
 
-    .project .header .status.complete {
+    .project .status.complete {
         color: var(--bright-green);
         background: color-mix(in oklch, black, var(--bright-green) 25%);
     }
 
-    .project .header .status.wip {
+    .project .status.wip {
         color: var(--bright-yellow);
         background: color-mix(in oklch, black, var(--bright-yellow) 25%);
     }
 
     .project .description {
         line-height: 1.6;
-        font-size: 0.9em;
+        font-size: 0.8em;
 
         color: rgba(255, 255, 255, 0.7);
     }
 
+    .project .information {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
     .project .tags {
         display: flex;
         flex-wrap: wrap;
@@ -296,7 +340,7 @@
     }
 
     .project .tags .tag {
-        font-size: 12.5px;
+        font-size: 0.7em;
         font-weight: 600;
 
         color: #777;
@@ -304,7 +348,8 @@
 
         background: #111;
 
-        padding: 0.3em 1em;
+        padding: 0.5em 1.5em;
+        border-radius: 2147483647px;
 
         backdrop-filter: blur(10px);
     }
@@ -312,43 +357,39 @@
     .project .tags .tag.backend {
         border: 1px solid var(--orange);
         color: var(--bright-orange);
-        background: color-mix(in oklch, #111, var(--bright-orange) 10%);
+        background: color-mix(in oklch, black, var(--bright-orange) 20%);
     }
 
     .project .tags .tag.frontend {
         border: 1px solid var(--green);
         color: var(--bright-green);
-        background: color-mix(in oklch, #111, var(--bright-green) 10%);
+        background: color-mix(in oklch, black, var(--bright-green) 20%);
     }
 
     .project .tags .tag.webpage {
         border: 1px solid var(--cyan);
         color: var(--bright-cyan);
-        background: color-mix(in oklch, #111, var(--bright-cyan) 10%);
+        background: color-mix(in oklch, black, var(--bright-cyan) 20%);
     }
 
     .project .tags .tag.program {
         border: 1px solid var(--purple);
         color: var(--bright-purple);
-        background: color-mix(in oklch, #111, var(--bright-purple) 10%);
+        background: color-mix(in oklch, black, var(--bright-purple) 20%);
     }
 
     .project .tags .tag.cli {
         border: 1px solid var(--magenta);
         color: var(--bright-magenta);
-        background: color-mix(in oklch, #111, var(--bright-magenta) 10%);
-    }
-
-    .project hr {
-        height: 1px;
-
-        margin: 0 0 18px 0;
+        background: color-mix(in oklch, black, var(--bright-magenta) 20%);
     }
 
     .project .links {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        flex-wrap: wrap;
+        column-gap: 1em;
+        row-gap: 0.5em;
     }
 
     .project .links :global(a) {

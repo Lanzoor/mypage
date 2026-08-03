@@ -3,7 +3,7 @@
         title: 'Monthly Recap | May 2026',
         description: 'A monthly recap for May 2026',
         tags: ['blog', 'monthly-recap', 'core'],
-        published: '2026-05-30',
+        published: new Date('2026-05-30T00:00:00+09:00'),
     };
 </script>
 

@@ -20,22 +20,15 @@ export const legalNoticeOverlay = $state<OverlayState>({
     closable: false,
 });
 
-export const changelogSearchOverlay = $state<OverlayState>({
-    identifier: 'changelog-search',
-    open: false,
-});
-
 export const closePriorities = [
     warpOverlay.identifier,
     navigationOverlay.identifier,
-    changelogSearchOverlay.identifier,
     legalNoticeOverlay.identifier,
 ];
 
 const overlays = {
     [navigationOverlay.identifier]: navigationOverlay,
     [warpOverlay.identifier]: warpOverlay,
-    [changelogSearchOverlay.identifier]: changelogSearchOverlay,
     [legalNoticeOverlay.identifier]: legalNoticeOverlay,
 };
 

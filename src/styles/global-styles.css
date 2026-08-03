@@ -263,7 +263,16 @@ main section.enable-padding {
     margin: 2% 0;
 }
 
-/* .tooltip-label {
+/* this part of the code exists due to legacy purposes
+the tooltips are from Lanzoor/profile
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tooltip-label {
     display: inline-block;
     position: relative;
 
@@ -334,7 +343,11 @@ input[type='text']:not(.plain):focus {
     border-color: #825dff;
 }
 
-/* .switch {
+/*
+yayy another legacy section
+use this when you have to i guess
+
+.switch {
     position: relative;
     display: inline-block;
     width: 50px;

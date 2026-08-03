@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#6f27f5" />
 </svelte:head>
 
-<section class="disable-initial-padding disable-padding" id="iris-background">
+<section class="disable-initial-padding disable-padding" id="iris-bg">
     <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
             <h1 class="logo">
@@ -62,7 +62,7 @@
     </section>
 </section>
 
-<section id="strawberry-jam-bg">
+<section id="strawberry-jam">
     <section id="quick-links">
         <h1>Quick Links</h1>
 
@@ -72,34 +72,34 @@
         </p>
 
         <div class="links">
-            <a class="link" href="/about">
+            <a class="link plain" href="/about">
                 <h2>🌐 About</h2>
                 <p>
                     <b>Learn more about this website,</b> including its goals, and how it was built.
                 </p>
             </a>
-            <a class="link" href="/profile">
+            <a class="link plain" href="/profile">
                 <h2>👤 Profile</h2>
                 <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
             </a>
-            <a class="link" href="/projects">
+            <a class="link plain" href="/projects">
                 <h2>💻 Projects</h2>
                 <p>
                     <b>Explore the projects I've been working on,</b> from experiments, simple tools,
                     to larger creations.
                 </p>
             </a>
-            <a class="link" href="/docs">
+            <a class="link plain" href="/docs">
                 <h2>📄 Documents</h2>
                 <p>
                     <b>Browse my documents and guides.</b> I really like talking about random stuff there!
                 </p>
             </a>
-            <a class="link" href="/docs/blog">
+            <a class="link plain" href="/docs/blog">
                 <h2>📝 Blog</h2>
                 <p>Read announcements, development updates and life updates.</p>
             </a>
-            <a class="link" href="/projects/core/changelog">
+            <a class="link plain" href="/projects/core/changelog">
                 <h2>🔄 Changelog</h2>
                 <p>See what's changed, what's new, and what's been improved.</p>
             </a>
@@ -108,7 +108,7 @@
 </section>
 
 <style lang="css">
-    #iris-background {
+    #iris-bg {
         background-image: url('/assets/backgrounds/iris.jpg');
         background-position: center center;
         background-repeat: no-repeat;
@@ -136,11 +136,13 @@
 
     #intro header .logo {
         font-size: 4em;
-        height: 1em;
+    }
 
-        user-select: none;
-        position: relative;
-        line-height: 0;
+    #intro header .logo::after {
+        position: absolute;
+        left: auto;
+        content: '_';
+        animation: cursorBlink 1s none infinite;
     }
 
     @media (max-width: 768px) {
@@ -155,14 +157,7 @@
         }
     }
 
-    #intro header .logo::after {
-        position: absolute;
-        left: auto;
-        content: '_';
-        animation: cursorBlink 1s none infinite;
-    }
-
-    #strawberry-jam-bg {
+    #strawberry-jam {
         background-image: url('/assets/backgrounds/strawberry-jam.jpg');
         background-position: center center;
         background-repeat: no-repeat;
@@ -182,7 +177,7 @@
 
     #quick-links .links {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
         gap: 1em;
     }
 

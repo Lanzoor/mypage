@@ -27,8 +27,9 @@
 
     <ul>
         <li>
-            <b>Consistent Illion Notation</b> - <a href="/docs/math/googology/CIN">./CIN</a><br />
-            The better and more consistent notation for large numbers.
+            <h2><a href="/docs/math/googology/CIN">Consistent Illion Notation</a></h2>
+
+            <p>The better and more consistent notation for large numbers.</p>
         </li>
     </ul>
 </section>
