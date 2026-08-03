@@ -6,11 +6,6 @@ import type { Config } from '@sveltejs/kit';
 const config: Config = {
     preprocess: vitePreprocess(),
 
-    compilerOptions: {
-        runes: ({ filename }) =>
-            filename.split(/[/\\]/).includes('node_modules') ? undefined : true,
-    },
-
     kit: {
         adapter: adapter(),
     },
