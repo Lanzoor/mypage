@@ -1,4 +1,6 @@
 <script lang="ts">
+    import WorkInProgress from '$lib/components/Information/WorkInProgress.svelte';
+
     const profileDesc = 'very cool profile image of my original character Iris';
     const timeFormatter = new Intl.DateTimeFormat('en-US', {
         hour: '2-digit',
@@ -8,8 +10,8 @@
     });
 
     const dateFormatter = new Intl.DateTimeFormat('en-US', {
-        month: 'short',
-        day: 'numeric',
+        month: 'long',
+        day: '2-digit',
     });
 
     const formatTime = () => timeFormatter.format(new Date()).toUpperCase();
@@ -26,6 +28,51 @@
     $effect(() => {
         return () => clearInterval(interval);
     });
+
+    type WordStyle = {
+        x: number;
+        y: number;
+        s: string;
+        r?: number;
+    };
+
+    type Word = {
+        text: string;
+        color: string;
+        style: WordStyle;
+    };
+    const words: Word[] = [
+        {
+            text: '한국어',
+            color: 'rgb(120, 180, 255)',
+            style: { x: 65, y: 42, s: '2.1em', r: 12 },
+        },
+        {
+            text: 'English',
+            color: 'rgb(255, 215, 120)',
+            style: { x: 12, y: 18, s: '1.9em', r: -8 },
+        },
+        {
+            text: '日本語',
+            color: 'rgb(255, 140, 170)',
+            style: { x: 35, y: 70, s: '1.6em' },
+        },
+        {
+            text: '中文',
+            color: 'rgb(140, 255, 210)',
+            style: { x: 80, y: 25, s: '1em', r: 5 },
+        },
+        {
+            text: 'Español',
+            color: 'rgb(220, 170, 255)',
+            style: { x: 55, y: 85, s: '1.1em' },
+        },
+        {
+            text: 'Deutsch',
+            color: 'rgb(180, 255, 255)',
+            style: { x: 94, y: 78, s: '1.1em', r: 10 },
+        },
+    ];
 </script>
 
 <svelte:head>
@@ -34,6 +81,8 @@
 
 <section id="intro-bg" class="disable-padding disable-initial-padding">
     <section id="intro" class="enable-initial-padding">
+        <WorkInProgress />
+
         <div class="header">
             <img
                 class="profile"
@@ -95,14 +144,14 @@
         <b
             >We use the glorious GMT+9 <span class="dim">(KST, Korean Standard Time)</span> timezone.</b
         ><br />
-        It is currently <b>{time}</b>, <b>{date}</b> in my location! Feel free to send me messages whether
+        It is currently <b>{time}</b>, <b>{date}</b> in my location. Feel free to send me messages whether
         I'm online or not.
     </p>
 
     <h1><span class="col bright yellow">[ 03 ]</span> personality & meta</h1>
 
     <p>
-        <b>My MBTI type is INTP.</b><br />
+        <b>My MBTI type is <span class="col bright cyan">INTP</span>.</b><br />
         I am introverted unless I'm online. I like understanding how things work and creating my own tools.<br
         />
         I have social anxiety and chronic depression. I show symptoms associated with ADHD, OCD, and potentially
@@ -110,7 +159,7 @@
     </p>
 
     <p>
-        <b>My general rule is simple: if you respect me, I will respect you.</b><br />
+        <b>My general rule is: <i>if you respect me, I respect you.</i> Simple as that.</b><br />
         I enjoy talking with people who are open-minded and willing to have genuine conversations. Please
         do not talk to me if all you do is ragebaiting and making fun of me.
     </p>
@@ -120,7 +169,21 @@
     <section id="tech">
         <h1>Tech</h1>
 
-        <p>I'd been fascinated by computers since I was around nine years old.</p>
+        <p>
+            <b>Ever since I was around ten years old, I've been fascinated by computers.</b>
+            I've always enjoyed
+            <b
+                >making short games and programs, taking computers apart, figuring out how they
+                work, and learning what goes on behind the scenes.</b
+            >
+        </p>
+
+        <p>
+            <b
+                >Today, I spend most of my time building software & websites and exploring topics
+                like cybersecurity.</b
+            >
+        </p>
 
         <h1>🖥️ Programming</h1>
 
@@ -143,9 +206,10 @@
         <h2>🌐 Web Development</h2>
 
         <p>
-            <b>Most of my projects are web-based because I love how accessible the web is.</b> If
-            someone has a browser, <i>they can use what I build instantly.</i> That makes it the perfect
-            platform for experimenting with ideas.
+            <b>Most of my projects are web-based because of how accessible the web is.</b> If
+            someone has a browser, <i>they can view what I build instantly</i> without having to wait
+            for the code to compile or to download. That makes it the perfect platform for experimenting
+            with ideas.
         </p>
 
         <h3>Frameworks</h3>
@@ -168,16 +232,18 @@
         </div>
 
         <p>
-            I have experience with <span class="col bright green">frontend</span> development. I
-            primarily use
+            I primarily use
             <b class="col bright red">SvelteKit</b>
-            for new web projects, although I also have experience with
-            <b>Next.js</b>.<br />
+            for new web projects, since it aligns with my coding principles and has few to none unpleasant
+            boilerplate code. I also have experience with
+            <b>Next.js</b>, though I never want to touch <span class="col bright cyan">React</span> again.
         </p>
 
         <p>
-            I also have experience with <span class="col bright orange">backend</span> development as
-            well.
+            I also have some experience with <span class="col bright orange">backend</span>
+            development. I've built
+            <b>REST APIs, Discord bots, database integrations, and the API powering this website</b
+            >, which... I'm pretty sure, has more uptime than GitHub 💀
         </p>
 
         <h2>🖥️ General Programming</h2>
@@ -188,17 +254,6 @@
             <div class="stack rust">Rust</div>
         </div>
 
-        <p>
-            <b
-                >I usually write scripts in <span class="col bright blue">Python</span>, since it
-                suits me well.</b
-            >
-            I have made a few CLI, TUI and GUI programs using Python before, and I have experience with
-            most general libraries.<br />
-            Nowadays, though, I use Python to automate repetitive tasks. (e.g. making backups, running
-            long commands repeatedly)
-        </p>
-
         <h3>Scripting</h3>
 
         <div class="stacks">
@@ -206,14 +261,26 @@
             <div class="stack zsh">Zsh</div>
         </div>
 
-        <h3>Others</h3>
+        <p>
+            <b>I usually write scripts in <span class="col bright blue">Python</span>.</b>
+            Although I also have experience with C and Rust, I'm expected to write code in Python since
+            it suits me.
+        </p>
 
         <p>
+            I have made a few CLI, TUI and GUI programs using Python before, and I have experience
+            with most of the common libraries.
+        </p>
+
+        <p>
+            Nowadays, though,
+
             <b
-                >I use <span class="col bright purple">EndeavourOS</span> + a custom modification of
-                <span class="col blue">VSCodium</span>
-                for programming.</b
+                >I usually find myself using Python and some scripting languages in order to <span
+                    class="col bright green">automate repetitive tasks</span
+                >.</b
             >
+            <span class="dim">(e.g. making backups, running long commands repeatedly)</span>
         </p>
 
         <h1>🔐 Cybersecurity</h1>
@@ -228,6 +295,7 @@
 
         <div class="stacks">
             <div class="stack">Networking</div>
+            <div class="stack">Cryptography</div>
             <div class="stack">OSINT</div>
             <div class="stack">OPSEC</div>
         </div>
@@ -237,7 +305,96 @@
             networking fascinates me so much. I'm also really interested in OSINT and operational
             security.
         </p>
+
+        <h1>Uses</h1>
+
+        <h2
+            title="YALL I KNOW LINUX ISN'T AN OPERATING SYSTEM 😭 i just used this name because it has w*ndows in it"
+        >
+            Operating System
+        </h2>
+
+        <p>
+            <b
+                >I currently use <span class="col bright purple">EndeavourOS</span> as my primary operating
+                system.</b
+            >
+            I switched to Linux around
+            <span class="col bright cyan">May 2025</span>, starting with
+            <span class="col bright green">Linux Mint</span>. Nowadays, I use Linux for just about
+            everything.
+        </p>
+
+        <p>
+            I also keep <span class="col bright blue">Windows</span> installed, but I mainly use it
+            for <b>video editing and music production.</b>
+        </p>
+
+        <h2>Development Environments</h2>
+
+        <p>
+            For most of my programming, <b
+                >I use a heavily customized version of
+                <span class="col bright blue">VSCodium</span>.</b
+            > <i>This is precisely why I have literal leveling bars in the editor.</i> I also use Zed
+            when working with Rust.
+        </p>
     </section>
+</section>
+
+<section id="languages">
+    <div class="word-cloud">
+        {#each words as word}
+            <span
+                class="word"
+                style={`
+                left:${word.style.x}%;
+                top:${word.style.y}%;
+                font-size:${word.style.s};
+                color:${word.color};
+                transform:translate(-50%, -50%) rotate(${word.style.r ?? 0}deg);
+            `}
+            >
+                {word.text}
+            </span>
+        {/each}
+    </div>
+
+    <h1>Languages</h1>
+
+    <p>
+        <b>I enjoy studying languages, analyzing them, and figuring out how they actually work.</b>
+    </p>
+
+    <div class="languages-display">
+        <details class="korean">
+            <summary>Korean (C1)</summary>
+
+            <div class="description">I'm a native Korean speaker.</div>
+        </details>
+        <details class="english">
+            <summary>English (B2 ~ C1)</summary>
+
+            <div class="description">I'm a native English speaker.</div>
+        </details>
+        <details class="japanese">
+            <summary>Japanese (B1, N3)</summary>
+
+            <div class="description">I'm a native Japanese speaker.</div>
+        </details>
+        <details class="mandarin">
+            <summary>Mandarin Chinese (A2, HSK 1)</summary>
+
+            <div class="description">I'm a native Mandarin speaker.</div>
+        </details>
+        <details class="spanish">
+            <summary>Spanish (A2)</summary>
+
+            <div class="description">I'm a native Spanish speaker.</div>
+        </details>
+    </div>
+
+    <h2>Conlanging</h2>
 </section>
 
 <style lang="css">
@@ -326,6 +483,14 @@
         transition: 0.5s ease;
     }
 
+    #bio {
+        background:
+            radial-gradient(circle at 20% 40%, #333 8%, transparent 8.1%),
+            radial-gradient(circle at 90% 60%, #333 7%, transparent 7.1%),
+            radial-gradient(circle at 70% 30%, #222 10%, transparent 10.1%),
+            radial-gradient(circle at 50% 80%, #222 10%, transparent 10.1%), #111;
+    }
+
     #bio > h1 {
         font-size: 1.5em;
     }
@@ -382,9 +547,7 @@
     }
 
     .stacks .stack:hover {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-        letter-spacing: 0.2em;
+        transform: scale(1.1);
         cursor: pointer;
     }
 
@@ -417,5 +580,84 @@
     }
     .stacks .stack.rust {
         color: #a04f12;
+    }
+
+    #languages {
+        background: rgb(0, 0, 20);
+        box-shadow: inset 0 0 50px rgba(9, 30, 71, 0.75);
+    }
+
+    #languages * {
+        z-index: 2000;
+    }
+
+    .word-cloud {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .word {
+        font-family: 'Noto Sans';
+        position: absolute;
+        opacity: 0.75;
+        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        white-space: nowrap;
+        user-select: none;
+        z-index: 1999;
+    }
+
+    #languages .languages-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: black;
+    }
+
+    #languages .languages-display details {
+        width: 100%;
+        height: 100%;
+    }
+
+    #languages .languages-display details summary {
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 1.5em;
+        font-size: 1.5em;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 150vw 150vw;
+        color: black;
+    }
+
+    #languages .languages-display details .description {
+        width: 100%;
+        height: 100%;
+        padding: 1.5em;
+    }
+
+    #languages .languages-display .korean summary {
+        background-image: url('/assets/icons/countries/south-korea.svg');
+    }
+
+    #languages .languages-display .english summary {
+        background-image: url('/assets/icons/countries/united-states.svg');
+        background-position: center 40%;
+    }
+
+    #languages .languages-display .japanese summary {
+        background-image: url('/assets/icons/countries/japan.svg');
+    }
+
+    #languages .languages-display .mandarin summary {
+        background-image: url('/assets/icons/countries/china.svg');
+        background-position: center 30%;
+    }
+
+    #languages .languages-display .spanish summary {
+        background-image: url('/assets/icons/countries/spain.svg');
+        background-position: center 25%;
     }
 </style>

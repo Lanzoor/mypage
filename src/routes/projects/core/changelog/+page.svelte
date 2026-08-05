@@ -76,9 +76,8 @@
     </p>
 
     <blockquote class="warning">
-        <b class="col bright yellow">Not all changes warrant a new changelog!</b><br />
-        If a change is very small and/or urgent, or was not assigned a version tag, it may not show up
-        here.
+        <b class="col bright yellow">Not all changes require a new changelog!</b><br />
+        If a change was very small, urgent, or not assigned a version tag, it won't show up here.
     </blockquote>
 </section>
 
@@ -145,7 +144,7 @@
     }
 
     .search .options input {
-        width: 500px;
+        width: 750px;
     }
 
     .search .options button {

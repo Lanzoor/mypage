@@ -78,20 +78,21 @@
                                     dateStyle: 'long',
                                 })}</b
                             ><br />
-                            tags:
-
-                            {#if blog.tags.length}
-                                <span class="tags">
-                                    {#each blog.tags as tag}
-                                        <span class={`tag ${tag}`}>
-                                            {tag}
-                                        </span>
-                                    {/each}
-                                </span>
-                            {:else}
-                                <i>No tags provided.</i>
-                            {/if}
                         </span>
+
+                        {#if blog.tags.length}
+                            <span class="tags">
+                                {#each blog.tags as tag}
+                                    <span class="tag">
+                                        {'<tag:'}<span class={`tagname ${tag}`}>
+                                            {tag}
+                                        </span>{' />'}
+                                    </span>
+                                {/each}
+                            </span>
+                        {:else}
+                            <i>No tags provided.</i>
+                        {/if}
                     </p>
                 </li>
             {/each}
@@ -104,68 +105,41 @@
         display: inline-flex;
         flex-direction: row;
         align-items: center;
-        gap: 30px;
+        gap: 1em;
     }
 
     .tags .tag {
-        cursor: pointer;
-        user-select: none;
+        background: #111;
+        color: #444;
+    }
 
+    .tags .tag .tagname {
         font-weight: 500;
 
-        color: #777;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 2px;
-
-        background: #111;
-
-        padding: 5px 12px;
-
-        backdrop-filter: blur(10px);
-        transition: 0.5s ease;
+        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
     }
 
-    .tags .tag.important {
-        color: rgb(255, 120, 120);
-        border: 1px solid rgba(255, 0, 0, 0.75);
-        text-shadow: 0 0 10px rgba(255, 0, 0);
-        box-shadow:
-            0 0 10px rgba(255, 0, 0, 0.5),
-            inset 0 0 10px rgba(255, 0, 0, 0.5);
+    .tags .tag .important {
+        color: var(--red);
     }
 
-    .tags .tag.announcement {
-        color: rgb(120, 179, 255);
-        border: 1px solid rgba(0, 157, 255, 0.5);
-        text-shadow: 0 0 10px rgba(0, 157, 255, 0.5);
-        box-shadow: 0 0 10px rgba(0, 157, 255, 0.5);
+    .tags .tag .announcement {
+        color: var(--cyan);
     }
 
-    .tags .tag.blog {
+    .tags .tag .blog {
         color: rgb(136, 120, 255);
-        border: 1px solid rgba(101, 66, 255, 0.5);
-        text-shadow: 0 0 10px rgba(101, 66, 255, 0.5);
-        box-shadow: 0 0 10px rgba(101, 66, 255, 0.5);
     }
-
-    .tags .tag.monthly-recap {
-        color: rgb(255, 190, 120);
-        border: 1px solid rgba(255, 179, 66, 0.5);
-        text-shadow: 0 0 10px rgba(255, 179, 66, 0.5);
-        box-shadow: 0 0 10px rgba(255, 179, 66, 0.5);
+    .tags .tag .monthly-recap {
+        color: var(--bright-yellow);
     }
-
-    .tags .tag.core {
-        color: rgb(120, 255, 163);
-        border: 1px solid rgba(66, 255, 123, 0.5);
-        text-shadow: 0 0 10px rgba(66, 255, 123, 0.5);
-        box-shadow: 0 0 10px rgba(66, 255, 123, 0.5);
+    .tags .tag .core {
+        color: var(--bright-green);
     }
-
-    .tags .tag.core-api {
-        color: rgb(255, 120, 120);
-        border: 1px solid rgba(255, 66, 66, 0.5);
-        text-shadow: 0 0 10px rgba(255, 66, 66, 0.5);
-        box-shadow: 0 0 10px rgba(255, 66, 66, 0.5);
+    .tags .tag .core-api {
+        color: var(--bright-orange);
+    }
+    .tags .tag .personal {
+        color: var(--orange);
     }
 </style>

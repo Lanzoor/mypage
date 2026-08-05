@@ -36,23 +36,19 @@
     <h2>How was it created?</h2>
 
     <p>
-        <b>
-            The website is hosted on
-            <External href="https://vercel.com">Vercel</External>
-            and built using
-            <External href="https://svelte.dev/docs/kit/introduction">SvelteKit</External>.
-        </b>
+        The website is hosted on
+        <External href="https://vercel.com">Vercel</External>
+        and built using
+        <External href="https://svelte.dev/docs/kit/introduction">SvelteKit</External>.
     </p>
 
     <h2>Who maintains this website?</h2>
 
     <p>
-        <b>
-            This website is currently maintained by
-            <span class="col bright purple">Lanzoor</span>, an individual developer from Korea,
-            under the organization
-            <External href="https://www.lanzaforge.org/">Lanzaforge</External>.
-        </b>
+        This website is maintained by
+        <span class="col bright purple">Lanzoor</span>, an individual developer from Korea, under
+        the organization
+        <External href="https://www.lanzaforge.org/">Lanzaforge</External>.
     </p>
 </section>
 
@@ -152,6 +148,12 @@
     </ul>
 
     <p>
+        <b>Do note that subdomains within every website above are indeed mine.</b> Examples include
+        <code><span class="dim">api</span>.lanzoor.dev</code>
+        and <code><span class="dim">discord</span>.lanzaforge.org</code>.
+    </p>
+
+    <p>
         If you see ANY other domain that's not on the list above,
         <i class="col bright red"><b>it's not affiliated with me, nor Lanzaforge.</b></i>
     </p>
@@ -163,7 +165,11 @@
     <h2>Registrar</h2>
 
     <p>
-        <b>All of my domains were registered via Porkbun.</b>
+        <b
+            >All of my domains are registered via <External href="https://porkbun.com/"
+                >Porkbun</External
+            >.</b
+        >
     </p>
 </section>
 

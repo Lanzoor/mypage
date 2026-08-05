@@ -235,7 +235,7 @@
         border: 2px solid #222;
         border-radius: 1em;
 
-        transition: 2s ease;
+        transition: 500ms ease;
 
         position: relative;
         overflow: hidden;
@@ -250,25 +250,22 @@
             160deg,
             transparent,
             transparent 20%,
-            rgba(166, 131, 255, 0.25) 40%,
+            rgba(166, 131, 255, 0.1) 40%,
             transparent 60%,
             transparent 100%
         );
 
         opacity: 0;
-        transition: opacity 500ms ease;
+        transition: 500ms ease;
         pointer-events: none;
     }
 
     .project:hover {
-        transform: scale(1.025) translateY(-4px);
         cursor: pointer;
 
         background: rgb(28, 13, 69);
         border-color: rgb(144, 92, 255);
         box-shadow: 0 10px 25px rgba(111, 16, 255, 0.5);
-
-        transition: 500ms ease;
     }
 
     .project:hover::after {
@@ -336,52 +333,37 @@
     .project .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 1em;
     }
 
     .project .tags .tag {
-        font-size: 0.7em;
+        font-size: 0.8em;
         font-weight: 600;
 
         color: #777;
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+    }
 
-        background: #111;
-
-        padding: 0.5em 1.5em;
-        border-radius: 2147483647px;
-
-        backdrop-filter: blur(10px);
+    .project .tags .tag::before {
+        content: '>_ ';
+        color: #333;
+        text-shadow: none;
     }
 
     .project .tags .tag.backend {
-        border: 1px solid var(--orange);
         color: var(--bright-orange);
-        background: color-mix(in oklch, black, var(--bright-orange) 20%);
     }
-
     .project .tags .tag.frontend {
-        border: 1px solid var(--green);
         color: var(--bright-green);
-        background: color-mix(in oklch, black, var(--bright-green) 20%);
     }
-
     .project .tags .tag.webpage {
-        border: 1px solid var(--cyan);
         color: var(--bright-cyan);
-        background: color-mix(in oklch, black, var(--bright-cyan) 20%);
     }
-
     .project .tags .tag.program {
-        border: 1px solid var(--purple);
         color: var(--bright-purple);
-        background: color-mix(in oklch, black, var(--bright-purple) 20%);
     }
-
     .project .tags .tag.cli {
-        border: 1px solid var(--magenta);
         color: var(--bright-magenta);
-        background: color-mix(in oklch, black, var(--bright-magenta) 20%);
     }
 
     .project .links {
