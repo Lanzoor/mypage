@@ -1,22 +1,10 @@
 <script>
     import External from '$lib/components/Links/External.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
-<svelte:head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Projects | lanzoor.dev</title>
-</svelte:head>
-
 <section id="projects">
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects">Projects</a>
-    </div>
+    <Breadcrumbs />
 
     <h1>Featured Projects</h1>
 

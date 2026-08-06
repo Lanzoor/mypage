@@ -1,19 +1,9 @@
-<svelte:head>
-    <title>Contributors | lanzoor.dev</title>
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section class="centered horizontally" id="intro">
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/credits">Credits</a>
-
-        <div class="separator">›</div>
-
-        <a href="/credits/contributors">Contributors</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Contributors</h1>

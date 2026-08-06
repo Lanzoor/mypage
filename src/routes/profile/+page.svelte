@@ -1,5 +1,6 @@
 <script lang="ts">
     import WorkInProgress from '$lib/components/Information/WorkInProgress.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 
     const profileDesc = 'very cool profile image of my original character Iris';
     const timeFormatter = new Intl.DateTimeFormat('en-US', {
@@ -75,12 +76,9 @@
     ];
 </script>
 
-<svelte:head>
-    <title>Welcome! | lanzoor.xyz</title>
-</svelte:head>
-
 <section id="intro-bg" class="disable-padding disable-initial-padding">
     <section id="intro" class="enable-initial-padding">
+        <Breadcrumbs />
         <WorkInProgress />
 
         <div class="header">
@@ -106,7 +104,7 @@
         </div>
 
         <div class="description">
-            <b>hii, my name is Lanzoor!!</b><br />
+            <b>hii, my name is <span class="col bright purple">Lanzoor</span>!!</b><br />
             i'm just a random student from Korea who enjoys creating things, solving interesting problems,
             and learning something new every day.<br />
             i'm obsessed with programming, learning languages, science and anime :)<br />
@@ -152,8 +150,11 @@
 
     <p>
         <b>My MBTI type is <span class="col bright cyan">INTP</span>.</b><br />
-        I am introverted unless I'm online. I like understanding how things work and creating my own tools.<br
-        />
+        I enjoy understanding why and how things work instead of memorizing things.<br />
+    </p>
+
+    <p>
+        I am introverted unless I'm online.<br />
         I have social anxiety and chronic depression. I show symptoms associated with ADHD, OCD, and potentially
         autism.
     </p>
@@ -232,18 +233,24 @@
         </div>
 
         <p>
-            I primarily use
-            <b class="col bright red">SvelteKit</b>
-            for new web projects, since it aligns with my coding principles and has few to none unpleasant
-            boilerplate code. I also have experience with
-            <b>Next.js</b>, though I never want to touch <span class="col bright cyan">React</span> again.
+            <b>
+                I primarily use
+                <span class="col bright red">SvelteKit</span>
+                for new web projects, since it aligns with my coding principles and doesn't have much
+                boilerplate.
+            </b>
+            I also have experience with
+            <b>Next.js</b> and <span class="col bright cyan">React</span>.
         </p>
 
         <p>
             I also have some experience with <span class="col bright orange">backend</span>
-            development. I've built
-            <b>REST APIs, Discord bots, database integrations, and the API powering this website</b
-            >, which... I'm pretty sure, has more uptime than GitHub 💀
+            development as well! I've built
+            <b
+                >REST APIs, Discord bots, database integrations, and the API powering this website <span
+                    class="dim">(which probably has more uptime than github 💀)</span
+                ></b
+            >.
         </p>
 
         <h2>🖥️ General Programming</h2>
@@ -287,8 +294,12 @@
 
         <p>
             Over time, my curiosity about how computers work naturally expanded into networking and
-            cybersecurity. Rather than focusing solely on writing software, I also enjoy
-            understanding how systems communicate, where they can fail, and how they can be secured.
+            cybersecurity. <b
+                >Rather than focusing solely on writing software, I also enjoy understanding how
+                systems <span class="col bright cyan">communicate</span>, where they can
+                <span class="col bright red">fail</span>, and how they can be
+                <span class="col bright green">secured</span>.</b
+            >
         </p>
 
         <h2>Interests</h2>
@@ -366,33 +377,71 @@
         <b>I enjoy studying languages, analyzing them, and figuring out how they actually work.</b>
     </p>
 
-    <div class="languages-display">
-        <details class="korean">
-            <summary>Korean (C1)</summary>
+    <ul>
+        <li>
+            <h3>
+                <img src="/assets/icons/countries/south-korea.svg" alt="Korea Icon" />
+                <div>
+                    Korean <span class="col green">(<i>native</i>, C1)</span>
+                </div>
+            </h3>
 
-            <div class="description">I'm a native Korean speaker.</div>
-        </details>
-        <details class="english">
-            <summary>English (B2 ~ C1)</summary>
+            I am a native Korean speaker.
+        </li>
+        <li>
+            <h3>
+                <img src="/assets/icons/countries/united-kingdom.svg" alt="UK Icon" />
+                <div>English <span class="col bright green">(B2 ~ C1)</span></div>
+            </h3>
 
-            <div class="description">I'm a native English speaker.</div>
-        </details>
-        <details class="japanese">
-            <summary>Japanese (B1, N3)</summary>
+            <p>
+                I learned English through an immersion-based approach. Basically, I spent my free
+                time consuming a lot of English content and communicating with friends online. This
+                method was very effective for me because I was able to learn while genuinely
+                enjoying the process.
+            </p>
+        </li>
+        <li>
+            <h3>
+                <img src="/assets/icons/countries/japan.svg" alt="Japan Icon" />
+                <div>Japanese <span class="col bright yellow">(B1 ~ B2, N3)</span></div>
+            </h3>
 
-            <div class="description">I'm a native Japanese speaker.</div>
-        </details>
-        <details class="mandarin">
-            <summary>Mandarin Chinese (A2, HSK 1)</summary>
+            <p>
+                I started learning Japanese around <b>March 2025</b> after discovering Japanese music
+                and anime.
+            </p>
 
-            <div class="description">I'm a native Mandarin speaker.</div>
-        </details>
-        <details class="spanish">
-            <summary>Spanish (A2)</summary>
+            <p>
+                As a Korean speaker, I found Japanese relatively easy because the two languages
+                share similar grammar and some vocabulary roots. I enjoy studying Japanese by
+                comparing it with Korean.
+            </p>
+        </li>
+        <li>
+            <h3>
+                <img src="/assets/icons/countries/china.svg" alt="China Icon" />
+                <div>Chinese <span class="col orange">(A2, HSK 1 ~ 2)</span></div>
+            </h3>
 
-            <div class="description">I'm a native Spanish speaker.</div>
-        </details>
-    </div>
+            <p>
+                I started learning Chinese around <b>early 2026</b> as another way to explore languages
+                and expand my understanding of East Asian languages.
+            </p>
+        </li>
+        <li>
+            <h3>
+                <img src="/assets/icons/countries/spain.svg" alt="Spain Icon" />
+                <div>Spanish <span class="col red">(A1)</span></div>
+            </h3>
+
+            <p>
+                <b>Spanish was the first Romance language I ever started learning.</b>
+                Although I am still at a beginner level, I find it interesting to explore a language with
+                a very different structure and history from the ones I already know.
+            </p>
+        </li>
+    </ul>
 
     <h2>Conlanging</h2>
 </section>
@@ -601,63 +650,22 @@
     .word {
         font-family: 'Noto Sans';
         position: absolute;
-        opacity: 0.75;
+        opacity: 0.5;
         text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
         white-space: nowrap;
         user-select: none;
         z-index: 1999;
     }
 
-    #languages .languages-display {
+    #languages ul li h3 {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background: black;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
     }
 
-    #languages .languages-display details {
-        width: 100%;
-        height: 100%;
-    }
-
-    #languages .languages-display details summary {
-        width: 100%;
-        height: 100%;
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-        padding: 1.5em;
-        font-size: 1.5em;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 150vw 150vw;
-        color: black;
-    }
-
-    #languages .languages-display details .description {
-        width: 100%;
-        height: 100%;
-        padding: 1.5em;
-    }
-
-    #languages .languages-display .korean summary {
-        background-image: url('/assets/icons/countries/south-korea.svg');
-    }
-
-    #languages .languages-display .english summary {
-        background-image: url('/assets/icons/countries/united-states.svg');
-        background-position: center 40%;
-    }
-
-    #languages .languages-display .japanese summary {
-        background-image: url('/assets/icons/countries/japan.svg');
-    }
-
-    #languages .languages-display .mandarin summary {
-        background-image: url('/assets/icons/countries/china.svg');
-        background-position: center 30%;
-    }
-
-    #languages .languages-display .spanish summary {
-        background-image: url('/assets/icons/countries/spain.svg');
-        background-position: center 25%;
+    #languages ul li h3 img {
+        width: 1.5em;
+        height: 1.5em;
     }
 </style>

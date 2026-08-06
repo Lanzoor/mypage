@@ -1,17 +1,26 @@
 <script lang="ts">
     import '../app.css';
 
-    // import { Analytics } from '$lib';
     import { onMount } from 'svelte';
 
     import TopPanel from '$lib/components/Panels/TopPanel.svelte';
     import FooterPanel from '$lib/components/Panels/FooterPanel.svelte';
     import NavigationPanel from '$lib/components/Overlays/NavigationPanel.svelte';
-    import Notice from '$lib/components/Overlays/LegalNotice.svelte';
+    import LegalNotice from '$lib/components/Overlays/LegalNotice.svelte';
 
     import { cleanupOldData } from '$lib/cleanup';
     import WarpPanel from '$lib/components/Overlays/WarpPanel.svelte';
     import { handleEscape } from '$lib/overlays.svelte';
+
+    import { page } from '$app/state';
+    import { pageIndex } from '$lib/map';
+    import { normalizePath } from '$lib/path';
+
+    const currentPage = $derived(
+        pageIndex.get(normalizePath(page.url.pathname)) ?? pageIndex.get('/')!
+    );
+
+    const options = $derived(currentPage.options);
 
     let { children } = $props();
 
@@ -32,9 +41,34 @@
     });
 </script>
 
-<TopPanel />
+<svelte:head>
+    {#if options.useSitemapMetadata}
+        <title>
+            {currentPage.title
+                ? `${currentPage.title}${currentPage.options.titlePad ? ' | lanzoor.dev' : ''}`
+                : 'lanzoor.dev'}
+        </title>
+        <meta property="og:type" content={currentPage.metadata?.ogType ?? 'website'} />
+        <meta
+            property="og:title"
+            content={currentPage.metadata?.ogTitle ?? currentPage.title ?? 'lanzoor.dev'}
+        />
+        <meta property="og:description" content={currentPage.description ?? ''} />
+        <meta name="description" content={currentPage.description ?? ''} />
+        <meta name="theme-color" content={currentPage.metadata?.themeColor ?? '#6f27f5'} /><meta
+            property="og:url"
+            content={page.url.href}
+        />
+    {/if}
+</svelte:head>
 
-<Notice />
+{#if options.topPanel}
+    <TopPanel />
+{/if}
+
+{#if options.legalNotice}
+    <LegalNotice />
+{/if}
 
 {#if !hydrated}
     <div id="hydration">
@@ -47,11 +81,14 @@
         </p>
     </div>
 {/if}
+
 <main>
     {@render children()}
 </main>
 
-<FooterPanel />
+{#if options.footerPanel}
+    <FooterPanel />
+{/if}
 
 <NavigationPanel />
 

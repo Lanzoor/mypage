@@ -1,19 +1,9 @@
-<svelte:head>
-    <title>Linguistics | lanzoor.dev</title>
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs">Documents</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/linguistics">Linguistics</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Linguistics</h1>

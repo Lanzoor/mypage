@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
     import entries from './(logs)/entries.json';
 
     const map = new Map<string, typeof entries>();
@@ -17,23 +18,37 @@
         map.get(id)!.push(entry);
     }
 
-    const groups = [...map].map(([id, entries]) => ({
-        id,
-        entries,
-    }));
+    let searchQuery = $state('');
+    let status = $state('Search a version name, and warp into an entry by pressing Enter!');
 
-    let query = $state('');
-    let status = $state('You can also warp into an entry by searching for the version name!');
+    function normalize(query: string) {
+        return query.trim().toLowerCase().replace(/\./g, '-');
+    }
 
-    function handleSearch() {
-        const normalized = query.trim().toLowerCase().replace(/\./g, '-');
+    const groups = $derived(
+        [...map]
+            .map(([id, entries]) => ({
+                id,
+                entries: entries.filter((entry) => {
+                    const query = normalize(searchQuery);
+
+                    return (
+                        entry.version.includes(query) || entry.title?.toLowerCase().includes(query)
+                    );
+                }),
+            }))
+            .filter((group) => group.entries.length > 0)
+    );
+
+    function warpIntoVersion() {
+        const normalized = normalize(searchQuery);
 
         if (!normalized) return;
 
         const entry = entries.find((entry) => entry.version.toLowerCase() === normalized);
 
         if (!entry) {
-            status = `Couldn't find version ${query}. Please try again!`;
+            status = `Sorry, we couldn't find a version named ${searchQuery}. Please try again!`;
             return;
         }
 
@@ -41,26 +56,8 @@
     }
 </script>
 
-<svelte:head>
-    <title>Changelog | core</title>
-</svelte:head>
-
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects">Projects</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core">core</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core/changelog">Changelog</a>
-    </div>
+    <Breadcrumbs />
 
     <h1>Changelog</h1>
 
@@ -70,8 +67,8 @@
     </p>
 
     <p>
-        For the changelog conventions, please refer to <a
-            href="/projects/core/changelog/conventions">./conventions/</a
+        For the changelog conventions, please refer to <a href="/conventions/changelog"
+            >this article</a
         >.
     </p>
 
@@ -95,12 +92,12 @@
             <input
                 type="text"
                 id="search-bar"
-                bind:value={query}
-                placeholder="Enter a version (e.g. v26.1.0)"
-                onkeydown={(e) => e.key === 'Enter' && handleSearch()}
+                bind:value={searchQuery}
+                placeholder="Search for a version (e.g. v26.1.0)"
+                onkeydown={(e) => e.key === 'Enter' && warpIntoVersion()}
             />
 
-            <button id="search-button" onclick={handleSearch}> Search </button>
+            <button id="search-button" onclick={warpIntoVersion}> Warp </button>
         </div>
     </div>
 
@@ -117,7 +114,7 @@
                     </h2>
 
                     <p class="dim">
-                        published on
+                        pushed on
                         <b
                             >{new Date(entry.published).toLocaleString('en-US', {
                                 timeZone: 'Asia/Seoul',
@@ -148,10 +145,7 @@
     }
 
     .search .options button {
-        font-family: 'JetBrains Mono';
-
         background: #7155ff;
-        border: none;
         color: white;
 
         padding: 0 10px;

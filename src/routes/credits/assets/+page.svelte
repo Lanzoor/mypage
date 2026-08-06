@@ -1,23 +1,10 @@
 <script>
     import External from '$lib/components/Links/External.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
-<svelte:head>
-    <title>Asset Credits | lanzoor.dev</title>
-</svelte:head>
-
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/credits">Credits</a>
-
-        <div class="separator">›</div>
-
-        <a href="/credits/assets">Asset Credits</a>
-    </div>
+    <Breadcrumbs />
 
     <h1>Icon Credits</h1>
 
@@ -67,6 +54,12 @@
         <External href="https://www.svgrepo.com/svg/401755/flag-for-spain" showArrow={false}>
             <img src="/assets/icons/countries/spain.svg" />
         </External>
+        <External
+            href="https://www.svgrepo.com/svg/401788/flag-for-united-kingdom"
+            showArrow={false}
+        >
+            <img src="/assets/icons/countries/united-kingdom.svg" />
+        </External>
     </div>
 
     <ul>
@@ -90,13 +83,6 @@
     </ul>
 
     <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/242307/united-states-of-america-united-states"
-            showArrow={false}
-        >
-            <img src="/assets/icons/countries/united-states.svg" />
-        </External>
-
         <External href="https://www.svgrepo.com/svg/242294/japan" showArrow={false}>
             <img src="/assets/icons/countries/japan.svg" />
         </External>

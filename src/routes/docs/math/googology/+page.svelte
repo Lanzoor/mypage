@@ -1,23 +1,9 @@
-<svelte:head>
-    <title>Googology | lanzoor.dev</title>
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs">Documents</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/math">Math</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/math/googology">Googology</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Googology</h1>

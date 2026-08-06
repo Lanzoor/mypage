@@ -1,30 +1,13 @@
 <script>
     import { Legal } from '$lib';
     import External from '$lib/components/Links/External.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 
     const privacyPolicy = Legal.LegalInfo.privacyPolicy;
 </script>
 
-<svelte:head>
-    <title>Privacy Policy | lanzoor.dev</title>
-
-    <meta property="og:title" content="Privacy Policy" />
-    <meta
-        property="og:description"
-        content="A detailed privacy policy that lists all details about data collection."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#6f27f5" />
-</svelte:head>
-
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/privacy-policy">Privacy Policy</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Privacy Policy</h1>

@@ -1,23 +1,9 @@
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
+
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects">Projects</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core">core</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core/changelog">Changelog</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core/changelog/conventions">Conventions</a>
-    </div>
+    <Breadcrumbs />
 
     <h1>Changelog Conventions</h1>
 
@@ -40,7 +26,10 @@
 
     <h2>Change Prefixes</h2>
 
-    <p>Every change is prefixed with a symbol indicating what happened.</p>
+    <p>
+        <b>Every change is prefixed with a symbol indicating what happened.</b>
+        Please note that colors may be different depending on the website.
+    </p>
 
     <ul>
         <li>
@@ -72,7 +61,7 @@
         </li>
 
         <li>
-            In some cases, a orange
+            In some cases, an orange
             <span class="col bright orange">i</span> may appear after the symbol. This means the change
             is internal and does not affect the user experience.
         </li>

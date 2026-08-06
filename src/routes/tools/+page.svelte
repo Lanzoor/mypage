@@ -1,21 +1,9 @@
-<svelte:head>
-    <title>Documents | lanzoor.dev</title>
-
-    <meta
-        property="og:description"
-        content="
-            A collection of some handy tools designed for everyone to use."
-    />
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/tools">Tools</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Tools Portal</h1>

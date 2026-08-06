@@ -2,30 +2,13 @@
     import { Legal } from '$lib';
     import Redirects from '$lib/components/Information/Redirects.svelte';
     import KaTeX from '$lib/components/Math/KaTeX.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 
     const termsOfService = Legal.LegalInfo.termsOfService;
 </script>
 
-<svelte:head>
-    <title>Privacy Policy | lanzoor.dev</title>
-
-    <meta property="og:title" content="Privacy Policy" />
-    <meta
-        property="og:description"
-        content="A detailed privacy policy that lists all details about data collection."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#6f27f5" />
-</svelte:head>
-
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/tos">Terms of Service</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Terms of Service</h1>

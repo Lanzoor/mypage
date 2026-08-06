@@ -1,25 +1,9 @@
-<svelte:head>
-    <title>Conlangs | lanzoor.dev</title>
-
-    <meta
-        property="og:description"
-        content="
-            A collection of my constructed languages."
-    />
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects">Projects</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/conlangs">Conlangs</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Conlang Portal</h1>

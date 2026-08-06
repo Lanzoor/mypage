@@ -1,23 +1,10 @@
 <script>
     import External from '$lib/components/Links/External.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
-<svelte:head>
-    <title>Showcase | core</title>
-</svelte:head>
-
 <section id="intro">
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects">Projects</a>
-
-        <div class="separator">›</div>
-
-        <a href="/projects/core">core</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>core</h1>

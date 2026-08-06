@@ -1,3 +1,4 @@
+import { normalizePath } from '$lib/path';
 import { redirect, type Handle } from '@sveltejs/kit';
 
 type CoreRedirect = {
@@ -48,7 +49,7 @@ const redirects: CoreRedirect[] = [
 ];
 
 export const handle: Handle = async ({ event, resolve }) => {
-    const { pathname } = event.url;
+    const pathname = normalizePath(event.url.pathname);
 
     for (const entry of redirects) {
         const code = entry.permanent === true ? 308 : 307;

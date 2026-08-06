@@ -3,32 +3,11 @@
     import Experimental from '$lib/components/Information/Experimental.svelte';
     import NotImplemented from '$lib/components/Information/NotImplemented.svelte';
     import Redirects from '$lib/components/Information/Redirects.svelte';
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
-<svelte:head>
-    <title>Consistent Illion Notation | lanzoor.dev</title>
-</svelte:head>
-
 <section>
-    <div class="breadcrumbs">
-        <a href="/">Home</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs">Documents</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/math">Math</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/math/googology">Googology</a>
-
-        <div class="separator">›</div>
-
-        <a href="/docs/math/googology/CIN">Consistent Illion Notation</a>
-    </div>
+    <Breadcrumbs />
 
     <header>
         <h1>Consistent Illion Notation (CIN)</h1>

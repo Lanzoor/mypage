@@ -4,10 +4,6 @@
     import { LegalInfo } from '$lib/legal';
     import { legalNoticeOverlay } from '$lib/overlays.svelte';
 
-    const legalPaths = new Set(['/privacy-policy', '/tos', '/about']);
-
-    let isLegalPage = $derived(legalPaths.has(page.url.pathname));
-
     let acceptedLegalInfo = $state(Legal.getAcceptedLegalInfo());
 
     let isPrivacyPolicyUpToDate = $derived(
@@ -19,7 +15,7 @@
     );
 
     $effect(() => {
-        if ((!isPrivacyPolicyUpToDate || !isTermsOfServiceUpToDate) && !isLegalPage) {
+        if (!isPrivacyPolicyUpToDate || !isTermsOfServiceUpToDate) {
             legalNoticeOverlay.open = true;
             setFrozen(true);
         } else {
@@ -42,82 +38,75 @@
     }
 </script>
 
-{#if !isLegalPage}
-    <div
-        id="legal-notice"
-        class:open={legalNoticeOverlay.open}
-        aria-hidden={!legalNoticeOverlay.open}
-    >
-        <h1>[ notice ]</h1>
+<div id="legal-notice" class:open={legalNoticeOverlay.open} aria-hidden={!legalNoticeOverlay.open}>
+    <h1>[ notice ]</h1>
 
-        {#if !acceptedLegalInfo}
-            <p>Hello! By continuing, you accept the Privacy Policy and Terms of Service.</p>
-        {:else}
-            <p>
-                Hey there! Since your last visit, the Legal Information of this website has changed.<br
-                />
-            </p>
-        {/if}
+    {#if !acceptedLegalInfo}
+        <p>Hello! By continuing, you accept the Privacy Policy and Terms of Service.</p>
+    {:else}
+        <p>
+            Hey there! Since your last visit, the Legal Information of this website has changed.<br
+            />
+        </p>
+    {/if}
 
-        {#if !isPrivacyPolicyUpToDate}
-            <h2>Privacy Policy</h2>
+    {#if !isPrivacyPolicyUpToDate}
+        <h2>Privacy Policy</h2>
 
-            <p>
-                <b>
-                    The Privacy Policy was updated to version {LegalInfo.privacyPolicy.version} at
-                    {LegalInfo.privacyPolicy.formatTime()}.
-                </b><br />
-                For more information, please refer to
-                <a href="/privacy-policy/">/privacy-policy</a>.
-            </p>
+        <p>
+            <b>
+                The Privacy Policy was updated to version {LegalInfo.privacyPolicy.version} at
+                {LegalInfo.privacyPolicy.formatTime()}.
+            </b><br />
+            For more information, please refer to
+            <a href="/privacy-policy/">/privacy-policy</a>.
+        </p>
 
-            <p>
-                <i>
-                    This website does not intentionally collect or use personal data or use
-                    analytics services. Period.
-                </i>
-            </p>
-        {/if}
+        <p>
+            <i>
+                This website does not intentionally collect or use personal data or use analytics
+                services. Period.
+            </i>
+        </p>
+    {/if}
 
-        {#if !isTermsOfServiceUpToDate}
-            <h2>Terms of Service</h2>
+    {#if !isTermsOfServiceUpToDate}
+        <h2>Terms of Service</h2>
 
-            <p>
-                <b>
-                    The Terms of Service were updated to version {LegalInfo.termsOfService.version} at
-                    {LegalInfo.termsOfService.formatTime()}.
-                </b><br />
-                For more information, please refer to
-                <a href="/tos/">/tos</a>.
-            </p>
+        <p>
+            <b>
+                The Terms of Service were updated to version {LegalInfo.termsOfService.version} at
+                {LegalInfo.termsOfService.formatTime()}.
+            </b><br />
+            For more information, please refer to
+            <a href="/tos/">/tos</a>.
+        </p>
 
-            <p>
-                <i>
-                    You probably won't need to read this unless you're curious about the details.<br
-                    />
-                    <b>We don't do any wacky stuff!</b>
-                </i>
-            </p>
-        {/if}
+        <p>
+            <i>
+                You probably won't need to read this unless you're curious about the details.<br />
+                <b>We don't do any wacky stuff!</b>
+            </i>
+        </p>
+    {/if}
 
-        <div class="bye">
-            <button onclick={() => acceptLegalChanges()}>I Accept</button>
+    <div class="bye">
+        <button onclick={() => acceptLegalChanges()}>I Accept</button>
 
-            <p>
-                <b>Clicking "I Accept" means that you accept the (new) Legal Information.</b><br />
-                This action will prevent this notice from popping up,<br />
-                unless a new change is made to the Legal Information.<b
-                    ><br />
-                    This panel intentionally does not pop up in any of the Legal Information pages.
-                </b>
+        <p>
+            <b>Clicking "I Accept" means that you accept the (new) Legal Information.</b><br />
+            This action will prevent this notice from popping up,<br />
+            unless a new change is made to the Legal Information.<b
+                ><br />
+                This panel intentionally does not pop up in any of the Legal Information pages.
+            </b>
 
-                <br /><br />
-                For more information, please refer to <a href="/about#legal">this section</a> in the about
-                page.
-            </p>
-        </div>
+            <br /><br />
+            For more information, please refer to <a href="/about#legal">this section</a> in the about
+            page.
+        </p>
     </div>
-{/if}
+</div>
 
 <style lang="css">
     #legal-notice {

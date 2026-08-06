@@ -1,8 +1,10 @@
-<svelte:head>
-    <title>Proto-Lanzavel | lanzoor.dev</title>
-</svelte:head>
+<script>
+    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+</script>
 
 <section>
+    <Breadcrumbs />
+
     <header>
         <h1 class="lt-track" id="header">Proto-Lanzavel</h1>
 
