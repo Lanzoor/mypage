@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { navigationOverlay } from '$lib/overlays.svelte';
+    import { navigationOverlay, warpOverlay } from '$lib/overlays.svelte';
     import { onMount } from 'svelte';
     import External from '../Links/External.svelte';
 
@@ -48,7 +48,7 @@
                         <a href="/map">Site Map</a>
                     </li>
                     <li>
-                        <details>
+                        <details open>
                             <summary> Legal </summary>
                             <ul>
                                 <li>
@@ -61,7 +61,7 @@
                         </details>
                     </li>
                     <li>
-                        <details>
+                        <details open>
                             <summary> Projects </summary>
                             <ul>
                                 <li>
@@ -82,7 +82,7 @@
                         </details>
                     </li>
                     <li>
-                        <details>
+                        <details open>
                             <summary> Documents </summary>
                             <ul>
                                 <li>
@@ -95,7 +95,7 @@
                         </details>
                     </li>
                     <li>
-                        <details>
+                        <details open>
                             <summary> Credits </summary>
                             <ul>
                                 <li>
@@ -115,6 +115,8 @@
                     </li>
                 </ul>
             </nav>
+
+            <button onclick={() => (warpOverlay.open = true)}>Open Warp Panel</button>
         </div>
     </div>
 </div>
@@ -140,6 +142,7 @@
         background: rgba(0, 0, 0, 0.5);
         width: 100%;
         height: 100%;
+        cursor: pointer;
     }
 
     #navigation .panel {
@@ -149,6 +152,7 @@
         background: rgba(0, 0, 0, 0.75);
         min-width: 40%;
         max-width: 100vw;
+        cursor: default;
 
         padding: 1.5em;
     }

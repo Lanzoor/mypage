@@ -9,7 +9,7 @@
     {#if !overflow}
         This page can also be accessed through
         {#each links as link, i}
-            <a href={link}><code>{link}</code></a
+            <code>{link}</code
             >{#if i < links.length - 2}{', '}{/if}{#if i === links.length - 2}{' and '}{/if}{#if i === links.length - 1}{'.'}{/if}
         {/each}
     {:else}

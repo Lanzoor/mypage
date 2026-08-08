@@ -10,8 +10,8 @@
 </svelte:head>
 
 {#if status === 404}
-    <section class="stretched">
-        <header class="align--center align-self--center text-align--center">
+    <section id="error-404" class="stretched">
+        <header>
             <h1>404 - Page not found!</h1>
             <p>
                 <b
@@ -48,7 +48,16 @@
 {/if}
 
 <style lang="css">
-    #buttons {
+    #error-404 {
+        background:
+            radial-gradient(circle at left top, rgba(100, 0, 255, 0.5), transparent 50%), #111;
+    }
+
+    #error-404 header {
+        align-self: center;
+        text-align: center;
+    }
+    #error-404 #buttons {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -57,9 +66,8 @@
         width: 100%;
     }
 
-    #buttons button {
+    #error-404 #buttons button {
         padding: 1em 2em;
-        font-family: 'JetBrains Mono';
         font-size: 1em;
         background: #111;
         border: 2px solid #ccc;
@@ -68,7 +76,7 @@
         transition: 0.25s ease;
     }
 
-    #buttons button:hover {
+    #error-404 #buttons button:hover {
         border-color: white;
         color: #111;
         background: white;

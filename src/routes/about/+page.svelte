@@ -37,9 +37,16 @@
 
     <p>
         This website is maintained by
-        <span class="col bright purple">Lanzoor</span>, an individual developer from Korea, under
-        the organization
+        <span class="col bright purple">Lanzoor</span>, an individual developer from Korea, as part
+        of the organization
         <External href="https://www.lanzaforge.org/">Lanzaforge</External>.
+    </p>
+
+    <h2>Can I use the content from this website?</h2>
+
+    <p>
+        Unless otherwise stated, the content on this website belongs to Lanzoor. Please ask for
+        permission before redistributing or modifying personal works.
     </p>
 </section>
 
@@ -58,36 +65,38 @@
 
     <ul>
         <li>
-            <b>
+            <h3>
                 Discord
 
                 <External href="https://discord.com/users/1160164047111606292">@lanzoor</External>
-            </b><br />
+            </h3>
 
             I strongly recommend using Discord since I check it quite often.
         </li>
         <li>
-            <b>
+            <h3>
                 Email
 
                 <a href="mailto:mail@lanzoor.dev">mail@lanzoor.dev</a>
-                <span class="dim">+3 others</span>
-            </b><br />
+                <span class="dim">+others</span>
+            </h3>
 
-            Emails sent to
-            <b>mail@lanzoor.dev</b>,
-            <b>noreply@lanzoor.dev</b>,
-            <b>hello@lanzoor.dev</b>, or
-            <b>support@lanzoor.dev</b>
-            are forwarded to my personal email address,
-            <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>.
-            <br />
+            <p>
+                Emails sent to
+                <b>mail@lanzoor.dev</b>,
+                <b>noreply@lanzoor.dev</b>,
+                <b>hello@lanzoor.dev</b>, or
+                <b>support@lanzoor.dev</b>
+                are forwarded to my personal email address,
+                <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>. Feel free
+                to contact my personal email address as well.
+            </p>
 
-            <b>
+            <p>
                 Replies will currently come from
                 <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>, not the
                 <code>@lanzoor.dev</code> addresses. Thank you for your understanding.
-            </b>
+            </p>
         </li>
     </ul>
 
@@ -150,7 +159,7 @@
     </p>
 
     <p class="dim">
-        I also do not own <code>lanzoor.com</code>. I don't even know what it's about.
+        I do not own <code>lanzoor.com</code>.
     </p>
 
     <h2>Registrar</h2>

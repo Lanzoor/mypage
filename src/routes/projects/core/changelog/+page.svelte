@@ -1,6 +1,6 @@
 <script lang="ts">
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import entries from './(logs)/entries.json';
+    import entries from './(entries)/entries.json';
 
     const map = new Map<string, typeof entries>();
 
@@ -83,12 +83,12 @@
         <b>Found {entries.length} changelog entries.</b>
     </p>
 
-    <div class="search enable-spacing">
+    <div class="search-options enable-spacing">
         <p>
             {status}
         </p>
 
-        <div class="options">
+        <div class="search-bar">
             <input
                 type="text"
                 id="search-bar"
@@ -129,22 +129,22 @@
 </section>
 
 <style lang="css">
-    .search {
+    .search-options {
         margin: 2em auto;
     }
 
-    .search .options {
+    .search-options .search-bar {
         display: flex;
         justify-content: center;
         align-items: stretch;
         gap: 0;
     }
 
-    .search .options input {
+    .search-options .search-bar input {
         width: 750px;
     }
 
-    .search .options button {
+    .search-options .search-bar button {
         background: #7155ff;
         color: white;
 
@@ -152,7 +152,7 @@
 
         transition: 0.5s ease;
     }
-    .search .options button:hover {
+    .search-options .search-bar button:hover {
         background: #aa91ff;
     }
 </style>

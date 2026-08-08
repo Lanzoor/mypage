@@ -1,22 +1,15 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { type BlogEntry } from '../src/lib/types';
 
-const BLOG_ROOT = path.resolve('src/routes/docs/blog');
+const BLOG_ROOT = path.resolve('src/routes/docs/blog/(entries)/');
 const OUTPUT = path.join(BLOG_ROOT, 'entries.json');
-
-type Entry = {
-    slug: string;
-    title: string;
-    description?: string;
-    tags?: string[];
-    published: Date;
-};
 
 async function sleep(timeMs: number): Promise<any> {
     return new Promise((p) => setTimeout(p, timeMs));
 }
 
-const entries: Entry[] = [];
+const entries: BlogEntry[] = [];
 
 async function walk(dir: string): Promise<void> {
     const items = await fs.readdir(dir, { withFileTypes: true });
@@ -25,12 +18,12 @@ async function walk(dir: string): Promise<void> {
         const target: string = path.join(dir, item.name);
 
         if (item.isDirectory()) {
-            console.log(`info: parsing directory ${target}`);
+            console.info(`info: parsing directory ${target}`);
             await sleep(5);
             await walk(target);
             continue;
         } else {
-            console.log(`info: parsing file ${target}`);
+            console.info(`info: parsing file ${target}`);
             await sleep(5);
         }
 
@@ -42,27 +35,29 @@ async function walk(dir: string): Promise<void> {
 
         if (!match) continue;
 
-        const metadata = Function(`return (${match[1]})`)() as Partial<Entry>;
+        const metadata = Function(`return (${match[1]})`)() as Partial<BlogEntry>;
 
         if (!metadata.title) {
-            console.log(`warn: ${target}: missing metadata.title`);
+            console.warn(`warn: ${target}: missing metadata.title, skipping...`);
             continue;
         }
 
         if (!metadata.published) {
-            console.log(`warn: ${target}: missing metadata.published`);
+            console.warn(`warn: ${target}: missing metadata.published, skipping...`);
             continue;
         }
 
         if (!Array.isArray(metadata.tags)) {
-            console.log(`warn: ${target}: metadata.tags must be an array`);
+            console.warn(`warn: ${target}: metadata.tags must be an array, skipping...`);
             continue;
         }
 
         entries.push({
             ...metadata,
             slug: path.relative(BLOG_ROOT, path.dirname(target)).replace(/\\/g, '/'),
-        } as Entry);
+        } as BlogEntry);
+
+        console.info(`info: parsed file ${target}`);
     }
 }
 
@@ -72,4 +67,6 @@ entries.sort((a, b) => Number(b.published) - Number(a.published));
 
 await fs.writeFile(OUTPUT, JSON.stringify(entries, null, 4));
 
-console.log(`successfully generated ${entries.length} blog entries @ /docs/blog/entries.json`);
+console.log(
+    `successfully generated ${entries.length} blog entries @ /docs/blog/(entries)/entries.json`
+);

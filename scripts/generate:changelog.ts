@@ -1,20 +1,15 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { type ChangelogEntry } from '../src/lib/types';
 
-const CHANGELOG_ROOT = path.resolve('src/routes/projects/core/changelog/(logs)');
+const CHANGELOG_ROOT = path.resolve('src/routes/projects/core/changelog/(entries)/');
 const OUTPUT = path.join(CHANGELOG_ROOT, 'entries.json');
-
-type Entry = {
-    version: string;
-    title?: string;
-    published: Date;
-};
 
 async function sleep(timeMs: number): Promise<any> {
     return new Promise((p) => setTimeout(p, timeMs));
 }
 
-const entries: Entry[] = [];
+const entries: ChangelogEntry[] = [];
 
 async function walk(dir: string): Promise<void> {
     const items = await fs.readdir(dir, { withFileTypes: true });
@@ -23,12 +18,12 @@ async function walk(dir: string): Promise<void> {
         const target: string = path.join(dir, item.name);
 
         if (item.isDirectory()) {
-            console.log(`info: parsing directory ${target}`);
+            console.info(`info: parsing directory ${target}`);
             await sleep(5);
             await walk(target);
             continue;
         } else {
-            console.log(`info: parsing file ${target}`);
+            console.info(`info: parsing file ${target}`);
             await sleep(5);
         }
 
@@ -40,17 +35,19 @@ async function walk(dir: string): Promise<void> {
 
         if (!match) continue;
 
-        const metadata = Function(`return (${match[1]})`)() as Partial<Entry>;
+        const metadata = Function(`return (${match[1]})`)() as Partial<ChangelogEntry>;
 
         if (!metadata.published) {
-            console.log(`warn: ${target}: missing metadata.published`);
+            console.warn(`warn: ${target}: missing metadata.published, skipping...`);
             continue;
         }
 
         entries.push({
             ...metadata,
             version: path.basename(path.dirname(target)),
-        } as Entry);
+        } as ChangelogEntry);
+
+        console.info(`info: parsed file ${target}`);
     }
 }
 
@@ -61,5 +58,5 @@ entries.sort((a, b) => Number(b.published) - Number(a.published));
 await fs.writeFile(OUTPUT, JSON.stringify(entries, null, 4));
 
 console.log(
-    `successfully generated ${entries.length} changelog entries @ /projects/core/changelog/entries.json`
+    `successfully generated ${entries.length} changelog entries @ /projects/core/changelog/(entries)/entries.json`
 );

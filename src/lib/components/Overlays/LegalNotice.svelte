@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { page } from '$app/state';
     import { Legal, setFrozen } from '$lib';
     import { LegalInfo } from '$lib/legal';
     import { legalNoticeOverlay } from '$lib/overlays.svelte';
@@ -45,8 +44,8 @@
         <p>Hello! By continuing, you accept the Privacy Policy and Terms of Service.</p>
     {:else}
         <p>
-            Hey there! Since your last visit, the Legal Information of this website has changed.<br
-            />
+            Hey there!<br />
+            <b>Since your last visit, the Legal Information of this website has been modified.</b>
         </p>
     {/if}
 

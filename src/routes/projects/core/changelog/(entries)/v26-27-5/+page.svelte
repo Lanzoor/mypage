@@ -39,5 +39,9 @@
             to
             <code>/conventions/changelog</code>.
         </li>
+        <li>
+            <span class="col bright yellow">~</span>
+            Updated the <a href="/profile">profile</a> page.
+        </li>
     </ul>
 </section>

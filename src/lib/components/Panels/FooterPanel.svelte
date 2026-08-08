@@ -226,6 +226,7 @@
 
     :global(#footer-panel #connections a:not(.plain):has(> img)) {
         opacity: 0.75;
+        transition: opacity 500ms ease;
     }
 
     :global(#footer-panel #connections a:not(.plain):has(> img):hover) {

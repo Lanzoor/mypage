@@ -117,7 +117,7 @@
 
     <p>
         <b>
-            I go by the name of Lanzoor, which is pronounced
+            I go by the name of <span class="col bright purple">Lanzoor</span>, which is pronounced
             <span class="ipa">/lɑn.ˈzoʊɹ/</span>.
         </b>
         <br />
@@ -127,42 +127,43 @@
     <p>
         If you're close to me, feel free to call me Lanzy (<span class="ipa">/ˈlæn.ziː/</span>) or
         lan lan man.<br />
-        I also have a lot of aliases, such as Lapis Lazuli
-        <span class="ipa"> /ˈlæpɪs læˈzʊliː/ </span> and Praseodymium Crystal.
+        I also have a lot of aliases, such as <span class="col bright blue">Lapis Lazuli</span>
+        <span class="ipa"> /ˈlæpɪs læˈzʊliː/ </span> and
+        <span class="col green">Praseodymium Crystal</span>.
     </p>
 
     <h1><span class="col bright yellow">[ 02 ]</span> nationality & location</h1>
 
     <p>
         <b>I am from South Korea 🇰🇷!</b>
-        I currently live at 📍 Yongin-si, Gyeonggi-do.
+        I currently live in 📍 Gyeonggi-do.
     </p>
 
     <p>
         <b
             >We use the glorious GMT+9 <span class="dim">(KST, Korean Standard Time)</span> timezone.</b
         ><br />
-        It is currently <b>{time}</b>, <b>{date}</b> in my location. Feel free to send me messages whether
-        I'm online or not.
+        It is currently <b>{time}</b>, <b>{date}</b> in my location.<br />
+        Feel free to send me messages whether I'm online or not!
     </p>
 
     <h1><span class="col bright yellow">[ 03 ]</span> personality & meta</h1>
 
     <p>
         <b>My MBTI type is <span class="col bright cyan">INTP</span>.</b><br />
-        I enjoy understanding why and how things work instead of memorizing things.<br />
+        I enjoy understanding why and how things work instead of simply memorizing things.<br />
     </p>
 
     <p>
         I am introverted unless I'm online.<br />
-        I have social anxiety and chronic depression. I show symptoms associated with ADHD, OCD, and potentially
-        autism.
+        I have social anxiety and chronic depression. I also show symptoms associated with ADHD, OCD,
+        and potentially autism.
     </p>
 
     <p>
-        <b>My general rule is: <i>if you respect me, I respect you.</i> Simple as that.</b><br />
-        I enjoy talking with people who are open-minded and willing to have genuine conversations. Please
-        do not talk to me if all you do is ragebaiting and making fun of me.
+        <b>My rule is: <i>if you respect me, I respect you.</i> Simple as that.</b><br />
+        I enjoy talking with people who are open-minded and willing to have genuine conversations.
+        <i>Please do not talk to me if all you do is ragebait or make fun of me.</i>
     </p>
 </section>
 
@@ -217,6 +218,7 @@
 
         <div class="stacks">
             <div class="stack svelte">SvelteKit</div>
+            ⬩
             <div class="stack next">Next.js</div>
         </div>
 
@@ -224,11 +226,17 @@
 
         <div class="stacks">
             <div class="stack svelte">Svelte</div>
+            ⬩
             <div class="stack react">React</div>
+            ⬩
             <div class="stack js">JavaScript</div>
+            ⬩
             <div class="stack ts">TypeScript</div>
+            ⬩
             <div class="stack css">CSS</div>
+            ⬩
             <div class="stack html">HTML</div>
+            ⬩
             <div class="stack php">PHP</div>
         </div>
 
@@ -257,7 +265,9 @@
 
         <div class="stacks">
             <div class="stack python">Python</div>
+            ⬩
             <div class="stack c">C</div>
+            ⬩
             <div class="stack rust">Rust</div>
         </div>
 
@@ -265,6 +275,7 @@
 
         <div class="stacks">
             <div class="stack bash">Bash</div>
+            ⬩
             <div class="stack zsh">Zsh</div>
         </div>
 
@@ -306,8 +317,11 @@
 
         <div class="stacks">
             <div class="stack">Networking</div>
+            ⬩
             <div class="stack">Cryptography</div>
+            ⬩
             <div class="stack">OSINT</div>
+            ⬩
             <div class="stack">OPSEC</div>
         </div>
 
@@ -320,7 +334,7 @@
         <h1>Uses</h1>
 
         <h2
-            title="YALL I KNOW LINUX ISN'T AN OPERATING SYSTEM 😭 i just used this name because it has w*ndows in it"
+            title="YALL I KNOW LINUX ISN'T AN OPERATING SYSTEM 😭 i just used this name since it has w*ndows in it"
         >
             Operating System
         </h2>
@@ -373,10 +387,6 @@
 
     <h1>Languages</h1>
 
-    <p>
-        <b>I enjoy studying languages, analyzing them, and figuring out how they actually work.</b>
-    </p>
-
     <ul>
         <li>
             <h3>
@@ -395,10 +405,9 @@
             </h3>
 
             <p>
-                I learned English through an immersion-based approach. Basically, I spent my free
-                time consuming a lot of English content and communicating with friends online. This
-                method was very effective for me because I was able to learn while genuinely
-                enjoying the process.
+                <b>I learned English through the immersion method™.</b> Basically, I spent my free time
+                consuming a lot of English content and communicating with friends online. This method
+                was very effective for me because I was able to learn while genuinely enjoying the process.
             </p>
         </li>
         <li>
@@ -437,13 +446,43 @@
 
             <p>
                 <b>Spanish was the first Romance language I ever started learning.</b>
-                Although I am still at a beginner level, I find it interesting to explore a language with
-                a very different structure and history from the ones I already know.
+                Although I am still a beginner, I find it interesting to explore a language with a very
+                different structure and history from the ones I already know.
             </p>
         </li>
     </ul>
 
-    <h2>Conlanging</h2>
+    <p>
+        <b>I'm willing to help anyone learn or practice any of the languages listed above,</b>
+        especially Korean, English and Japanese.
+        <i>Though, please do note that I'm not really the best at teaching.</i>
+    </p>
+
+    <p>
+        I am also interested in learning languages such as <b>German, Dutch and Greek</b>.
+    </p>
+
+    <h1>Linguistics</h1>
+
+    <p>
+        As much as I enjoy learning languages, <b
+            >I also enjoy taking them apart and figuring out how they actually work.</b
+        >
+    </p>
+
+    <p>
+        <b
+            >I love exploring grammar, pronunciation, writing systems, and other aspects of
+            linguistics.</b
+        >
+        I want to explore how languages work, and furthermore help other people learn languages as well.
+    </p>
+
+    <p>
+        I also enjoy making my own conlangs
+        <span class="dim">(constructed languages)</span>
+        in my free time!
+    </p>
 </section>
 
 <style lang="css">
@@ -567,7 +606,8 @@
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
-        gap: 1.5em;
+        gap: 1em;
+        color: #444;
 
         padding: 0 2em;
         text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
@@ -579,25 +619,9 @@
         background: transparent;
         color: white;
 
-        padding: 0.25em 1em;
-        font-size: 1.25em;
+        font-size: 1em;
         letter-spacing: 0.15em;
         font-weight: 400;
-
-        transition: 500ms ease;
-    }
-
-    .stacks .stack::before {
-        content: '[ ';
-    }
-
-    .stacks .stack::after {
-        content: ' ]';
-    }
-
-    .stacks .stack:hover {
-        transform: scale(1.1);
-        cursor: pointer;
     }
 
     .stacks .stack.svelte {
@@ -657,6 +681,9 @@
         z-index: 1999;
     }
 
+    #languages ul li {
+        margin: 1em 0;
+    }
     #languages ul li h3 {
         display: flex;
         flex-direction: row;

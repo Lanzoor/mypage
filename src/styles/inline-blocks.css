@@ -63,7 +63,7 @@ a:not(.plain) {
 
     color: var(--anchor);
 
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 a:not(.plain):hover {

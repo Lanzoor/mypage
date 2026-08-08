@@ -1,6 +1,7 @@
 <script lang="ts">
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import entries from './entries.json';
+    import type { BlogEntry } from '$lib/types';
+    import entries from './(entries)/entries.json';
 
     const availableTags = [
         'important',
@@ -19,44 +20,54 @@
 
     let sortingOrder = $state<SortingOrder>('descending');
 
-    const sortedEntries = $derived(
-        [...entries].sort((a, b) => {
+    function sortEntries(entries: BlogEntry[]) {
+        return [...entries].sort((a, b) => {
             const result = a.published.localeCompare(b.published);
 
             return sortingOrder === 'ascending' ? result : -result;
-        })
-    );
+        });
+    }
+
+    function matchesSearchQuery(entry: BlogEntry) {
+        const query = searchQuery.trim().toLowerCase();
+
+        if (query === '') {
+            return true;
+        }
+
+        return (
+            entry.title.toLowerCase().includes(query) ||
+            entry.description?.toLowerCase().includes(query) ||
+            entry.tags?.some((tag) => tag.toLowerCase().includes(query))
+        );
+    }
+
+    function matchesSelectedTags(entry: BlogEntry) {
+        return searchTags.every((tag) => entry.tags?.includes(tag));
+    }
+
+    function groupByMonth(entries: BlogEntry[]) {
+        return Object.values(
+            entries.reduce(
+                (groups, entry) => {
+                    const month = entry.published.slice(0, 7);
+
+                    (groups[month] ??= []).push(entry);
+
+                    return groups;
+                },
+                {} as Record<string, typeof entries>
+            )
+        );
+    }
+
+    const sortedEntries = $derived(sortEntries(entries));
 
     const filteredEntries = $derived(
-        sortedEntries.filter((entry) => {
-            const query = searchQuery.trim().toLowerCase();
-
-            const matchesQuery =
-                query === '' ||
-                entry.title.toLowerCase().includes(query) ||
-                entry.description?.toLowerCase().includes(query) ||
-                entry.tags.some((tag) => tag.toLowerCase().includes(query));
-
-            const matchesTags = searchTags.every((tag) => entry.tags.includes(tag));
-
-            return matchesQuery && matchesTags;
-        })
+        sortedEntries.filter((entry) => matchesSearchQuery(entry) && matchesSelectedTags(entry))
     );
 
-    const groups = $derived(
-        Object.values(
-            filteredEntries.reduce(
-                (acc, entry) => {
-                    const key = entry.published.slice(0, 7);
-
-                    (acc[key] ??= []).push(entry);
-
-                    return acc;
-                },
-                {} as Record<string, typeof filteredEntries>
-            )
-        )
-    );
+    const groups = $derived(groupByMonth(filteredEntries));
 </script>
 
 <section>
@@ -78,13 +89,11 @@
     <div class="search-options enable-spacing">
         <h2>Search Options</h2>
 
-        <p>You can search for a blog entry.</p>
-
         <div class="search-bar">
             <input type="text" placeholder="Search for a blog entry..." bind:value={searchQuery} />
         </div>
 
-        <p>You can also narrow down the searches by providing one or more tags:</p>
+        <p>You can narrow down the searches by providing one or more tags:</p>
 
         <div class="tag-bar">
             {#each availableTags as tag}
@@ -110,7 +119,7 @@
                 onclick={() =>
                     (sortingOrder = sortingOrder === 'ascending' ? 'descending' : 'ascending')}
                 >{sortingOrder} order</button
-            >
+            > <span class="dim">(click to change)</span>
         </p>
     </div>
 
@@ -148,7 +157,9 @@
 
                     •
 
-                    {#if blog.tags.length}
+                    {#if !blog.tags}
+                        <i>No tags provided.</i>
+                    {:else}
                         {#each blog.tags as tag}
                             <span class="tag active">
                                 {'#'}<span class={`tagname ${tag}`}>
@@ -156,8 +167,6 @@
                                 </span>{' '}
                             </span>
                         {/each}
-                    {:else}
-                        <i>No tags provided.</i>
                     {/if}
                 </p>
             </div>
@@ -167,7 +176,6 @@
 
 <style lang="css">
     .tag {
-        background: #111;
         color: #444;
     }
 
@@ -206,6 +214,12 @@
         color: var(--orange);
     }
 
+    .search-options {
+        padding: 2em;
+        border-top: 2px solid #777;
+        border-bottom: 2px solid #777;
+        background: #222;
+    }
     .tag-bar {
         display: flex;
         flex-direction: row;
@@ -224,24 +238,11 @@
         width: 1000px;
     }
 
-    .search-bar button {
-        background: #7155ff;
-        color: white;
-
-        padding: 0 10px;
-
-        transition: 0.5s ease;
-    }
-
-    .search-bar button:hover {
-        background: #aa91ff;
-    }
-
-    button.ascending {
+    .search-options button.ascending {
         color: var(--green);
     }
 
-    button.descending {
+    .search-options button.descending {
         color: var(--orange);
     }
 </style>

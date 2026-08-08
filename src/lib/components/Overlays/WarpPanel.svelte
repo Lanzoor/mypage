@@ -1,7 +1,8 @@
 <script lang="ts">
     import { warpOverlay } from '$lib/overlays.svelte';
     import { onMount } from 'svelte';
-    import External from '../Links/External.svelte';
+
+    let inputElement = $state<HTMLInputElement>();
 
     onMount(() => {
         const listener = (event: KeyboardEvent) => {
@@ -9,6 +10,7 @@
                 event.preventDefault();
                 tip = randomTip();
                 warpOverlay.open = !warpOverlay.open;
+                inputElement?.focus();
             }
         };
 
@@ -31,6 +33,12 @@
     }
 
     let tip = $state(randomTip());
+
+    let urlQuery = $state('/');
+
+    function handleURL() {
+        window.location.replace(urlQuery);
+    }
 </script>
 
 <div id="warp" class:open={warpOverlay.open}>
@@ -42,7 +50,23 @@
 
             <p>Select a destination to warp to!</p>
 
-            <input type="text" placeholder="Type a destination... (e.g. /projects, /)" />
+            <div class="search-bar">
+                <input
+                    type="text"
+                    placeholder="Type a destination... (e.g. /projects, /)"
+                    bind:value={urlQuery}
+                    bind:this={inputElement}
+                    onkeydown={(event) => {
+                        console.log(event.key);
+
+                        if (event.key === 'Enter') {
+                            handleURL();
+                        }
+                    }}
+                />
+
+                <button onclick={handleURL}>Warp</button>
+            </div>
 
             <p class="dim">
                 <b>Quick tip!</b><br />{@html tip}
@@ -78,6 +102,8 @@
         align-items: center;
         justify-content: center;
         padding: 2em;
+
+        cursor: pointer;
     }
 
     #warp .panel {
@@ -89,9 +115,31 @@
         font-size: 0.75em;
         align-items: center;
         text-align: center;
+
+        cursor: default;
     }
 
-    #warp .panel input[type='text'] {
-        width: 100%;
+    #warp .panel .search-bar input[type='text'] {
+        width: 600px;
+        max-width: 75vw;
+    }
+
+    #warp .panel .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    #warp .panel .search-bar button {
+        background: #7155ff;
+        color: white;
+
+        padding: 0 10px;
+
+        transition: 0.5s ease;
+    }
+
+    #warp .panel .search-bar button:hover {
+        background: #aa91ff;
     }
 </style>
