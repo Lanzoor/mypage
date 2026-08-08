@@ -58,7 +58,7 @@
                 {LegalInfo.privacyPolicy.formatTime()}.
             </b><br />
             For more information, please refer to
-            <a href="/privacy-policy/">/privacy-policy</a>.
+            <a href="/legal/privacy-policy">/privacy-policy</a>.
         </p>
 
         <p>
@@ -78,7 +78,7 @@
                 {LegalInfo.termsOfService.formatTime()}.
             </b><br />
             For more information, please refer to
-            <a href="/tos/">/tos</a>.
+            <a href="/legal/tos">/tos</a>.
         </p>
 
         <p>
@@ -101,8 +101,7 @@
             </b>
 
             <br /><br />
-            For more information, please refer to <a href="/about#legal">this section</a> in the about
-            page.
+            For more information, please refer to <a href="/legal/about">this article</a>.
         </p>
     </div>
 </div>

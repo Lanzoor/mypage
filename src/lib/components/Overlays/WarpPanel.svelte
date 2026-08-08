@@ -8,7 +8,7 @@
         const listener = (event: KeyboardEvent) => {
             if (event.ctrlKey && event.shiftKey && event.code === 'Slash') {
                 event.preventDefault();
-                tip = randomTip();
+                warpTip = randomTip();
                 warpOverlay.open = !warpOverlay.open;
                 inputElement?.focus();
             }
@@ -32,12 +32,39 @@
             : 'Look behind you.';
     }
 
-    let tip = $state(randomTip());
+    let warpTip = $state(randomTip());
 
     let urlQuery = $state('/');
+    let warpInfo = $state('Enter an internal destination to warp to!');
+    type WarpError = 'invalid' | 'external';
+
+    function failHandler(reason: WarpError) {
+        switch (reason) {
+            case 'invalid':
+                warpInfo =
+                    "<b>That destination doesn't look like a valid URL!</b> Please try again.";
+                break;
+
+            case 'external':
+                warpInfo = '<b>Only internal destinations are allowed!</b> Please try again.';
+                break;
+        }
+    }
 
     function handleURL() {
-        window.location.replace(urlQuery);
+        const destination = urlQuery.trim();
+
+        try {
+            const url = new URL(destination, window.location.origin);
+
+            if (url.origin !== window.location.origin) {
+                return failHandler('external');
+            }
+
+            window.location.replace(url.href);
+        } catch {
+            failHandler('invalid');
+        }
     }
 </script>
 
@@ -48,7 +75,7 @@
         <div class="panel enable-spacing" onclick={(event) => event.stopPropagation()}>
             <h1>Warp Panel</h1>
 
-            <p>Select a destination to warp to!</p>
+            <p>{@html warpInfo}</p>
 
             <div class="search-bar">
                 <input
@@ -57,8 +84,6 @@
                     bind:value={urlQuery}
                     bind:this={inputElement}
                     onkeydown={(event) => {
-                        console.log(event.key);
-
                         if (event.key === 'Enter') {
                             handleURL();
                         }
@@ -69,7 +94,8 @@
             </div>
 
             <p class="dim">
-                <b>Quick tip!</b><br />{@html tip}
+                <b>Quick tip!</b><br />
+                {@html warpTip}
             </p>
         </div>
     </div>
@@ -107,20 +133,23 @@
     }
 
     #warp .panel {
-        overflow: auto;
         background: #111;
         border: 2px solid #222;
         border-radius: 2em;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+
         padding: 2em;
         font-size: 0.75em;
+
         align-items: center;
         text-align: center;
 
+        overflow: auto;
         cursor: default;
     }
 
     #warp .panel .search-bar input[type='text'] {
-        width: 600px;
+        width: 30em;
         max-width: 75vw;
     }
 
@@ -134,7 +163,7 @@
         background: #7155ff;
         color: white;
 
-        padding: 0 10px;
+        padding: 0.5em 1em;
 
         transition: 0.5s ease;
     }

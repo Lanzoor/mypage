@@ -52,10 +52,13 @@
                             <summary> Legal </summary>
                             <ul>
                                 <li>
-                                    <a href="/privacy-policy">Privacy Policy</a>
+                                    <a href="/legal">About</a>
                                 </li>
                                 <li>
-                                    <a href="/tos">Terms Of Service</a>
+                                    <a href="/legal/privacy-policy">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="/legal/tos">Terms Of Service</a>
                                 </li>
                             </ul>
                         </details>

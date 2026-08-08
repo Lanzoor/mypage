@@ -1,5 +1,6 @@
 <script>
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { getPageData } from '$lib/map';
 </script>
 
 <section>
@@ -16,8 +17,7 @@
 
     <ul>
         <li>
-            <b>Manual BPM Checker</b> -
-            <a href="/tools/manual-bpm-checker">./manual-bpm-checker/</a>
+            <b>Manual BPM Checker</b> - {getPageData('/tools/manual-bpm-checker')?.description}
         </li>
     </ul>
 </section>

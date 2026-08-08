@@ -1,5 +1,6 @@
 <script>
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { getPageData } from '$lib/map';
 </script>
 
 <section>
@@ -22,17 +23,17 @@
     <ul>
         <li>
             <a href="/credits/contributors">Contributors</a>
-            - People who contributed to this website and related projects.
+            - {getPageData('/credits/contributors')?.description}
         </li>
 
         <li>
             <a href="/credits/fonts">Fonts</a>
-            - Fonts used throughout this website.
+            - {getPageData('/credits/fonts')?.description}
         </li>
 
         <li>
             <a href="/credits/assets">Assets</a>
-            - External assets and resources used throughout this website.
+            - {getPageData('/credits/assets')?.description}
         </li>
     </ul>
 </section>

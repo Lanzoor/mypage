@@ -1,4 +1,5 @@
 <script>
+    import External from '$lib/components/Links/External.svelte';
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
@@ -10,10 +11,28 @@
 
         <p>
             Here's an updating list of amazing contributors, who helped create and improve the
-            website for everyone!<br />
-            If you're curious on how to get involved, read <a href="/contribution">this article</a>!
+            website for everyone!
         </p>
     </header>
+</section>
+
+<section id="supporters">
+    <h1>Supporters</h1>
+
+    <p>
+        A huge thank-you to the <span class="col bright red">amazing supporters</span> who has supported
+        this project!
+    </p>
+
+    <p>
+        Want your name here? <b>Please refer to <a href="/about/donations">this page</a>!</b>
+    </p>
+
+    <div class="supporters">
+        <External href="https://github.com/Derukugis" showArrow={false}>
+            <img src="/assets/contributors/derukugi.png" alt="derukugi" title="derukugi" />
+        </External>
+    </div>
 </section>
 
 <section id="amethyst">
@@ -24,9 +43,9 @@
         frequently work together in order to improve the website for everyone.
     </p>
 
-    <div class="contributors">
-        <div class="contributor">
-            <img src="/assets/contributors/iris-modern.png" />
+    <div class="cards">
+        <div class="card">
+            <img src="/assets/contributors/iris-modern.png" alt="lanzoor" title="lanzoor" />
 
             <div class="description">
                 <h1>Lanzoor</h1>
@@ -39,8 +58,8 @@
             </div>
         </div>
 
-        <div class="contributor">
-            <img src="/assets/contributors/kiui6.png" />
+        <div class="card">
+            <img src="/assets/contributors/kiui6.png" alt="kiui6" title="kiui6" />
 
             <div class="description">
                 <h1>
@@ -50,16 +69,16 @@
                 <div class="roles">Security · Quality Assurance</div>
 
                 <p>
-                    Literally made a whole in-depth analysis for the website, pointing out potential
-                    issues.
+                    A gigachad programmer from Russia who made a whole in-depth analysis for the
+                    website, pointing out potential issues.
                 </p>
 
                 <div class="quote">He is Russian. He's probably built different. 🥵🥶💀</div>
             </div>
         </div>
 
-        <div class="contributor">
-            <img src="/assets/contributors/derukugi.png" />
+        <div class="card">
+            <img src="/assets/contributors/derukugi.png" alt="derukugi" title="derukugi" />
 
             <div class="description">
                 <h1>derukugi</h1>
@@ -82,21 +101,28 @@
         build this website.
     </p>
 
-    <div class="contributors">
-        <div class="contributor">
-            <img src="/assets/contributors/default.png" />
+    <div class="cards">
+        <div class="card">
+            <img src="/assets/contributors/default.png" alt="conaxsilver" title="conaxsilver" />
 
             <div class="description">
                 <h1>conaxsilver</h1>
 
-                <p>Gave some great quality Assurance and bug reports for the website.</p>
+                <p>
+                    A genius from Japan who gave some great quality assurance and bug reports for
+                    the website.
+                </p>
 
                 <div class="quote jp" lang="jp">むいむい！</div>
             </div>
         </div>
 
-        <div class="contributor">
-            <img src="/assets/contributors/sweden_finlandia.hoi4.png" />
+        <div class="card">
+            <img
+                src="/assets/contributors/sweden_finlandia.hoi4.png"
+                alt="sweden_finlandia.hoi4"
+                title="sweden_finlandia.hoi4"
+            />
 
             <div class="description">
                 <h1>ASEANCoin</h1>
@@ -110,39 +136,62 @@
             </div>
         </div>
 
-        <div class="contributor">
-            <img src="/assets/contributors/tactical02_.png" />
+        <div class="card">
+            <img src="/assets/contributors/tactical02_.png" alt="tactical02_" title="tactical02_" />
 
             <div class="description">
                 <h1>Suw</h1>
 
-                <p>Gave some great suggestions and direct fixes for the website.</p>
+                <p>
+                    Frontend developer from Vietnam. Gave some great suggestions and direct fixes
+                    for the website.
+                </p>
 
                 <div class="quote">:OkuuMindblown:</div>
             </div>
         </div>
+
+        <div class="card">
+            <h1>blackrose</h1>
+
+            <img src="/assets/contributors/blackrose.png" alt="blackrose" title="blackrose" />
+
+            <div class="description">
+                <p>
+                    Gave inspirations for the design aspect of the website, and pointed out some
+                    several security-related issues.
+                </p>
+            </div>
+        </div>
     </div>
-
-    <!--    <div id="contributors" class="flex-grid">
-
-                <div class="contributor">
-                    <h1>blackrose | <code>blackrose00.</code></h1>
-
-                    <img src="/assets/contributors/default.png">
-
-                    <p>
-                        Pointed out several security-related issues with the website.
-                    </p>
-
-                    <div class="quote">
-                        placeholder
-                    </div>
-                </div>
-
-            </div> -->
 </section>
 
 <style lang="css">
+    #supporters {
+        background:
+            radial-gradient(circle at top left, rgba(112, 7, 37, 0.5), transparent 40%), black;
+    }
+
+    #supporters .supporters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #supporters .supporters img {
+        width: 5em;
+        height: 5em;
+        border-radius: 2147483647px;
+
+        transition: transform 500ms ease;
+        user-select: none;
+    }
+
+    #supporters .supporters img:hover {
+        transform: scale(1.1) translateY(-4px);
+        cursor: pointer;
+    }
+
     #amethyst {
         background:
             radial-gradient(circle at top left, rgba(40, 7, 112, 0.5), transparent 40%),
@@ -170,57 +219,59 @@
             black;
     }
 
-    .contributors {
+    .cards {
         display: flex;
-        flex-direction: column;
-        align-items: left;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 4em;
 
         padding: 2em;
         width: 100%;
     }
 
-    .contributors .contributor {
+    .cards .card {
         display: flex;
+        flex-direction: column;
         gap: 2em;
 
-        padding: 2em;
+        width: 20em;
 
-        background: rgba(255, 255, 255, 0.03);
-        border: 2px solid rgba(255, 255, 255, 0.08);
-        border-radius: 24px;
+        align-items: center;
+        text-align: center;
 
         backdrop-filter: blur(4px);
 
         transition: 0.2s ease;
     }
 
-    .contributors .contributor:hover {
-        transform: translateY(-2px);
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 20px 20px rgba(255, 255, 255, 0.025);
+    .cards .description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
     }
 
-    .contributors .description h1 {
-        margin-bottom: 0.25em;
+    .cards .description h1 {
         font-size: 2em;
+    }
+
+    .cards .description p {
+        font-size: 0.75em;
     }
 
     .roles {
         opacity: 0.65;
 
-        font-size: 0.8em;
+        font-size: 0.6em;
         letter-spacing: 0.05em;
-
-        margin-bottom: 1em;
     }
 
     .quote {
         margin-top: 1em;
-        width: fit-content;
 
-        padding: 0.5em;
-        padding-left: 1em;
+        padding: 0.5em 1em;
+        font-size: 0.75em;
 
         opacity: 0.75;
     }
@@ -246,12 +297,17 @@
         margin-top: 1em;
     }
 
-    .contributors .contributor img {
+    .cards .card img {
         width: 7.5em;
         height: 7.5em;
 
-        border-radius: 50%;
+        border-radius: 2147483647px;
+        transition: transform 500ms ease;
+        user-select: none;
+    }
 
-        flex-shrink: 0;
+    .cards .card img:hover {
+        transform: scale(1.1) translateY(-4px);
+        cursor: pointer;
     }
 </style>

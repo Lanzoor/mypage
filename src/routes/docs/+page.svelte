@@ -1,5 +1,6 @@
 <script>
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { getPageData } from '$lib/map';
 </script>
 
 <section>
@@ -16,12 +17,10 @@
 
     <ul>
         <li>
-            <b>Blogs</b> - <a href="/docs/blog/">./blog/</a> - Official notices, updates, or important
-            information.
+            <a href="/docs/blog/">Blog</a> - {getPageData('/docs/blog')?.description}
         </li>
         <li>
-            <b>API Documentation</b> - <a href="/api/docs/">/api/docs/</a> - Official documentation for
-            the API of this website.
+            <a href="/api/docs/">API Documentation</a> - Official documentation for the API of this website.
         </li>
     </ul>
 
@@ -29,11 +28,11 @@
 
     <ul>
         <li>
-            <b>Math</b> - <a href="/docs/math">./math/</a> - My documents related to math.
+            <a href="/docs/math">Math</a> - {getPageData('/docs/math')?.description}
         </li>
         <li>
-            <b>Linguistics</b> - <a href="/docs/linguistics">./linguistics/</a> - My documents related
-            to linguistics.
+            <a href="/docs/linguistics">Linguistics</a> - {getPageData('/docs/linguistics')
+                ?.description}
         </li>
     </ul>
 </section>

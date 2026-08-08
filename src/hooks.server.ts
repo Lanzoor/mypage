@@ -31,8 +31,12 @@ const redirects: CoreRedirect[] = [
         to: 'https://legacy.lanzoor.dev',
     },
     {
-        from: ['/tos'],
-        to: '/terms-of-service',
+        from: ['/legal/tos', '/tos'],
+        to: '/legal/terms-of-service',
+    },
+    {
+        from: ['/privacy-policy', '/privacy', '/legal/privacy'],
+        to: '/legal/privacy-policy',
     },
     {
         from: ['/api'],

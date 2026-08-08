@@ -71,8 +71,9 @@
             </div>
             <div class="group">
                 <h2>Legal</h2>
-                <a href="/privacy-policy">Privacy Policy</a>
-                <a href="/tos">Terms of Service</a>
+                <a href="/legal">About</a>
+                <a href="/legal/privacy-policy">Privacy Policy</a>
+                <a href="/legal/tos">Terms of Service</a>
             </div>
         </nav>
     </section>

@@ -50,7 +50,7 @@ export namespace LegalInfo {
     );
 
     export const termsOfService = new LegalInformation(
-        new Date('2026-07-29T17:42:00+09:00'),
-        new Version(1, 3)
+        new Date('2026-08-08T22:36:00+09:00'),
+        new Version(2, 0)
     );
 }

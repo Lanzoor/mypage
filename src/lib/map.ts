@@ -1,3 +1,5 @@
+import { normalizePath } from './path';
+
 export type PageOptions = {
     titlePad?: boolean;
     breadcrumbs?: boolean;
@@ -56,6 +58,17 @@ export const sitemap: Page[] = [
         options: {
             legalNotice: false,
         },
+
+        children: [
+            {
+                path: '/about/domains',
+                title: 'Domains',
+            },
+            {
+                path: '/about/donations',
+                title: 'Donations',
+            },
+        ],
     },
     {
         path: '/conlangs',
@@ -87,14 +100,17 @@ export const sitemap: Page[] = [
             {
                 path: '/credits/assets',
                 title: 'Asset Credits',
+                description: 'Attributions for all of the assets used within this website.',
             },
             {
                 path: '/credits/contributors',
                 title: 'Contributors',
+                description: 'Credits for all of the amazing people who helped build this website.',
             },
             {
                 path: '/credits/fonts',
                 title: 'Font Credits',
+                description: 'Attributions for all of the fonts used within this website.',
             },
         ],
     },
@@ -105,14 +121,18 @@ export const sitemap: Page[] = [
             {
                 path: '/docs/blog',
                 title: 'Blog',
+                description: 'Official updates, notices, or important announcements.',
             },
             {
                 path: '/docs/linguistics',
                 title: 'Linguistics',
+                description: 'My documents related to linguistics.',
             },
             {
                 path: '/docs/math',
                 title: 'Math',
+                description: 'My documents related to math.',
+
                 children: [
                     {
                         path: '/docs/googology',
@@ -129,21 +149,45 @@ export const sitemap: Page[] = [
         ],
     },
     {
-        path: '/map',
-        title: 'Site Map',
-    },
-    {
-        path: '/privacy-policy',
-        title: 'Privacy Policy',
-        description: 'A detailed privacy policy that lists all details about data collection.',
+        path: '/legal',
+        title: 'Legal',
+        description: 'A section that holds all of the Legal Information.',
 
         options: {
             legalNotice: false,
         },
+
+        children: [
+            {
+                path: '/legal/privacy-policy',
+                title: 'Privacy Policy',
+                description:
+                    'A detailed privacy policy explaining what information is collected, how it is used, and how it is handled.',
+
+                options: {
+                    legalNotice: false,
+                },
+            },
+            {
+                path: '/legal/terms-of-service',
+                title: 'Terms Of Service',
+                description:
+                    'The terms and conditions governing your use of this website and its services.',
+
+                options: {
+                    legalNotice: false,
+                },
+            },
+        ],
+    },
+    {
+        path: '/map',
+        title: 'Site Map',
     },
     {
         path: '/profile',
         title: 'Profile',
+        description: 'A short section dedicated to my profile.',
     },
     {
         path: '/projects',
@@ -167,14 +211,6 @@ export const sitemap: Page[] = [
         ],
     },
     {
-        path: '/terms-of-service',
-        title: 'Terms Of Service',
-
-        options: {
-            legalNotice: false,
-        },
-    },
-    {
         path: '/tools',
         title: 'Tools',
         description: 'A collection of some handy tools designed for everyone to use.',
@@ -183,6 +219,7 @@ export const sitemap: Page[] = [
             {
                 path: '/tools/manual-bpm-checker',
                 title: 'Manual BPM Checker',
+                description: 'A simple yet effective manual BPM checker.',
 
                 options: {
                     footerPanel: false,
@@ -222,3 +259,7 @@ function createPageIndex(pages: Page[]) {
 }
 
 export const pageIndex = createPageIndex(sitemap);
+
+export function getPageData(page: string) {
+    return pageIndex.get(normalizePath(page));
+}

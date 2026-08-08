@@ -118,7 +118,7 @@
         We may <span class="dim">(and <i>absolutely</i> will)</span>
         update Legal Information from time to time.<br />
         We will notify you of any changes through a notice on the website.<br />
-        For more information, please refer to <a href="/about#legal">this section</a>!
+        For more information, please refer to <a href="/legal#notices">this section</a>!
     </p>
 
     <p>

@@ -1,9 +1,8 @@
 <script lang="ts">
     import { page } from '$app/state';
-    import { pageIndex } from '$lib/map';
-    import { normalizePath } from '$lib/path';
+    import { getPageData, pageIndex } from '$lib/map';
 
-    const currentPage = $derived(pageIndex.get(normalizePath(page.url.pathname)));
+    const currentPage = $derived(getPageData(page.url.pathname));
 
     const breadcrumbs = $derived.by(() => {
         const result = [];
