@@ -173,6 +173,27 @@
     </p>
 </section>
 
+<section id="donations">
+    <h1>Donations</h1>
+
+    <h2>Link</h2>
+
+    <p>
+        We accept donations through <a href="https://ko-fi.com/lanzoor">Ko-fi</a>.
+    </p>
+
+    <h2>Purpose</h2>
+
+    <p>
+        <b
+            >Donations are primarily used to help cover the operating costs of the website and its
+            services,</b
+        > including domain registrations, subscriptions, and other related expenses.
+    </p>
+
+    <p>Every contribution is appreciated, no matter how small. <b>Even a dollar is welcome!</b></p>
+</section>
+
 <section id="legal">
     <h1>Legal Information</h1>
 

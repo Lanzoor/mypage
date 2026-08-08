@@ -148,6 +148,14 @@
                     </span>
                 </External>
 
+                <External href="https://ko-fi.com/lanzoor" showArrow={false} class="link">
+                    <img src="/assets/icons/socials/ko-fi.svg" alt="Ko-fi" />
+
+                    <span class="handle">
+                        <span class="col bright purple">lanzoor</span>
+                    </span>
+                </External>
+
                 <a href="mailto:mail@lanzoor.dev" class="link">
                     <img src="/assets/icons/socials/email.svg" alt="Email" />
 

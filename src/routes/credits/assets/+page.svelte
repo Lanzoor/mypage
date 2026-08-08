@@ -90,10 +90,6 @@
         <External href="https://www.svgrepo.com/svg/242353/china" showArrow={false}>
             <img src="/assets/icons/countries/china.svg" />
         </External>
-
-        <External href="https://www.svgrepo.com/svg/242257/netherlands-holland" showArrow={false}>
-            <img src="/assets/icons/countries/netherlands.svg" />
-        </External>
     </div>
 
     <ul>
@@ -243,6 +239,27 @@
         <li>
             License: <External href="https://svgstack.com/page/license"
                 >Creative Commons BY 4.0 license</External
+            >
+        </li>
+    </ul>
+
+    <div class="icon-group">
+        <External href="https://www.svgrepo.com/svg/341974/ko-fi" showArrow={false}>
+            <img src="/assets/icons/socials/ko-fi.svg" />
+        </External>
+    </div>
+
+    <ul>
+        <li>
+            Platform:
+            <External href="https://www.svgrepo.com/">SVG Repo</External>
+        </li>
+        <li>
+            Author: <External href="https://www.svgrepo.com/author/coreui/">coreui</External>
+        </li>
+        <li>
+            License: <External href="https://www.svgrepo.com/page/licensing/#GPL"
+                >GPL license</External
             >
         </li>
     </ul>
