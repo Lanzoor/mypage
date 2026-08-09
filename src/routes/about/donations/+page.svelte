@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 </script>
 
@@ -46,4 +46,4 @@
             >Even a dollar is genuinely welcome!</b
         >
     </p>
-</section>
+</section> -->

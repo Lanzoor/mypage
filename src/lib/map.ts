@@ -59,12 +59,12 @@ export const sitemap: Page[] = [
             legalNotice: false,
         },
 
-        children: [
-            {
-                path: '/about/donations',
-                title: 'Donations',
-            },
-        ],
+        // children: [
+        //     {
+        //         path: '/about/donations',
+        //         title: 'Donations',
+        //     },
+        // ],
     },
     {
         path: '/conlangs',
