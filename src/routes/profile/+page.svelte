@@ -142,7 +142,7 @@
         'I am legally required to put at least one easter egg in every website I make.',
         'Enter the Konami code.',
 
-        '<b>Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
+        '<b class="col bright yellow">Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
     ];
 
     type TriviaType = 'normal' | 'special' | 'unsettling';
