@@ -32,6 +32,8 @@
         <External href="https://github.com/Derukugis" showArrow={false}>
             <img src="/assets/contributors/derukugi.png" alt="derukugi" title="derukugi" />
         </External>
+
+        <img src="/assets/contributors/default.png" alt="conaxsilver" title="conaxsilver" />
     </div>
 </section>
 
@@ -172,13 +174,14 @@
             radial-gradient(circle at top left, rgba(112, 7, 37, 0.5), transparent 40%), black;
     }
 
-    #supporters .supporters {
+    .supporters {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 1em;
     }
 
-    #supporters .supporters img {
+    .supporters img {
         width: 5em;
         height: 5em;
         border-radius: 2147483647px;
@@ -187,7 +190,7 @@
         user-select: none;
     }
 
-    #supporters .supporters img:hover {
+    .supporters img:hover {
         transform: scale(1.1) translateY(-4px);
         cursor: pointer;
     }

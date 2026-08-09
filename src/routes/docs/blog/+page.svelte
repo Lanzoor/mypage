@@ -176,7 +176,7 @@
 
 <style lang="css">
     .tag {
-        color: #444;
+        color: #555;
     }
 
     .tag,
@@ -216,10 +216,11 @@
 
     .search-options {
         padding: 2em;
-        border-top: 2px solid #777;
-        border-bottom: 2px solid #777;
-        background: #222;
+        border-top: 2px solid #555;
+        border-bottom: 2px solid #555;
+        background: #1a1a1a;
     }
+
     .tag-bar {
         display: flex;
         flex-direction: row;

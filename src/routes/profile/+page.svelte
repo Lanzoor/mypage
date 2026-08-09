@@ -79,7 +79,6 @@
 <section id="intro-bg" class="disable-padding disable-initial-padding">
     <section id="intro" class="enable-initial-padding">
         <Breadcrumbs />
-        <WorkInProgress />
 
         <div class="header">
             <img
@@ -104,10 +103,10 @@
         </div>
 
         <div class="description">
-            <b>hii, my name is <span class="col bright purple">Lanzoor</span>!!</b><br />
+            <b>hii, my name is <span class="col bright purple">Lanzoor</span>!</b><br />
             i'm just a random student from Korea who enjoys creating things, solving interesting problems,
             and learning something new every day.<br />
-            i'm obsessed with programming, learning languages, science and anime :)<br />
+            i'm obsessed with programming, learning languages, science and anime!<br />
         </div>
     </section>
 </section>
@@ -327,8 +326,10 @@
 
         <p>
             I enjoy learning about the principles that make the Internet work, which is why
-            networking fascinates me so much. I'm also really interested in OSINT and operational
-            security.
+            networking fascinates me so much. I'm also really interested in OSINT
+            <span class="dim">(Open Source Intelligence)</span>
+            and OPSEC.
+            <span class="dim">(Operational Security)</span>
         </p>
 
         <h1>Uses</h1>
@@ -340,11 +341,12 @@
         </h2>
 
         <p>
-            <b
-                >I currently use <span class="col bright purple">EndeavourOS</span> as my primary operating
-                system.</b
-            >
-            I switched to Linux around
+            <b>
+                I currently use <span class="col bright purple">EndeavourOS</span> as my primary
+                operating system. <span class="dim">(or kernel, whatever)</span>
+            </b>
+            <br />
+            I switched to Linux at around
             <span class="col bright cyan">May 2025</span>, starting with
             <span class="col bright green">Linux Mint</span>. Nowadays, I use Linux for just about
             everything.
@@ -361,9 +363,10 @@
             For most of my programming, <b
                 >I use a heavily customized version of
                 <span class="col bright blue">VSCodium</span>.</b
-            > <i>This is precisely why I have literal leveling bars in the editor.</i> I also use Zed
-            when working with Rust.
+            > <i>This is exactly why I have literal leveling bars in the editor.</i>
         </p>
+
+        <p>I also use Zed when working with Rust, since I find it easier to work with.</p>
     </section>
 </section>
 
@@ -392,45 +395,55 @@
             <h3>
                 <img src="/assets/icons/countries/south-korea.svg" alt="Korea Icon" />
                 <div>
-                    Korean <span class="col green">(<i>native</i>, C1)</span>
+                    Korean <span class="adaptive-text-shadow col green">(<i>native</i>, C1)</span>
                 </div>
             </h3>
 
-            I am a native Korean speaker.
+            <p>I am a native Korean speaker.</p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/united-kingdom.svg" alt="UK Icon" />
-                <div>English <span class="col bright green">(B2 ~ C1)</span></div>
+                <div>
+                    English <span class="adaptive-text-shadow col bright green">(B2 ~ C1)</span>
+                </div>
             </h3>
 
             <p>
                 <b>I learned English through the immersion method™.</b> Basically, I spent my free time
-                consuming a lot of English content and communicating with friends online. This method
-                was very effective for me because I was able to learn while genuinely enjoying the process.
+                consuming English content and communicating with friends online. This method was very
+                effective for me because I was able to learn while genuinely enjoying the process.
             </p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/japan.svg" alt="Japan Icon" />
-                <div>Japanese <span class="col bright yellow">(B1 ~ B2, N3)</span></div>
+                <div>
+                    Japanese <span class="adaptive-text-shadow col bright yellow"
+                        >(B1 ~ B2, N3)</span
+                    >
+                </div>
             </h3>
 
             <p>
-                I started learning Japanese around <b>March 2025</b> after discovering Japanese music
-                and anime.
+                <b>
+                    I started learning Japanese around <b>March 2025</b> after discovering Japanese music
+                    and anime.
+                </b>
             </p>
 
             <p>
                 As a Korean speaker, I found Japanese relatively easy because the two languages
-                share similar grammar and some vocabulary roots. I enjoy studying Japanese by
-                comparing it with Korean.
+                share similar grammar and vocabulary roots. I enjoy studying Japanese by comparing
+                it with Korean.
             </p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/china.svg" alt="China Icon" />
-                <div>Chinese <span class="col orange">(A2, HSK 1 ~ 2)</span></div>
+                <div>
+                    Chinese <span class="adaptive-text-shadow col orange">(A2, HSK 1 ~ 2)</span>
+                </div>
             </h3>
 
             <p>
@@ -441,7 +454,7 @@
         <li>
             <h3>
                 <img src="/assets/icons/countries/spain.svg" alt="Spain Icon" />
-                <div>Spanish <span class="col red">(A1)</span></div>
+                <div>Spanish <span class="adaptive-text-shadow col red">(A1)</span></div>
             </h3>
 
             <p>
@@ -479,9 +492,80 @@
     </p>
 
     <p>
-        I also enjoy making my own conlangs
-        <span class="dim">(constructed languages)</span>
+        I also enjoy making my own languages
+        <span class="dim">(conlangs, constructed languages)</span>
         in my free time!
+    </p>
+</section>
+
+<section id="other-interests">
+    <h1>Other Interests</h1>
+
+    <h2>Science</h2>
+
+    <div class="stacks">
+        <div class="stack">Astronomy</div>
+        ⬩
+        <div class="stack">Physics</div>
+        ⬩
+        <div class="stack">Chemistry</div>
+    </div>
+
+    <p>
+        I enjoy studying most branches of science, but I especially like <b
+            >🔭 astronomy, ⚛️ physics, and 🧪 chemistry.</b
+        >
+    </p>
+
+    <p>
+        <b>I have been interested in astronomy since I was very young.</b> That interest eventually led
+        me toward physics, where I enjoy learning about the principles that govern how the world works.
+    </p>
+
+    <h2>Gaming</h2>
+
+    <div class="stacks">
+        <div class="stack">Idle/Clicker/Incremental Games</div>
+        ⬩
+        <div class="stack">Rhythm Games</div>
+        ⬩
+        <div class="stack">Platformers</div>
+        ⬩
+        <div class="stack">Puzzle Games</div>
+    </div>
+
+    <p>
+        <b>I play games in my free time, mostly as a way to relax and have fun.</b>
+        I particularly enjoy games that challenge my timing, problem-solving skills, or patience.
+    </p>
+
+    <p>
+        Some games that I enjoy include <b
+            ><span class="col bright yellow">Geometry Dash</span>,
+            <span class="col bright blue">A Dance of Fire and Ice</span>,
+            <span class="col bright purple">Project Sekai</span>,
+            <span class="col bright red">Celeste</span>, Danganronpa,
+            <span class="col bright cyan">Antimatter Dimensions</span> and more.</b
+        >
+    </p>
+</section>
+
+<section id="what-i-make">
+    <h1>What I Make</h1>
+
+    <p>
+        <b>I enjoy building things that let me turn my ideas into something tangible.</b><br />
+        Most of what I make involves programming, whether it is websites, tools, experiments, or smaller
+        projects made simply to explore an idea.
+    </p>
+
+    <p>I also enjoy creating conlangs, videos and music in my free time.</p>
+
+    <p>
+        My biggest ongoing project is <b><code>core</code></b>, my personal website, where I
+        experiment with web development, design, and different ideas I want to bring to life. For
+        information about my other projects, consider checking out the
+        <a href="/projects">projects</a> page!
     </p>
 </section>
 
@@ -694,5 +778,11 @@
     #languages ul li h3 img {
         width: 1.5em;
         height: 1.5em;
+    }
+
+    #what-i-make {
+        background:
+            radial-gradient(circle at top left, rgba(115, 0, 255, 0.2), transparent 50%),
+            radial-gradient(circle at bottom right, rgba(0, 238, 255, 0.2), transparent 50%), black;
     }
 </style>

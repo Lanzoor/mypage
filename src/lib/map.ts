@@ -61,10 +61,6 @@ export const sitemap: Page[] = [
 
         children: [
             {
-                path: '/about/domains',
-                title: 'Domains',
-            },
-            {
                 path: '/about/donations',
                 title: 'Donations',
             },
