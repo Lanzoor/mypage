@@ -132,14 +132,6 @@
         }
     }
 
-    #strawberry-jam {
-        background-image: url('/assets/backgrounds/strawberry-jam.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
     .quick-links {
         background: rgba(15, 15, 20, 0.55);
 
@@ -184,7 +176,7 @@
         font-size: 1.5em;
     }
 
-    #quick-links .links .link p {
+    .quick-links .links .link p {
         margin: 0;
         opacity: 0.9;
     }

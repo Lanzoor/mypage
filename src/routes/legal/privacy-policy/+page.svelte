@@ -1,9 +1,9 @@
 <script>
-    import { Legal } from '$lib';
     import External from '$lib/components/Links/External.svelte';
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { LegalInfo } from '$lib/legal';
 
-    const privacyPolicy = Legal.LegalInfo.privacyPolicy;
+    const privacyPolicy = LegalInfo.privacyPolicy;
 </script>
 
 <section>

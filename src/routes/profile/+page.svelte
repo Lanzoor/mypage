@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { pickRandom, randInt } from '$lib';
     import WorkInProgress from '$lib/components/Information/WorkInProgress.svelte';
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
 
@@ -74,6 +75,101 @@
             style: { x: 94, y: 78, s: '1.1em', r: 10 },
         },
     ];
+
+    const triviaList = [
+        // Programming & Tech
+        'SvelteKit is my favorite framework.',
+        'This website is built with SvelteKit.',
+        'I like giving my projects unnecessarily elaborate names.',
+        'I HATE React. I have personal beef with React states.',
+        'The first webpage I ever made was a page for my conlang, Lanzoorian.<br>This conlang has been retired in favor of <a href="/conlangs/proto-lanzavel">Lanzavel</a>.',
+        'This site actually started as a single-page profile website.',
+        'I genuinely lose my mind when I try to understand recursive functions.',
+        'I like command-line interfaces more than I probably should.',
+        'I have a Python program that backs up my workspace folder.',
+        'I once spent 2 hours debugging an issue while editing a project,<br>until I realized I was in the wrong directory.',
+
+        // Languages
+        'Contrary to popular belief, my favorite language is actually English.',
+        'I like how Japanese letters look.',
+        'My favorite sound is <span class="ipa">/x/</span>.',
+        'I pronounce GIF as <span class="ipa">/gɪf/</span>.',
+        'I really like words with unusual consonant clusters.',
+        'I enjoy finding unnecessarily complicated ways to say simple things.',
+        'I am better at English input than English output.',
+        'I think Latin makes every word sound like a mythical artifact.',
+        'I have a weird obsession with Greek letters.',
+
+        // Common
+        'My favorite color is purple.',
+        'My favorite numbers are 11, 13, and 17.<br>I especially like 13 for some reason.',
+        'I prefer cats over dogs.',
+        'I have never drank coffee ever in my life.',
+        'I believe water is the best drink.',
+        'I enjoy going down extremely specific rabbit holes.',
+        'I am obsessed with monospace fonts.',
+        'I can spend an unreasonable amount of time choosing a font.',
+        'I have a tendency to memorize random things perfectly.',
+    ];
+
+    const unsettlingTriviaList = [
+        // Unsettling
+        'You found the wrong trivia.',
+        'Look behind you.',
+        'We recommend keeping your volume low.',
+        'Something changed while you were reading this.',
+        ':)',
+    ];
+
+    const specialTriviaList = [
+        // Funni
+        'I am a pigeon.',
+        'Have you found the pigeon yet?',
+        'I ate a watermelon while writing this sentence.',
+        'Your Lanzaforge™ subscription expires in 10 minutes.<br>Please renew immediately to continue using lanzoor.dev.',
+
+        // Programming
+        'git commit -m "h"',
+        'text-shadow: 0 0 10px currentColor',
+        'CSS is a programming language if you believe hard enough.',
+
+        // References
+        'Emu is meaning... smile!!',
+        'wuck',
+        'mu',
+
+        // Easter Eggs
+        'I am legally required to put at least one easter egg in every website I make.',
+        'Enter the Konami code.',
+
+        '<b>Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
+    ];
+
+    type TriviaType = 'normal' | 'special' | 'unsettling';
+
+    function pickTrivia() {
+        let list;
+
+        const roll = randInt(1, 1000);
+
+        if (roll <= 5) {
+            // unsettling: 0.5%
+            triviaType = 'unsettling';
+            list = unsettlingTriviaList;
+        } else if (roll <= 45) {
+            // unsettling: 3%
+            triviaType = 'special';
+            list = specialTriviaList;
+        } else {
+            triviaType = 'normal';
+            list = triviaList;
+        }
+
+        trivia = pickRandom(list);
+    }
+
+    let trivia = $state('');
+    let triviaType = $state<TriviaType>('normal');
 </script>
 
 <section id="intro-bg" class="disable-padding disable-initial-padding">
@@ -524,33 +620,55 @@
 
     <h2>Gaming</h2>
 
+    <h3>Idle/Clicker/Incremental Games</h3>
+
     <div class="stacks">
-        <div class="stack">Idle/Clicker/Incremental Games</div>
+        <div class="stack col bright cyan">Antimatter Dimensions</div>
         ⬩
-        <div class="stack">Rhythm Games</div>
+        <div class="stack col bright blue">Cell to Singularity</div>
         ⬩
-        <div class="stack">Platformers</div>
+        <div class="stack col bright orange">Idle Slayer</div>
+    </div>
+
+    <h3>Rhythm Games</h3>
+
+    <div class="stacks">
+        <div class="stack">
+            A Dance of
+            <span class="col bright red">Fire</span> and
+            <span class="col bright blue">Ice</span>
+        </div>
         ⬩
-        <div class="stack">Puzzle Games</div>
+        <div class="stack col bright magenta">osu!</div>
+        ⬩
+        <div class="stack col bright cyan">Quaver</div>
+        ⬩
+        <div class="stack">
+            <span class="col bright red">vivid</span>/<span class="col bright cyan">stasis</span>
+        </div>
+    </div>
+
+    <h3>Platformer Games</h3>
+
+    <div class="stacks">
+        <div class="stack col bright yellow">Geometry Dash</div>
+        ⬩
+        <div class="stack col bright red">Celeste</div>
+    </div>
+
+    <h3>Other Games</h3>
+
+    <div class="stacks">
+        <div class="stack col bright black">Danganronpa</div>
     </div>
 
     <p>
         <b>I play games in my free time, mostly as a way to relax and have fun.</b>
         I particularly enjoy games that challenge my timing, problem-solving skills, or patience.
     </p>
-
-    <p>
-        Some games that I enjoy include <b
-            ><span class="col bright yellow">Geometry Dash</span>,
-            <span class="col bright blue">A Dance of Fire and Ice</span>,
-            <span class="col bright purple">Project Sekai</span>,
-            <span class="col bright red">Celeste</span>, Danganronpa,
-            <span class="col bright cyan">Antimatter Dimensions</span> and more.</b
-        >
-    </p>
 </section>
 
-<section id="what-i-make">
+<section id="projects">
     <h1>What I Make</h1>
 
     <p>
@@ -562,10 +680,23 @@
     <p>I also enjoy creating conlangs, videos and music in my free time.</p>
 
     <p>
-        My biggest ongoing project is <b><code>core</code></b>, my personal website, where I
-        experiment with web development, design, and different ideas I want to bring to life. For
-        information about my other projects, consider checking out the
+        My biggest ongoing project is <code>core</code>,
+        <span class="dim">(the website you're looking at!)</span>
+        where I experiment with web development, design, and different ideas I want to bring to life.
+        For information about my other projects, consider checking out the
         <a href="/projects">projects</a> page!
+    </p>
+</section>
+
+<section id="trivia">
+    <h1>Trivia</h1>
+
+    <p>Want to learn something random about me?<br />Click the button below!</p>
+
+    <button onclick={pickTrivia}>Generate Trivia</button>
+
+    <p class="quote {triviaType}">
+        {@html trivia}
     </p>
 </section>
 
@@ -780,9 +911,44 @@
         height: 1.5em;
     }
 
-    #what-i-make {
+    #projects {
         background:
             radial-gradient(circle at top left, rgba(115, 0, 255, 0.2), transparent 50%),
             radial-gradient(circle at bottom right, rgba(0, 238, 255, 0.2), transparent 50%), black;
+    }
+
+    #trivia button {
+        background: white;
+        color: #111;
+        padding: 0.5em 1em;
+        border: 2px solid white;
+        border-radius: 2147483647px;
+
+        align-self: center;
+        transition: 200ms ease;
+    }
+
+    #trivia button:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    #trivia .quote {
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    #trivia .quote.special {
+        opacity: 0.95;
+        color: var(--bright-yellow);
+        text-shadow: 0 0 20px var(--yellow);
+    }
+
+    #trivia .quote.unsettling {
+        opacity: 0.95;
+        transform: rotate(1deg);
+        color: red;
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        font-size: 1.5em;
     }
 </style>

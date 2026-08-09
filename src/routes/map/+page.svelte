@@ -37,8 +37,10 @@
         content: '- ';
     }
 
-    .site-map {
+    .site-map,
+    :global(.site-map ul) {
+        list-style: none;
         margin: 0;
-        padding: 0;
+        padding: 0 1.5em 0 0;
     }
 </style>

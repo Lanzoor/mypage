@@ -1,9 +1,8 @@
 <script lang="ts">
-    import { Legal, setFrozen } from '$lib';
-    import { LegalInfo } from '$lib/legal';
+    import { LegalInfo, AcceptedLegalInfo } from '$lib/legal';
     import { legalNoticeOverlay } from '$lib/overlays.svelte';
 
-    let acceptedLegalInfo = $state(Legal.getAcceptedLegalInfo());
+    let acceptedLegalInfo = $state(AcceptedLegalInfo.get());
 
     let isPrivacyPolicyUpToDate = $derived(
         acceptedLegalInfo?.privacyPolicy === LegalInfo.privacyPolicy.formatVersion()
@@ -16,10 +15,8 @@
     $effect(() => {
         if (!isPrivacyPolicyUpToDate || !isTermsOfServiceUpToDate) {
             legalNoticeOverlay.open = true;
-            setFrozen(true);
         } else {
             legalNoticeOverlay.open = false;
-            setFrozen(false);
         }
     });
 
@@ -29,11 +26,10 @@
             termsOfService: LegalInfo.termsOfService.formatVersion(),
         };
 
-        Legal.setAcceptedLegalInfo(newConf);
+        AcceptedLegalInfo.set(newConf);
 
         acceptedLegalInfo = newConf;
         legalNoticeOverlay.open = false;
-        setFrozen(false);
     }
 </script>
 
@@ -58,7 +54,7 @@
                 {LegalInfo.privacyPolicy.formatTime()}.
             </b><br />
             For more information, please refer to
-            <a href="/legal/privacy-policy">/privacy-policy</a>.
+            <a href="/legal/privacy-policy/">/privacy-policy</a>.
         </p>
 
         <p>
@@ -93,7 +89,7 @@
         <button onclick={() => acceptLegalChanges()}>I Accept</button>
 
         <p>
-            <b>Clicking "I Accept" means that you accept the (new) Legal Information.</b><br />
+            <b>Clicking "I Accept" means that you accept the Legal Information.</b><br />
             This action will prevent this notice from popping up,<br />
             unless a new change is made to the Legal Information.<b
                 ><br />
@@ -101,7 +97,7 @@
             </b>
 
             <br /><br />
-            For more information, please refer to <a href="/legal/about">this article</a>.
+            For more information, please refer to <a href="/legal#notices">this article</a>.
         </p>
     </div>
 </div>
@@ -148,24 +144,14 @@
     }
 
     #legal-notice button {
-        font-family: 'JetBrains Mono';
-        font-size: 1em;
-
         background: transparent;
-        border: none;
-        cursor: pointer;
-        border-radius: 2147483647px;
         padding: 0.5em 1em;
 
         color: white;
         border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2147483647px;
 
         transition: 0.25s ease;
-    }
-
-    #legal-notice button.enable {
-        background: rgba(255, 255, 255, 0.25);
-        border-color: transparent;
     }
 
     #legal-notice button:hover {

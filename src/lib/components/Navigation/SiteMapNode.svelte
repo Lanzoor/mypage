@@ -5,12 +5,10 @@
     let { page } = $props<{ page: Page }>();
 </script>
 
-{#if page.children?.length}
-    <details open>
-        <summary>
-            <a href={page.path}>{page.title}</a>
-        </summary>
+<span class="site-map-node">
+    <a href={page.path}>{page.title}</a>
 
+    {#if page.children?.length}
         <ul>
             {#each page.children as child}
                 <li>
@@ -18,7 +16,5 @@
                 </li>
             {/each}
         </ul>
-    </details>
-{:else}
-    <a href={page.path}>{page.title}</a>
-{/if}
+    {/if}
+</span>

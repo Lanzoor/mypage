@@ -5,8 +5,8 @@
 
     onMount(() => {
         const listener = (event: KeyboardEvent) => {
-            if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'n') {
-                event.preventDefault(); // i hope this works
+            if (event.ctrlKey && event.shiftKey && event.code === 'KeyN') {
+                event.preventDefault();
                 navigationOverlay.open = !navigationOverlay.open;
             }
         };

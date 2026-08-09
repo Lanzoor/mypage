@@ -454,3 +454,7 @@ button:not(.initial) {
     font-family: inherit;
     cursor: pointer;
 }
+
+.rounded {
+    border-radius: 2147483647px;
+}

@@ -59,8 +59,6 @@ a:not(.plain) {
     text-decoration: none;
     display: inline-block;
 
-    border-radius: 10px;
-
     color: var(--anchor);
 
     transition: color 0.2s ease;

@@ -1,11 +1,15 @@
-export * as Legal from './legal';
+// export function setFrozen(value: boolean) {
+//     const main = document.querySelector('main');
 
-export function setFrozen(value?: boolean) {
-    let main = document.querySelector('main');
-    if (!main) return;
-    main.classList.toggle('frozen', value);
+//     if (!main) return;
+
+//     main.classList.toggle('frozen', value);
+// }
+
+export function randInt(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export async function sleep(timeMs: number): Promise<any> {
-    return new Promise((p) => setTimeout(p, timeMs));
+export function pickRandom<T>(array: T[]): T {
+    return array[randInt(0, array.length - 1)];
 }

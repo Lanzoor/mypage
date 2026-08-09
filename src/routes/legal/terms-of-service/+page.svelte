@@ -1,9 +1,9 @@
 <script>
-    import { Legal } from '$lib';
     import Redirects from '$lib/components/Information/Redirects.svelte';
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { LegalInfo } from '$lib/legal';
 
-    const termsOfService = Legal.LegalInfo.termsOfService;
+    const termsOfService = LegalInfo.termsOfService;
 </script>
 
 <section>

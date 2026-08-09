@@ -29,7 +29,7 @@
         <b>Legal Information</b> refers to the Terms of Service and the Privacy Policy.
     </p>
 
-    <h2 id="voices">Notices</h2>
+    <h2 id="notices">Notices</h2>
 
     <p>
         When you first visit the website, or when existing Legal Information is updated, a notice

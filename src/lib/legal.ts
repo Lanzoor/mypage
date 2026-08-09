@@ -1,27 +1,28 @@
+import { LStorage } from './storage';
 import { Version } from './version';
 
-export type AcceptedLegalInfo = {
+export type AcceptedLegalInformation = {
     privacyPolicy?: string;
     termsOfService?: string;
 } | null;
 
-export function getAcceptedLegalInfo(): AcceptedLegalInfo {
-    if (typeof window === 'undefined') return null;
+export const LEGAL_KEY = 'acceptedLegalInfo';
 
-    try {
-        return JSON.parse(localStorage.getItem('acceptedLegalInfo') ?? 'null');
-    } catch {
-        return null;
+export namespace AcceptedLegalInfo {
+    export function get(): AcceptedLegalInformation {
+        try {
+            return JSON.parse(LStorage.get(LEGAL_KEY) ?? 'null');
+        } catch {
+            return null;
+        }
+    }
+
+    export function set(value: AcceptedLegalInformation) {
+        LStorage.set(LEGAL_KEY, JSON.stringify(value));
     }
 }
 
-export function setAcceptedLegalInfo(value: AcceptedLegalInfo) {
-    if (typeof window === 'undefined') return;
-
-    localStorage.setItem('acceptedLegalInfo', JSON.stringify(value));
-}
-
-class LegalInformation {
+export class LegalInformation {
     constructor(
         public lastUpdated: Date,
         public version: Version

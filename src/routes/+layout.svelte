@@ -8,13 +8,15 @@
     import NavigationPanel from '$lib/components/Overlays/NavigationPanel.svelte';
     import LegalNotice from '$lib/components/Overlays/LegalNotice.svelte';
 
-    import { cleanupOldData } from '$lib/cleanup';
     import WarpPanel from '$lib/components/Overlays/WarpPanel.svelte';
     import { handleEscape } from '$lib/overlays.svelte';
+
+    import Konami from '$lib/components/EasterEggs/Konami.svelte';
 
     import { page } from '$app/state';
     import { pageIndex } from '$lib/map';
     import { normalizePath } from '$lib/path';
+    import { cleanupOldData } from '$lib/cleanup';
 
     const currentPage = $derived(
         pageIndex.get(normalizePath(page.url.pathname)) ?? pageIndex.get('/')!
@@ -93,3 +95,5 @@
 <NavigationPanel />
 
 <WarpPanel />
+
+<Konami />
