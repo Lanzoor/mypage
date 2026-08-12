@@ -112,15 +112,6 @@
         'I have a tendency to memorize random things perfectly.',
     ];
 
-    const unsettlingTriviaList = [
-        // Unsettling
-        'You found the wrong trivia.',
-        'Look behind you.',
-        'We recommend keeping your volume low.',
-        'Something changed while you were reading this.',
-        ':)',
-    ];
-
     const specialTriviaList = [
         // Funni
         'I am a pigeon.',
@@ -141,6 +132,9 @@
         // Easter Eggs
         'I am legally required to put at least one easter egg in every website I make.',
         'Enter the Konami code.',
+        'May the eggs duplicate in peace.',
+        'Nice weather today.',
+        'I like spending time on the frontpage without doing anything whatsoever.',
 
         '<b class="col bright yellow">Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
     ];
@@ -152,12 +146,8 @@
 
         const roll = randInt(1, 1000);
 
-        if (roll <= 5) {
-            // unsettling: 0.5%
-            triviaType = 'unsettling';
-            list = unsettlingTriviaList;
-        } else if (roll <= 45) {
-            // unsettling: 3%
+        if (roll <= 50) {
+            // special: 5%
             triviaType = 'special';
             list = specialTriviaList;
         } else {
@@ -917,6 +907,29 @@
             radial-gradient(circle at bottom right, rgba(0, 238, 255, 0.2), transparent 50%), black;
     }
 
+    #trivia {
+        background:
+            radial-gradient(
+                circle at 15% 20%,
+                rgba(80, 140, 255, 0.12) 0,
+                rgba(80, 140, 255, 0.12) 8%,
+                transparent 8.1%
+            ),
+            radial-gradient(
+                circle at 85% 75%,
+                rgba(180, 100, 255, 0.1) 0,
+                rgba(180, 100, 255, 0.1) 12%,
+                transparent 12.1%
+            ),
+            radial-gradient(
+                circle at 70% 15%,
+                rgba(255, 255, 255, 0.05) 0,
+                rgba(255, 255, 255, 0.05) 3%,
+                transparent 3.1%
+            ),
+            #111;
+    }
+
     #trivia button {
         background: white;
         color: #111;
@@ -942,13 +955,5 @@
         opacity: 0.95;
         color: var(--bright-yellow);
         text-shadow: 0 0 20px var(--yellow);
-    }
-
-    #trivia .quote.unsettling {
-        opacity: 0.95;
-        transform: rotate(1deg);
-        color: red;
-        text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-        font-size: 1.5em;
     }
 </style>

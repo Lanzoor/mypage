@@ -12,7 +12,7 @@
     <Experimental description={`{insert description}`} />
     <NotImplemented />
     <Outdated />
-    <ContentWarning description={`{insert description}`} />
+    <ContentWarning>insert description</ContentWarning>
     <Redirects links={['/a', '/b', '/c']} />
     <Redirects links={['/a', '/b', '/c', '/d', '/e', '/f']} />
     <Redirects

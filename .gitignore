@@ -27,3 +27,7 @@ vite.config.ts.timestamp-*
 # Custom entries
 
 TODO.md
+
+**/(private)
+**/(hidden)
+**/arg

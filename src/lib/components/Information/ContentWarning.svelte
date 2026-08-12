@@ -1,11 +1,13 @@
 <script lang="ts">
-    let { description }: { description: string } = $props();
+    let { children }: { children: import('svelte').Snippet } = $props();
 </script>
 
 <blockquote class="error">
-    <b class="col bright red">Content Warning!</b><br />
+    <h2 class="col bright red">Content Warning!</h2>
 
-    This section contains content that may require additional context or caution.<br />
-    {description}<br />
-    Viewer description is advised. Please proceed with caution.
+    <p>
+        {@render children()}
+    </p>
+
+    <p class="dim">Viewer discretion is advised. Please proceed with caution.</p>
 </blockquote>

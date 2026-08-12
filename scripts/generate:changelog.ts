@@ -2,7 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { type ChangelogEntry } from '../src/lib/types';
 
-const CHANGELOG_ROOT = path.resolve('src/routes/projects/core/changelog/(entries)/');
+const CHANGELOG_ROOT = path.resolve('src/routes/(main)/projects/core/changelog/(entries)/');
 const OUTPUT = path.join(CHANGELOG_ROOT, 'entries.json');
 
 async function sleep(timeMs: number): Promise<any> {

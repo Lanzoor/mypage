@@ -18,7 +18,7 @@
         input = [...input, event.key].slice(-konamiCode.length);
 
         if (input.join(',') === konamiCode.join(',')) {
-            document.body.classList.toggle('spin');
+            document.body.classList.toggle('disco');
 
             input = [];
         }
@@ -28,33 +28,33 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <style>
-    :global(body.spin) {
-        animation: disco 1s linear infinite;
+    :global(body.disco) {
+        animation: disco 0.5s linear infinite;
     }
-
     @keyframes disco {
         0% {
             filter: hue-rotate(0deg) saturate(2);
+            transform: scale(1.01) translateY(0) rotate(0deg);
         }
 
-        20% {
-            filter: hue-rotate(72deg) saturate(3);
+        25% {
+            filter: hue-rotate(90deg) saturate(2);
+            transform: translateY(-4px) rotate(-0.5deg);
         }
 
-        40% {
-            filter: hue-rotate(144deg) saturate(2);
+        50% {
+            filter: hue-rotate(180deg) saturate(2);
+            transform: scale(1.01) translateY(0) rotate(0deg);
         }
 
-        60% {
-            filter: hue-rotate(216deg) saturate(3);
-        }
-
-        80% {
-            filter: hue-rotate(288deg) saturate(2);
+        75% {
+            filter: hue-rotate(270deg) saturate(2);
+            transform: translateY(4px) rotate(0.5deg);
         }
 
         100% {
-            filter: hue-rotate(360deg) saturate(3);
+            filter: hue-rotate(360deg) saturate(2);
+            transform: scale(1.01) translateY(0) rotate(0deg);
         }
     }
 </style>

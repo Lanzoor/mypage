@@ -1,14 +1,14 @@
 # core
 
-the frontend source code for <https://lanzoor.dev>.
+> the frontend source code for <https://www.lanzoor.dev>.
 
 ## Download
 
-Clone the repository using one of the following commands:
+First, clone the repository:
 
 ```sh
 git clone https://github.com/Lanzoor/core.git
-# or
+# or by using the GitHub CLI:
 gh repo clone Lanzoor/core
 ```
 

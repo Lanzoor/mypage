@@ -11,4 +11,5 @@ Disallow: /private/
 Disallow: /admin/
 Disallow: /.git/
 Disallow: /.env
+Disallow: /arg/
 

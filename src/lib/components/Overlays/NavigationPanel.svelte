@@ -119,7 +119,9 @@
                 </ul>
             </nav>
 
-            <button onclick={() => (warpOverlay.open = true)}>Open Warp Panel</button>
+            <button class="open-warp" onclick={() => (warpOverlay.open = true)}
+                >Open Warp Panel</button
+            >
         </div>
     </div>
 </div>
@@ -187,7 +189,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        align-self: flex-end;
         justify-content: center;
         gap: 0.5em;
     }
@@ -224,11 +225,8 @@
 
     @media (max-width: 480px) {
         #navigation .panel .header {
-            justify-content: flex-start;
-        }
-
-        #navigation .panel .header .logo {
-            display: none;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         #navigation .panel .header img {
@@ -238,6 +236,10 @@
 
         #navigation .panel .header button .mobile-failsafe {
             display: inline-block;
+        }
+
+        #navigation .panel .open-warp {
+            display: none;
         }
     }
 </style>

@@ -23,7 +23,7 @@ html {
 
     --heading: #ddd;
 
-    --base-font-size: clamp(10px, 2vw, 20px);
+    --base-font-size: clamp(10px, 3vw, 25px);
 }
 
 body {

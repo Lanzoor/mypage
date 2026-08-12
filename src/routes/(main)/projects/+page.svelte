@@ -1,6 +1,7 @@
 <script>
     import External from '$lib/components/Links/External.svelte';
     import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { getPageData } from '$lib/map';
 </script>
 
 <section id="projects">
@@ -159,13 +160,15 @@
 
     <ul>
         <li>
-            Tools - <a href="/tools">/tools</a><br />
-            A collection of some handy tools designed for everyone to use.
+            <a href="/tools">Tools</a> - {getPageData('/tools')?.description}
         </li>
 
         <li>
-            Conlangs - <a href="/conlangs">/conlangs</a><br />
-            A collection of my constructed languages.
+            <a href="/conlangs">Conlangs</a> - {getPageData('/conlangs')?.description}
+        </li>
+
+        <li>
+            <a href="/arg">Alternate Reality Games</a> - {getPageData('/arg')?.description}
         </li>
     </ul>
 </section>

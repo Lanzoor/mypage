@@ -67,6 +67,11 @@ export const sitemap: Page[] = [
         // ],
     },
     {
+        path: '/arg',
+        title: 'Alternate Reality Games',
+        description: 'A collection of alternate reality games made by Lanzoor.',
+    },
+    {
         path: '/conlangs',
         title: 'Conlangs',
         description: 'A collection of my constructed languages.',

@@ -1,3 +1,54 @@
+<script lang="ts">
+    import { onMount } from 'svelte';
+
+    const messages = [
+        [30_000, 'Still there?'],
+        [60_000, 'You can take your time.'],
+        [90_000, 'You really like this page, huh.'],
+        [120_000, 'Okay, seriously. I think you forgot to close this tab.'],
+        [180_000, "Let's just act like nothing ever happened and just move on."],
+        [182_400, 'Welcome! 👋'],
+    ] as const;
+
+    let greeting = $state('Welcome! 👋');
+
+    onMount(() => {
+        let timers: ReturnType<typeof setTimeout>[] = [];
+
+        function reset() {
+            for (const timer of timers) {
+                clearTimeout(timer);
+            }
+
+            greeting = 'Welcome! 👋';
+
+            timers = messages.map(([delay, message]) =>
+                setTimeout(() => {
+                    greeting = message;
+                }, delay)
+            );
+        }
+
+        const events = ['mousemove', 'scroll', 'click', 'keydown', 'touchstart'] as const;
+
+        for (const event of events) {
+            window.addEventListener(event, reset, { passive: true });
+        }
+
+        reset();
+
+        return () => {
+            for (const event of events) {
+                window.removeEventListener(event, reset);
+            }
+
+            for (const timer of timers) {
+                clearTimeout(timer);
+            }
+        };
+    });
+</script>
+
 <section class="disable-initial-padding disable-padding" id="iris-bg">
     <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
@@ -18,7 +69,7 @@
             </p>
 
             <p>
-                <b>Hello! 👋</b><br />
+                <b class="egg">{greeting}</b><br />
                 My name is <span class="col bright purple">Lanzoor</span>, a student from South
                 Korea who likes
                 <span class="col green">programming</span>,
@@ -81,6 +132,8 @@
         </div>
     </section>
 </section>
+
+<div style="display: none">Nice weather today, 'innit?</div>
 
 <style lang="css">
     #iris-bg {

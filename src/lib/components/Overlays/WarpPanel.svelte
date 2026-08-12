@@ -34,7 +34,7 @@
 
     let warpTip = $state(randomTip());
 
-    let urlQuery = $state('/');
+    let urlQuery = $state('');
     let warpInfo = $state('Enter an internal destination to warp to!');
     type WarpError = 'invalid' | 'external';
 
