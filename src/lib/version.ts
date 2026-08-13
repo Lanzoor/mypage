@@ -3,11 +3,11 @@ export class Version {
 
     constructor(...parts: readonly number[]) {
         if (parts.length === 0) {
-            throw new Error('A version must contain at least one number.');
+            throw new Error("A version must contain at least one number.");
         }
 
         if (parts.some((p) => !Number.isInteger(p) || p < 0)) {
-            throw new Error('Version parts must be non-negative integers.');
+            throw new Error("Version parts must be non-negative integers.");
         }
 
         this.parts = [...parts];
@@ -18,13 +18,15 @@ export class Version {
     }
 
     static parse(input: string): Version {
-        const match = input.trim().match(/^v?(\d+(?:\.\d+)*)(?:-(dev|alpha|beta|rc|release))?$/i);
+        const match = input
+            .trim()
+            .match(/^v?(\d+(?:\.\d+)*)(?:-(dev|alpha|beta|rc|release))?$/i);
 
         if (!match) {
             throw new Error(`Invalid version: "${input}"`);
         }
 
-        const parts = match[1].split('.').map(Number);
+        const parts = match[1].split(".").map(Number);
 
         return new Version(...parts);
     }
@@ -97,7 +99,7 @@ export class Version {
     }
 
     toString() {
-        return `v${this.parts.join('.')}`;
+        return `v${this.parts.join(".")}`;
     }
 
     format() {

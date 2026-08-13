@@ -1,7 +1,7 @@
 <script>
-    import External from '$lib/components/Links/External.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import { LegalInfo } from '$lib/legal';
+    import External from "$lib/components/Links/External.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import { LegalInfo } from "$lib/legal";
 
     const privacyPolicy = LegalInfo.privacyPolicy;
 </script>
@@ -22,8 +22,8 @@
 
     <p>
         <b>
-            This website does not intentionally collect or use personal data or use analytics
-            services. Period.
+            This website does not intentionally collect or use personal data or
+            use analytics services. Period.
         </b>
     </p>
 
@@ -31,25 +31,28 @@
 
     <blockquote>
         Although we strive to minimize the use of third-party services, <b
-            >some services are required for the operation, security, and delivery of this website.</b
+            >some services are required for the operation, security, and
+            delivery of this website.</b
         > Thanks for your understanding!
     </blockquote>
 
     <h3>Information</h3>
 
     <p>
-        These third-party services may process limited information necessary to provide their
-        services. <b
-            >The website itself, however, does not intentionally share personal information with
-            third parties for advertising, analytics, or tracking purposes.</b
+        These third-party services may process limited information necessary to
+        provide their services. <b
+            >The website itself, however, does not intentionally share personal
+            information with third parties for advertising, analytics, or
+            tracking purposes.</b
         >
     </p>
 
     <p>
         <b>
-            Lanzaforge is not affiliated with the services listed below. Lanzaforge does not control
-            how these services process information, and does not access or use information collected
-            by these services for its own purposes.
+            Lanzaforge is not affiliated with the services listed below.
+            Lanzaforge does not control how these services process information,
+            and does not access or use information collected by these services
+            for its own purposes.
         </b>
     </p>
 
@@ -57,10 +60,11 @@
 
     <p>
         <b
-            >Cloudflare provides DNS, content delivery, and email routing services for this website.</b
+            >Cloudflare provides DNS, content delivery, and email routing
+            services for this website.</b
         ><br />
-        As part of providing these services, Cloudflare may process technical information such as IP addresses.<br
-        />
+        As part of providing these services, Cloudflare may process technical information
+        such as IP addresses.<br />
         For more information, please refer to
         <External href="https://www.cloudflare.com/privacypolicy/">
             Cloudflare's privacy policy
@@ -71,9 +75,12 @@
 
     <p>
         <b>This website is hosted via Vercel.</b><br />
-        As part of normal operation, Vercel may collect technical information such as IP addresses, request
-        logs, and performance metrics.<br />For more information, please refer to
-        <External href="https://vercel.com/legal/privacy-notice#how-we-use-info">
+        As part of normal operation, Vercel may collect technical information such
+        as IP addresses, request logs, and performance metrics.<br />For more
+        information, please refer to
+        <External
+            href="https://vercel.com/legal/privacy-notice#how-we-use-info"
+        >
             Vercel's privacy policy
         </External>.
     </p>

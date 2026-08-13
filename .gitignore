@@ -24,10 +24,10 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Custom entries
+# ==================== Custom entries ====================
 
 TODO.md
 
 **/(private)
 **/(hidden)
-**/arg
+static/arg

@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-08T00:00:00+09:00'),
+        published: new Date("2026-08-08T00:00:00+09:00"),
     };
 </script>
 
@@ -15,7 +15,8 @@
         <li>
             <span class="col bright green">+</span>
             <b>Added functionality to the warp panel.</b><br />
-            You can open it by using the keybind <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd>!
+            You can open it by using the keybind <kbd>Ctrl</kbd>+<kbd>Shift</kbd
+            >+<kbd>/</kbd>!
         </li>
         <li>
             <span class="col bright green">+</span>
@@ -27,11 +28,15 @@
         </li>
         <li>
             <span class="col bright green">+</span>
-            Added donations information page at <a href="/about/donations">/about/donations</a>.
+            Added donations information page at
+            <a href="/about/donations">/about/donations</a>.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            <b>Moved the Legal Information to a dedicated section, <a href="/legal">/legal</a>.</b
+            <b
+                >Moved the Legal Information to a dedicated section, <a
+                    href="/legal">/legal</a
+                >.</b
             ><br />
             Redirects has been configured for compatibility, so old URLs such as
             <code>/privacy-policy</code>
@@ -62,7 +67,9 @@
             Improved the design of the navigation panel.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Renamed some unintuitive selector names.
         </li>
     </ul>

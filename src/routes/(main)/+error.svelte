@@ -1,8 +1,8 @@
 <script>
-    import { page } from '$app/state';
+    import { page } from "$app/state";
 
     let status = $state(page.status);
-    let attemptedPath = $state(page.url?.pathname || '/');
+    let attemptedPath = $state(page.url?.pathname || "/");
 </script>
 
 <svelte:head>
@@ -14,11 +14,12 @@
         <header>
             <h1>404 - Page not found!</h1>
             <p>
-                <b
-                    >We couldn't find a resource located at
-                    <span class="col bright green">'{attemptedPath}'</span>.</b
-                ><br />
-                The filename may have changed, or the file may have been moved or removed.
+                <b>
+                    We couldn't find a resource located at
+                    <span class="col bright green">'{attemptedPath}'</span>.
+                </b><br />
+                The filename may have changed, or the file may have been moved or
+                removed.
             </p>
         </header>
 
@@ -50,7 +51,12 @@
 <style lang="css">
     #error-404 {
         background:
-            radial-gradient(circle at left top, rgba(100, 0, 255, 0.5), transparent 50%), #111;
+            radial-gradient(
+                circle at left top,
+                rgba(100, 0, 255, 0.5),
+                transparent 50%
+            ),
+            #111;
     }
 
     #error-404 header {

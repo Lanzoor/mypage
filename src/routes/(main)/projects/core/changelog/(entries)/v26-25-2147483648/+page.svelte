@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-07-09T00:00:00+09:00'),
+        published: new Date("2026-07-09T00:00:00+09:00"),
     };
 </script>
 
@@ -13,8 +13,8 @@
 
     <p>
         <b>This is the pre-release version of the Svelte port.</b><br />
-        Although the Svelte port is not complete, we decided to release this version earlier since we
-        had to make a few important posts, as well as a few changes.
+        Although the Svelte port is not complete, we decided to release this version
+        earlier since we had to make a few important posts, as well as a few changes.
     </p>
 
     <p class="dim">

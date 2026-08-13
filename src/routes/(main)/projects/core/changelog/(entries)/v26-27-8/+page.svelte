@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-12T00:00:00+09:00'),
+        published: new Date("2026-08-12T00:00:00+09:00"),
     };
 </script>
 
@@ -14,11 +14,13 @@
     <ul>
         <li>
             <span class="col bright green">+</span>
-            Added more easter eggs, and their hints in the <a href="/profile#trivia">trivia</a> section.
+            Added more easter eggs, and their hints in the
+            <a href="/profile#trivia">trivia</a> section.
         </li>
         <li>
             <span class="col bright green">+</span>
-            Added the <a href="/arg">ARG</a> section, appropriate metadata, and links within the
+            Added the <a href="/arg">ARG</a> section, appropriate metadata, and
+            links within the
             <a href="/projects">projects</a> page.
         </li>
         <li>
@@ -30,7 +32,9 @@
             Improved design of the navigation panel on mobile devices.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Reworked the folder structure.
         </li>
     </ul>

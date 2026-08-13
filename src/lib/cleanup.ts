@@ -1,9 +1,9 @@
-import { LStorage } from './storage';
+import { LStorage } from "./storage";
 
-const keysToRemove = ['hasSeenNotice', 'isTrackingAllowed', 'legalConf'];
+const keysToRemove = ["hasSeenNotice", "isTrackingAllowed", "legalConf"];
 
 export function cleanupOldData() {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     for (const key of keysToRemove) {
         LStorage.remove(key);

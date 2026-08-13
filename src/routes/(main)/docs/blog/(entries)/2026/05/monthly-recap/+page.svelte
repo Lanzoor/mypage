@@ -1,16 +1,16 @@
 <script lang="ts" module>
     export const metadata = {
-        title: 'Monthly Recap | May 2026',
-        description: 'A monthly recap for May 2026',
-        tags: ['blog', 'monthly-recap', 'core'],
-        published: new Date('2026-05-30T00:00:00+09:00'),
+        title: "Monthly Recap | May 2026",
+        description: "A monthly recap for May 2026",
+        tags: ["blog", "monthly-recap", "core"],
+        published: new Date("2026-05-30T00:00:00+09:00"),
     };
 </script>
 
 <script lang="ts">
-    import oldImage from './assets/old.png';
-    import newImage from './assets/new.png';
-    import Deleted from '$lib/components/Information/Deleted.svelte';
+    import oldImage from "./assets/old.png";
+    import newImage from "./assets/new.png";
+    import Deleted from "$lib/components/Information/Deleted.svelte";
 </script>
 
 <svelte:head>
@@ -18,7 +18,7 @@
 
     <meta name="description" content={metadata.description} />
 
-    <meta name="tags" content={metadata.tags.join(', ')} />
+    <meta name="tags" content={metadata.tags.join(", ")} />
 </svelte:head>
 
 <section>
@@ -27,10 +27,11 @@
     <h1>Monthly Recap | May 2026</h1>
 
     <blockquote class="info">
-        <b class="col bright green"> From now on, I am going to be posting monthly recaps! </b><br
-        />
-        Monthly recaps will include some progress I've made within my websites, as well as some additional
-        life updates.
+        <b class="col bright green">
+            From now on, I am going to be posting monthly recaps!
+        </b><br />
+        Monthly recaps will include some progress I've made within my websites, as
+        well as some additional life updates.
     </blockquote>
 
     <h2>A Complete Design Overhaul</h2>
@@ -40,19 +41,22 @@
         <img src={newImage} alt="New version" />
     </div>
 
-    <div class="image-description">The design of the frontpage, before vs after</div>
+    <div class="image-description">
+        The design of the frontpage, before vs after
+    </div>
 
     <p>
         <b>
-            Almost every page and feature across the website has been completely redesigned and
-            reworked!
+            Almost every page and feature across the website has been completely
+            redesigned and reworked!
         </b><br />
 
-        This update includes major improvements to the frontpage, navigation panels, layouts, and
-        many more.<br />
+        This update includes major improvements to the frontpage, navigation
+        panels, layouts, and many more.<br />
 
-        <b>I've also started developing a more consistent visual style</b>, which will be the
-        foundation for future updates and features moving forward.<br />
+        <b>I've also started developing a more consistent visual style</b>,
+        which will be the foundation for future updates and features moving
+        forward.<br />
 
         The goal of these changes is to make the website feel
         <span class="col bright green">cleaner</span>,
@@ -66,7 +70,9 @@
     <Deleted />
 
     <blockquote class="info">
-        <b class="col bright green">That's probably it for this monthly recap!</b><br />
+        <b class="col bright green"
+            >That's probably it for this monthly recap!</b
+        ><br />
         Stay tuned for more monthly recaps, and have a nice day.
     </blockquote>
 </section>

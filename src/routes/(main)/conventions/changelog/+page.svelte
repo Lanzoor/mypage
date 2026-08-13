@@ -1,5 +1,5 @@
 <script>
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section>
@@ -12,8 +12,9 @@
     <h3>Change Writing Conventions</h3>
 
     <p>
-        Changes are written in <b>the past tense</b> rather than the imperative mood commonly used in
-        Git commits. This improves readability for visitors who are not familiar with development workflows.
+        Changes are written in <b>the past tense</b> rather than the imperative mood
+        commonly used in Git commits. This improves readability for visitors who are
+        not familiar with development workflows.
     </p>
 
     <p>
@@ -22,7 +23,10 @@
 
     <h3>Change Order</h3>
 
-    <p>Changes are generally ordered from the most significant to the least significant.</p>
+    <p>
+        Changes are generally ordered from the most significant to the least
+        significant.
+    </p>
 
     <h2>Change Prefixes</h2>
 
@@ -34,47 +38,51 @@
     <ul>
         <li>
             <b>A purple f</b>
-            (<span class="col bright purple">ƒ</span>) indicates that an issue has been fixed.
+            (<span class="col bright purple">ƒ</span>) indicates that an issue
+            has been fixed.
         </li>
 
         <li>
             <b>A green plus sign</b>
-            (<span class="col bright green">+</span>) indicates that something has been added.
+            (<span class="col bright green">+</span>) indicates that something
+            has been added.
         </li>
 
         <li>
             <b>A yellow tilde</b>
-            (<span class="col bright yellow">~</span>) indicates that something has been changed or
-            improved.
+            (<span class="col bright yellow">~</span>) indicates that something
+            has been changed or improved.
         </li>
 
         <li>
             <b>A red minus sign</b>
-            (<span class="col bright red">-</span>) indicates that something has been removed.
+            (<span class="col bright red">-</span>) indicates that something has
+            been removed.
         </li>
 
         <li>
             In some cases, a blue
             <span class="col bright blue">p</span>
-            may appear after the symbol. This means the change is provisional and may be reverted in the
-            future.
+            may appear after the symbol. This means the change is provisional and
+            may be reverted in the future.
         </li>
 
         <li>
             In some cases, an orange
-            <span class="col bright orange">i</span> may appear after the symbol. This means the change
-            is internal and does not affect the user experience.
+            <span class="col bright orange">i</span> may appear after the symbol.
+            This means the change is internal and does not affect the user experience.
         </li>
     </ul>
 
     <blockquote class="warning">
         <b class="col bright yellow">
-            Please note that change prefixes are only intended as a quick summary of a change.
+            Please note that change prefixes are only intended as a quick
+            summary of a change.
         </b>
         They are subjective and may not fully describe everything included in an update.
         <b
-            >For example, an entry marked with a plus sign may also contain modifications to
-            existing features.</b
+            >For example, an entry marked with a plus sign may also contain
+            modifications to existing features.</b
         >
     </blockquote>
 </section>

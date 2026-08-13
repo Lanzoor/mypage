@@ -1,5 +1,5 @@
-import { normalizePath } from '$lib/path';
-import { redirect, type Handle } from '@sveltejs/kit';
+import { normalizePath } from "$lib/path";
+import { redirect, type Handle } from "@sveltejs/kit";
 
 type CoreRedirect = {
     from: string[];
@@ -10,45 +10,45 @@ type CoreRedirect = {
 
 const redirects: CoreRedirect[] = [
     {
-        from: ['/documents'],
-        to: '/docs',
+        from: ["/documents"],
+        to: "/docs",
         preservePath: true,
     },
     {
-        from: ['/docs/math/googology/CIN', '/docs/math/googology/cin'],
-        to: '/docs/math/googology/consistent-illion-notation',
+        from: ["/docs/math/googology/CIN", "/docs/math/googology/cin"],
+        to: "/docs/math/googology/consistent-illion-notation",
     },
     {
-        from: ['/site-map'],
-        to: '/map',
+        from: ["/site-map"],
+        to: "/map",
     },
     {
-        from: ['/testing', '/tests'],
-        to: '/test',
+        from: ["/testing", "/tests"],
+        to: "/test",
     },
     {
-        from: ['/legacy', '/archived', '/archive'],
-        to: 'https://legacy.lanzoor.dev',
+        from: ["/legacy", "/archived", "/archive"],
+        to: "https://legacy.lanzoor.dev",
     },
     {
-        from: ['/legal/tos', '/legal/terms', '/tos', '/terms'],
-        to: '/legal/terms-of-service',
+        from: ["/legal/tos", "/legal/terms", "/tos", "/terms"],
+        to: "/legal/terms-of-service",
     },
     {
-        from: ['/privacy-policy', '/privacy', '/legal/privacy'],
-        to: '/legal/privacy-policy',
+        from: ["/privacy-policy", "/privacy", "/legal/privacy"],
+        to: "/legal/privacy-policy",
     },
     {
-        from: ['/api'],
-        to: 'https://api.lanzoor.dev',
+        from: ["/api"],
+        to: "https://api.lanzoor.dev",
     },
     {
-        from: ['/projects/core-api/changelog'],
-        to: 'https://api.lanzoor.dev/docs/changelog',
+        from: ["/projects/core-api/changelog"],
+        to: "https://api.lanzoor.dev/docs/changelog",
     },
     {
-        from: ['/projects/conlangs'],
-        to: '/conlangs',
+        from: ["/projects/conlangs"],
+        to: "/conlangs",
     },
 ];
 
@@ -63,7 +63,7 @@ export const handle: Handle = async ({ event, resolve }) => {
                 throw redirect(code, entry.to);
             }
 
-            if (entry.preservePath && pathname.startsWith(from + '/')) {
+            if (entry.preservePath && pathname.startsWith(from + "/")) {
                 throw redirect(code, entry.to + pathname.slice(from.length));
             }
         }

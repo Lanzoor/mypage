@@ -1,7 +1,7 @@
 <script>
-    import External from '$lib/components/Links/External.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import { getPageData } from '$lib/map';
+    import External from "$lib/components/Links/External.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import { getPageData } from "$lib/map";
 </script>
 
 <section id="projects">
@@ -14,14 +14,14 @@
     <div id="container">
         <div class="project">
             <div class="header">
-                <div class="status wip">wip</div>
+                <div class="status complete">complete</div>
 
                 <h1>core</h1>
             </div>
 
             <p class="description">
-                The frontend source code for lanzoor.dev, which is the website you're looking at
-                right now.
+                The frontend source code for lanzoor.dev, which is the website
+                you're looking at right now.
             </p>
 
             <div class="information">
@@ -36,7 +36,9 @@
                     <a href="/"> project </a>
                     <a href="/projects/core"> showcase </a>
                     <a href="/projects/core/changelog"> changelog </a>
-                    <External href="https://github.com/Lanzoor/core">source</External>
+                    <External href="https://github.com/Lanzoor/core"
+                        >source</External
+                    >
                 </div>
             </div>
         </div>
@@ -49,7 +51,8 @@
             </div>
 
             <p class="description">
-                The source code for api.lanzoor.dev, which powers the backend of this site.
+                The source code for api.lanzoor.dev, which powers the backend of
+                this site.
             </p>
 
             <div class="information">
@@ -63,8 +66,12 @@
 
                     <External href="https://api.lanzoor.dev">project</External>
                     <a href="/projects/core-api"> showcase </a>
-                    <External href="/projects/core-api/changelog">changelog</External>
-                    <External href="https://github.com/Lanzoor/core-api">source</External>
+                    <External href="/projects/core-api/changelog"
+                        >changelog</External
+                    >
+                    <External href="https://github.com/Lanzoor/core-api"
+                        >source</External
+                    >
                 </div>
             </div>
         </div>
@@ -77,8 +84,8 @@
             </div>
 
             <p class="description">
-                An archive containing previous documents related to me that are no longer actively
-                maintained.
+                An archive containing previous documents related to me that are
+                no longer actively maintained.
             </p>
 
             <div class="information">
@@ -90,8 +97,12 @@
                 <div class="links">
                     links:
 
-                    <External href="https://legacy.lanzoor.dev">project</External>
-                    <External href="https://github.com/Lanzoor/core-legacy">source</External>
+                    <External href="https://legacy.lanzoor.dev"
+                        >project</External
+                    >
+                    <External href="https://github.com/Lanzoor/core-legacy"
+                        >source</External
+                    >
                 </div>
             </div>
         </div>
@@ -104,8 +115,8 @@
             </div>
 
             <p class="description">
-                A strong deterministic password generator that creates unique, reproducible
-                passwords, written in Python.
+                A strong deterministic password generator that creates unique,
+                reproducible passwords, written in Python.
             </p>
 
             <div class="information">
@@ -117,7 +128,9 @@
                 <div class="links">
                     links:
 
-                    <External href="https://github.com/Lanzoor/tzepak">source</External>
+                    <External href="https://github.com/Lanzoor/tzepak"
+                        >source</External
+                    >
                 </div>
             </div>
         </div>
@@ -129,7 +142,9 @@
                 <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>
             </div>
 
-            <p class="description">An esoteric programming language compiler, written in Python.</p>
+            <p class="description">
+                An esoteric programming language compiler, written in Python.
+            </p>
 
             <div class="information">
                 <div class="tags">
@@ -140,35 +155,42 @@
                 <div class="links">
                     links:
 
-                    <External href="https://github.com/Lanzoor/BHOJ">source</External>
+                    <External href="https://github.com/Lanzoor/BHOJ"
+                        >source</External
+                    >
                 </div>
             </div>
         </div>
     </div>
 
     <p>
-        For archived projects (such as <code>periodica</code> and <code>profile-old</code>), please
-        refer to
-        <External href="https://legacy.lanzoor.dev">legacy.lanzoor.dev</External>.
+        For archived projects (such as <code>periodica</code> and
+        <code>profile-old</code>), please refer to
+        <External href="https://legacy.lanzoor.dev">legacy.lanzoor.dev</External
+        >.
     </p>
 </section>
 
 <section id="portal">
     <h1>Projects Portal</h1>
 
-    <p>There's also a plenty of projects hosted directly within this website.</p>
+    <p>
+        There's also a plenty of projects hosted directly within this website.
+    </p>
 
     <ul>
         <li>
-            <a href="/tools">Tools</a> - {getPageData('/tools')?.description}
+            <a href="/tools">Tools</a> - {getPageData("/tools")?.description}
         </li>
 
         <li>
-            <a href="/conlangs">Conlangs</a> - {getPageData('/conlangs')?.description}
+            <a href="/conlangs">Conlangs</a> - {getPageData("/conlangs")
+                ?.description}
         </li>
 
         <li>
-            <a href="/arg">Alternate Reality Games</a> - {getPageData('/arg')?.description}
+            <a href="/arg">Alternate Reality Games</a> - {getPageData("/arg")
+                ?.description}
         </li>
     </ul>
 </section>
@@ -206,8 +228,12 @@
     }
 
     #container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
         gap: 3em;
 
         width: 100%;
@@ -233,7 +259,7 @@
     }
 
     .project::after {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
 
@@ -275,7 +301,7 @@
         letter-spacing: 0.05em;
         text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 
-        font-family: 'JetBrains Mono';
+        font-family: "JetBrains Mono";
 
         transition: 200ms ease;
     }
@@ -291,11 +317,11 @@
     }
 
     .project .status::before {
-        content: '[ ';
+        content: "[ ";
     }
 
     .project .status::after {
-        content: ' ]';
+        content: " ]";
     }
 
     .project .status.complete {
@@ -311,6 +337,7 @@
     .project .description {
         line-height: 1.6;
         font-size: 0.8em;
+        max-width: 25em;
 
         color: rgba(255, 255, 255, 0.7);
     }
@@ -332,11 +359,12 @@
         font-weight: 600;
 
         color: #777;
-        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        text-shadow: 0 0 20px
+            oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
     }
 
     .project .tags .tag::before {
-        content: '>_ ';
+        content: ">_ ";
         color: #333;
         text-shadow: none;
     }
@@ -363,6 +391,7 @@
         flex-wrap: wrap;
         column-gap: 1em;
         row-gap: 0.5em;
+        max-width: 25em;
     }
 
     .project .links :global(a) {
@@ -372,5 +401,12 @@
 
     .project .links :global(a):hover {
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+        .project .description,
+        .project .links {
+            max-width: none;
+        }
     }
 </style>

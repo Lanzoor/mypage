@@ -1,9 +1,9 @@
 <script lang="ts">
-    import External from '$lib/components/Links/External.svelte';
+    import External from "$lib/components/Links/External.svelte";
 
     export const metadata = {
-        title: 'Overly Overhauled Overlays',
-        published: new Date('2026-07-29T00:00:00+09:00'),
+        title: "Overly Overhauled Overlays",
+        published: new Date("2026-07-29T00:00:00+09:00"),
     };
 </script>
 
@@ -16,12 +16,15 @@
 
     <ul>
         <li>
-            <span class="col bright green">+</span><span class="col bright yellow">~</span>
+            <span class="col bright green">+</span><span
+                class="col bright yellow">~</span
+            >
             <b>
-                Added a proper overlays system and migrated all existing overlays to the new system.
+                Added a proper overlays system and migrated all existing
+                overlays to the new system.
             </b><br />
-            The new overlays system supports toggle keybindings, interaction and rendering priorities,
-            and escape handlers for all components.<br />
+            The new overlays system supports toggle keybindings, interaction and rendering
+            priorities, and escape handlers for all components.<br />
             This makes managing existing overlays and creating new ones much easier.
         </li>
         <li>
@@ -45,19 +48,25 @@
             <a href="/legacy/profile-old">the old profile</a>.
         </li>
         <li>
-            <span class="col bright green">+</span><span class="col bright orange">i</span>
-            <b>Added the <code>External</code> component, and its appropriate styles.</b><br />
+            <span class="col bright green">+</span><span
+                class="col bright orange">i</span
+            >
+            <b
+                >Added the <code>External</code> component, and its appropriate styles.</b
+            ><br />
             This component is used when referencing external links.
         </li>
         <li>
             <span class="col bright yellow">~</span>
             <b>
                 Changed the Terms Of Service URL from <code>/tos</code> to
-                <code>/terms-of-service</code>, and added a redirect from <code>/tos</code> to
+                <code>/terms-of-service</code>, and added a redirect from
+                <code>/tos</code>
+                to
                 <code>/terms-of-service</code>.
             </b><br />
-            The shorthand URL <code>/tos</code> can still be used when referring to the Terms Of Service.
-            In fact, all in-site links already use it.
+            The shorthand URL <code>/tos</code> can still be used when referring to
+            the Terms Of Service. In fact, all in-site links already use it.
         </li>
         <li>
             <span class="col bright yellow">~</span>
@@ -69,7 +78,8 @@
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved accessibility by adding ARIA roles and reworking interactive elements where possible.
+            Improved accessibility by adding ARIA roles and reworking interactive
+            elements where possible.
         </li>
         <li>
             <span class="col bright yellow">~</span>

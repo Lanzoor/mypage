@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-05T00:00:00+09:00'),
+        published: new Date("2026-08-05T00:00:00+09:00"),
     };
 </script>
 

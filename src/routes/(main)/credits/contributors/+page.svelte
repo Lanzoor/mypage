@@ -1,6 +1,6 @@
 <script>
-    import External from '$lib/components/Links/External.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import External from "$lib/components/Links/External.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section class="centered horizontally" id="intro">
@@ -10,8 +10,8 @@
         <h1>Contributors</h1>
 
         <p>
-            Here's an updating list of amazing contributors, who helped create and improve the
-            website for everyone!
+            Here's an updating list of amazing contributors, who helped create
+            and improve the website for everyone!
         </p>
     </header>
 </section>
@@ -20,20 +20,31 @@
     <h1>Supporters</h1>
 
     <p>
-        A huge thank-you to the <span class="col bright red">amazing supporters</span> who has supported
-        this project!
+        A huge thank-you to the <span class="col bright red"
+            >amazing supporters</span
+        > who has supported this project!
     </p>
 
     <p>
-        Want your name here? <b>Please refer to <a href="/about/donations">this page</a>!</b>
+        Want your name here? <b
+            >Please refer to <a href="/about/donations">this page</a>!</b
+        >
     </p>
 
     <div class="supporters">
         <External href="https://github.com/Derukugis" showArrow={false}>
-            <img src="/assets/contributors/derukugi.png" alt="derukugi" title="derukugi" />
+            <img
+                src="/assets/contributors/derukugi.png"
+                alt="derukugi"
+                title="derukugi"
+            />
         </External>
 
-        <img src="/assets/contributors/default.png" alt="conaxsilver" title="conaxsilver" />
+        <img
+            src="/assets/contributors/default.png"
+            alt="conaxsilver"
+            title="conaxsilver"
+        />
     </div>
 </section>
 
@@ -41,27 +52,43 @@
     <h1>Amethyst Team</h1>
 
     <p>
-        <span class="col bright purple">The Amethyst Team</span> refers to a certain group of people that
-        frequently work together in order to improve the website for everyone.
+        <span class="col bright purple">The Amethyst Team</span> refers to a certain
+        group of people that frequently work together in order to improve the website
+        for everyone.
     </p>
 
     <div class="cards">
         <div class="card">
-            <img src="/assets/contributors/iris-modern.png" alt="lanzoor" title="lanzoor" />
+            <img
+                src="/assets/contributors/iris-modern.png"
+                alt="lanzoor"
+                title="lanzoor"
+            />
 
             <div class="description">
                 <h1>Lanzoor</h1>
 
-                <div class="roles">Founder · Developer · Professional Procrastinator</div>
+                <div class="roles">
+                    Founder · Developer · Professional Procrastinator
+                </div>
 
-                <p>Maintains the website infrastructure, frontend systems, and backend services.</p>
+                <p>
+                    Maintains the website infrastructure, frontend systems, and
+                    backend services.
+                </p>
 
-                <div class="quote">i like mangoes. mangoes are a way of life.</div>
+                <div class="quote">
+                    i like mangoes. mangoes are a way of life.
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="/assets/contributors/kiui6.png" alt="kiui6" title="kiui6" />
+            <img
+                src="/assets/contributors/kiui6.png"
+                alt="kiui6"
+                title="kiui6"
+            />
 
             <div class="description">
                 <h1>
@@ -71,23 +98,31 @@
                 <div class="roles">Security · Quality Assurance</div>
 
                 <p>
-                    A gigachad programmer from Russia who made a whole in-depth analysis for the
-                    website, pointing out potential issues.
+                    A gigachad programmer from Russia who made a whole in-depth
+                    analysis for the website, pointing out potential issues.
                 </p>
 
-                <div class="quote">He is Russian. He's probably built different. 🥵🥶💀</div>
+                <div class="quote">
+                    He is Russian. He's probably built different. 🥵🥶💀
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="/assets/contributors/derukugi.png" alt="derukugi" title="derukugi" />
+            <img
+                src="/assets/contributors/derukugi.png"
+                alt="derukugi"
+                title="derukugi"
+            />
 
             <div class="description">
                 <h1>derukugi</h1>
 
                 <div class="roles">Security · Quality Assurance</div>
 
-                <p>Gave some great inspirations and feedback for the website.</p>
+                <p>
+                    Gave some great inspirations and feedback for the website.
+                </p>
 
                 <div class="quote">I'm a big fan of Drastic</div>
             </div>
@@ -99,20 +134,24 @@
     <h1>Jade Team</h1>
 
     <p>
-        <span class="col bright cyan">The Jade Team</span> refers to the amazing contributors that helped
-        build this website.
+        <span class="col bright cyan">The Jade Team</span> refers to the amazing contributors
+        that helped build this website.
     </p>
 
     <div class="cards">
         <div class="card">
-            <img src="/assets/contributors/default.png" alt="conaxsilver" title="conaxsilver" />
+            <img
+                src="/assets/contributors/default.png"
+                alt="conaxsilver"
+                title="conaxsilver"
+            />
 
             <div class="description">
                 <h1>conaxsilver</h1>
 
                 <p>
-                    A genius from Japan who gave some great quality assurance and bug reports for
-                    the website.
+                    A genius from Japan who gave some great quality assurance
+                    and bug reports for the website.
                 </p>
 
                 <div class="quote jp" lang="jp">むいむい！</div>
@@ -132,21 +171,25 @@
                 <p>Drew my original character, Iris.</p>
 
                 <div class="quote">
-                    His drawing skills are so good they should honestly be illegal. Also, a huge
-                    HOI4 fan.
+                    His drawing skills are so good they should honestly be
+                    illegal. Also, a huge HOI4 fan.
                 </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="/assets/contributors/tactical02_.png" alt="tactical02_" title="tactical02_" />
+            <img
+                src="/assets/contributors/tactical02_.png"
+                alt="tactical02_"
+                title="tactical02_"
+            />
 
             <div class="description">
                 <h1>Suw</h1>
 
                 <p>
-                    Frontend developer from Vietnam. Gave some great suggestions and direct fixes
-                    for the website.
+                    Frontend developer from Vietnam. Gave some great suggestions
+                    and direct fixes for the website.
                 </p>
 
                 <div class="quote">:OkuuMindblown:</div>
@@ -156,12 +199,16 @@
         <div class="card">
             <h1>blackrose</h1>
 
-            <img src="/assets/contributors/blackrose.png" alt="blackrose" title="blackrose" />
+            <img
+                src="/assets/contributors/blackrose.png"
+                alt="blackrose"
+                title="blackrose"
+            />
 
             <div class="description">
                 <p>
-                    Gave inspirations for the design aspect of the website, and pointed out some
-                    several security-related issues.
+                    Gave inspirations for the design aspect of the website, and
+                    pointed out some several security-related issues.
                 </p>
             </div>
         </div>
@@ -171,7 +218,12 @@
 <style lang="css">
     #supporters {
         background:
-            radial-gradient(circle at top left, rgba(112, 7, 37, 0.5), transparent 40%), black;
+            radial-gradient(
+                circle at top left,
+                rgba(112, 7, 37, 0.5),
+                transparent 40%
+            ),
+            black;
     }
 
     .supporters {
@@ -197,8 +249,16 @@
 
     #amethyst {
         background:
-            radial-gradient(circle at top left, rgba(40, 7, 112, 0.5), transparent 40%),
-            radial-gradient(circle at bottom right, rgba(40, 7, 112, 0.5), transparent 40%),
+            radial-gradient(
+                circle at top left,
+                rgba(40, 7, 112, 0.5),
+                transparent 40%
+            ),
+            radial-gradient(
+                circle at bottom right,
+                rgba(40, 7, 112, 0.5),
+                transparent 40%
+            ),
             linear-gradient(
                 to bottom,
                 rgba(40, 7, 112, 0.25) 0%,
@@ -211,7 +271,11 @@
 
     #jade {
         background:
-            radial-gradient(circle at top left, rgba(9, 82, 95, 0.5), transparent 40%),
+            radial-gradient(
+                circle at top left,
+                rgba(9, 82, 95, 0.5),
+                transparent 40%
+            ),
             linear-gradient(
                 to right,
                 rgba(9, 82, 95, 0.25) 0%,
@@ -292,11 +356,11 @@
     }
 
     .quote:before {
-        content: '“';
+        content: "“";
     }
 
     .quote:after {
-        content: '”';
+        content: "”";
         margin-top: 1em;
     }
 

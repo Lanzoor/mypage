@@ -1,5 +1,5 @@
 <script>
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section>
@@ -13,7 +13,8 @@
 
     <ul>
         <li>
-            <b>Googology</b> - <a href="/docs/math/googology/">./googology/</a><br />
+            <b>Googology</b> -
+            <a href="/docs/math/googology/">./googology/</a><br />
             Googology is the study and nomenclature of large numbers.
         </li>
     </ul>

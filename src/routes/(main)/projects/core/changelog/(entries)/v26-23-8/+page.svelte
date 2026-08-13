@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-15T00:00:00+09:00'),
+        published: new Date("2026-06-15T00:00:00+09:00"),
     };
 </script>
 
@@ -19,7 +19,8 @@
 
         <li>
             <span class="col bright yellow">~</span>
-            Reworked the entirety of <a href="/credits/contributors/">the contributors page</a>, and
+            Reworked the entirety of
+            <a href="/credits/contributors/">the contributors page</a>, and
             implemented a better convention for contributor roles.
         </li>
     </ul>

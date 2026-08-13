@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-09T00:00:00+09:00'),
+        published: new Date("2026-08-09T00:00:00+09:00"),
     };
 </script>
 
@@ -29,7 +29,9 @@
             Improved design of the <a href="/map">sitemap</a> page.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Refactored internal code.
         </li>
         <li>

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { page } from '$app/state';
-    import { getPageData, pageIndex } from '$lib/map';
+    import { page } from "$app/state";
+    import { getPageData, pageIndex } from "$lib/map";
 
     const currentPage = $derived(getPageData(page.url.pathname));
 
@@ -14,9 +14,9 @@
             current = current.parent;
         }
 
-        const home = pageIndex.get('/');
+        const home = pageIndex.get("/");
 
-        if (home && result[0]?.path !== '/') {
+        if (home && result[0]?.path !== "/") {
             result.unshift(home);
         }
 
@@ -31,7 +31,7 @@
         {/if}
 
         <a href={crumb.path}>
-            {crumb.path === '/' ? 'Home' : crumb.title}
+            {crumb.path === "/" ? "Home" : crumb.title}
         </a>
     {/each}
 </div>

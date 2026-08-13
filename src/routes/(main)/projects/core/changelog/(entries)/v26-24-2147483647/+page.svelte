@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-28T00:00:00+09:00'),
+        published: new Date("2026-06-28T00:00:00+09:00"),
     };
 </script>
 
@@ -12,9 +12,14 @@
     </p>
 
     <p>
-        <b> This is probably going to be the last update I publish for a while, hence the name. </b>
+        <b>
+            This is probably going to be the last update I publish for a while,
+            hence the name.
+        </b>
         For more information, please check
-        <a href="/docs/blog/2026/06/monthly-recap.html#svelte"> the monthly recap for June </a>.
+        <a href="/docs/blog/2026/06/monthly-recap.html#svelte">
+            the monthly recap for June
+        </a>.
     </p>
 
     <ul>
@@ -35,7 +40,9 @@
             Removed some unnecessary pages.
         </li>
         <li>
-            <span class="col bright red">-</span><span class="col bright blue">p</span>
+            <span class="col bright red">-</span><span class="col bright blue"
+                >p</span
+            >
             Removed analytics.
         </li>
     </ul>

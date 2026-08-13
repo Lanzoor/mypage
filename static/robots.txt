@@ -5,11 +5,10 @@ Disallow: /assets/
 Disallow: /docs/blog/
 Disallow: /testing/
 
-# panic routes (might save my ass when i actually decide to maek these)
+# panic routes (might save my ass when i actually accidentally push these)
 
 Disallow: /private/
 Disallow: /admin/
 Disallow: /.git/
 Disallow: /.env
 Disallow: /arg/
-

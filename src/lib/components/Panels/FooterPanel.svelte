@@ -1,23 +1,23 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import External from '../Links/External.svelte';
+    import { onMount } from "svelte";
+    import External from "../Links/External.svelte";
 
-    let frontendVersion: string = $state('...');
-    let backendVersion: string = $state('...');
+    let frontendVersion: string = $state("...");
+    let backendVersion: string = $state("...");
 
     onMount(() => {
         const cleanFunc = () => {
-            frontendVersion = '...';
-            backendVersion = '...';
+            frontendVersion = "...";
+            backendVersion = "...";
         };
 
         async function loadVersions() {
-            const result = await fetch('https://api.lanzoor.dev/status');
+            const result = await fetch("https://api.lanzoor.dev/status");
 
             if (!result.ok) {
                 console.error(
                     `error: failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
-                    Error(result.statusText)
+                    Error(result.statusText),
                 );
 
                 return cleanFunc;
@@ -31,7 +31,7 @@
             } else {
                 console.error(
                     `error: failed to fetch versions: api.lanzoor.dev/status responded with an error\n\t`,
-                    Error(jsonResult)
+                    Error(jsonResult),
                 );
             }
         }
@@ -85,10 +85,12 @@
             </h1>
 
             <p>
-                A website by Lanzoor, including projects, showcases, documents, and more!<br />
+                A website by Lanzoor, including projects, showcases, documents,
+                and more!<br />
 
                 <span class="dim">
-                    frontend <code>{frontendVersion}</code> | backend <code>{backendVersion}</code>
+                    frontend <code>{frontendVersion}</code> | backend
+                    <code>{backendVersion}</code>
                 </span>
             </p>
         </div>
@@ -97,8 +99,15 @@
 
         <div id="footer" class="enable-spacing">
             <div id="connections">
-                <External href="https://www.discord.com" showArrow={false} class="link">
-                    <img src="/assets/icons/socials/discord.svg" alt="Discord" />
+                <External
+                    href="https://www.discord.com"
+                    showArrow={false}
+                    class="link"
+                >
+                    <img
+                        src="/assets/icons/socials/discord.svg"
+                        alt="Discord"
+                    />
 
                     <span class="handle">
                         @<span class="col bright purple">lanzoor</span>
@@ -117,7 +126,11 @@
                     </span>
                 </External>
 
-                <External href="https://github.com/Lanzoor" showArrow={false} class="link">
+                <External
+                    href="https://github.com/Lanzoor"
+                    showArrow={false}
+                    class="link"
+                >
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
 
                     <span class="handle">
@@ -142,10 +155,14 @@
                     showArrow={false}
                     class="link"
                 >
-                    <img src="/assets/icons/socials/youtube.svg" alt="YouTube" />
+                    <img
+                        src="/assets/icons/socials/youtube.svg"
+                        alt="YouTube"
+                    />
 
                     <span class="handle">
-                        @<span class="col bright purple">lanzoor</span>makesvideos
+                        @<span class="col bright purple">lanzoor</span
+                        >makesvideos
                     </span>
                 </External>
 
@@ -167,7 +184,9 @@
             </div>
 
             <footer>
-                © 2026 <External href="https://lanzaforge.org">Lanzaforge</External> ⬩ built with ♡
+                © 2026 <External href="https://lanzaforge.org"
+                    >Lanzaforge</External
+                > ⬩ built with ♡
             </footer>
         </div>
     </section>
@@ -175,7 +194,11 @@
 
 <style lang="css">
     :root {
-        --footer-panel-bg: radial-gradient(circle at 50% -25%, #22054d 0%, #000 100%);
+        --footer-panel-bg: radial-gradient(
+            circle at 50% -25%,
+            #22054d 0%,
+            #000 100%
+        );
     }
 
     #footer-panel {
@@ -189,7 +212,7 @@
         justify-content: flex-start;
         gap: 2%;
 
-        font-family: 'JetBrains Mono';
+        font-family: "JetBrains Mono";
     }
 
     #footer-panel section {
@@ -203,8 +226,14 @@
 
     #footer-panel #navigation #navigation-links {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
         gap: 2em;
+    }
+
+    @media (max-width: 1200px) {
+        #footer-panel #navigation #navigation-links {
+            grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+        }
     }
 
     #footer-panel #navigation #navigation-links .group {
@@ -216,7 +245,7 @@
 
     #footer-panel #navigation #navigation-links .group h2 {
         margin: 0.25em 0 0.5em 0;
-        font-family: 'JetBrains Mono';
+        font-family: "JetBrains Mono";
         font-size: 1.1em;
         color: rgb(123, 61, 255);
     }

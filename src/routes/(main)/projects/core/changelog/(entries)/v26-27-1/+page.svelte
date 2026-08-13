@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-01T00:00:00+09:00'),
+        published: new Date("2026-08-01T00:00:00+09:00"),
     };
 </script>
 
@@ -18,7 +18,10 @@
         </li>
         <li>
             <span class="col bright green">+</span>
-            <b>Added the Quick Links section in the <a href="/">frontpage</a>.</b>
+            <b
+                >Added the Quick Links section in the <a href="/">frontpage</a
+                >.</b
+            >
         </li>
         <li>
             <span class="col bright green">+</span>
@@ -26,7 +29,8 @@
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Moved the <a href="/conlangs">conlangs</a> section from <code>/projects/conlangs</code>
+            Moved the <a href="/conlangs">conlangs</a> section from
+            <code>/projects/conlangs</code>
             to
             <code>/conlangs</code>.<br />
             <b

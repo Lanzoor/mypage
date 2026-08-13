@@ -119,5 +119,6 @@
 
 .adaptive-text-shadow,
 .adaptive-text-shadow * {
-    text-shadow: 0 0 10px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+    text-shadow: 0 0 10px
+        oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
 }

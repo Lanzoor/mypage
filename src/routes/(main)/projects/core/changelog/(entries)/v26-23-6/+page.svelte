@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-13T00:00:00+09:00'),
+        published: new Date("2026-06-13T00:00:00+09:00"),
     };
 </script>
 
@@ -16,7 +16,8 @@
     <ul>
         <li>
             <span class="col bright purple">ƒ</span>
-            Fixed an issue where the frozen state wouldn't get removed after the analytics panel is hidden.
+            Fixed an issue where the frozen state wouldn't get removed after the analytics
+            panel is hidden.
         </li>
 
         <li>

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import SiteMapNode from './SiteMapNode.svelte';
-    import type { Page } from '$lib/map';
+    import SiteMapNode from "./SiteMapNode.svelte";
+    import type { Page } from "$lib/map";
 
     let { page } = $props<{ page: Page }>();
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-12T00:00:00+09:00'),
+        published: new Date("2026-06-12T00:00:00+09:00"),
     };
 </script>
 
@@ -13,14 +13,16 @@
 
     <p>
         <b>This update is part of the navigation UI/UX overhaul.</b>
-        We do not have an ETA for the actual overhaul yet, but it will take place sometime in June.
+        We do not have an ETA for the actual overhaul yet, but it will take place
+        sometime in June.
     </p>
 
     <ul>
         <li>
             <span class="col bright green">+</span>
-            Added a <code>.frozen</code> attribute to the <code>main</code> element, so some panels can
-            disable user interaction with the main content when necessary.
+            Added a <code>.frozen</code> attribute to the <code>main</code> element,
+            so some panels can disable user interaction with the main content when
+            necessary.
         </li>
 
         <li>
@@ -36,8 +38,11 @@
 
         <li>
             <span class="col bright green">+</span>
-            Implemented a redirect from <code>/projects/core-api/changelog/:path*</code> to
-            <code>https://api.lanzoor.dev/docs/changelog/:path*</code> to match the projects convention.
+            Implemented a redirect from
+            <code>/projects/core-api/changelog/:path*</code>
+            to
+            <code>https://api.lanzoor.dev/docs/changelog/:path*</code> to match the
+            projects convention.
         </li>
 
         <li>

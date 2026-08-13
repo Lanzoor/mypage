@@ -1,12 +1,13 @@
 <script lang="ts">
-    import { warpOverlay } from '$lib/overlays.svelte';
-    import { onMount } from 'svelte';
+    import { pickRandom } from "$lib";
+    import { warpOverlay } from "$lib/overlays.svelte";
+    import { onMount } from "svelte";
 
     let inputElement = $state<HTMLInputElement>();
 
     onMount(() => {
         const listener = (event: KeyboardEvent) => {
-            if (event.ctrlKey && event.shiftKey && event.code === 'Slash') {
+            if (event.ctrlKey && event.shiftKey && event.code === "Slash") {
                 event.preventDefault();
                 warpTip = randomTip();
                 warpOverlay.open = !warpOverlay.open;
@@ -14,39 +15,38 @@
             }
         };
 
-        document.addEventListener('keydown', listener);
+        document.addEventListener("keydown", listener);
 
         return () => {
-            document.removeEventListener('keydown', listener);
+            document.removeEventListener("keydown", listener);
         };
     });
 
     const tips: string[] = [
-        'You can also access this menu using the keybind <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd>.',
-        'You can use URL syntaxes such as <code>#intro</code> and <code>?query=abc</code>.',
+        "You can also access this menu using the keybind <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd>.",
+        "You can use URL syntaxes such as <code>#intro</code> and <code>?query=abc</code>.",
     ] as const;
 
     function randomTip() {
-        return Math.random() < 0.99
-            ? tips[Math.floor(Math.random() * tips.length)]
-            : 'Look behind you.';
+        return pickRandom(tips);
     }
 
     let warpTip = $state(randomTip());
 
-    let urlQuery = $state('');
-    let warpInfo = $state('Enter an internal destination to warp to!');
-    type WarpError = 'invalid' | 'external';
+    let urlQuery = $state("");
+    let warpInfo = $state("Enter an internal destination to warp to!");
+    type WarpError = "invalid" | "external";
 
     function failHandler(reason: WarpError) {
         switch (reason) {
-            case 'invalid':
+            case "invalid":
                 warpInfo =
                     "<b>That destination doesn't look like a valid URL!</b> Please try again.";
                 break;
 
-            case 'external':
-                warpInfo = '<b>Only internal destinations are allowed!</b> Please try again.';
+            case "external":
+                warpInfo =
+                    "<b>Only internal destinations are allowed!</b> Please try again.";
                 break;
         }
     }
@@ -58,12 +58,12 @@
             const url = new URL(destination, window.location.origin);
 
             if (url.origin !== window.location.origin) {
-                return failHandler('external');
+                return failHandler("external");
             }
 
             window.location.replace(url.href);
         } catch {
-            failHandler('invalid');
+            failHandler("invalid");
         }
     }
 </script>
@@ -72,7 +72,10 @@
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div class="bg" onclick={() => (warpOverlay.open = false)}>
-        <div class="panel enable-spacing" onclick={(event) => event.stopPropagation()}>
+        <div
+            class="panel enable-spacing"
+            onclick={(event) => event.stopPropagation()}
+        >
             <h1>Warp Panel</h1>
 
             <p>{@html warpInfo}</p>
@@ -84,7 +87,7 @@
                     bind:value={urlQuery}
                     bind:this={inputElement}
                     onkeydown={(event) => {
-                        if (event.key === 'Enter') {
+                        if (event.key === "Enter") {
                             handleURL();
                         }
                     }}
@@ -148,7 +151,7 @@
         cursor: default;
     }
 
-    #warp .panel .search-bar input[type='text'] {
+    #warp .panel .search-bar input[type="text"] {
         width: 30em;
         max-width: 75vw;
     }

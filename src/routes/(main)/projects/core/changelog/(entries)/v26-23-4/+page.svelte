@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-10T00:00:00+09:00'),
+        published: new Date("2026-06-10T00:00:00+09:00"),
     };
 </script>
 
@@ -18,12 +18,15 @@
             <a href="/projects"> the projects page </a>.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright blue">p</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright blue">p</span
+            >
             Altered the color scheme of codeblocks.
         </li>
         <li>
             <span class="col bright red">-</span>
-            Removed the annoying margin for <code>code</code> and <code>kbd</code> elements.
+            Removed the annoying margin for <code>code</code> and
+            <code>kbd</code> elements.
         </li>
     </ul>
 </section>

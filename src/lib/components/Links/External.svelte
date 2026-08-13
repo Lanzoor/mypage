@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { HTMLAnchorAttributes } from 'svelte/elements';
+    import type { HTMLAnchorAttributes } from "svelte/elements";
 
     let {
         external = true,
@@ -15,8 +15,8 @@
 
 <a
     {href}
-    target={external ? '_blank' : undefined}
-    rel={external ? 'noopener noreferrer' : undefined}
+    target={external ? "_blank" : undefined}
+    rel={external ? "noopener noreferrer" : undefined}
     {...props}
 >
     {@render children?.()}

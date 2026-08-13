@@ -5,17 +5,17 @@ export interface OverlayState {
 }
 
 export const navigationOverlay = $state<OverlayState>({
-    identifier: 'navigation-overlay',
+    identifier: "navigation-overlay",
     open: false,
 });
 
 export const warpOverlay = $state<OverlayState>({
-    identifier: 'warp-overlay',
+    identifier: "warp-overlay",
     open: false,
 });
 
 export const legalNoticeOverlay = $state<OverlayState>({
-    identifier: 'legal-notice',
+    identifier: "legal-notice",
     open: false,
     closable: false,
 });
@@ -34,7 +34,7 @@ const overlays = {
 
 export function handleEscape() {
     return (event: KeyboardEvent) => {
-        if (event.key !== 'Escape') return;
+        if (event.key !== "Escape") return;
 
         const activeOverlay = closePriorities
             .map((id) => overlays[id])

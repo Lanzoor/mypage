@@ -1,15 +1,29 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+    import { LStorage } from "$lib/storage";
+
+    let discoMode = $state(false);
+
+    onMount(() => {
+        discoMode = LStorage.get("disco-mode", "false") === "true";
+    });
+
+    $effect(() => {
+        document.body.classList.toggle("disco", discoMode);
+        LStorage.set("disco-mode", String(discoMode));
+    });
+
     const konamiCode = [
-        'ArrowUp',
-        'ArrowUp',
-        'ArrowDown',
-        'ArrowDown',
-        'ArrowLeft',
-        'ArrowRight',
-        'ArrowLeft',
-        'ArrowRight',
-        'b',
-        'a',
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "b",
+        "a",
     ];
 
     let input: string[] = [];
@@ -17,8 +31,8 @@
     function handleKeydown(event: KeyboardEvent) {
         input = [...input, event.key].slice(-konamiCode.length);
 
-        if (input.join(',') === konamiCode.join(',')) {
-            document.body.classList.toggle('disco');
+        if (input.join(",") === konamiCode.join(",")) {
+            discoMode = !discoMode;
 
             input = [];
         }
@@ -31,6 +45,7 @@
     :global(body.disco) {
         animation: disco 0.5s linear infinite;
     }
+
     @keyframes disco {
         0% {
             filter: hue-rotate(0deg) saturate(2);

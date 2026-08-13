@@ -1,19 +1,19 @@
 <script lang="ts">
-    import { pickRandom, randInt } from '$lib';
-    import WorkInProgress from '$lib/components/Information/WorkInProgress.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import { pickRandom, randInt } from "$lib";
+    import WorkInProgress from "$lib/components/Information/WorkInProgress.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 
-    const profileDesc = 'very cool profile image of my original character Iris';
-    const timeFormatter = new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
+    const profileDesc = "very cool profile image of my original character Iris";
+    const timeFormatter = new Intl.DateTimeFormat("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
         hour12: true,
-        timeZone: 'Asia/Seoul',
+        timeZone: "Asia/Seoul",
     });
 
-    const dateFormatter = new Intl.DateTimeFormat('en-US', {
-        month: 'long',
-        day: '2-digit',
+    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        day: "2-digit",
     });
 
     const formatTime = () => timeFormatter.format(new Date()).toUpperCase();
@@ -45,101 +45,101 @@
     };
     const words: Word[] = [
         {
-            text: '한국어',
-            color: 'rgb(120, 180, 255)',
-            style: { x: 65, y: 42, s: '2.1em', r: 12 },
+            text: "한국어",
+            color: "rgb(120, 180, 255)",
+            style: { x: 65, y: 42, s: "2.1em", r: 12 },
         },
         {
-            text: 'English',
-            color: 'rgb(255, 215, 120)',
-            style: { x: 12, y: 18, s: '1.9em', r: -8 },
+            text: "English",
+            color: "rgb(255, 215, 120)",
+            style: { x: 12, y: 18, s: "1.9em", r: -8 },
         },
         {
-            text: '日本語',
-            color: 'rgb(255, 140, 170)',
-            style: { x: 35, y: 70, s: '1.6em' },
+            text: "日本語",
+            color: "rgb(255, 140, 170)",
+            style: { x: 35, y: 70, s: "1.6em" },
         },
         {
-            text: '中文',
-            color: 'rgb(140, 255, 210)',
-            style: { x: 80, y: 25, s: '1em', r: 5 },
+            text: "中文",
+            color: "rgb(140, 255, 210)",
+            style: { x: 80, y: 25, s: "1em", r: 5 },
         },
         {
-            text: 'Español',
-            color: 'rgb(220, 170, 255)',
-            style: { x: 55, y: 85, s: '1.1em' },
+            text: "Español",
+            color: "rgb(220, 170, 255)",
+            style: { x: 55, y: 85, s: "1.1em" },
         },
         {
-            text: 'Deutsch',
-            color: 'rgb(180, 255, 255)',
-            style: { x: 94, y: 78, s: '1.1em', r: 10 },
+            text: "Deutsch",
+            color: "rgb(180, 255, 255)",
+            style: { x: 94, y: 78, s: "1.1em", r: 10 },
         },
     ];
 
     const triviaList = [
         // Programming & Tech
-        'SvelteKit is my favorite framework.',
-        'This website is built with SvelteKit.',
-        'I like giving my projects unnecessarily elaborate names.',
-        'I HATE React. I have personal beef with React states.',
+        "SvelteKit is my favorite framework.",
+        "This website is built with SvelteKit.",
+        "I like giving my projects unnecessarily elaborate names.",
+        "I HATE React. I have personal beef with React states.",
         'The first webpage I ever made was a page for my conlang, Lanzoorian.<br>This conlang has been retired in favor of <a href="/conlangs/proto-lanzavel">Lanzavel</a>.',
-        'This site actually started as a single-page profile website.',
-        'I genuinely lose my mind when I try to understand recursive functions.',
-        'I like command-line interfaces more than I probably should.',
-        'I have a Python program that backs up my workspace folder.',
-        'I once spent 2 hours debugging an issue while editing a project,<br>until I realized I was in the wrong directory.',
+        "This site actually started as a single-page profile website.",
+        "I genuinely lose my mind when I try to understand recursive functions.",
+        "I like command-line interfaces more than I probably should.",
+        "I have a Python program that backs up my workspace folder.",
+        "I once spent 2 hours debugging an issue while editing a project,<br>until I realized I was in the wrong directory.",
 
         // Languages
-        'Contrary to popular belief, my favorite language is actually English.',
-        'I like how Japanese letters look.',
+        "Contrary to popular belief, my favorite language is actually English.",
+        "I like how Japanese letters look.",
         'My favorite sound is <span class="ipa">/x/</span>.',
         'I pronounce GIF as <span class="ipa">/gɪf/</span>.',
-        'I really like words with unusual consonant clusters.',
-        'I enjoy finding unnecessarily complicated ways to say simple things.',
-        'I am better at English input than English output.',
-        'I think Latin makes every word sound like a mythical artifact.',
-        'I have a weird obsession with Greek letters.',
+        "I really like words with unusual consonant clusters.",
+        "I enjoy finding unnecessarily complicated ways to say simple things.",
+        "I am better at English input than English output.",
+        "I think Latin makes every word sound like a mythical artifact.",
+        "I have a weird obsession with Greek letters.",
 
         // Common
-        'My favorite color is purple.',
-        'My favorite numbers are 11, 13, and 17.<br>I especially like 13 for some reason.',
-        'I prefer cats over dogs.',
-        'I have never drank coffee ever in my life.',
-        'I believe water is the best drink.',
-        'I enjoy going down extremely specific rabbit holes.',
-        'I am obsessed with monospace fonts.',
-        'I can spend an unreasonable amount of time choosing a font.',
-        'I have a tendency to memorize random things perfectly.',
+        "My favorite color is purple.",
+        "My favorite numbers are 11, 13, and 17.<br>I especially like 13 for some reason.",
+        "I prefer cats over dogs.",
+        "I have never drank coffee ever in my life.",
+        "I believe water is the best drink.",
+        "I enjoy going down extremely specific rabbit holes.",
+        "I am obsessed with monospace fonts.",
+        "I can spend an unreasonable amount of time choosing a font.",
+        "I have a tendency to memorize random things perfectly.",
     ];
 
     const specialTriviaList = [
         // Funni
-        'I am a pigeon.',
-        'Have you found the pigeon yet?',
-        'I ate a watermelon while writing this sentence.',
-        'Your Lanzaforge™ subscription expires in 10 minutes.<br>Please renew immediately to continue using lanzoor.dev.',
+        "I am a pigeon.",
+        "Have you found the pigeon yet?",
+        "I ate a watermelon while writing this sentence.",
+        "Your Lanzaforge™ subscription expires in 10 minutes.<br>Please renew immediately to continue using lanzoor.dev.",
 
         // Programming
         'git commit -m "h"',
-        'text-shadow: 0 0 10px currentColor',
-        'CSS is a programming language if you believe hard enough.',
+        "text-shadow: 0 0 10px currentColor",
+        "CSS is a programming language if you believe hard enough.",
 
         // References
-        'Emu is meaning... smile!!',
-        'wuck',
-        'mu',
+        "Emu is meaning... smile!!",
+        "wuck",
+        "mu",
 
         // Easter Eggs
-        'I am legally required to put at least one easter egg in every website I make.',
-        'Enter the Konami code.',
-        'May the eggs duplicate in peace.',
-        'Nice weather today.',
-        'I like spending time on the frontpage without doing anything whatsoever.',
+        "I am legally required to put at least one easter egg in every website I make.",
+        "Enter the Konami code.",
+        "May the eggs duplicate in peace.",
+        "Nice weather today.",
+        "I like spending time on the frontpage without doing anything whatsoever.",
 
         '<b class="col bright yellow">Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
     ];
 
-    type TriviaType = 'normal' | 'special' | 'unsettling';
+    type TriviaType = null | "normal" | "special";
 
     function pickTrivia() {
         let list;
@@ -148,18 +148,18 @@
 
         if (roll <= 50) {
             // special: 5%
-            triviaType = 'special';
+            triviaType = "special";
             list = specialTriviaList;
         } else {
-            triviaType = 'normal';
+            triviaType = "normal";
             list = triviaList;
         }
 
         trivia = pickRandom(list);
     }
 
-    let trivia = $state('');
-    let triviaType = $state<TriviaType>('normal');
+    let trivia = $state("");
+    let triviaType = $state<TriviaType>(null);
 </script>
 
 <section id="intro-bg" class="disable-padding disable-initial-padding">
@@ -189,10 +189,14 @@
         </div>
 
         <div class="description">
-            <b>hii, my name is <span class="col bright purple">Lanzoor</span>!</b><br />
-            i'm just a random student from Korea who enjoys creating things, solving interesting problems,
-            and learning something new every day.<br />
-            i'm obsessed with programming, learning languages, science and anime!<br />
+            <b
+                >hii, my name is <span class="col bright purple">Lanzoor</span
+                >!</b
+            ><br />
+            i'm just a random student from Korea who enjoys creating things, solving
+            interesting problems, and learning something new every day.<br />
+            i'm obsessed with programming, learning languages, science and anime!<br
+            />
         </div>
     </section>
 </section>
@@ -202,7 +206,8 @@
 
     <p>
         <b>
-            I go by the name of <span class="col bright purple">Lanzoor</span>, which is pronounced
+            I go by the name of <span class="col bright purple">Lanzoor</span>,
+            which is pronounced
             <span class="ipa">/lɑn.ˈzoʊɹ/</span>.
         </b>
         <br />
@@ -210,14 +215,18 @@
     </p>
 
     <p>
-        If you're close to me, feel free to call me Lanzy (<span class="ipa">/ˈlæn.ziː/</span>) or
-        lan lan man.<br />
-        I also have a lot of aliases, such as <span class="col bright blue">Lapis Lazuli</span>
+        If you're close to me, feel free to call me Lanzy (<span class="ipa"
+            >/ˈlæn.ziː/</span
+        >) or lan lan man.<br />
+        I also have a lot of aliases, such as
+        <span class="col bright blue">Lapis Lazuli</span>
         <span class="ipa"> /ˈlæpɪs læˈzʊliː/ </span> and
         <span class="col green">Praseodymium Crystal</span>.
     </p>
 
-    <h1><span class="col bright yellow">[ 02 ]</span> nationality & location</h1>
+    <h1>
+        <span class="col bright yellow">[ 02 ]</span> nationality & location
+    </h1>
 
     <p>
         <b>I am from South Korea 🇰🇷!</b>
@@ -226,7 +235,9 @@
 
     <p>
         <b
-            >We use the glorious GMT+9 <span class="dim">(KST, Korean Standard Time)</span> timezone.</b
+            >We use the glorious GMT+9 <span class="dim"
+                >(KST, Korean Standard Time)</span
+            > timezone.</b
         ><br />
         It is currently <b>{time}</b>, <b>{date}</b> in my location.<br />
         Feel free to send me messages whether I'm online or not!
@@ -236,19 +247,26 @@
 
     <p>
         <b>My MBTI type is <span class="col bright cyan">INTP</span>.</b><br />
-        I enjoy understanding why and how things work instead of simply memorizing things.<br />
+        I enjoy understanding why and how things work instead of simply memorizing
+        things.<br />
     </p>
 
     <p>
         I am introverted unless I'm online.<br />
-        I have social anxiety and chronic depression. I also show symptoms associated with ADHD, OCD,
-        and potentially autism.
+        I have social anxiety and chronic depression. I also show symptoms associated
+        with ADHD, OCD, and potentially autism.
     </p>
 
     <p>
-        <b>My rule is: <i>if you respect me, I respect you.</i> Simple as that.</b><br />
-        I enjoy talking with people who are open-minded and willing to have genuine conversations.
-        <i>Please do not talk to me if all you do is ragebait or make fun of me.</i>
+        <b
+            >My rule is: <i>if you respect me, I respect you.</i> Simple as that.</b
+        ><br />
+        I enjoy talking with people who are open-minded and willing to have genuine
+        conversations.
+        <i
+            >Please do not talk to me if all you do is ragebait or make fun of
+            me.</i
+        >
     </p>
 </section>
 
@@ -257,18 +275,22 @@
         <h1>Tech</h1>
 
         <p>
-            <b>Ever since I was around ten years old, I've been fascinated by computers.</b>
+            <b
+                >Ever since I was around ten years old, I've been fascinated by
+                computers.</b
+            >
             I've always enjoyed
             <b
-                >making short games and programs, taking computers apart, figuring out how they
-                work, and learning what goes on behind the scenes.</b
+                >making short games and programs, taking computers apart,
+                figuring out how they work, and learning what goes on behind the
+                scenes.</b
             >
         </p>
 
         <p>
             <b
-                >Today, I spend most of my time building software & websites and exploring topics
-                like cybersecurity.</b
+                >Today, I spend most of my time building software & websites and
+                exploring topics like cybersecurity.</b
             >
         </p>
 
@@ -276,8 +298,8 @@
 
         <p>
             <b
-                >Programming always has been my favorite hobby, and also the hobby that I'm the most
-                passionate about.</b
+                >Programming always has been my favorite hobby, and also the
+                hobby that I'm the most passionate about.</b
             ><br />
         </p>
 
@@ -287,16 +309,23 @@
                 it wasn't until <span class="col bright green">late 2024</span>
                 that I actually started taking programming seriously.
             </b><br />
-            <b>Since then, it's become one of the things I spend the most time doing.</b>
+            <b
+                >Since then, it's become one of the things I spend the most time
+                doing.</b
+            >
         </p>
 
         <h2>🌐 Web Development</h2>
 
         <p>
-            <b>Most of my projects are web-based because of how accessible the web is.</b> If
-            someone has a browser, <i>they can view what I build instantly</i> without having to wait
-            for the code to compile or to download. That makes it the perfect platform for experimenting
-            with ideas.
+            <b
+                >Most of my projects are web-based because of how accessible the
+                web is.</b
+            >
+            If someone has a browser,
+            <i>they can view what I build instantly</i> without having to wait for
+            the code to compile or to download. That makes it the perfect platform
+            for experimenting with ideas.
         </p>
 
         <h3>Frameworks</h3>
@@ -329,19 +358,22 @@
             <b>
                 I primarily use
                 <span class="col bright red">SvelteKit</span>
-                for new web projects, since it aligns with my coding principles and doesn't have much
-                boilerplate.
+                for new web projects, since it aligns with my coding principles and
+                doesn't have much boilerplate.
             </b>
             I also have experience with
             <b>Next.js</b> and <span class="col bright cyan">React</span>.
         </p>
 
         <p>
-            I also have some experience with <span class="col bright orange">backend</span>
+            I also have some experience with <span class="col bright orange"
+                >backend</span
+            >
             development as well! I've built
             <b
-                >REST APIs, Discord bots, database integrations, and the API powering this website <span
-                    class="dim">(which probably has more uptime than github 💀)</span
+                >REST APIs, Discord bots, database integrations, and the API
+                powering this website <span class="dim"
+                    >(which probably has more uptime than github 💀)</span
                 ></b
             >.
         </p>
@@ -365,34 +397,43 @@
         </div>
 
         <p>
-            <b>I usually write scripts in <span class="col bright blue">Python</span>.</b>
-            Although I also have experience with C and Rust, I'm expected to write code in Python since
-            it suits me.
+            <b
+                >I usually write scripts in <span class="col bright blue"
+                    >Python</span
+                >.</b
+            >
+            Although I also have experience with C and Rust, I'm expected to write
+            code in Python since it suits me.
         </p>
 
         <p>
-            I have made a few CLI, TUI and GUI programs using Python before, and I have experience
-            with most of the common libraries.
+            I have made a few CLI, TUI and GUI programs using Python before, and
+            I have experience with most of the common libraries.
         </p>
 
         <p>
             Nowadays, though,
 
             <b
-                >I usually find myself using Python and some scripting languages in order to <span
-                    class="col bright green">automate repetitive tasks</span
+                >I usually find myself using Python and some scripting languages
+                in order to <span class="col bright green"
+                    >automate repetitive tasks</span
                 >.</b
             >
-            <span class="dim">(e.g. making backups, running long commands repeatedly)</span>
+            <span class="dim"
+                >(e.g. making backups, running long commands repeatedly)</span
+            >
         </p>
 
         <h1>🔐 Cybersecurity</h1>
 
         <p>
-            Over time, my curiosity about how computers work naturally expanded into networking and
-            cybersecurity. <b
-                >Rather than focusing solely on writing software, I also enjoy understanding how
-                systems <span class="col bright cyan">communicate</span>, where they can
+            Over time, my curiosity about how computers work naturally expanded
+            into networking and cybersecurity. <b
+                >Rather than focusing solely on writing software, I also enjoy
+                understanding how systems <span class="col bright cyan"
+                    >communicate</span
+                >, where they can
                 <span class="col bright red">fail</span>, and how they can be
                 <span class="col bright green">secured</span>.</b
             >
@@ -411,8 +452,9 @@
         </div>
 
         <p>
-            I enjoy learning about the principles that make the Internet work, which is why
-            networking fascinates me so much. I'm also really interested in OSINT
+            I enjoy learning about the principles that make the Internet work,
+            which is why networking fascinates me so much. I'm also really
+            interested in OSINT
             <span class="dim">(Open Source Intelligence)</span>
             and OPSEC.
             <span class="dim">(Operational Security)</span>
@@ -420,39 +462,48 @@
 
         <h1>Uses</h1>
 
-        <h2
-            title="YALL I KNOW LINUX ISN'T AN OPERATING SYSTEM 😭 i just used this name since it has w*ndows in it"
-        >
-            Operating System
-        </h2>
+        <h2>Operating System</h2>
 
         <p>
             <b>
-                I currently use <span class="col bright purple">EndeavourOS</span> as my primary
-                operating system. <span class="dim">(or kernel, whatever)</span>
+                I currently use <span class="col bright purple"
+                    >EndeavourOS</span
+                >
+                as my primary operating system.
+                <span class="dim">(or kernel, whatever)</span>
             </b>
             <br />
             I switched to Linux at around
             <span class="col bright cyan">May 2025</span>, starting with
-            <span class="col bright green">Linux Mint</span>. Nowadays, I use Linux for just about
-            everything.
+            <span class="col bright green">Linux Mint</span>. Nowadays, I use
+            Linux for just about everything.
         </p>
 
         <p>
-            I also keep <span class="col bright blue">Windows</span> installed, but I mainly use it
-            for <b>video editing and music production.</b>
+            I also keep <span class="col bright blue">Windows</span> installed. Although
+            I genuinely want to wipe it off my disk, I'm obligated to keep it for
+            music production.
         </p>
 
         <h2>Development Environments</h2>
 
         <p>
-            For most of my programming, <b
-                >I use a heavily customized version of
-                <span class="col bright blue">VSCodium</span>.</b
-            > <i>This is exactly why I have literal leveling bars in the editor.</i>
+            <b>
+                I use a heavily customized version of
+                <span class="col bright blue">VSCodium</span>
+            </b>
+            for most tasks.
+            <i
+                >This is exactly why I have literal leveling bars in the editor.</i
+            >
         </p>
 
-        <p>I also use Zed when working with Rust, since I find it easier to work with.</p>
+        <p>
+            <b>
+                I also use <span class="col bright black">Zed</span> as an alternative
+                editor,
+            </b> since I find it easier to work with.
+        </p>
     </section>
 </section>
 
@@ -479,9 +530,14 @@
     <ul>
         <li>
             <h3>
-                <img src="/assets/icons/countries/south-korea.svg" alt="Korea Icon" />
+                <img
+                    src="/assets/icons/countries/south-korea.svg"
+                    alt="Korea Icon"
+                />
                 <div>
-                    Korean <span class="adaptive-text-shadow col green">(<i>native</i>, C1)</span>
+                    Korean <span class="adaptive-text-shadow col green"
+                        >(<i>native</i>, C1)</span
+                    >
                 </div>
             </h3>
 
@@ -489,23 +545,30 @@
         </li>
         <li>
             <h3>
-                <img src="/assets/icons/countries/united-kingdom.svg" alt="UK Icon" />
+                <img
+                    src="/assets/icons/countries/united-kingdom.svg"
+                    alt="UK Icon"
+                />
                 <div>
-                    English <span class="adaptive-text-shadow col bright green">(B2 ~ C1)</span>
+                    English <span class="adaptive-text-shadow col bright green"
+                        >(B2 ~ C1)</span
+                    >
                 </div>
             </h3>
 
             <p>
-                <b>I learned English through the immersion method™.</b> Basically, I spent my free time
-                consuming English content and communicating with friends online. This method was very
-                effective for me because I was able to learn while genuinely enjoying the process.
+                <b>I learned English through the immersion method™.</b> Basically,
+                I spent my free time consuming English content and communicating with
+                friends online. This method was very effective for me because I was
+                able to learn while genuinely enjoying the process.
             </p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/japan.svg" alt="Japan Icon" />
                 <div>
-                    Japanese <span class="adaptive-text-shadow col bright yellow"
+                    Japanese <span
+                        class="adaptive-text-shadow col bright yellow"
                         >(B1 ~ B2, N3)</span
                     >
                 </div>
@@ -513,68 +576,85 @@
 
             <p>
                 <b>
-                    I started learning Japanese around <b>March 2025</b> after discovering Japanese music
-                    and anime.
+                    I started learning Japanese around <b>March 2025</b> after discovering
+                    Japanese music and anime.
                 </b>
             </p>
 
             <p>
-                As a Korean speaker, I found Japanese relatively easy because the two languages
-                share similar grammar and vocabulary roots. I enjoy studying Japanese by comparing
-                it with Korean.
+                As a Korean speaker, I found Japanese relatively easy because
+                the two languages share similar grammar and vocabulary roots. I
+                enjoy studying Japanese by comparing it with Korean.
             </p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/china.svg" alt="China Icon" />
                 <div>
-                    Chinese <span class="adaptive-text-shadow col orange">(A2, HSK 1 ~ 2)</span>
+                    Chinese <span class="adaptive-text-shadow col orange"
+                        >(A2, HSK 1 ~ 2)</span
+                    >
                 </div>
             </h3>
 
             <p>
-                I started learning Chinese around <b>early 2026</b> as another way to explore languages
-                and expand my understanding of East Asian languages.
+                I started learning Chinese around <b>early 2026</b> as another way
+                to explore languages and expand my understanding of East Asian languages.
             </p>
         </li>
         <li>
             <h3>
                 <img src="/assets/icons/countries/spain.svg" alt="Spain Icon" />
-                <div>Spanish <span class="adaptive-text-shadow col red">(A1)</span></div>
+                <div>
+                    Spanish <span class="adaptive-text-shadow col red"
+                        >(A1)</span
+                    >
+                </div>
             </h3>
 
             <p>
-                <b>Spanish was the first Romance language I ever started learning.</b>
-                Although I am still a beginner, I find it interesting to explore a language with a very
-                different structure and history from the ones I already know.
+                <b
+                    >Spanish was the first Romance language I ever started
+                    learning.</b
+                >
+                Although I am still a beginner, I find it interesting to explore a
+                language with a very different structure and history from the ones
+                I already know.
             </p>
         </li>
     </ul>
 
     <p>
-        <b>I'm willing to help anyone learn or practice any of the languages listed above,</b>
+        <b
+            >I'm willing to help anyone learn or practice any of the languages
+            listed above,</b
+        >
         especially Korean, English and Japanese.
         <i>Though, please do note that I'm not really the best at teaching.</i>
     </p>
 
     <p>
-        I am also interested in learning languages such as <b>German, Dutch and Greek</b>.
+        I am also interested in learning languages such as <b
+            >German, Dutch and Greek</b
+        >.
     </p>
 
     <h1>Linguistics</h1>
 
     <p>
         As much as I enjoy learning languages, <b
-            >I also enjoy taking them apart and figuring out how they actually work.</b
+            >I also enjoy taking them apart and figuring out how they actually
+            work.</b
         >
     </p>
 
     <p>
         <b
-            >I love exploring grammar, pronunciation, writing systems, and other aspects of
-            linguistics.</b
+            >I love exploring grammar, pronunciation, writing systems, and other
+            aspects of linguistics.</b
         >
-        I want to explore how languages work, and furthermore help other people learn languages as well.
+        I want to explore how languages work, and furthermore help other people learn
+        languages as well.
     </p>
 
     <p>
@@ -590,11 +670,11 @@
     <h2>Science</h2>
 
     <div class="stacks">
-        <div class="stack">Astronomy</div>
+        <div class="stack"><div class="col blue">Astronomy</div></div>
         ⬩
-        <div class="stack">Physics</div>
+        <div class="stack"><div class="col purple">Physics</div></div>
         ⬩
-        <div class="stack">Chemistry</div>
+        <div class="stack"><div class="col green">Chemistry</div></div>
     </div>
 
     <p>
@@ -604,8 +684,9 @@
     </p>
 
     <p>
-        <b>I have been interested in astronomy since I was very young.</b> That interest eventually led
-        me toward physics, where I enjoy learning about the principles that govern how the world works.
+        <b>I have been interested in astronomy since I was very young.</b> That interest
+        eventually led me toward physics, where I enjoy learning about the principles
+        that govern how the world works.
     </p>
 
     <h2>Gaming</h2>
@@ -613,11 +694,17 @@
     <h3>Idle/Clicker/Incremental Games</h3>
 
     <div class="stacks">
-        <div class="stack col bright cyan">Antimatter Dimensions</div>
+        <div class="stack">
+            <div class="col bright cyan">Antimatter Dimensions</div>
+        </div>
         ⬩
-        <div class="stack col bright blue">Cell to Singularity</div>
+        <div class="stack">
+            <div class="col bright blue">Cell to Singularity</div>
+        </div>
         ⬩
-        <div class="stack col bright orange">Idle Slayer</div>
+        <div class="stack">
+            <div class="col bright orange">Idle Slayer</div>
+        </div>
     </div>
 
     <h3>Rhythm Games</h3>
@@ -629,52 +716,76 @@
             <span class="col bright blue">Ice</span>
         </div>
         ⬩
-        <div class="stack col bright magenta">osu!</div>
+        <div class="stack"><span class="col bright magenta">osu!</span></div>
         ⬩
         <div class="stack col bright cyan">Quaver</div>
         ⬩
         <div class="stack">
-            <span class="col bright red">vivid</span>/<span class="col bright cyan">stasis</span>
+            <span class="col bright red">vivid</span>/<span
+                class="col bright cyan">stasis</span
+            >
         </div>
     </div>
 
     <h3>Platformer Games</h3>
 
     <div class="stacks">
-        <div class="stack col bright yellow">Geometry Dash</div>
+        <div class="stack">
+            <div class="col bright yellow">Geometry Dash</div>
+        </div>
         ⬩
-        <div class="stack col bright red">Celeste</div>
+        <div class="stack">
+            <div class="col bright red">Celeste</div>
+        </div>
     </div>
 
     <h3>Other Games</h3>
 
     <div class="stacks">
-        <div class="stack col bright black">Danganronpa</div>
+        <div class="stack">
+            <div class="col bright black">Danganronpa</div>
+        </div>
     </div>
 
     <p>
-        <b>I play games in my free time, mostly as a way to relax and have fun.</b>
-        I particularly enjoy games that challenge my timing, problem-solving skills, or patience.
+        <b>
+            I play games in my free time, mostly as a way to relax and have fun.
+        </b>
+        I particularly enjoy games that challenge my timing, problem-solving skills,
+        or patience.
     </p>
+
+    <h2>Other Interests</h2>
+
+    <p>Some of my other interests include:</p>
+
+    <ul>
+        <li>Math.</li>
+        <li>Solving Rubik's cubes.</li>
+        <li>
+            Listening to music, and playing instruments such as the drum or the
+            piano.
+        </li>
+        <li>Watching anime.</li>
+    </ul>
 </section>
 
 <section id="projects">
     <h1>What I Make</h1>
 
     <p>
-        <b>I enjoy building things that let me turn my ideas into something tangible.</b><br />
-        Most of what I make involves programming, whether it is websites, tools, experiments, or smaller
-        projects made simply to explore an idea.
+        <b>
+            I enjoy building things that let me turn my ideas into something
+            tangible.
+        </b><br />
+        Most of what I make involves programming, whether it is websites, tools, experiments,
+        or smaller projects made simply to explore an idea.
     </p>
 
-    <p>I also enjoy creating conlangs, videos and music in my free time.</p>
-
     <p>
-        My biggest ongoing project is <code>core</code>,
-        <span class="dim">(the website you're looking at!)</span>
-        where I experiment with web development, design, and different ideas I want to bring to life.
-        For information about my other projects, consider checking out the
-        <a href="/projects">projects</a> page!
+        I also enjoy creating conlangs, videos and some music in my free time.
+        For information about my projects, consider checking the dedicated
+        <a href="/projects">projects</a> page out!
     </p>
 </section>
 
@@ -686,13 +797,14 @@
     <button onclick={pickTrivia}>Generate Trivia</button>
 
     <p class="quote {triviaType}">
+        {#if triviaType === "normal"}<b>Did you know?</b><br />{/if}
         {@html trivia}
     </p>
 </section>
 
 <style lang="css">
     #intro-bg {
-        background-image: url('/assets/backgrounds/strawberry-jam.jpg');
+        background-image: url("/assets/backgrounds/strawberry-jam.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -730,7 +842,7 @@
     }
 
     #intro .header .name-group .name::after {
-        content: '';
+        content: "";
         position: absolute;
 
         left: 0;
@@ -781,7 +893,8 @@
             radial-gradient(circle at 20% 40%, #333 8%, transparent 8.1%),
             radial-gradient(circle at 90% 60%, #333 7%, transparent 7.1%),
             radial-gradient(circle at 70% 30%, #222 10%, transparent 10.1%),
-            radial-gradient(circle at 50% 80%, #222 10%, transparent 10.1%), #111;
+            radial-gradient(circle at 50% 80%, #222 10%, transparent 10.1%),
+            #111;
     }
 
     #bio > h1 {
@@ -793,7 +906,7 @@
     }
 
     #tech-bg {
-        background-image: url('/assets/backgrounds/vscodium.png');
+        background-image: url("/assets/backgrounds/vscodium.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -815,11 +928,12 @@
         color: #444;
 
         padding: 0 2em;
-        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        text-shadow: 0 0 20px
+            oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
     }
 
     .stacks .stack {
-        font-family: 'JetBrains Mono';
+        font-family: "JetBrains Mono";
 
         background: transparent;
         color: white;
@@ -877,10 +991,11 @@
     }
 
     .word {
-        font-family: 'Noto Sans';
+        font-family: "Noto Sans";
         position: absolute;
         opacity: 0.5;
-        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        text-shadow: 0 0 20px
+            oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
         white-space: nowrap;
         user-select: none;
         z-index: 1999;
@@ -903,8 +1018,17 @@
 
     #projects {
         background:
-            radial-gradient(circle at top left, rgba(115, 0, 255, 0.2), transparent 50%),
-            radial-gradient(circle at bottom right, rgba(0, 238, 255, 0.2), transparent 50%), black;
+            radial-gradient(
+                circle at top left,
+                rgba(115, 0, 255, 0.2),
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at bottom right,
+                rgba(0, 238, 255, 0.2),
+                transparent 50%
+            ),
+            black;
     }
 
     #trivia {

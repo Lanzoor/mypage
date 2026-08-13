@@ -1,25 +1,29 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { page } from '$app/state';
-    import External from '../Links/External.svelte';
-    import { navigationOverlay } from '$lib/overlays.svelte';
+    import { onMount } from "svelte";
+    import { page } from "$app/state";
+    import External from "../Links/External.svelte";
+    import { navigationOverlay } from "$lib/overlays.svelte";
 
-    type TopPanelDestination = { href: string; name: string; external?: boolean };
+    type TopPanelDestination = {
+        href: string;
+        name: string;
+        external?: boolean;
+    };
 
     const topPanelDestinations: TopPanelDestination[] = [
-        { href: '/', name: 'welcome!' },
-        { href: '/profile', name: 'profile' },
-        { href: '/about', name: 'about' },
-        { href: '/projects', name: 'projects' },
-        { href: '/docs', name: 'documents' },
+        { href: "/", name: "welcome!" },
+        { href: "/profile", name: "profile" },
+        { href: "/about", name: "about" },
+        { href: "/projects", name: "projects" },
+        { href: "/docs", name: "documents" },
     ];
 
     const HIDE_THRESHOLD = 100;
     let hidden = $state(false);
 
     function isCurrent(destination: TopPanelDestination) {
-        return destination.href === '/'
-            ? page.url.pathname === '/'
+        return destination.href === "/"
+            ? page.url.pathname === "/"
             : page.url.pathname.startsWith(destination.href);
     }
 
@@ -35,12 +39,12 @@
             lastY = currentY;
         }
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
         handleScroll();
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     });
 </script>
@@ -53,11 +57,17 @@
     <nav class="links">
         {#each topPanelDestinations as destination}
             {#if destination.external}
-                <External href={destination.href} class={isCurrent(destination) ? 'current' : ''}>
+                <External
+                    href={destination.href}
+                    class={isCurrent(destination) ? "current" : ""}
+                >
                     [ {destination.name} ]
                 </External>
             {:else}
-                <a href={destination.href} class:current={isCurrent(destination)}>
+                <a
+                    href={destination.href}
+                    class:current={isCurrent(destination)}
+                >
                     [ {destination.name} ]
                 </a>
             {/if}
@@ -65,8 +75,14 @@
     </nav>
 
     <div class="buttons">
-        <button onclick={() => (navigationOverlay.open = !navigationOverlay.open)}>
-            <img src="/assets/icons/hamburger.svg" alt="☰" class="panel-icon" /></button
+        <button
+            onclick={() => (navigationOverlay.open = !navigationOverlay.open)}
+        >
+            <img
+                src="/assets/icons/hamburger.svg"
+                alt="☰"
+                class="panel-icon"
+            /></button
         >
     </div>
 </div>
@@ -94,7 +110,7 @@
         justify-content: space-between;
 
         gap: 3em;
-        padding: 1.5em;
+        padding: 2em;
 
         max-height: var(--top-panel-max-height);
 
@@ -122,7 +138,7 @@
         text-decoration: none;
 
         font-size: 2em;
-        font-family: 'Noto Sans Mono';
+        font-family: "Noto Sans Mono";
 
         transition: 0.2s ease;
     }
@@ -161,7 +177,7 @@
     #top-panel .links a {
         text-decoration: none;
 
-        font-family: 'JetBrains Mono';
+        font-family: "JetBrains Mono";
         font-size: 20px;
 
         padding: 5px 10px;
@@ -201,7 +217,7 @@
         cursor: pointer;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
         #top-panel .buttons {
             display: flex;
             flex-direction: row;

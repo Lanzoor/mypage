@@ -1,16 +1,16 @@
 <script>
-    import Redirects from '$lib/components/Information/Redirects.svelte';
+    import Redirects from "$lib/components/Information/Redirects.svelte";
 </script>
 
 <section>
     <h1>Testing</h1>
 
-    <Redirects links={['/testing', '/test']} />
+    <Redirects links={["/testing", "/test"]} />
 
     <p>
         Hey there!<br />
-        This section contains some, "tests" with styles and experimental features for debugging purposes.
-        Feel free to just ignore this section of the website.
+        This section contains some, "tests" with styles and experimental features
+        for debugging purposes. Feel free to just ignore this section of the website.
     </p>
 
     <ul>

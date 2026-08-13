@@ -1,5 +1,5 @@
 <script>
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section>
@@ -13,7 +13,10 @@
 
     <ul>
         <li>
-            <h2><a href="/docs/math/googology/CIN">Consistent Illion Notation</a></h2>
+            <h2>
+                <a href="/docs/math/googology/CIN">Consistent Illion Notation</a
+                >
+            </h2>
 
             <p>The better and more consistent notation for large numbers.</p>
         </li>

@@ -1,10 +1,10 @@
 <script>
-    import { sitemap } from '$lib/map';
+    import { sitemap } from "$lib/map";
 
-    import NotImplemented from '$lib/components/Information/NotImplemented.svelte';
-    import Redirects from '$lib/components/Information/Redirects.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import SiteMapNode from '$lib/components/Navigation/SiteMapNode.svelte';
+    import NotImplemented from "$lib/components/Information/NotImplemented.svelte";
+    import Redirects from "$lib/components/Information/Redirects.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import SiteMapNode from "$lib/components/Navigation/SiteMapNode.svelte";
 </script>
 
 <section>
@@ -13,11 +13,11 @@
     <h1>Site Map</h1>
 
     <p>
-        This is a bare-bones site map generated from the internal site map for generating metadata
-        and breadcrumbs.
+        This is a bare-bones site map generated from the internal site map for
+        generating metadata and breadcrumbs.
     </p>
 
-    <Redirects links={['/site-map']} />
+    <Redirects links={["/site-map"]} />
 
     <ul class="site-map">
         {#each sitemap as page}
@@ -34,7 +34,7 @@
     }
 
     :global(.site-map li:not(:has(summary))::before) {
-        content: '- ';
+        content: "- ";
     }
 
     .site-map,

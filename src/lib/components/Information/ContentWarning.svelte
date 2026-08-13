@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { children }: { children: import('svelte').Snippet } = $props();
+    let { children }: { children: import("svelte").Snippet } = $props();
 </script>
 
 <blockquote class="error">
@@ -9,5 +9,7 @@
         {@render children()}
     </p>
 
-    <p class="dim">Viewer discretion is advised. Please proceed with caution.</p>
+    <p class="dim">
+        Viewer discretion is advised. Please proceed with caution.
+    </p>
 </blockquote>

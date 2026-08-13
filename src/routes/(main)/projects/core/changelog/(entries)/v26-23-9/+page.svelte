@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-16T00:00:00+09:00'),
+        published: new Date("2026-06-16T00:00:00+09:00"),
     };
 </script>
 
@@ -18,14 +18,14 @@
     <ul>
         <li>
             <span class="col bright purple">ƒ</span>
-            Fixed an issue where the analytics panel would pop up in the privacy policy page even after
-            seeing it.
+            Fixed an issue where the analytics panel would pop up in the privacy policy
+            page even after seeing it.
         </li>
 
         <li>
             <span class="col bright green">+</span>
-            <b>Added breadcrumbs navigation to most major pages.</b> This would allow for easier navigation
-            and clarity.
+            <b>Added breadcrumbs navigation to most major pages.</b> This would allow
+            for easier navigation and clarity.
         </li>
 
         <li>

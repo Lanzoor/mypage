@@ -1,7 +1,7 @@
 <script lang="ts">
     export const metadata = {
-        title: 'The Navigation Overhaul',
-        published: new Date('2026-06-19T00:00:00+09:00'),
+        title: "The Navigation Overhaul",
+        published: new Date("2026-06-19T00:00:00+09:00"),
     };
 </script>
 
@@ -13,14 +13,18 @@
     </p>
 
     <p>
-        <b>The long-awaited navigation UI/UX overhaul is finally here!</b><br /><br />
+        <b>The long-awaited navigation UI/UX overhaul is finally here!</b><br
+        /><br />
 
-        I hesitated quite a bit before publishing this update, but who knows what will happen?
-        Anyways, this major update includes several improvements to the navigation experience across
-        the website.<br /><br />
+        I hesitated quite a bit before publishing this update, but who knows
+        what will happen? Anyways, this major update includes several
+        improvements to the navigation experience across the website.<br /><br
+        />
 
         <b>
-            As always, please feel free to <a href="#connections">get in touch</a>!
+            As always, please feel free to <a href="#connections"
+                >get in touch</a
+            >!
         </b>
         We'd love to hear your feedback. Have a nice day!
     </p>
@@ -43,7 +47,9 @@
             Improved the design of breadcrumbs navigation.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Renamed some unintuitive internal names.
         </li>
         <li>

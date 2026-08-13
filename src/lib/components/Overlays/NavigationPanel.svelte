@@ -1,20 +1,20 @@
 <script lang="ts">
-    import { navigationOverlay, warpOverlay } from '$lib/overlays.svelte';
-    import { onMount } from 'svelte';
-    import External from '../Links/External.svelte';
+    import { navigationOverlay, warpOverlay } from "$lib/overlays.svelte";
+    import { onMount } from "svelte";
+    import External from "../Links/External.svelte";
 
     onMount(() => {
         const listener = (event: KeyboardEvent) => {
-            if (event.ctrlKey && event.shiftKey && event.code === 'KeyN') {
+            if (event.ctrlKey && event.shiftKey && event.code === "KeyN") {
                 event.preventDefault();
                 navigationOverlay.open = !navigationOverlay.open;
             }
         };
 
-        document.addEventListener('keydown', listener);
+        document.addEventListener("keydown", listener);
 
         return () => {
-            document.removeEventListener('keydown', listener);
+            document.removeEventListener("keydown", listener);
         };
     });
 </script>
@@ -23,10 +23,15 @@
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div class="bg" onclick={() => (navigationOverlay.open = false)}>
-        <div class="panel enable-spacing" onclick={(event) => event.stopPropagation()}>
+        <div
+            class="panel enable-spacing"
+            onclick={(event) => event.stopPropagation()}
+        >
             <div class="header">
                 <h1 class="logo">
-                    <span class="head">lanzoor</span>.<span class="tail">dev</span>
+                    <span class="head">lanzoor</span>.<span class="tail"
+                        >dev</span
+                    >
                 </h1>
 
                 <button onclick={() => (navigationOverlay.open = false)}>
@@ -55,7 +60,9 @@
                                     <a href="/legal">About</a>
                                 </li>
                                 <li>
-                                    <a href="/legal/privacy-policy">Privacy Policy</a>
+                                    <a href="/legal/privacy-policy"
+                                        >Privacy Policy</a
+                                    >
                                 </li>
                                 <li>
                                     <a href="/legal/tos">Terms Of Service</a>
@@ -77,7 +84,9 @@
                                     <a href="/tools">Conlangs</a>
                                 </li>
                                 <li>
-                                    <External href="https://www.youtube.com/@lanzoormakesvideos">
+                                    <External
+                                        href="https://www.youtube.com/@lanzoormakesvideos"
+                                    >
                                         Videos
                                     </External>
                                 </li>
@@ -111,7 +120,9 @@
                                     <a href="/credits/assets">Asset Credits</a>
                                 </li>
                                 <li>
-                                    <a href="/credits/contributors">Contributors</a>
+                                    <a href="/credits/contributors"
+                                        >Contributors</a
+                                    >
                                 </li>
                             </ul>
                         </details>
@@ -211,7 +222,7 @@
         padding: 0;
     }
     #navigation .panel .links li:not(:has(details))::before {
-        content: '- ';
+        content: "- ";
     }
     #navigation .panel .links li details > summary {
         user-select: none;

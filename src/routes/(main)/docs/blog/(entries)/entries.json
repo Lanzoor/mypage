@@ -1,5 +1,18 @@
 [
     {
+        "title": "core Has Been Completed",
+        "description": "core has been completed after months of development. This is a recap of the completion of core, as well as what comes next.",
+        "tags": [
+            "important",
+            "announcement",
+            "blog",
+            "core",
+            "monthly-recap"
+        ],
+        "published": "2026-08-12T15:00:00.000Z",
+        "slug": "2026/08/core-has-been-completed"
+    },
+    {
         "title": "My Opinion on Vibe Coding",
         "description": "My detailed opinion on vibe coding and using AI to code.",
         "tags": [

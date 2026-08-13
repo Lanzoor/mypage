@@ -1,7 +1,7 @@
-@import './styles/fonts.css';
-@import './styles/colors.css';
-@import './styles/blocks.css';
-@import './styles/inline-blocks.css';
+@import "./styles/fonts.css";
+@import "./styles/colors.css";
+@import "./styles/blocks.css";
+@import "./styles/inline-blocks.css";
 
 /* @import './styles/debug.css'; */
 
@@ -23,11 +23,11 @@ html {
 
     --heading: #ddd;
 
-    --base-font-size: clamp(10px, 3vw, 25px);
+    --base-font-size: clamp(14px, 1.2vw + 10px, 25px);
 }
 
 body {
-    font-family: 'JetBrains Mono';
+    font-family: "JetBrains Mono";
     font-size: var(--base-font-size);
     font-weight: 300;
 
@@ -55,7 +55,7 @@ h5,
 h6,
 th {
     color: var(--heading);
-    font-family: 'Noto Sans Mono';
+    font-family: "Noto Sans Mono";
     font-weight: 400;
 }
 
@@ -192,7 +192,7 @@ h1.logo .head {
 }
 
 .breadcrumbs a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -335,8 +335,8 @@ the tooltips are from Lanzoor/profile
 }
 */
 
-input[type='text']:not(.plain) {
-    font-family: 'JetBrains Mono';
+input[type="text"]:not(.plain) {
+    font-family: "JetBrains Mono";
 
     padding: 0.5em;
     border: 1px solid #7155ff;
@@ -347,11 +347,11 @@ input[type='text']:not(.plain) {
     transition: 0.2s ease;
 }
 
-input[type='text']:not(.plain)::placeholder {
+input[type="text"]:not(.plain)::placeholder {
     color: #888;
 }
 
-input[type='text']:not(.plain):focus {
+input[type="text"]:not(.plain):focus {
     outline: none;
     border-color: #825dff;
 }
@@ -436,11 +436,11 @@ p > details,
 }
 
 summary::marker {
-    content: '> ';
+    content: "> ";
 }
 
 details[open] summary::marker {
-    content: '< ';
+    content: "< ";
 }
 
 button:not(.initial) {
@@ -457,4 +457,15 @@ button:not(.initial) {
 
 .rounded {
     border-radius: 2147483647px;
+}
+
+/* accessibility thingy */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

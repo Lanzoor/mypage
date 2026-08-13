@@ -6,7 +6,7 @@
 code,
 kbd:not(.plain) {
     display: inline-block;
-    font-family: 'JetBrains Mono';
+    font-family: "JetBrains Mono";
     padding: 4px 8px;
     border-radius: 5px;
 }
@@ -25,16 +25,16 @@ kbd:not(.plain) {
 
 kbd.plain {
     display: inline-block;
-    font-family: 'JetBrains Mono';
+    font-family: "JetBrains Mono";
     color: #777;
 }
 
 kbd.plain::before {
-    content: '<';
+    content: "<";
 }
 
 kbd.plain::after {
-    content: '>';
+    content: ">";
 }
 
 pre {

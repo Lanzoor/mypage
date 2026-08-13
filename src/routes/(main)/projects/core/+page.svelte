@@ -1,6 +1,6 @@
 <script>
-    import External from '$lib/components/Links/External.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import External from "$lib/components/Links/External.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section id="intro">
@@ -10,8 +10,8 @@
         <h1>core</h1>
 
         <blockquote>
-            the frontend source code for <code>lanzoor.dev</code>, which is the website you're
-            looking at right now.
+            the frontend source code for <code>lanzoor.dev</code>, which is the
+            website you're looking at right now.
         </blockquote>
     </header>
 
@@ -19,9 +19,10 @@
 
     <p>
         <b
-            ><code>core</code> is the name of the repository that contains the frontend source code
-            for
-            <code>lanzoor.dev</code>, which is the website you're looking at right now.</b
+            ><code>core</code> is the name of the repository that contains the
+            frontend source code for
+            <code>lanzoor.dev</code>, which is the website you're looking at
+            right now.</b
         >
         <code>core</code> powers pretty much everything you see on this website.
     </p>
@@ -31,7 +32,8 @@
     <p>
         <b>
             <code>core</code> is built using <External
-                href="https://svelte.dev/docs/kit/introduction">SvelteKit</External
+                href="https://svelte.dev/docs/kit/introduction"
+                >SvelteKit</External
             >,</b
         > an amazing framework for developing web applications like this.
     </p>
@@ -56,15 +58,18 @@
     <ul>
         <li>
             <a href="https://lanzoor.dev">Project</a><br />
-            <code>core</code> is deployed to <a href="https://lanzoor.dev">https://lanzoor.dev</a>.
+            <code>core</code> is deployed to
+            <a href="https://lanzoor.dev">https://lanzoor.dev</a>.
         </li>
         <li>
             <a href="/projects/core/changelog">Changelog</a><br />
             A list of changes made to <code>core</code>.
         </li>
         <li>
-            <External href="https://github.com/Lanzoor/core">Source</External><br />
-            Everything you see on this website is open source and available for everyone to see or contribute.
+            <External href="https://github.com/Lanzoor/core">Source</External
+            ><br />
+            Everything you see on this website is open source and available for everyone
+            to see or contribute.
         </li>
     </ul>
 </section>

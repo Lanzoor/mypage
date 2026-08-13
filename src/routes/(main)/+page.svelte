@@ -1,16 +1,19 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount } from "svelte";
 
     const messages = [
-        [30_000, 'Still there?'],
-        [60_000, 'You can take your time.'],
-        [90_000, 'You really like this page, huh.'],
-        [120_000, 'Okay, seriously. I think you forgot to close this tab.'],
-        [180_000, "Let's just act like nothing ever happened and just move on."],
-        [182_400, 'Welcome! 👋'],
+        [30_000, "Still there?"],
+        [60_000, "You can take your time."],
+        [90_000, "You really like this page, huh."],
+        [120_000, "Okay, seriously. I think you forgot to close this tab."],
+        [
+            180_000,
+            "Let's just act like nothing ever happened and just move on.",
+        ],
+        [182_400, "Welcome! 👋"],
     ] as const;
 
-    let greeting = $state('Welcome! 👋');
+    let greeting = $state("Welcome! 👋");
 
     onMount(() => {
         let timers: ReturnType<typeof setTimeout>[] = [];
@@ -20,16 +23,22 @@
                 clearTimeout(timer);
             }
 
-            greeting = 'Welcome! 👋';
+            greeting = "Welcome! 👋";
 
             timers = messages.map(([delay, message]) =>
                 setTimeout(() => {
                     greeting = message;
-                }, delay)
+                }, delay),
             );
         }
 
-        const events = ['mousemove', 'scroll', 'click', 'keydown', 'touchstart'] as const;
+        const events = [
+            "mousemove",
+            "scroll",
+            "click",
+            "keydown",
+            "touchstart",
+        ] as const;
 
         for (const event of events) {
             window.addEventListener(event, reset, { passive: true });
@@ -53,7 +62,9 @@
     <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
             <h1 class="logo">
-                <span class="head">lanzoor</span><span>.</span><span class="tail">dev</span>
+                <span class="head">lanzoor</span><span>.</span><span
+                    class="tail">dev</span
+                >
             </h1>
 
             <p class="adaptive-text-shadow">
@@ -70,13 +81,14 @@
 
             <p>
                 <b class="egg">{greeting}</b><br />
-                My name is <span class="col bright purple">Lanzoor</span>, a student from South
-                Korea who likes
+                My name is <span class="col bright purple">Lanzoor</span>, a
+                student from South Korea who likes
                 <span class="col green">programming</span>,
                 <span class="col yellow">science</span>,
                 <span class="col orange">languages</span> and more.<br />
 
-                You'll find projects, showcases, tools, and whatever my brain decided to finish.
+                You'll find projects, showcases, tools, and whatever my brain
+                decided to finish.
             </p>
         </header>
 
@@ -91,42 +103,52 @@
             <h1>Quick Links</h1>
 
             <p>
-                <i class="col bright purple">Not sure where to start?</i> Here are a few places worth
-                checking out.
+                <i class="col bright purple">Not sure where to start?</i> Here are
+                a few places worth checking out.
             </p>
 
             <div class="links">
                 <a class="link plain" href="/about">
                     <h2>🌐 About</h2>
                     <p>
-                        <b>Learn more about this website,</b> including its goals, and how it was built.
+                        <b>Learn more about this website,</b> including its goals,
+                        and how it was built.
                     </p>
                 </a>
                 <a class="link plain" href="/profile">
                     <h2>👤 Profile</h2>
-                    <p><b>Learn more about me</b>, my interests, and where to find me online.</p>
+                    <p>
+                        <b>Learn more about me</b>, my interests, and where to
+                        find me online.
+                    </p>
                 </a>
                 <a class="link plain" href="/projects">
                     <h2>💻 Projects</h2>
                     <p>
-                        <b>Explore the projects I've been working on,</b> from experiments, simple tools,
-                        to larger creations.
+                        <b>Explore the projects I've been working on,</b> from experiments,
+                        simple tools, to larger creations.
                     </p>
                 </a>
                 <a class="link plain" href="/docs">
                     <h2>📄 Documents</h2>
                     <p>
-                        <b>Browse my documents and guides.</b> I really like talking about random stuff
-                        there!
+                        <b>Browse my documents and guides.</b> I really like talking
+                        about random stuff there!
                     </p>
                 </a>
                 <a class="link plain" href="/docs/blog">
                     <h2>📝 Blog</h2>
-                    <p>Read announcements, development updates and life updates.</p>
+                    <p>
+                        Read announcements, development updates and life
+                        updates.
+                    </p>
                 </a>
                 <a class="link plain" href="/projects/core/changelog">
                     <h2>🔄 Changelog</h2>
-                    <p>See what's changed, what's new, and what's been improved.</p>
+                    <p>
+                        See what's changed, what's new, and what's been
+                        improved.
+                    </p>
                 </a>
             </div>
         </div>
@@ -137,7 +159,7 @@
 
 <style lang="css">
     #iris-bg {
-        background-image: url('/assets/backgrounds/iris.jpg');
+        background-image: url("/assets/backgrounds/iris.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -169,7 +191,7 @@
     #intro header .logo::after {
         position: absolute;
         left: auto;
-        content: '_';
+        content: "_";
         animation: cursorBlink 1s none infinite;
     }
 

@@ -1,7 +1,7 @@
 <script lang="ts">
     export const metadata = {
-        title: 'The Legal Update',
-        published: new Date('2026-07-24T00:00:00+09:00'),
+        title: "The Legal Update",
+        published: new Date("2026-07-24T00:00:00+09:00"),
     };
 </script>
 
@@ -13,7 +13,10 @@
     </p>
 
     <p>
-        <b>Here's a surprise update! You definitely weren't expecting this, right?</b>
+        <b
+            >Here's a surprise update! You definitely weren't expecting this,
+            right?</b
+        >
     </p>
 
     <ul>
@@ -24,8 +27,8 @@
         <li>
             <span class="col bright green">+</span>
             <b>
-                Added a notice panel that notifies you whether the Legal Information changes, or you
-                first visit the website.
+                Added a notice panel that notifies you whether the Legal
+                Information changes, or you first visit the website.
             </b>
         </li>
         <li>
@@ -41,22 +44,27 @@
         </li>
         <li>
             <span class="col bright green">+</span>
-            Added the internal change marker (<span class="col bright orange">i</span>) for
-            changelog entries.
+            Added the internal change marker (<span class="col bright orange"
+                >i</span
+            >) for changelog entries.
         </li>
         <li>
             <span class="col bright green">+</span>
             Added new navigation entries to the footer panel.
         </li>
         <li>
-            <span class="col bright green">+</span><span class="col bright orange">i</span>
+            <span class="col bright green">+</span><span
+                class="col bright orange">i</span
+            >
             <b>Added automatic cleanup of outdated localStorage data.</b><br />
-            Previously stored keys that are no longer used may now be automatically removed.
+            Previously stored keys that are no longer used may now be automatically
+            removed.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved style definitions for <code>{'<kbd>'}</code>, <code>{'<ul>'}</code>,
-            <code>{'<ol>'}</code>, as well as some block elements.
+            Improved style definitions for <code>{"<kbd>"}</code>,
+            <code>{"<ul>"}</code>,
+            <code>{"<ol>"}</code>, as well as some block elements.
         </li>
         <li>
             <span class="col bright yellow">~</span>
@@ -71,11 +79,15 @@
             Changed layout of the footer panel.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Renamed long selector identifiers.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright orange">i</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright orange">i</span
+            >
             Split <code>app.css</code> into even more stylesheets.
         </li>
         <li>
@@ -88,8 +100,8 @@
         </li>
         <li>
             <span class="col bright red">-</span>
-            Added clear visuals in the Privacy Policy page to indicate that data collection has been temporarily
-            disabled.
+            Added clear visuals in the Privacy Policy page to indicate that data collection
+            has been temporarily disabled.
         </li>
     </ul>
 </section>

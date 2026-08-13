@@ -1,11 +1,11 @@
 <script lang="ts">
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import entries from './(entries)/entries.json';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import entries from "./(entries)/entries.json";
 
     const map = new Map<string, typeof entries>();
 
     for (const entry of entries) {
-        const [major, minor] = entry.version.slice(1).split('-');
+        const [major, minor] = entry.version.slice(1).split("-");
 
         if (!major || !minor) continue;
 
@@ -18,11 +18,13 @@
         map.get(id)!.push(entry);
     }
 
-    let searchQuery = $state('');
-    let status = $state('Search a version name, and warp into an entry by pressing Enter!');
+    let searchQuery = $state("");
+    let status = $state(
+        "Search a version name, and warp into an entry by pressing Enter!",
+    );
 
     function normalize(query: string) {
-        return query.trim().toLowerCase().replace(/\./g, '-');
+        return query.trim().toLowerCase().replace(/\./g, "-");
     }
 
     const groups = $derived(
@@ -33,11 +35,12 @@
                     const query = normalize(searchQuery);
 
                     return (
-                        entry.version.includes(query) || entry.title?.toLowerCase().includes(query)
+                        entry.version.includes(query) ||
+                        entry.title?.toLowerCase().includes(query)
                     );
                 }),
             }))
-            .filter((group) => group.entries.length > 0)
+            .filter((group) => group.entries.length > 0),
     );
 
     function warpIntoVersion() {
@@ -45,7 +48,9 @@
 
         if (!normalized) return;
 
-        const entry = entries.find((entry) => entry.version.toLowerCase() === normalized);
+        const entry = entries.find(
+            (entry) => entry.version.toLowerCase() === normalized,
+        );
 
         if (!entry) {
             status = `Sorry, we couldn't find a version named ${searchQuery}. Please try again!`;
@@ -62,19 +67,22 @@
     <h1>Changelog</h1>
 
     <p>
-        This page contains a list of all changes and updates made to the website.
+        This page contains a list of all changes and updates made to the
+        website.
         <b>You can use the search bar below to search for a version!</b>
     </p>
 
     <p>
-        For the changelog conventions, please refer to <a href="/conventions/changelog"
-            >this article</a
+        For the changelog conventions, please refer to <a
+            href="/conventions/changelog">this article</a
         >.
     </p>
 
     <blockquote class="warning">
-        <b class="col bright yellow">Not all changes require a new changelog!</b><br />
-        If a change was very small, urgent, or not assigned a version tag, it won't show up here.
+        <b class="col bright yellow">Not all changes require a new changelog!</b
+        ><br />
+        If a change was very small, urgent, or not assigned a version tag, it won't
+        show up here.
     </blockquote>
 </section>
 
@@ -94,7 +102,7 @@
                 id="search-bar"
                 bind:value={searchQuery}
                 placeholder="Search for a version (e.g. v26.1.0)"
-                onkeydown={(e) => e.key === 'Enter' && warpIntoVersion()}
+                onkeydown={(e) => e.key === "Enter" && warpIntoVersion()}
             />
 
             <button id="search-button" onclick={warpIntoVersion}> Warp </button>
@@ -116,10 +124,13 @@
                     <p class="dim">
                         pushed on
                         <b
-                            >{new Date(entry.published).toLocaleString('en-US', {
-                                timeZone: 'Asia/Seoul',
-                                dateStyle: 'long',
-                            })}</b
+                            >{new Date(entry.published).toLocaleString(
+                                "en-US",
+                                {
+                                    timeZone: "Asia/Seoul",
+                                    dateStyle: "long",
+                                },
+                            )}</b
                         >
                     </p>
                 </li>

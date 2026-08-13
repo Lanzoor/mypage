@@ -1,37 +1,37 @@
 <script lang="ts">
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
-    import type { BlogEntry } from '$lib/types';
-    import entries from './(entries)/entries.json';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import type { BlogEntry } from "$lib/types";
+    import entries from "./(entries)/entries.json";
 
     const availableTags = [
-        'important',
-        'announcement',
-        'blog',
-        'personal',
-        'core',
-        'core-api',
-        'monthly-recap',
+        "important",
+        "announcement",
+        "blog",
+        "personal",
+        "core",
+        "core-api",
+        "monthly-recap",
     ];
 
-    let searchQuery = $state('');
+    let searchQuery = $state("");
     let searchTags = $state<string[]>([]);
 
-    type SortingOrder = 'ascending' | 'descending';
+    type SortingOrder = "ascending" | "descending";
 
-    let sortingOrder = $state<SortingOrder>('descending');
+    let sortingOrder = $state<SortingOrder>("descending");
 
     function sortEntries(entries: BlogEntry[]) {
         return [...entries].sort((a, b) => {
             const result = a.published.localeCompare(b.published);
 
-            return sortingOrder === 'ascending' ? result : -result;
+            return sortingOrder === "ascending" ? result : -result;
         });
     }
 
     function matchesSearchQuery(entry: BlogEntry) {
         const query = searchQuery.trim().toLowerCase();
 
-        if (query === '') {
+        if (query === "") {
             return true;
         }
 
@@ -56,15 +56,17 @@
 
                     return groups;
                 },
-                {} as Record<string, typeof entries>
-            )
+                {} as Record<string, typeof entries>,
+            ),
         );
     }
 
     const sortedEntries = $derived(sortEntries(entries));
 
     const filteredEntries = $derived(
-        sortedEntries.filter((entry) => matchesSearchQuery(entry) && matchesSelectedTags(entry))
+        sortedEntries.filter(
+            (entry) => matchesSearchQuery(entry) && matchesSelectedTags(entry),
+        ),
     );
 
     const groups = $derived(groupByMonth(filteredEntries));
@@ -77,7 +79,8 @@
         <h1>Blog Portal</h1>
 
         <p>
-            Hello there! This is a page where you can find all of my blogs.<br />
+            Hello there! This is a page where you can find all of my blogs.<br
+            />
             <i>Click one of the headers below to warp into that page.</i>
         </p>
     </header>
@@ -90,7 +93,11 @@
         <h2>Search Options</h2>
 
         <div class="search-bar">
-            <input type="text" placeholder="Search for a blog entry..." bind:value={searchQuery} />
+            <input
+                type="text"
+                placeholder="Search for a blog entry..."
+                bind:value={searchQuery}
+            />
         </div>
 
         <p>You can narrow down the searches by providing one or more tags:</p>
@@ -108,7 +115,7 @@
                         }
                     }}
                 >
-                    {'#'}<span class="tagname {tag}">{tag}</span>
+                    {"#"}<span class="tagname {tag}">{tag}</span>
                 </button>
             {/each}
         </div>
@@ -117,18 +124,20 @@
             Currently sorting by: <button
                 class="{sortingOrder} adaptive-text-shadow"
                 onclick={() =>
-                    (sortingOrder = sortingOrder === 'ascending' ? 'descending' : 'ascending')}
-                >{sortingOrder} order</button
+                    (sortingOrder =
+                        sortingOrder === "ascending"
+                            ? "descending"
+                            : "ascending")}>{sortingOrder} order</button
             > <span class="dim">(click to change)</span>
         </p>
     </div>
 
     {#each groups as group}
         <h1>
-            {new Date(group[0].published).toLocaleString('en-US', {
-                timeZone: 'Asia/Seoul',
-                month: 'long',
-                year: 'numeric',
+            {new Date(group[0].published).toLocaleString("en-US", {
+                timeZone: "Asia/Seoul",
+                month: "long",
+                year: "numeric",
             })}
         </h1>
 
@@ -148,9 +157,9 @@
                     {/if}<br />
                     <span class="dim">
                         <b
-                            >{new Date(blog.published).toLocaleString('en-US', {
-                                timeZone: 'Asia/Seoul',
-                                dateStyle: 'long',
+                            >{new Date(blog.published).toLocaleString("en-US", {
+                                timeZone: "Asia/Seoul",
+                                dateStyle: "long",
                             })}</b
                         >
                     </span>
@@ -162,9 +171,9 @@
                     {:else}
                         {#each blog.tags as tag}
                             <span class="tag active">
-                                {'#'}<span class={`tagname ${tag}`}>
+                                {"#"}<span class={`tagname ${tag}`}>
                                     {tag}
-                                </span>{' '}
+                                </span>{" "}
                             </span>
                         {/each}
                     {/if}
@@ -187,7 +196,8 @@
     .tag.active .tagname {
         font-weight: 500;
 
-        text-shadow: 0 0 20px oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        text-shadow: 0 0 20px
+            oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
     }
 
     .tag.active .tagname.important {
@@ -235,7 +245,7 @@
         justify-content: center;
     }
 
-    .search-bar input[type='text'] {
+    .search-bar input[type="text"] {
         width: 1000px;
     }
 

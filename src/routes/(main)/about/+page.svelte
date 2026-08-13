@@ -1,6 +1,6 @@
 <script>
-    import External from '$lib/components/Links/External.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import External from "$lib/components/Links/External.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section id="faq">
@@ -8,20 +8,23 @@
 
     <h1>About lanzoor.dev</h1>
 
-    <p>Here's a simple FAQ section about the website to help you get started!</p>
+    <p>
+        Here's a simple FAQ section about the website to help you get started!
+    </p>
 
     <h2>What is this website?</h2>
 
     <p>
-        <code>lanzoor.dev</code> is a personal website featuring projects, experiments, articles, and
-        other things I create.
+        <code>lanzoor.dev</code> is a personal website featuring projects, experiments,
+        articles, and other things I create.
     </p>
 
     <h2>Why was it created?</h2>
 
     <p>
-        The website originally started with a simple profile for myself. At that time, it was mostly
-        for fun. However, over time, it grew into a collection of projects and showcases.
+        The website originally started with a simple profile for myself. At that
+        time, it was mostly for fun. However, over time, it grew into a
+        collection of projects and showcases.
     </p>
 
     <h2>How was it created?</h2>
@@ -30,23 +33,26 @@
         The website is hosted on
         <External href="https://vercel.com">Vercel</External>
         and built using
-        <External href="https://svelte.dev/docs/kit/introduction">SvelteKit</External>.
+        <External href="https://svelte.dev/docs/kit/introduction"
+            >SvelteKit</External
+        >.
     </p>
 
     <h2>Who maintains this website?</h2>
 
     <p>
         This website is maintained by
-        <span class="col bright purple">Lanzoor</span>, an individual developer from Korea, as part
-        of the organization
+        <span class="col bright purple">Lanzoor</span>, an individual developer
+        from Korea, as part of the organization
         <External href="https://www.lanzaforge.org/">Lanzaforge</External>.
     </p>
 
     <h2>Can I use the content from this website?</h2>
 
     <p>
-        Unless otherwise stated, the content on this website belongs to Lanzoor. Please ask for
-        permission before redistributing or modifying personal works.
+        Unless otherwise stated, the content on this website belongs to
+        Lanzaforge, and primarily Lanzoor. Please ask for permission before
+        redistributing or modifying personal works.
     </p>
 </section>
 
@@ -68,10 +74,12 @@
             <h3>
                 Discord
 
-                <External href="https://discord.com/users/1160164047111606292">@lanzoor</External>
+                <code>@lanzoor</code>
             </h3>
 
-            I strongly recommend using Discord since I check it quite often.
+            I strongly recommend using Discord since I check it quite often.<br
+            />
+            You may send me a friend request.
         </li>
         <li>
             <h3>
@@ -88,35 +96,42 @@
                 <b>hello@lanzoor.dev</b>, or
                 <b>support@lanzoor.dev</b>
                 are forwarded to my personal email address,
-                <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>. Feel free
-                to contact my personal email address as well.
+                <a href="mailto:lanzoor-general@proton.me"
+                    >lanzoor-general@proton.me</a
+                >. Feel free to contact my personal email address as well.
             </p>
 
             <p>
                 Replies will currently come from
-                <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a>, not the
+                <a href="mailto:lanzoor-general@proton.me"
+                    >lanzoor-general@proton.me</a
+                >, not the
                 <code>@lanzoor.dev</code> addresses. Thank you for your understanding.
             </p>
         </li>
     </ul>
 
     <blockquote class="warning">
-        <b class="col bright yellow"> ⚠ Please use this contact method responsibly. </b><br /><br />
+        <b class="col bright yellow">
+            ⚠ Please use this contact method responsibly.
+        </b><br /><br />
 
         <b
-            >Messages containing spam, scams, harassment, abuse, or other inappropriate content may
-            be ignored, blocked, reported, or otherwise dealt with at my discretion.</b
+            >Messages containing spam, scams, harassment, abuse, or other
+            inappropriate content may be ignored, blocked, reported, or
+            otherwise dealt with at my discretion.</b
         >
 
-        Please be respectful and keep your messages relevant. Constructive feedback, questions, bug
-        reports, and genuine inquiries are always welcome.<br /><br />
+        Please be respectful and keep your messages relevant. Constructive
+        feedback, questions, bug reports, and genuine inquiries are always
+        welcome.<br /><br />
 
         <b>
             <i>
                 <u>
-                    Please do not interact with me if all you're doing is being a jerk,
-                    disrespecting my efforts, or attempting to manipulate me. I am a human being,
-                    not your servant.
+                    Please do not interact with me if all you're doing is being
+                    a jerk, disrespecting my efforts, or attempting to
+                    manipulate me. I am a human being, not your servant.
                 </u>
             </i>
         </b>
@@ -140,7 +155,8 @@
             <code>lanzoor.xyz</code> (the website for my profile)
         </li>
         <li>
-            <code>lanzaforge.com</code> (redirects to <code>lanzaforge.org</code>)
+            <code>lanzaforge.com</code> (redirects to
+            <code>lanzaforge.org</code>)
         </li>
         <li>
             <code>lanzaforge.org</code> (nothing yet :c)
@@ -148,14 +164,19 @@
     </ul>
 
     <p>
-        <b>Do note that subdomains within every website above are indeed mine.</b> Examples include
+        <b
+            >Do note that subdomains within every website above are indeed mine.</b
+        >
+        Examples include
         <code><span class="dim">api</span>.lanzoor.dev</code>
         and <code><span class="dim">discord</span>.lanzaforge.org</code>.
     </p>
 
     <p>
         If you see ANY other domain that's not on the list above,
-        <i class="col bright red"><b>it's not affiliated with me, nor Lanzaforge.</b></i>
+        <i class="col bright red"
+            ><b>it's not affiliated with me, nor Lanzaforge.</b></i
+        >
     </p>
 
     <p class="dim">
@@ -166,8 +187,8 @@
 
     <p>
         <b
-            >All of my domains are registered via <External href="https://porkbun.com/"
-                >Porkbun</External
+            >All of my domains are registered via <External
+                href="https://porkbun.com/">Porkbun</External
             >.</b
         >
     </p>

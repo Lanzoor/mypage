@@ -1,6 +1,6 @@
 <script lang="ts" module>
     export const metadata = {
-        published: new Date('2026-08-06T00:00:00+09:00'),
+        published: new Date("2026-08-06T00:00:00+09:00"),
     };
 </script>
 
@@ -17,10 +17,13 @@
             Fixed some issues related to the new redirects system.
         </li>
         <li>
-            <span class="col bright green">+</span><span class="col bright orange">i</span>
+            <span class="col bright green">+</span><span
+                class="col bright orange">i</span
+            >
             <b
-                >Added an internal sitemap for the automated generation of metadata and navigation
-                elements such as breadcrumbs and navigation features.</b
+                >Added an internal sitemap for the automated generation of
+                metadata and navigation elements such as breadcrumbs and
+                navigation features.</b
             >
         </li>
         <li>
@@ -29,12 +32,15 @@
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Improved the search features within the <a href="/docs/blog">blog</a> and
+            Improved the search features within the
+            <a href="/docs/blog">blog</a>
+            and
             <a href="/projects/core/changelog">changelog</a> pages.
         </li>
         <li>
             <span class="col bright yellow">~</span>
-            Moved the <a href="/conventions/changelog">changelog conventions</a> page from
+            Moved the <a href="/conventions/changelog">changelog conventions</a>
+            page from
             <code>/projects/core/changelog/conventions</code>
             to
             <code>/conventions/changelog</code>.

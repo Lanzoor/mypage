@@ -1,15 +1,17 @@
 <script lang="ts">
-    import { LegalInfo, AcceptedLegalInfo } from '$lib/legal';
-    import { legalNoticeOverlay } from '$lib/overlays.svelte';
+    import { LegalInfo, AcceptedLegalInfo } from "$lib/legal";
+    import { legalNoticeOverlay } from "$lib/overlays.svelte";
 
     let acceptedLegalInfo = $state(AcceptedLegalInfo.get());
 
     let isPrivacyPolicyUpToDate = $derived(
-        acceptedLegalInfo?.privacyPolicy === LegalInfo.privacyPolicy.formatVersion()
+        acceptedLegalInfo?.privacyPolicy ===
+            LegalInfo.privacyPolicy.formatVersion(),
     );
 
     let isTermsOfServiceUpToDate = $derived(
-        acceptedLegalInfo?.termsOfService === LegalInfo.termsOfService.formatVersion()
+        acceptedLegalInfo?.termsOfService ===
+            LegalInfo.termsOfService.formatVersion(),
     );
 
     $effect(() => {
@@ -33,15 +35,25 @@
     }
 </script>
 
-<div id="legal-notice" class:open={legalNoticeOverlay.open} aria-hidden={!legalNoticeOverlay.open}>
+<div
+    id="legal-notice"
+    class:open={legalNoticeOverlay.open}
+    aria-hidden={!legalNoticeOverlay.open}
+>
     <h1>[ notice ]</h1>
 
     {#if !acceptedLegalInfo}
-        <p>Hello! By continuing, you accept the Privacy Policy and Terms of Service.</p>
+        <p>
+            Hello! By continuing, you accept the Privacy Policy and Terms of
+            Service.
+        </p>
     {:else}
         <p>
             Hey there!<br />
-            <b>Since your last visit, the Legal Information of this website has been modified.</b>
+            <b
+                >Since your last visit, the Legal Information of this website
+                has been modified.</b
+            >
         </p>
     {/if}
 
@@ -50,7 +62,8 @@
 
         <p>
             <b>
-                The Privacy Policy was updated to version {LegalInfo.privacyPolicy.version} at
+                The Privacy Policy was updated to version {LegalInfo
+                    .privacyPolicy.version} at
                 {LegalInfo.privacyPolicy.formatTime()}.
             </b><br />
             For more information, please refer to
@@ -59,8 +72,8 @@
 
         <p>
             <i>
-                This website does not intentionally collect or use personal data or use analytics
-                services. Period.
+                This website does not intentionally collect or use personal data
+                or use analytics services. Period.
             </i>
         </p>
     {/if}
@@ -70,7 +83,8 @@
 
         <p>
             <b>
-                The Terms of Service were updated to version {LegalInfo.termsOfService.version} at
+                The Terms of Service were updated to version {LegalInfo
+                    .termsOfService.version} at
                 {LegalInfo.termsOfService.formatTime()}.
             </b><br />
             For more information, please refer to
@@ -79,7 +93,8 @@
 
         <p>
             <i>
-                You probably won't need to read this unless you're curious about the details.<br />
+                You probably won't need to read this unless you're curious about
+                the details.<br />
                 <b>We don't do any wacky stuff!</b>
             </i>
         </p>
@@ -89,15 +104,20 @@
         <button onclick={() => acceptLegalChanges()}>I Accept</button>
 
         <p>
-            <b>Clicking "I Accept" means that you accept the Legal Information.</b><br />
+            <b
+                >Clicking "I Accept" means that you accept the Legal
+                Information.</b
+            ><br />
             This action will prevent this notice from popping up,<br />
             unless a new change is made to the Legal Information.<b
                 ><br />
-                This panel intentionally does not pop up in any of the Legal Information pages.
+                This panel intentionally does not pop up in any of the Legal Information
+                pages.
             </b>
 
             <br /><br />
-            For more information, please refer to <a href="/legal#notices">this article</a>.
+            For more information, please refer to
+            <a href="/legal#notices">this article</a>.
         </p>
     </div>
 </div>

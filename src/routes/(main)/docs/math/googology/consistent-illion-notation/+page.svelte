@@ -1,9 +1,9 @@
 <script lang="ts">
-    import KaTeX from '$lib/components/Math/KaTeX.svelte';
-    import Experimental from '$lib/components/Information/Experimental.svelte';
-    import NotImplemented from '$lib/components/Information/NotImplemented.svelte';
-    import Redirects from '$lib/components/Information/Redirects.svelte';
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import KaTeX from "$lib/components/Math/KaTeX.svelte";
+    import Experimental from "$lib/components/Information/Experimental.svelte";
+    import NotImplemented from "$lib/components/Information/NotImplemented.svelte";
+    import Redirects from "$lib/components/Information/Redirects.svelte";
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section>
@@ -17,7 +17,7 @@
         </p>
     </header>
 
-    <Redirects links={['/docs/math/googology/CIN/']}></Redirects>
+    <Redirects links={["/docs/math/googology/CIN/"]}></Redirects>
 
     <Experimental
         description="This page uses KaTeX-like syntax for math equations and expressions."
@@ -28,20 +28,20 @@
     <h1>Introduction</h1>
 
     <p>
-        Ever since I was a kid, I was a huge fan of idle games and large numbers. I also noticed the <b
-            >Conway-Wechsler system</b
-        >
-        was used to describe large numbers. This used to fascinate me, since the names for large numbers
-        sounded like a mythical artifact.
+        Ever since I was a kid, I was a huge fan of idle games and large
+        numbers. I also noticed the <b>Conway-Wechsler system</b>
+        was used to describe large numbers. This used to fascinate me, since the names
+        for large numbers sounded like a mythical artifact.
         <br /><br />
-        However, as I grew up, I started noticing how messed up the Conway-Wechsler system is. One of
-        the biggest issues for me is that
-        <b>the Conway-Wechsler system uses phonological adjustments</b>, which means that prefixes
-        can change their shape based on where it's attached to.
+        However, as I grew up, I started noticing how messed up the Conway-Wechsler
+        system is. One of the biggest issues for me is that
+        <b>the Conway-Wechsler system uses phonological adjustments</b>, which
+        means that prefixes can change their shape based on where it's attached
+        to.
         <br /><br />
         <b
-            >So, I'm very proud to present my own version & improvement of the Conway-Wechsler
-            system.</b
+            >So, I'm very proud to present my own version & improvement of the
+            Conway-Wechsler system.</b
         >
         Introducing... the <b>Consistent Illion Notation!</b>
         CIN for short.
@@ -50,8 +50,9 @@
     <h2>What's the goal of CIN?</h2>
 
     <p>
-        CIN is supposed to make illion index part of large numbers more straight-forward to
-        understand, while also being phonologically consistent and easy to pronounce.
+        CIN is supposed to make illion index part of large numbers more
+        straight-forward to understand, while also being phonologically
+        consistent and easy to pronounce.
     </p>
 </section>
 
@@ -59,7 +60,10 @@
     <h1>The Illion Index</h1>
 
     <p>
-        <b>We start by converting the number into its illion index form and mantissa.</b>
+        <b
+            >We start by converting the number into its illion index form and
+            mantissa.</b
+        >
 
         Given a number in scientific notation:
 
@@ -68,7 +72,10 @@
 
     <p>
         We can obtain the group index <KaTeX content="j" /> of this number with:
-        <KaTeX content={`j = \\left\\lfloor \\frac{e}{3} \\right\\rfloor - 1`} display={true} />
+        <KaTeX
+            content={`j = \\left\\lfloor \\frac{e}{3} \\right\\rfloor - 1`}
+            display={true}
+        />
     </p>
 
     <p>
@@ -80,12 +87,15 @@
             <KaTeX content={`i = j`} /> for Short Scale
         </li>
         <li>
-            <KaTeX content={`i = \\left\\lceil \\frac{j}{2} \\right\\rceil`} /> for Long Scale
+            <KaTeX content={`i = \\left\\lceil \\frac{j}{2} \\right\\rceil`} /> for
+            Long Scale
         </li>
     </ul>
 
     <p>
-        We can determine the illion suffix <KaTeX content="s" /> (<code>-illion</code>?
+        We can determine the illion suffix <KaTeX content="s" /> (<code
+            >-illion</code
+        >?
         <code>-illiard</code>?) with:
     </p>
 
@@ -111,7 +121,8 @@
     </ul>
 
     <p>
-        We can obtain the illion remainder <KaTeX content="i_r" /> for the mantissa with:
+        We can obtain the illion remainder <KaTeX content="i_r" /> for the mantissa
+        with:
 
         <KaTeX content={`i_r = e \\bmod{3}`} display={true} />
 
@@ -123,8 +134,8 @@
             display={true}
         />
 
-        Assuming function <KaTeX content={`\\operatorname{p}(x)`} /> returns the formatted prefix of the
-        x-th illion, the number would be expressed as:
+        Assuming function <KaTeX content={`\\operatorname{p}(x)`} /> returns the formatted
+        prefix of the x-th illion, the number would be expressed as:
 
         <KaTeX
             content={`
@@ -134,8 +145,12 @@
     </p>
 
     <p>
-        CIN's goal is to help define and simplify the illion prefix for big numbers, hence the name.
-        <b>You can use the steps below in order to convert the illion index into a CIN notation.</b>
+        CIN's goal is to help define and simplify the illion prefix for big
+        numbers, hence the name.
+        <b
+            >You can use the steps below in order to convert the illion index
+            into a CIN notation.</b
+        >
     </p>
 
     <NotImplemented />

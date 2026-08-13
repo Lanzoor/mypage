@@ -1,6 +1,6 @@
 <script lang="ts">
     export const metadata = {
-        published: new Date('2026-06-09T00:00:00+09:00'),
+        published: new Date("2026-06-09T00:00:00+09:00"),
     };
 </script>
 
@@ -22,8 +22,8 @@
         <li>
             <span class="col bright green">+</span>
             Added a changelog page at
-            <a href="/projects/core/changelog"> /projects/core/changelog </a>, which is exactly what
-            you're looking at right now!
+            <a href="/projects/core/changelog"> /projects/core/changelog </a>,
+            which is exactly what you're looking at right now!
         </li>
         <li>
             <span class="col bright yellow">~</span>
@@ -33,18 +33,22 @@
         <li>
             <span class="col bright yellow">~</span>
             <b>
-                Moved the <a href="/legacy/anti-JPA">anti-JPA project</a> to the legacy category.
+                Moved the <a href="/legacy/anti-JPA">anti-JPA project</a> to the legacy
+                category.
             </b>
             This project will be archived for a while, and will be deleted eventually.
         </li>
         <li>
-            <span class="col bright yellow">~</span><span class="col bright blue">p</span>
+            <span class="col bright yellow">~</span><span
+                class="col bright blue">p</span
+            >
             Changed the position of the left panel to the right.
         </li>
         <li>
             <span class="col bright red">-</span>
             Removed the outdated status page at
-            <code>/troubleshooting/status.html</code>, in favor of the new work-in-progress one.
+            <code>/troubleshooting/status.html</code>, in favor of the new
+            work-in-progress one.
         </li>
     </ul>
 </section>

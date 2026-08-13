@@ -1,5 +1,5 @@
 <script>
-    import Breadcrumbs from '$lib/components/Navigation/Breadcrumbs.svelte';
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
 <section>
