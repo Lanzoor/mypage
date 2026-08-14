@@ -137,6 +137,11 @@
             {/each}
         </ul>
     {/each}
+
+    <p class="dim">
+        Please note that versions prior to <code>v26.23.3</code> aren't listed here,
+        as they were not documented.
+    </p>
 </section>
 
 <style lang="css">

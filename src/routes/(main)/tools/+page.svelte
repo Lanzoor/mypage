@@ -18,8 +18,13 @@
 
     <ul>
         <li>
-            <b>Manual BPM Checker</b> - {getPageData(
+            <a href="/tools/manual-bpm-checker">Manual BPM Checker</a> - {getPageData(
                 "/tools/manual-bpm-checker",
+            )?.description}
+        </li>
+        <li>
+            <a href="/tools/number-formatter">Number Formatter</a> - {getPageData(
+                "/tools/number-formatter",
             )?.description}
         </li>
     </ul>

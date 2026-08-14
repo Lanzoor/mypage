@@ -232,6 +232,12 @@ export const sitemap: Page[] = [
                     footerPanel: false,
                 },
             },
+            {
+                path: "/tools/number-formatter",
+                title: "Number Formatter",
+                description:
+                    "A tool that formats extremely large numbers into more readable representations.",
+            },
         ],
     },
 ];
