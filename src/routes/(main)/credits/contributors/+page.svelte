@@ -25,12 +25,6 @@
         > who has supported this project!
     </p>
 
-    <p>
-        Want your name here? <b
-            >Please refer to <a href="/about/donations">this page</a>!</b
-        >
-    </p>
-
     <div class="supporters">
         <External href="https://github.com/Derukugis" showArrow={false}>
             <img
@@ -98,8 +92,8 @@
                 <div class="roles">Security · Quality Assurance</div>
 
                 <p>
-                    A gigachad programmer from Russia who made a whole in-depth
-                    analysis for the website, pointing out potential issues.
+                    A gigachad programmer from Russia who pointed out potential
+                    issues within the website and gave some great ideas.
                 </p>
 
                 <div class="quote">
@@ -120,9 +114,7 @@
 
                 <div class="roles">Security · Quality Assurance</div>
 
-                <p>
-                    Gave some great inspirations and feedback for the website.
-                </p>
+                <p>Gave inspirations and feedback for the website.</p>
 
                 <div class="quote">I'm a big fan of Drastic</div>
             </div>
@@ -197,8 +189,6 @@
         </div>
 
         <div class="card">
-            <h1>blackrose</h1>
-
             <img
                 src="/assets/contributors/blackrose.png"
                 alt="blackrose"
@@ -206,6 +196,8 @@
             />
 
             <div class="description">
+                <h1>blackrose</h1>
+
                 <p>
                     Gave inspirations for the design aspect of the website, and
                     pointed out some several security-related issues.

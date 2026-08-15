@@ -164,9 +164,7 @@
     </ul>
 
     <p>
-        <b
-            >Do note that subdomains within every website above are indeed mine.</b
-        >
+        <b>Subdomains within every website above are indeed mine.</b>
         Examples include
         <code><span class="dim">api</span>.lanzoor.dev</code>
         and <code><span class="dim">discord</span>.lanzaforge.org</code>.

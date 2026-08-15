@@ -11,10 +11,13 @@
     <title>{metadata.title}</title>
 
     <meta name="tags" content={metadata.tags.join(", ")} />
+    <meta name="description" content={metadata.description} />
 </svelte:head>
 
 <section>
     <a href="/docs/blog">../ Go back to blogs page</a>
+
+    <h1>Svelte Migration: A Major Change for <code>core</code></h1>
 
     <blockquote class="info">
         Hey! Future Lanzoor here.<br />
@@ -22,10 +25,6 @@
         please refer to
         <a href="/projects/core/changelog#v26-25-0">the changelog</a>.
     </blockquote>
-
-    <h1 id="svelte">A Major Change for <code>core</code></h1>
-
-    <meta name="description" content={metadata.description} />
 
     <p>
         After some consideration,
@@ -58,7 +57,8 @@
         </b>
         <i>This will likely be the last version we release for a while.</i>
         <b>
-            We will also not be collecting any analytics during the transition.
+            We will also not be collecting any analytics data during the
+            transition.
         </b>
 
         <br /><br />
@@ -87,16 +87,18 @@
         Don't worry! Svelte is just some intelligent HTML code. I think so.
     </p>
 
-    <h2>Will the previous version still be available to the public?</h2>
+    <h2>Will the previous version still be available to view?</h2>
 
     <p>
         <b>Unfortunately, no.</b> The previous <code>core-svelte</code>
         directory is planned to be merged into <code>core</code> once the
         migration is 100% complete.<br />
+        Although not complete yet, we'll make sure to make an announcement and update
+        this article when the decision is made.
     </p>
 
     <p>
-        Although not complete yet, we'll make sure to make an announcement and
-        update this article when the decision is made.
+        As of August 2026, we have backed up old <code>core</code> into the
+        <a href="https://github.com/Lanzoor/core/tree/legacy">legacy</a> branch.
     </p>
 </section>

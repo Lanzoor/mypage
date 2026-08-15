@@ -1072,7 +1072,6 @@
 
     #trivia .quote {
         text-align: center;
-        font-size: 1.1em;
     }
 
     #trivia .quote.special {

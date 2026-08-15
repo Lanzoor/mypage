@@ -86,10 +86,10 @@
             <b>Get feedback.</b>
             Using AI can honestly be one of the best ways to receive feedback before
             releasing software. Why? Because it does not criticize <i>you</i>,
-            it critiques your <i>code</i>. I'd even encourage new programmers to
-            use AI as a learning tool! Seriously, you can learn a lot by
-            discussing ideas, receiving feedback, and experimenting with new
-            approaches.
+            it critiques your <i>code</i>. Heck, I'd even encourage new
+            programmers to use AI as a learning tool. Seriously, you can learn a
+            lot by discussing ideas, receiving feedback, and experimenting with
+            new approaches.
         </li>
     </ul>
 
@@ -142,8 +142,8 @@
         >
         Just make sure to keep the things I mentioned in mind.
         <b>
-            So whether you are a traditional developer, a vibe coder, or
-            somewhere in between, keep cookin'!
+            So whether you're a traditional developer, a vibe coder, or
+            somewhere in between, keep cooking!
         </b>
     </p>
 

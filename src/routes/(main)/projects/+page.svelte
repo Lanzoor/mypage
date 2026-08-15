@@ -80,7 +80,7 @@
             <div class="header">
                 <div class="status complete">complete</div>
 
-                <h1>core-legacy</h1>
+                <h1>core-archive</h1>
             </div>
 
             <p class="description">
@@ -97,10 +97,10 @@
                 <div class="links">
                     links:
 
-                    <External href="https://legacy.lanzoor.dev"
+                    <External href="https://archive.lanzoor.dev"
                         >project</External
                     >
-                    <External href="https://github.com/Lanzoor/core-legacy"
+                    <External href="https://github.com/Lanzoor/core-archive"
                         >source</External
                     >
                 </div>

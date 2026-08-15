@@ -88,50 +88,51 @@
     <p>
         <b>Found {sortedEntries.length} blog entries.</b>
     </p>
+</section>
 
-    <div class="search-options enable-spacing">
-        <h2>Search Options</h2>
+<section id="search">
+    <h1>Search Options</h1>
 
-        <div class="search-bar">
-            <input
-                type="text"
-                placeholder="Search for a blog entry..."
-                bind:value={searchQuery}
-            />
-        </div>
-
-        <p>You can narrow down the searches by providing one or more tags:</p>
-
-        <div class="tag-bar">
-            {#each availableTags as tag}
-                <button
-                    class:active={searchTags.includes(tag)}
-                    class="tag"
-                    onclick={() => {
-                        if (searchTags.includes(tag)) {
-                            searchTags = searchTags.filter((x) => x !== tag);
-                        } else {
-                            searchTags = [...searchTags, tag];
-                        }
-                    }}
-                >
-                    {"#"}<span class="tagname {tag}">{tag}</span>
-                </button>
-            {/each}
-        </div>
-
-        <p>
-            Currently sorting by: <button
-                class="{sortingOrder} adaptive-text-shadow"
-                onclick={() =>
-                    (sortingOrder =
-                        sortingOrder === "ascending"
-                            ? "descending"
-                            : "ascending")}>{sortingOrder} order</button
-            > <span class="dim">(click to change)</span>
-        </p>
+    <div class="search-bar">
+        <input
+            type="text"
+            placeholder="Search for a blog entry..."
+            bind:value={searchQuery}
+        />
     </div>
 
+    <p>You can narrow down the searches by providing one or more tags:</p>
+
+    <div class="tag-bar">
+        {#each availableTags as tag}
+            <button
+                class:active={searchTags.includes(tag)}
+                class="tag"
+                onclick={() => {
+                    if (searchTags.includes(tag)) {
+                        searchTags = searchTags.filter((x) => x !== tag);
+                    } else {
+                        searchTags = [...searchTags, tag];
+                    }
+                }}
+            >
+                {"#"}<span class="tagname {tag}">{tag}</span>
+            </button>
+        {/each}
+    </div>
+
+    <p>
+        Currently sorting by: <button
+            class="{sortingOrder} adaptive-text-shadow"
+            onclick={() =>
+                (sortingOrder =
+                    sortingOrder === "ascending" ? "descending" : "ascending")}
+            >{sortingOrder} order</button
+        > <span class="dim">(click to change)</span>
+    </p>
+</section>
+
+<section>
     {#each groups as group}
         <h1>
             {new Date(group[0].published).toLocaleString("en-US", {
@@ -224,11 +225,10 @@
         color: var(--orange);
     }
 
-    .search-options {
-        padding: 2em;
+    #search {
         border-top: 2px solid #555;
         border-bottom: 2px solid #555;
-        background: #1a1a1a;
+        background: #121212;
     }
 
     .tag-bar {
@@ -249,11 +249,11 @@
         width: 1000px;
     }
 
-    .search-options button.ascending {
+    #search button.ascending {
         color: var(--green);
     }
 
-    .search-options button.descending {
+    #search button.descending {
         color: var(--orange);
     }
 </style>
