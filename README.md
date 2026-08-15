@@ -27,7 +27,7 @@ npm install
 ## Watch
 
 ```sh
-pnpm run dev --open
+pnpm run dev
 # or
-npm run dev --open
+npm run dev
 ```
