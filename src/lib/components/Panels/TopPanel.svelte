@@ -110,7 +110,7 @@
         justify-content: space-between;
 
         gap: 3em;
-        padding: 2em;
+        padding: clamp(1em, calc(2vw + 1em), 2em);
 
         max-height: var(--top-panel-max-height);
 
@@ -137,7 +137,7 @@
         text-shadow: none;
         text-decoration: none;
 
-        font-size: 2em;
+        font-size: clamp(1em, calc(2vw + 1em), 2em);
         font-family: "Noto Sans Mono";
 
         transition: 0.2s ease;

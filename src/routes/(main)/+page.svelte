@@ -185,7 +185,7 @@
     }
 
     #intro header .logo {
-        font-size: 4em;
+        font-size: clamp(1em, calc(3vw + 1em), 4em);
     }
 
     #intro header .logo::after {
@@ -193,18 +193,6 @@
         left: auto;
         content: "_";
         animation: cursorBlink 1s none infinite;
-    }
-
-    @media (max-width: 768px) {
-        #intro header .logo {
-            font-size: 3em;
-        }
-    }
-
-    @media (max-width: 480px) {
-        #intro header .logo {
-            font-size: 2em;
-        }
     }
 
     .quick-links {

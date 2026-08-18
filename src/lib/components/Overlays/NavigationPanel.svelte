@@ -228,7 +228,7 @@
         user-select: none;
     }
     #navigation .panel .links li details > ul {
-        padding: 0 2em 0.5em 2em;
+        padding: 0 1em 0.5em 1em;
     }
     #navigation .panel .links li {
         padding: 0.1em 0;

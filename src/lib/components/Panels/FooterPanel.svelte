@@ -282,13 +282,22 @@
         text-align: center;
     }
 
-    @media (max-width: 1080px) {
-        #footer-panel #navigation #navigation-links {
-            flex-wrap: wrap;
+    @media (max-width: 768px) {
+        :global(#footer-panel #connections a > img) {
+            width: 2em;
+            height: 2em;
         }
 
-        #footer-panel #footer footer {
-            font-size: 0.75em;
+        #footer-panel #connections {
+            justify-content: flex-start;
+            column-gap: 1em;
+            row-gap: 0.25em;
+
+            margin: 0;
+        }
+
+        #footer-panel #connections .handle {
+            display: none;
         }
     }
 </style>

@@ -155,6 +155,11 @@ export const sitemap: Page[] = [
         ],
     },
     {
+        path: "/games",
+        title: "Games",
+        description: "A collection of games made by Lanzoor.",
+    },
+    {
         path: "/legal",
         title: "Legal",
         description: "A section that holds all of the Legal Information.",

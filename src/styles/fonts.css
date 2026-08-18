@@ -23,6 +23,10 @@
 .noto-sans,
 .noto-sans * {
     font-family: "Noto Sans", sans-serif;
+}
+
+.ipa,
+.ipa * {
     color: var(--bright-purple);
 }
 

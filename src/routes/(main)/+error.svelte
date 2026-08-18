@@ -31,11 +31,31 @@
             The filename may have changed, or the file may have been moved or removed.
         </p>
     </section>
-    <!-- {:else}
-    <section class="stretched">
-        <h1>{status} - Internal Server Error</h1>
-        <p>An unexpected error occurred. Please try again later.</p>
-    </section> -->
+{:else}
+    <section id="internal-error" class="stretched">
+        <a href="/" onclick={() => history.back()}>
+            {"<-"} Back
+        </a>
+
+        <header>
+            <h1>{status}</h1>
+
+            <div class="separator"></div>
+
+            <h2>Internal Error</h2>
+        </header>
+
+        <p>
+            Something went wrong while processing your request. The server
+            encountered an unexpected error and could not complete the request.
+        </p>
+
+        <p>
+            This error is on our end. Please feel free to <a href="#connections"
+                >get in touch</a
+            >.
+        </p>
+    </section>
 {/if}
 
 <style lang="css">
@@ -47,7 +67,15 @@
         );
     }
 
-    #error-404 header {
+    #internal-error {
+        background: radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 4, 255, 0.25),
+            transparent
+        );
+    }
+
+    section header {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -55,40 +83,14 @@
         gap: 1.5em;
     }
 
-    #error-404 header .separator {
+    section header .separator {
         width: 2px;
         height: 2em;
 
         background: rgba(255, 255, 255, 0.25);
     }
 
-    #error-404 p {
+    section p {
         text-align: center;
-    }
-
-    #error-404 #buttons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
-        width: 100%;
-    }
-
-    #error-404 #buttons button {
-        padding: 1em 2em;
-        font-size: 1em;
-        background: #111;
-        border: 2px solid #ccc;
-        color: #ccc;
-        border-radius: 0.5em;
-        transition: 0.25s ease;
-    }
-
-    #error-404 #buttons button:hover {
-        border-color: white;
-        color: #111;
-        background: white;
-        cursor: pointer;
     }
 </style>

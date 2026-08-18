@@ -51,8 +51,9 @@
 
     <p>
         Unless otherwise stated, the content on this website belongs to
-        Lanzaforge, and primarily Lanzoor. Please ask for permission before
-        redistributing or modifying personal works.
+        <External href="https://www.lanzaforge.org">Lanzaforge</External>, and
+        primarily Lanzoor. Please ask for permission before redistributing or
+        modifying personal works.
     </p>
 </section>
 
