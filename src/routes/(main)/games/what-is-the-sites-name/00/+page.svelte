@@ -587,7 +587,7 @@
 
         <input
             type="text"
-            placeholder="xxx"
+            placeholder="xx"
             bind:value={object.question10.currentAnswer}
         />
 
