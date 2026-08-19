@@ -15,7 +15,7 @@
             {"<-"} Back
         </a>
 
-        <header>
+        <header class="disable-layout">
             <h1>404</h1>
 
             <div class="separator"></div>
@@ -37,7 +37,7 @@
             {"<-"} Back
         </a>
 
-        <header>
+        <header class="disable-layout">
             <h1>{status}</h1>
 
             <div class="separator"></div>

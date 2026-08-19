@@ -34,7 +34,6 @@
                     links:
 
                     <a href="/"> project </a>
-                    <a href="/projects/core"> showcase </a>
                     <a href="/projects/core/changelog"> changelog </a>
                     <External href="https://github.com/Lanzoor/core"
                         >source</External
@@ -65,7 +64,6 @@
                     links:
 
                     <External href="https://api.lanzoor.dev">project</External>
-                    <a href="/projects/core-api"> showcase </a>
                     <External href="/projects/core-api/changelog"
                         >changelog</External
                     >

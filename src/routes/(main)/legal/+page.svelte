@@ -12,20 +12,20 @@
 
     <ul>
         <li>
-            <a href="/legal/privacy-policy">Privacy Policy</a> - {getPageData(
-                "/legal/privacy-policy",
+            <a href="/legal/privacy">Privacy Policy</a> - {getPageData(
+                "/legal/privacy",
             )?.description}
         </li>
         <li>
-            <a href="/legal/tos">Terms Of Service</a> -
-            {getPageData("/legal/terms-of-service")?.description}
+            <a href="/legal/terms">Terms Of Service</a> -
+            {getPageData("/legal/terms")?.description}
         </li>
     </ul>
 
     <h2>Definition</h2>
 
     <p>
-        As stated in our <a href="/legal/tos">Terms of Service</a>,
+        As stated in our <a href="/legal/terms">Terms of Service</a>,
         <b>Legal Information</b> refers to the Terms of Service and the Privacy Policy.
     </p>
 

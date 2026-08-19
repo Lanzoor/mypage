@@ -459,6 +459,15 @@ button:not(.initial) {
     border-radius: 2147483647px;
 }
 
+.example {
+    width: 100%;
+    text-align: center;
+    border: 2px solid #777;
+    border-radius: 0.5em;
+    padding: 1em;
+    background: #222;
+}
+
 /* accessibility thingy */
 
 @media (prefers-reduced-motion: reduce) {

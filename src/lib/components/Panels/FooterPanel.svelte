@@ -49,13 +49,7 @@
                 <h2>General</h2>
                 <a href="/">Frontpage</a>
                 <a href="/profile">Profile</a>
-                <a href="/about">About</a>
                 <a href="/map">Site map</a>
-            </div>
-            <div class="group">
-                <h2>Documents</h2>
-                <a href="/docs">Documents</a>
-                <a href="/docs/blog">Blog</a>
             </div>
             <div class="group">
                 <h2>Projects</h2>
@@ -65,15 +59,22 @@
                 <a href="/projects/conlangs">Conlangs</a>
             </div>
             <div class="group">
+                <h2>Documents</h2>
+                <a href="/docs">Documents</a>
+                <a href="/docs/blog">Blog</a>
+            </div>
+            <div class="group">
                 <h2>Meta</h2>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
                 <a href="/projects/core/changelog">Changelog</a>
                 <a href="/credits">Credits</a>
             </div>
             <div class="group">
                 <h2>Legal</h2>
                 <a href="/legal">About</a>
-                <a href="/legal/privacy-policy">Privacy Policy</a>
-                <a href="/legal/tos">Terms of Service</a>
+                <a href="/legal/privacy">Privacy Policy</a>
+                <a href="/legal/terms">Terms of Service</a>
             </div>
         </nav>
     </section>

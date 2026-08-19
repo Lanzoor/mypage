@@ -55,140 +55,17 @@
         primarily Lanzoor. Please ask for permission before redistributing or
         modifying personal works.
     </p>
-</section>
 
-<section id="contact">
-    <h1>Contact</h1>
+    <div class="enable-spacing dim">
+        <h2>Looking for something else?</h2>
 
-    <p>
-        If you have any
-        <b>
-            <span class="col bright black">questions</span>,
-            <span class="col bright yellow">suggestions</span>, or
-            <span class="col bright red">concerns</span>,
-        </b>
-        feel free use the connections below to get in touch!
-    </p>
-
-    <ul>
-        <li>
-            <h3>
-                Discord
-
-                <code>@lanzoor</code>
-            </h3>
-
-            I strongly recommend using Discord since I check it quite often.<br
-            />
-            You may send me a friend request.
-        </li>
-        <li>
-            <h3>
-                Email
-
-                <a href="mailto:mail@lanzoor.dev">mail@lanzoor.dev</a>
-                <span class="dim">+others</span>
-            </h3>
-
-            <p>
-                Emails sent to
-                <b>mail@lanzoor.dev</b>,
-                <b>noreply@lanzoor.dev</b>,
-                <b>hello@lanzoor.dev</b>, or
-                <b>support@lanzoor.dev</b>
-                are forwarded to my personal email address,
-                <a href="mailto:lanzoor-general@proton.me"
-                    >lanzoor-general@proton.me</a
-                >. Feel free to contact my personal email address as well.
-            </p>
-
-            <p>
-                Replies will currently come from
-                <a href="mailto:lanzoor-general@proton.me"
-                    >lanzoor-general@proton.me</a
-                >, not the
-                <code>@lanzoor.dev</code> addresses. Thank you for your understanding.
-            </p>
-        </li>
-    </ul>
-
-    <blockquote class="warning">
-        <b class="col bright yellow">
-            ⚠ Please use this contact method responsibly.
-        </b><br /><br />
-
-        <b
-            >Messages containing spam, scams, harassment, abuse, or other
-            inappropriate content may be ignored, blocked, reported, or
-            otherwise dealt with at my discretion.</b
-        >
-
-        Please be respectful and keep your messages relevant. Constructive
-        feedback, questions, bug reports, and genuine inquiries are always
-        welcome.<br /><br />
-
-        <b>
-            <i>
-                <u>
-                    Please do not interact with me if all you're doing is being
-                    a jerk, disrespecting my efforts, or attempting to
-                    manipulate me. I am a human being, not your servant.
-                </u>
-            </i>
-        </b>
-    </blockquote>
-</section>
-
-<section id="domain">
-    <h1>Domains</h1>
-
-    <h2>Registered Domains</h2>
-
-    <p>
-        <b> As of now, the only domain(s) I have purchased are: </b>
-    </p>
-
-    <ul>
-        <li>
-            <code>lanzoor.dev</code> (the main website)
-        </li>
-        <li>
-            <code>lanzoor.xyz</code> (the website for my profile)
-        </li>
-        <li>
-            <code>lanzaforge.com</code> (redirects to
-            <code>lanzaforge.org</code>)
-        </li>
-        <li>
-            <code>lanzaforge.org</code> (nothing yet :c)
-        </li>
-    </ul>
-
-    <p>
-        <b>Subdomains within every website above are indeed mine.</b>
-        Examples include
-        <code><span class="dim">api</span>.lanzoor.dev</code>
-        and <code><span class="dim">discord</span>.lanzaforge.org</code>.
-    </p>
-
-    <p>
-        If you see ANY other domain that's not on the list above,
-        <i class="col bright red"
-            ><b>it's not affiliated with me, nor Lanzaforge.</b></i
-        >
-    </p>
-
-    <p class="dim">
-        I do not own <code>lanzoor.com</code>.
-    </p>
-
-    <h2>Registrar</h2>
-
-    <p>
-        <b
-            >All of my domains are registered via <External
-                href="https://porkbun.com/">Porkbun</External
-            >.</b
-        >
-    </p>
+        <ul>
+            <li>
+                <a href="/domains">Domain information</a>
+            </li>
+            <li>
+                <a href="/contact">Contact methods</a>
+            </li>
+        </ul>
+    </div>
 </section>

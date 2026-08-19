@@ -10,17 +10,6 @@
         <h1>Credits</h1>
     </header>
 
-    <blockquote class="warning">
-        <b class="col bright yellow">
-            This page, as well as every page under <code>/credits</code>, is
-            currently being moved to Lanzaforge, where credits and attribution
-            information will be maintained across all projects.
-        </b>
-        <br />
-        Some information here may be outdated during the migration. Thanks for your
-        patience!
-    </blockquote>
-
     <ul>
         <li>
             <a href="/credits/contributors">Contributors</a>

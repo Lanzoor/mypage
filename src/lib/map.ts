@@ -96,6 +96,13 @@ export const sitemap: Page[] = [
         ],
     },
     {
+        path: "/contact",
+        title: "Contact",
+
+        description:
+            "A list of the contact methods you can use to get in touch.",
+    },
+    {
         path: "/credits",
         title: "Credits",
         children: [
@@ -133,6 +140,24 @@ export const sitemap: Page[] = [
                 path: "/docs/linguistics",
                 title: "Linguistics",
                 description: "My documents related to linguistics.",
+
+                children: [
+                    {
+                        path: "/docs/linguistics/english",
+                        title: "English",
+
+                        description: "My documents related to English.",
+                        children: [
+                            {
+                                path: "/docs/linguistics/english/past-tenses",
+                                title: "About Past Tenses in English",
+
+                                description:
+                                    "An analysis of past tenses in English.",
+                            },
+                        ],
+                    },
+                ],
             },
             {
                 path: "/docs/math",
@@ -145,7 +170,7 @@ export const sitemap: Page[] = [
                         title: "Googology",
                         children: [
                             {
-                                path: "/docs/googology/CIN",
+                                path: "/docs/googology/consistent-illion-notation",
                                 title: "Consistent Illion Notation",
                             },
                         ],
@@ -153,6 +178,11 @@ export const sitemap: Page[] = [
                 ],
             },
         ],
+    },
+    {
+        path: "/domains",
+        title: "Domains",
+        description: "Information about the domains related to this website.",
     },
     {
         path: "/games",
@@ -170,7 +200,7 @@ export const sitemap: Page[] = [
 
         children: [
             {
-                path: "/legal/privacy-policy",
+                path: "/legal/privacy",
                 title: "Privacy Policy",
                 description:
                     "A detailed privacy policy explaining what information is collected, how it is used, and how it is handled.",
@@ -180,7 +210,7 @@ export const sitemap: Page[] = [
                 },
             },
             {
-                path: "/legal/terms-of-service",
+                path: "/legal/terms",
                 title: "Terms Of Service",
                 description:
                     "The terms and conditions governing your use of this website and its services.",
