@@ -739,7 +739,7 @@
         <h2>Konf&imacr;rma-k&emacr;sta 20</h2>
 
         <h1>
-            Da alenj&umacr;oca q&emacr;r der p&amacr;kel vel n&omacr;ma es
+            Da alenj&umacr;roca q&emacr;t der p&amacr;kel vel n&omacr;ma es
             lanzoor.dev ka?
         </h1>
 
