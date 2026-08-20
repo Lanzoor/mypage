@@ -136,7 +136,7 @@
                         about random stuff there!
                     </p>
                 </a>
-                <a class="link plain" href="/docs/blog">
+                <a class="link plain" href="/blog">
                     <h2>📝 Blog</h2>
                     <p>
                         Read announcements, development updates and life
