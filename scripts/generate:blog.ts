@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { type BlogEntry } from "../src/lib/types";
 
-const BLOG_ROOT = path.resolve("src/routes/(main)/docs/blog/(entries)/");
+const BLOG_ROOT = path.resolve("src/routes/(main)/blog/(entries)/");
 const OUTPUT = path.join(BLOG_ROOT, "entries.json");
 
 async function sleep(timeMs: number): Promise<any> {
@@ -81,5 +81,5 @@ entries.sort((a, b) => Number(b.published) - Number(a.published));
 await fs.writeFile(OUTPUT, JSON.stringify(entries, null, 4));
 
 console.log(
-    `successfully generated ${entries.length} blog entries @ /docs/blog/(entries)/entries.json`,
+    `successfully generated ${entries.length} blog entries @ /blog/(entries)/entries.json`,
 );

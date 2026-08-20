@@ -75,7 +75,9 @@
     <p>
         For the changelog conventions, please refer to <a
             href="/conventions/changelog">this article</a
-        >.
+        >.<br />
+        All versions of <code>core</code> follow the
+        <a href="/conventions/versioning">versioning conventions</a>.
     </p>
 
     <blockquote class="warning">

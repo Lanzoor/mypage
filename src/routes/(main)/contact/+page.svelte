@@ -18,7 +18,7 @@
 
     <blockquote class="warning">
         <b class="col bright yellow">Note:</b>
-        If your inquiry is more related to <External
+        If you believe your inquiry is more related to <External
             href="https://www.lanzaforge.org/contact">Lanzaforge</External
         > than to me personally, please consider using the contact methods listed
         on
@@ -44,10 +44,13 @@
     </p>
 
     <p>
-        Replies will currently come from
-        <a href="mailto:lanzoor-general@proton.me">lanzoor-general@proton.me</a
-        >, not the
-        <code>@lanzoor.dev</code> addresses. Thank you for your understanding.
+        <i
+            >Replies will currently come from
+            <a href="mailto:lanzoor-general@proton.me"
+                >lanzoor-general@proton.me</a
+            >, not the
+            <code>@lanzoor.dev</code> addresses. Thank you for your understanding.</i
+        >
     </p>
 
     <h2>Social Media</h2>
@@ -60,7 +63,7 @@
                 <code>@lanzoor</code>
             </h3>
 
-            I strongly recommend using Discord since I check it quite often.<br
+            I strongly recommend using Discord since I check it the most often.<br
             />
             You may send me a friend request.
         </li>
@@ -77,11 +80,11 @@
 
     <blockquote class="warning">
         <b class="col bright yellow">
-            ⚠ Please use this contact method responsibly.
+            ⚠ Please use my contact methods responsibly.
         </b><br /><br />
 
         <b
-            >Messages containing spam, scams, harassment, abuse, or other
+            >1. Messages containing spam, scams, harassment, abuse, or other
             inappropriate content may be ignored, blocked, reported, or
             otherwise dealt with at my discretion.</b
         >
@@ -93,8 +96,8 @@
         <b>
             <i>
                 <u>
-                    Please do not interact with me if all you're doing is being
-                    a jerk, disrespecting my efforts, or attempting to
+                    2. Please do not interact with me if all you're doing is
+                    being a jerk, disrespecting my efforts, or attempting to
                     manipulate me. I am a human being, not your servant.
                 </u>
             </i>

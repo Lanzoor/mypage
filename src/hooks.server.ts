@@ -19,6 +19,10 @@ const redirects: CoreRedirect[] = [
         to: "/docs/math/googology/consistent-illion-notation",
     },
     {
+        from: ["/docs/blog"],
+        to: "/blog",
+    },
+    {
         from: ["/site-map"],
         to: "/map",
     },

@@ -16,17 +16,6 @@
         </p>
     </header>
 
-    <ul>
-        <li>
-            <a href="/docs/blog/">Blog</a> - {getPageData("/docs/blog")
-                ?.description}
-        </li>
-        <li>
-            <a href="/api/docs/">API Documentation</a> - Official documentation for
-            the API of this website.
-        </li>
-    </ul>
-
     <h2>Topics</h2>
 
     <ul>
@@ -38,6 +27,18 @@
             <a href="/docs/linguistics">Linguistics</a> - {getPageData(
                 "/docs/linguistics",
             )?.description}
+        </li>
+    </ul>
+
+    <h2>Other Documents</h2>
+
+    <ul>
+        <li>
+            <a href="/blog/">Blog</a> - {getPageData("/blog")?.description}
+        </li>
+        <li>
+            <a href="/api/docs/">API Documentation</a> - Official documentation for
+            the API of this website.
         </li>
     </ul>
 </section>

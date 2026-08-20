@@ -73,6 +73,11 @@ export const sitemap: Page[] = [
         description: "A collection of alternate reality games made by Lanzoor.",
     },
     {
+        path: "/blog",
+        title: "Blog",
+        description: "Official updates, notices, or important announcements.",
+    },
+    {
         path: "/conlangs",
         title: "Conlangs",
         description: "A collection of my constructed languages.",
@@ -92,6 +97,15 @@ export const sitemap: Page[] = [
             {
                 path: "/conventions/changelog",
                 title: "Changelog Conventions",
+
+                description: "Conventions for changelog pages and entries.",
+            },
+            {
+                path: "/conventions/versioning",
+                title: "Versioning Conventions",
+
+                description:
+                    "Conventions for version strings of Lanzaforge projects.",
             },
         ],
     },
@@ -130,12 +144,6 @@ export const sitemap: Page[] = [
         path: "/docs",
         title: "Documents",
         children: [
-            {
-                path: "/docs/blog",
-                title: "Blog",
-                description:
-                    "Official updates, notices, or important announcements.",
-            },
             {
                 path: "/docs/linguistics",
                 title: "Linguistics",

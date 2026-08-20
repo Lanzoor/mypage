@@ -1,6 +1,5 @@
 <script lang="ts">
     import { pickRandom, randInt } from "$lib";
-    import WorkInProgress from "$lib/components/Information/WorkInProgress.svelte";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 
     const profileDesc = "very cool profile image of my original character Iris";
@@ -935,13 +934,18 @@
 
     .stacks .stack {
         font-family: "JetBrains Mono";
-
-        background: transparent;
-        color: white;
-
         font-size: 1em;
         letter-spacing: 0.15em;
         font-weight: 400;
+
+        background: transparent;
+        color: white;
+        transition: 200ms ease;
+    }
+
+    .stacks .stack:hover {
+        cursor: pointer;
+        transform: scale(1.1);
     }
 
     .stacks .stack.svelte {

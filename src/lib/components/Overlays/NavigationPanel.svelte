@@ -47,10 +47,23 @@
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/map">Site Map</a>
                     </li>
                     <li>
-                        <a href="/map">Site Map</a>
+                        <details open>
+                            <summary> Meta </summary>
+                            <ul>
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>
+                                <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="/credits">Credits</a>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                     <li>
                         <details open>
@@ -60,12 +73,10 @@
                                     <a href="/legal">About</a>
                                 </li>
                                 <li>
-                                    <a href="/legal/privacy-policy"
-                                        >Privacy Policy</a
-                                    >
+                                    <a href="/legal/privacy">Privacy Policy</a>
                                 </li>
                                 <li>
-                                    <a href="/legal/tos">Terms Of Service</a>
+                                    <a href="/legal/terms">Terms Of Service</a>
                                 </li>
                             </ul>
                         </details>
@@ -81,14 +92,14 @@
                                     <a href="/tools">Tools</a>
                                 </li>
                                 <li>
-                                    <a href="/tools">Conlangs</a>
-                                </li>
-                                <li>
                                     <External
                                         href="https://www.youtube.com/@lanzoormakesvideos"
                                     >
                                         Videos
                                     </External>
+                                </li>
+                                <li>
+                                    <a href="/tools">Conlangs</a>
                                 </li>
                             </ul>
                         </details>
@@ -101,28 +112,10 @@
                                     <a href="/docs">Document Portal</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/blog">Blog</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details open>
-                            <summary> Credits </summary>
-                            <ul>
-                                <li>
-                                    <a href="/credits">Credits Portal</a>
+                                    <a href="/blog">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="/credits/fonts">Font Credits</a>
-                                </li>
-                                <li>
-                                    <a href="/credits/assets">Asset Credits</a>
-                                </li>
-                                <li>
-                                    <a href="/credits/contributors"
-                                        >Contributors</a
-                                    >
+                                    <a href="/conventions">Conventions</a>
                                 </li>
                             </ul>
                         </details>

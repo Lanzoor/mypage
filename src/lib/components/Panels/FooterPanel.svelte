@@ -61,7 +61,8 @@
             <div class="group">
                 <h2>Documents</h2>
                 <a href="/docs">Documents</a>
-                <a href="/docs/blog">Blog</a>
+                <a href="/blog">Blog</a>
+                <a href="/conventions">Conventions</a>
             </div>
             <div class="group">
                 <h2>Meta</h2>
