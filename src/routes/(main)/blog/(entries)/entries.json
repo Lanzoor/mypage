@@ -1,16 +1,5 @@
 [
     {
-        "title": "Page Path Updates",
-        "description": "An announcement regarding updates to page paths.",
-        "tags": [
-            "important",
-            "announcement",
-            "core"
-        ],
-        "published": "2026-08-19T15:00:00.000Z",
-        "slug": "2026/08/page-path-updates"
-    },
-    {
         "title": "core Has Been Completed",
         "description": "core has been completed after months of development. This is a recap of the completion of core, as well as what comes next.",
         "tags": [

@@ -5,10 +5,6 @@ import { type BlogEntry } from "../src/lib/types";
 const BLOG_ROOT = path.resolve("src/routes/(main)/blog/(entries)/");
 const OUTPUT = path.join(BLOG_ROOT, "entries.json");
 
-async function sleep(timeMs: number): Promise<any> {
-    return new Promise((p) => setTimeout(p, timeMs));
-}
-
 const entries: BlogEntry[] = [];
 
 async function walk(dir: string): Promise<void> {
@@ -18,13 +14,8 @@ async function walk(dir: string): Promise<void> {
         const target: string = path.join(dir, item.name);
 
         if (item.isDirectory()) {
-            console.info(`info: parsing directory ${target}`);
-            await sleep(5);
             await walk(target);
             continue;
-        } else {
-            console.info(`info: parsing file ${target}`);
-            await sleep(5);
         }
 
         if (item.name !== "+page.svelte" || path.dirname(target) === BLOG_ROOT)

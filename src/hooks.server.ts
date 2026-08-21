@@ -54,6 +54,10 @@ const redirects: CoreRedirect[] = [
         from: ["/projects/conlangs"],
         to: "/conlangs",
     },
+    {
+        from: ["/it-all-begins"],
+        to: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    },
 ];
 
 export const handle: Handle = async ({ event, resolve }) => {

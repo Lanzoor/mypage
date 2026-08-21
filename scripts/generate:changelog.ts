@@ -7,10 +7,6 @@ const CHANGELOG_ROOT = path.resolve(
 );
 const OUTPUT = path.join(CHANGELOG_ROOT, "entries.json");
 
-async function sleep(timeMs: number): Promise<any> {
-    return new Promise((p) => setTimeout(p, timeMs));
-}
-
 const entries: ChangelogEntry[] = [];
 
 async function walk(dir: string): Promise<void> {
@@ -20,13 +16,8 @@ async function walk(dir: string): Promise<void> {
         const target: string = path.join(dir, item.name);
 
         if (item.isDirectory()) {
-            console.info(`info: parsing directory ${target}`);
-            await sleep(5);
             await walk(target);
             continue;
-        } else {
-            console.info(`info: parsing file ${target}`);
-            await sleep(5);
         }
 
         if (
