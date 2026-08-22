@@ -26,6 +26,16 @@
         "question19",
         "question20",
         "question21",
+        "question22",
+        "question23",
+        "question24",
+        "question25",
+        "question26",
+        "question27",
+        "question28",
+        "question29",
+        "question30",
+        "question31",
     ] as const;
 
     type Scene = (typeof scenes)[number];
@@ -767,7 +777,60 @@
             questions left to go!
         </p>
 
-        <h1>To be continued</h1>
+        <h2>Confirmation Question 21</h2>
+
+        <h1>What is lanzoor.dev?</h1>
+
+        <div class="buttons">
+            <button onclick={restart}>A type of cheese.</button>
+            <button onclick={restart}>A button.</button>
+            <button onclick={restart}>An orchestra.</button>
+            <button
+                onclick={() => {
+                    advance();
+                }}>A website.</button
+            >
+            <button onclick={restart}>A company that produces cheese.</button>
+            <button onclick={restart}>A language.</button>
+            <button onclick={restart} class="negative"
+                >Nothing. It doesn't exist.</button
+            >
+        </div>
+    {/if}
+
+    {#if scene === "question22"}
+        <h2>Confirmation Question 22</h2>
+
+        <h1>What is the name of the website?</h1>
+
+        <div class="scroll">
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+            <div>d</div>
+            <div>e</div>
+            <div>f</div>
+            <div>g</div>
+            <div>h</div>
+            <div>i</div>
+            <div>j</div>
+            <div>k</div>
+            <div>l</div>
+            <div>m</div>
+            <div>n</div>
+            <div>o</div>
+            <div>p</div>
+            <div>q</div>
+            <div>r</div>
+            <div>s</div>
+            <div>t</div>
+            <div>u</div>
+            <div>v</div>
+            <div>w</div>
+            <div>x</div>
+            <div>y</div>
+            <div>z</div>
+        </div>
     {/if}
 </section>
 
@@ -790,7 +853,8 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 2em;
+        column-gap: 2em;
+        row-gap: 1em;
     }
 
     .buttons button {

@@ -29,9 +29,9 @@
 
     <p>
         <b
-            >Subdomains, such as <code
-                ><span class="dim">api</span>.lanzoor.dev</code
-            >. the websites above are indeed mine.</b
+            >Subdomains of the websites above, such as <code
+                ><i>api</i>.lanzoor.dev</code
+            > are indeed mine.</b
         >
     </p>
 
@@ -43,7 +43,9 @@
     </p>
 
     <p class="dim">
-        I do not own <code>lanzoor.com</code>.
+        Also... I do not own <code>lanzoor.com</code>. It's probably worth
+        mentioning that it didn't exist before I bought
+        <code>lanzoor.dev</code>.
     </p>
 
     <h2>Registrar</h2>

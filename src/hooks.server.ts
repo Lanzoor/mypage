@@ -73,7 +73,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
             if (entry.preservePath && pathname.startsWith(from + "/")) {
                 throw redirect(code, entry.to + pathname.slice(from.length));
-            }
+            }   
         }
     }
 

@@ -81,7 +81,7 @@
         "This website is built with SvelteKit.",
         "I like giving my projects unnecessarily elaborate names.",
         "I HATE React. I have personal beef with React states.",
-        'The first webpage I ever made was a page for my conlang, Lanzoorian.<br>This conlang has been retired in favor of <a href="/conlangs/proto-lanzavel">Lanzavel</a>.',
+        'The first webpage I ever made was a page for my conlang, Lanzoorian.<br>Yes, I know that name sucks. Anyways, this conlang has been retired since then in favor of <a href="/conlangs/proto-lanzavel">Lanzavel</a>.',
         "This site actually started as a single-page profile website.",
         "I genuinely lose my mind when I try to understand recursive functions.",
         "I like command-line interfaces more than I probably should.",
@@ -100,7 +100,7 @@
         "I have a weird obsession with Greek letters.",
 
         // Common
-        "My favorite color is purple.",
+        "My favorite color is purple. It used to be blue, though.",
         "My favorite numbers are 11, 13, and 17.<br>I especially like 13 for some reason.",
         "I prefer cats over dogs.",
         "I have never drank coffee ever in my life.",
@@ -134,6 +134,7 @@
         "Enter the Konami code.",
         "May the eggs duplicate in peace.",
         "Nice weather today.",
+        "It all begins.",
         "I like spending time on the frontpage without doing anything whatsoever.",
 
         '<b class="col bright yellow">Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
@@ -810,8 +811,9 @@
         background-size: cover;
         background-attachment: fixed;
     }
+
     #intro {
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0, 0, 0, 0.6);
     }
 
     #intro .header {
@@ -838,6 +840,7 @@
         color: white;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         font-size: 2.5em;
+        line-height: 1.25;
         cursor: pointer;
     }
 
@@ -862,7 +865,6 @@
 
     #intro .header .name-group .handle {
         color: rgba(255, 255, 255, 0.75);
-        text-shadow: 0 0.5em 10px black;
     }
 
     #intro .description {
@@ -876,7 +878,6 @@
 
     #intro .tags .tag {
         opacity: 0.5;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
         transition: 2s ease;
     }
 
@@ -886,6 +887,7 @@
         cursor: pointer;
         transform: scale(1.1);
         transition: 0.5s ease;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 
     #bio {
