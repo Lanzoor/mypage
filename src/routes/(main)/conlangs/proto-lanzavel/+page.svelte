@@ -1,0 +1,101 @@
+<script>
+    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+</script>
+
+<section>
+    <Breadcrumbs />
+
+    <header>
+        <h1 class="lt-track" id="header">Proto-Lanzavel</h1>
+
+        <p>
+            Welcome to my conlang! This is <b>Proto-Lanzavel</b>, which is a
+            more ancient version of the modern Lanzavel language.<br />
+            This is
+            <b>not a document for those who wants to study the language.</b>
+            It's a basic foundation of the conlang.<br />
+            Once this language gets out of the development status, it will be adjusted
+            to new learners.<br />
+            But for now, there may be mistakes, inconsistencies, and variable information.
+        </p>
+    </header>
+
+    <h1 class="lt-track" id="1">1. Getting Started</h1>
+
+    <h2 class="lt-track" id="1-1">1-1. Purpose and Design Principles</h2>
+
+    <p>
+        Lanzavel is supposed to be a <b>root language</b> of all the future
+        languages, so it can be referenced and evolved at the same time.<br />
+        The conlang should be kept <b>minimal and consistent,</b> but it should
+        also be able to properly convey meaning just like the other natural
+        languages.<br />
+        It's similar in structure as of in Japanese since it's a pro-drop and SOV
+        language, but uses the Latin script as well as some accent markers.
+    </p>
+
+    <h2 class="lt-track" id="1-2">1-2. Phonetics and Phonology</h2>
+
+    <blockquote>
+        <b>
+            The first character of all alphabet names are <b>capitalized</b>.
+            They help differentiate from the existing words.
+        </b><br />
+        Vowel names: <b>[V] + <code>ref</code></b><br />
+        Consonant names: <b>[C] + <code>ef</code></b>
+    </blockquote>
+
+    <h3 class="lt-track" id="1-2-1">1-2-1. Vowels</h3>
+
+    <p>
+        In PLZ, vowels are split into two types; <b>"normal" vowels</b> and
+        <b>"distorted" vowels.</b><br />
+        Normal vowels have a more straight sound, while distorted vowels have a more
+        distorted, alternative sound.
+    </p>
+
+    <h3>Normal Vowels</h3>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Letter</th>
+                <th>Letter name in Lanzavel</th>
+                <th>IPA Pronunciation</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Aa</b></td>
+                <td><code>Aref</code></td>
+                <td>[a]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Ee</b></td>
+                <td><code>Eref</code></td>
+                <td>[e]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Ii</b></td>
+                <td><code>Iref</code></td>
+                <td>[i]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Oo</b></td>
+                <td><code>Oref</code></td>
+                <td>[o]</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Uu</b></td>
+                <td><code>Uref</code></td>
+                <td>[u]</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="lt-track" id="1-2-2">1-2-2. Consonants</h3>
+</section>

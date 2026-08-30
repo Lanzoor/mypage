@@ -1,0 +1,90 @@
+:root {
+    --anchor: #aaa;
+    --anchor-hover: #777;
+}
+
+code,
+kbd:not(.plain) {
+    display: inline-block;
+    font-family: "JetBrains Mono";
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+code {
+    background: rgb(20, 13, 0);
+    color: rgb(255, 220, 140);
+    padding: 2px 6px;
+}
+
+kbd:not(.plain) {
+    background: rgb(0, 18, 20);
+    color: rgb(140, 249, 255);
+    padding: 2px 6px;
+}
+
+kbd.plain {
+    display: inline-block;
+    font-family: "JetBrains Mono";
+    color: #777;
+}
+
+kbd.plain::before {
+    content: "<";
+}
+
+kbd.plain::after {
+    content: ">";
+}
+
+pre {
+    background: rgb(40, 40, 60);
+    padding: 0.75em 0.35em;
+    margin: 1rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 5px rgba(120, 140, 180, 0.4);
+    user-select: text;
+    color: rgb(180, 185, 200);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+a.plain {
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:not(.plain) {
+    text-decoration: none;
+    display: inline-block;
+
+    color: var(--anchor);
+
+    transition: color 0.2s ease;
+}
+
+a:not(.plain):hover {
+    text-decoration: underline;
+    color: var(--anchor-hover);
+}
+
+a:not(.plain):has(> img) {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    color: white;
+}
+
+a:not(.plain):has(> img):hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
+a:not(.plain) > img {
+    width: 1em;
+    height: 1em;
+}

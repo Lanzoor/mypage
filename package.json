@@ -1,0 +1,35 @@
+{
+    "name": "core-svelte",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm generate && vite dev",
+        "build": "pnpm generate && vite build",
+        "preview": "vite preview",
+        "prepare": "svelte-kit sync || echo ''",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "generate": "pnpm generate:blog && pnpm generate:changelog",
+        "generate:blog": "tsx scripts/generate:blog.ts",
+        "generate:changelog": "tsx scripts/generate:changelog.ts"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^7.0.1",
+        "@sveltejs/adapter-vercel": "^6.3.4",
+        "@sveltejs/kit": "^2.63.0",
+        "@sveltejs/vite-plugin-svelte": "^7.1.2",
+        "@types/node": "^26.1.1",
+        "prettier": "^3.9.1",
+        "prettier-plugin-svelte": "^4.1.1",
+        "svelte": "^5.56.1",
+        "svelte-check": "^4.6.0",
+        "tsx": "^4.23.0",
+        "typescript": "^6.0.3",
+        "vite": "^8.0.16"
+    },
+    "dependencies": {
+        "decimal.js": "^10.6.0",
+        "katex": "^0.18.1"
+    },
+    "packageManager": "pnpm@11.24.0+sha512.bd27e345e976dcb0be0b7a1228217b049a817e21b1f355c90dbe7dc46671895a8bc1e6d06c24554505ea93ea0b45f489a27ec1bfbc8de6a9659fca0f16fa0000"
+}
