@@ -68,14 +68,6 @@ export const sitemap: Page[] = [
         // ],
     },
     {
-<<<<<<< HEAD
-=======
-        path: "/arg",
-        title: "Alternate Reality Games",
-        description: "A collection of alternate reality games made by Lanzoor.",
-    },
-    {
->>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
         path: "/blog",
         title: "Blog",
         description: "Official updates, notices, or important announcements.",

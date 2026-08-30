@@ -49,17 +49,10 @@
 
     <p>
         <b>
-<<<<<<< HEAD
             Lanzoor, as well as Lanzaforge, is not affiliated with the services
             listed below. We do not control how these services process
             information, and do not access or use information collected by these
             services for its own purposes.
-=======
-            Lanzaforge is not affiliated with the services listed below.
-            Lanzaforge does not control how these services process information,
-            and does not access or use information collected by these services
-            for its own purposes.
->>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
         </b>
     </p>
 
@@ -71,35 +64,22 @@
             services for this website.</b
         ><br />
         As part of providing these services, Cloudflare may process technical information
-<<<<<<< HEAD
         such as IP addresses.
     </p>
 
     <p>
-=======
-        such as IP addresses.<br />
->>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
-        For more information, please refer to
         <External href="https://www.cloudflare.com/privacypolicy/">
             Cloudflare's privacy policy
         </External>.
     </p>
-
-    <h3>Vercel</h3>
-
     <p>
         <b>This website is hosted via Vercel.</b><br />
         As part of normal operation, Vercel may collect technical information such
-<<<<<<< HEAD
         as IP addresses, request logs, and performance metrics.
     </p>
 
     <p>
         For more information, please refer to
-=======
-        as IP addresses, request logs, and performance metrics.<br />For more
-        information, please refer to
->>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
         <External
             href="https://vercel.com/legal/privacy-notice#how-we-use-info"
         >
@@ -110,14 +90,10 @@
     <h3>Google Fonts</h3>
 
     <p>
-<<<<<<< HEAD
         <b>This website loads fonts via Google Fonts.</b>
     </p>
 
     <p>
-=======
-        <b>This website loads fonts via Google Fonts.</b><br />
->>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
         For more information, please refer to
         <External href="https://developers.google.com/fonts/faq/privacy">
             Google Fonts' privacy policy
