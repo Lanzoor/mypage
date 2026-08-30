@@ -189,6 +189,14 @@
         <li>
             <a href="/games">Games</a> - {getPageData("/games")?.description}
         </li>
+<<<<<<< HEAD
+=======
+
+        <li>
+            <a href="/arg">Alternate Reality Games</a> - {getPageData("/arg")
+                ?.description}
+        </li>
+>>>>>>> e0fbe813a6b43f0a534cbd13ea795a6371913f3a
     </ul>
 </section>
 
