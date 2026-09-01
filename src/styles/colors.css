@@ -36,89 +36,82 @@
     --bright-magenta: #dd88ff;
 }
 
-.col.black,
-.col.black * {
-    color: var(--black);
+.col * {
+    color: inherit;
 }
-.col.bright.black,
-.col.bright.black * {
-    color: var(--bright-black);
+.col.black {
+    color: var(--black) !important;
 }
 
-.col.red,
-.col.red * {
-    color: var(--red);
-}
-.col.bright.red,
-.col.bright.red * {
-    color: var(--bright-red);
+.col.bright.black {
+    color: var(--bright-black) !important;
 }
 
-.col.orange,
-.col.orange * {
-    color: var(--orange);
-}
-.col.bright.orange,
-.col.bright.orange * {
-    color: var(--bright-orange);
+.col.red {
+    color: var(--red) !important;
 }
 
-.col.yellow,
-.col.yellow * {
-    color: var(--yellow);
-}
-.col.bright.yellow,
-.col.bright.yellow * {
-    color: var(--bright-yellow);
+.col.bright.red {
+    color: var(--bright-red) !important;
 }
 
-.col.green,
-.col.green * {
-    color: var(--green);
-}
-.col.bright.green,
-.col.bright.green * {
-    color: var(--bright-green);
+.col.orange {
+    color: var(--orange) !important;
 }
 
-.col.cyan,
-.col.cyan * {
-    color: var(--cyan);
-}
-.col.bright.cyan,
-.col.bright.cyan * {
-    color: var(--bright-cyan);
+.col.bright.orange {
+    color: var(--bright-orange) !important;
 }
 
-.col.blue,
-.col.blue * {
-    color: var(--blue);
-}
-.col.bright.blue,
-.col.bright.blue * {
-    color: var(--bright-blue);
+.col.yellow {
+    color: var(--yellow) !important;
 }
 
-.col.purple,
-.col.purple * {
-    color: var(--purple);
-}
-.col.bright.purple,
-.col.bright.purple * {
-    color: var(--bright-purple);
+.col.bright.yellow {
+    color: var(--bright-yellow) !important;
 }
 
-.col.magenta,
-.col.magenta * {
-    color: var(--magenta);
-}
-.col.bright.magenta,
-.col.bright.magenta * {
-    color: var(--bright-magenta);
+.col.green {
+    color: var(--green) !important;
 }
 
-.adaptive-text-shadow,
-.adaptive-text-shadow * {
+.col.bright.green {
+    color: var(--bright-green) !important;
+}
+
+.col.cyan {
+    color: var(--cyan) !important;
+}
+
+.col.bright.cyan {
+    color: var(--bright-cyan) !important;
+}
+
+.col.blue {
+    color: var(--blue) !important;
+}
+
+.col.bright.blue {
+    color: var(--bright-blue) !important;
+}
+
+.col.purple {
+    color: var(--purple) !important;
+}
+
+.col.bright.purple {
+    color: var(--bright-purple) !important;
+}
+
+.col.magenta {
+    color: var(--magenta) !important;
+}
+
+.col.bright.magenta {
+    color: var(--bright-magenta) !important;
+}
+
+.adaptive-text-shadow {
     text-shadow: 0 0 10px
-        oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10));
+        oklch(from currentColor calc(l * 0.7) calc(c * 2) calc(h + 10)) !important;
 }

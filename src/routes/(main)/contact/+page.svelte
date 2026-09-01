@@ -60,7 +60,7 @@
             <h3>
                 Discord -
 
-                <code>@lanzoor</code>
+                <code>lanzoor</code>
             </h3>
 
             I strongly recommend using Discord since I check it the most often.<br

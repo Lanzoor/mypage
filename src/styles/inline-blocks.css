@@ -1,90 +1,86 @@
-:root {
-    --anchor: #aaa;
-    --anchor-hover: #777;
-}
+@layer global {
+    :root {
+        --anchor: #aaa;
+        --anchor-hover: #777;
+    }
 
-code,
-kbd:not(.plain) {
-    display: inline-block;
-    font-family: "JetBrains Mono";
-    padding: 4px 8px;
-    border-radius: 5px;
-}
+    code:not(.plain),
+    kbd:not(.plain) {
+        display: inline-block;
+        font-family: "JetBrains Mono";
+        padding: 4px 8px;
+        border-radius: 5px;
+    }
 
-code {
-    background: rgb(20, 13, 0);
-    color: rgb(255, 220, 140);
-    padding: 2px 6px;
-}
+    code:not(.plain) {
+        background: rgb(20, 13, 0);
+        color: rgb(255, 220, 140);
+        padding: 2px 6px;
+    }
 
-kbd:not(.plain) {
-    background: rgb(0, 18, 20);
-    color: rgb(140, 249, 255);
-    padding: 2px 6px;
-}
+    kbd:not(.plain) {
+        background: rgb(0, 18, 20);
+        color: rgb(140, 249, 255);
+        padding: 2px 6px;
+    }
 
-kbd.plain {
-    display: inline-block;
-    font-family: "JetBrains Mono";
-    color: #777;
-}
+    kbd.plain {
+        display: inline-block;
+        font-family: "JetBrains Mono";
+        color: #777;
+    }
 
-kbd.plain::before {
-    content: "<";
-}
+    kbd.plain::before {
+        content: "<";
+    }
 
-kbd.plain::after {
-    content: ">";
-}
+    kbd.plain::after {
+        content: ">";
+    }
 
-pre {
-    background: rgb(40, 40, 60);
-    padding: 0.75em 0.35em;
-    margin: 1rem 1rem;
-    border-radius: 6px;
-    box-shadow: 0 0 10px 5px rgba(120, 140, 180, 0.4);
-    user-select: text;
-    color: rgb(180, 185, 200);
+    pre:not(.plain) {
+        overflow-x: auto;
 
-    overflow-x: auto;
-    overflow-y: hidden;
-}
+        margin: 1.25rem 0;
+        padding: 1.25rem;
 
-a.plain {
-    text-decoration: none;
-    color: var(--text);
-}
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
 
-a:not(.plain) {
-    text-decoration: none;
-    display: inline-block;
+        background: #1a1b26;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 
-    color: var(--anchor);
+        user-select: text;
+    }
 
-    transition: color 0.2s ease;
-}
+    pre:not(.plain) code {
+        display: block;
 
-a:not(.plain):hover {
-    text-decoration: underline;
-    color: var(--anchor-hover);
-}
+        width: max-content;
+        min-width: 100%;
 
-a:not(.plain):has(> img) {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
+        font-size: 0.9em;
+        line-height: 1.65;
+    }
 
-    color: white;
-}
+    a.-block-anchor,
+    a.plain {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
-a:not(.plain):has(> img):hover {
-    text-decoration: none;
-    color: #ddd;
-}
+    a:not(.-block-anchor):not(.plain) {
+        text-decoration: none;
+        display: inline-block;
 
-a:not(.plain) > img {
-    width: 1em;
-    height: 1em;
+        color: var(--anchor);
+
+        transition: color 0.2s ease;
+    }
+
+    a:not(.-block-anchor):not(.plain):hover {
+        text-decoration: underline;
+        color: var(--anchor-hover);
+    }
 }

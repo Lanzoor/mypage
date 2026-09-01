@@ -17,9 +17,14 @@
 
     <ul>
         <li>
+            <a href="/games/do-not-play-this-game">Do not play this game</a><br
+            />
+            I have no idea why I made this. But for your own good, do not.
+        </li>
+        <!-- <li>
             <a href="/games/what-is-the-sites-name">What is the site's name?</a
             ><br />
             This is a VERY LONG puzzle game about the name of this website.
-        </li>
+        </li> -->
     </ul>
 </section>

@@ -1,1 +1,5 @@
-<a href="/blog">../ Go back to blogs page</a>
+<script>
+    import GoBack from "./GoBack.svelte";
+</script>
+
+<GoBack target="blogs" />

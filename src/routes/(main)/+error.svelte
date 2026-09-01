@@ -59,38 +59,40 @@
 {/if}
 
 <style lang="css">
-    #error-404 {
-        background: radial-gradient(
-            circle at 50% 50%,
-            rgba(100, 0, 255, 0.25),
-            transparent
-        );
-    }
+    @layer page {
+        #error-404 {
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(100, 0, 255, 0.25),
+                transparent
+            );
+        }
 
-    #internal-error {
-        background: radial-gradient(
-            circle at 50% 50%,
-            rgba(0, 4, 255, 0.25),
-            transparent
-        );
-    }
+        #internal-error {
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(0, 4, 255, 0.25),
+                transparent
+            );
+        }
 
-    section header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5em;
-    }
+        section header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5em;
+        }
 
-    section header .separator {
-        width: 2px;
-        height: 2em;
+        section header .separator {
+            width: 2px;
+            height: 2em;
 
-        background: rgba(255, 255, 255, 0.25);
-    }
+            background: rgba(255, 255, 255, 0.25);
+        }
 
-    section p {
-        text-align: center;
+        section p {
+            text-align: center;
+        }
     }
 </style>

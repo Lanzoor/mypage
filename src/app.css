@@ -3,7 +3,7 @@
 @import "./styles/blocks.css";
 @import "./styles/inline-blocks.css";
 
-/* @import './styles/debug.css'; */
+/* @import "./styles/debug.css"; */
 
 *,
 *::before,
@@ -14,6 +14,15 @@
 
 html {
     font-optical-sizing: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 :root {
@@ -470,15 +479,4 @@ button:not(.initial) {
     border-radius: 0.5em;
     padding: 1em;
     background: #222;
-}
-
-/* accessibility thingy */
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
 }

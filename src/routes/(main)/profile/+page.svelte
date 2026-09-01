@@ -77,10 +77,11 @@
 
     const triviaList = [
         // Programming & Tech
+        "I have a very weird love-hate relationship with programming.",
         "SvelteKit is my favorite framework.",
         "This website is built with SvelteKit.",
         "I like giving my projects unnecessarily elaborate names.",
-        "I HATE React. I have personal beef with React states.",
+        "I HATE REACT. Screw React states.",
         'The first webpage I ever made was a page for my conlang, Lanzoorian.<br>Yes, I know that name sucks. Anyways, this conlang has been retired since then in favor of <a href="/conlangs/proto-lanzavel">Lanzavel</a>.',
         "This site actually started as a single-page profile website.",
         "I genuinely lose my mind when I try to understand recursive functions.",
@@ -112,30 +113,25 @@
     ];
 
     const specialTriviaList = [
+        // Programming
+        "text-shadow: 0 0 10px currentColor :walc",
+        "CSS is a programming language if you believe hard enough.",
+
         // Funni
-        "I am a pigeon.",
-        "Have you found the pigeon yet?",
+        "I think this text is yellow. Feel free to prove me wrong.",
         "I ate a watermelon while writing this sentence.",
         "On August 29th, 2026, I made the devastating realization that I was, in fact, allergic to peaches.",
         "Your Lanzaforge™ subscription expires in 10 minutes.<br>Please renew immediately to continue using lanzoor.dev.",
-
-        // Programming
-        'git commit -m "h"',
-        "text-shadow: 0 0 10px currentColor",
-        "CSS is a programming language if you believe hard enough.",
-
-        // References
         "Emu is meaning... smile!!",
-        "wuck",
-        "mu",
 
         // Easter Eggs
         "I am legally required to put at least one easter egg in every website I make.",
         "Enter the Konami code.",
         "May the eggs duplicate in peace.",
         "Nice weather today.",
-        "It all begins.",
+        "It-all-begins.",
         "I like spending time on the frontpage without doing anything whatsoever.",
+        "Lan lan man. The sixteenth developer, lying hidden somewhere in this website. The one they call the Ultimate Procrastinator. Watch out for him.",
 
         '<b class="col bright yellow">Hey, thank you for spending a little bit of your time here! ♡</b><br>I put a lot of myself into the things I make, so knowing that someone chose to look at them genuinely means a lot to me.',
     ];
@@ -512,7 +508,7 @@
     <div class="word-cloud">
         {#each words as word}
             <span
-                class="word"
+                class="word noto-sans"
                 style={`
                 left:${word.style.x}%;
                 top:${word.style.y}%;
@@ -671,11 +667,13 @@
     <h2>Science</h2>
 
     <div class="stacks">
-        <div class="stack"><div class="col blue">Astronomy</div></div>
+        <div class="stack col blue">Astronomy</div>
         ⬩
-        <div class="stack"><div class="col purple">Physics</div></div>
+        <div class="stack col purple">Physics</div>
         ⬩
-        <div class="stack"><div class="col green">Chemistry</div></div>
+        <div class="stack col green">Chemistry</div>
+        ⬩
+        <div class="stack col orange">Thermodynamics</div>
     </div>
 
     <p>
@@ -695,33 +693,49 @@
     <h3>Idle/Clicker/Incremental Games</h3>
 
     <div class="stacks">
-        <div class="stack">
-            <div class="col bright cyan">Antimatter Dimensions</div>
+        <div
+            class="stack col bright cyan"
+            title="haha number go up simulator go brrr"
+        >
+            Antimatter Dimensions
         </div>
         ⬩
-        <div class="stack">
-            <div class="col bright blue">Cell to Singularity</div>
+        <div
+            class="stack col bright blue"
+            title="This is one of the first idle games I've ever played. It's peak."
+        >
+            Cell to Singularity
         </div>
         ⬩
-        <div class="stack">
-            <div class="col bright orange">Idle Slayer</div>
+        <div
+            class="stack col bright orange"
+            title="I don't get why people hate this so much. It's such a peak game."
+        >
+            Idle Slayer
         </div>
     </div>
 
     <h3>Rhythm Games</h3>
 
     <div class="stacks">
-        <div class="stack">
+        <div
+            class="stack"
+            title="no bro it's not tap tap tap TAP tap it's actually tap tap TAP tap tap"
+        >
             A Dance of
             <span class="col bright red">Fire</span> and
             <span class="col bright blue">Ice</span>
         </div>
         ⬩
-        <div class="stack"><span class="col bright magenta">osu!</span></div>
+        <div class="stack" title="click the rhombicosidodecahedrons">
+            <span class="col bright magenta">osu!</span>
+        </div>
         ⬩
-        <div class="stack col bright cyan">Quaver</div>
+        <div class="stack" title="semiquaver when">
+            <span class="col bright cyan">Quaver</span>
+        </div>
         ⬩
-        <div class="stack">
+        <div class="stack" title="PHENOMENAL game btw">
             <span class="col bright red">vivid</span>/<span
                 class="col bright cyan">stasis</span
             >
@@ -731,20 +745,29 @@
     <h3>Platformer Games</h3>
 
     <div class="stacks">
-        <div class="stack">
-            <div class="col bright yellow">Geometry Dash</div>
+        <div
+            class="stack col bright yellow"
+            title="brings me a lot of nostalgia"
+        >
+            Geometry Dash
         </div>
         ⬩
-        <div class="stack">
-            <div class="col bright red">Celeste</div>
+        <div
+            class="stack col bright red"
+            title="holy cow it peak platformer gaem!!"
+        >
+            Celeste
         </div>
     </div>
 
     <h3>Other Games</h3>
 
     <div class="stacks">
-        <div class="stack">
-            <div class="col bright black">Danganronpa</div>
+        <div
+            class="stack col bright black"
+            title="Lan lan man. The sixteenth developer, lying hidden somewhere in this website. The one they call the Ultimate Procrastinator. Watch out for him. "
+        >
+            Danganronpa
         </div>
     </div>
 
@@ -939,9 +962,9 @@
         font-size: 1em;
         letter-spacing: 0.15em;
         font-weight: 400;
+        color: white;
 
         background: transparent;
-        color: white;
         transition: 200ms ease;
     }
 
@@ -1021,6 +1044,22 @@
     #languages ul li h3 img {
         width: 1.5em;
         height: 1.5em;
+    }
+
+    #other-interests {
+        background: rgb(0, 0, 20);
+        background:
+            radial-gradient(
+                circle at 40% 40%,
+                rgba(115, 0, 255, 0.1),
+                transparent
+            ),
+            radial-gradient(
+                circle at 60% 60%,
+                rgba(0, 238, 255, 0.1),
+                transparent
+            ),
+            black;
     }
 
     #projects {

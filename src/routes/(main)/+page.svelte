@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Ba } from "$lib/components/Links";
     import { onMount } from "svelte";
 
     const messages = [
@@ -108,48 +109,48 @@
             </p>
 
             <div class="links">
-                <a class="link plain" href="/about">
+                <Ba href="/about">
                     <h2>🌐 About</h2>
                     <p>
                         <b>Learn more about this website,</b> including its goals,
                         and how it was built.
                     </p>
-                </a>
-                <a class="link plain" href="/profile">
+                </Ba>
+                <Ba href="/profile">
                     <h2>👤 Profile</h2>
                     <p>
                         <b>Learn more about me</b>, my interests, and where to
                         find me online.
                     </p>
-                </a>
-                <a class="link plain" href="/projects">
+                </Ba>
+                <Ba href="/projects">
                     <h2>💻 Projects</h2>
                     <p>
                         <b>Explore the projects I've been working on,</b> from experiments,
                         simple tools, to larger creations.
                     </p>
-                </a>
-                <a class="link plain" href="/docs">
+                </Ba>
+                <Ba href="/docs">
                     <h2>📄 Documents</h2>
                     <p>
                         <b>Browse my documents and guides.</b> I really like talking
                         about random stuff there!
                     </p>
-                </a>
-                <a class="link plain" href="/blog">
+                </Ba>
+                <Ba href="/blog">
                     <h2>📝 Blog</h2>
                     <p>
                         Read announcements, development updates and life
                         updates.
                     </p>
-                </a>
-                <a class="link plain" href="/projects/core/changelog">
+                </Ba>
+                <Ba href="/projects/core/changelog">
                     <h2>🔄 Changelog</h2>
                     <p>
                         See what's changed, what's new, and what's been
                         improved.
                     </p>
-                </a>
+                </Ba>
             </div>
         </div>
     </section>
@@ -209,10 +210,10 @@
     .quick-links .links {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
-        gap: 1em;
+        gap: 1.5em;
     }
 
-    .quick-links .links .link {
+    :global(.quick-links .links .-block-anchor) {
         display: block;
 
         padding: 1.5em;
@@ -227,19 +228,19 @@
         transition: 200ms ease;
     }
 
-    .quick-links .links .link:hover {
+    :global(.quick-links .links .-block-anchor:hover) {
         transform: translateY(-4px);
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.25);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .quick-links .links .link h2 {
+    :global(.quick-links .links .-block-anchor h2) {
         margin-bottom: 0.5em;
         font-size: 1.5em;
     }
 
-    .quick-links .links .link p {
+    :global(.quick-links .links .-block-anchor p) {
         margin: 0;
         opacity: 0.9;
     }

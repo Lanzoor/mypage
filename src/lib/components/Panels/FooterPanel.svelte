@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import External from "../Links/External.svelte";
+    import { Ba } from "../Links";
 
     let frontendVersion: string = $state("...");
     let backendVersion: string = $state("...");
@@ -101,11 +102,7 @@
 
         <div id="footer" class="enable-spacing">
             <div id="connections">
-                <External
-                    href="https://www.discord.com"
-                    showArrow={false}
-                    class="link"
-                >
+                <Ba href="https://www.discord.com" external={true}>
                     <img
                         src="/assets/icons/socials/discord.svg"
                         alt="Discord"
@@ -114,48 +111,38 @@
                     <span class="handle">
                         @<span class="col bright purple">lanzoor</span>
                     </span>
-                </External>
+                </Ba>
 
-                <External
-                    href="https://www.reddit.com/user/Lanzoor/"
-                    showArrow={false}
-                    class="link"
-                >
+                <Ba href="https://www.reddit.com/user/Lanzoor/" external={true}>
                     <img src="/assets/icons/socials/reddit.svg" alt="Reddit" />
 
                     <span class="handle">
                         u/<span class="col bright purple">Lanzoor</span>
                     </span>
-                </External>
+                </Ba>
 
-                <External
-                    href="https://github.com/Lanzoor"
-                    showArrow={false}
-                    class="link"
-                >
+                <Ba href="https://github.com/Lanzoor" external={true}>
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
 
                     <span class="handle">
                         <span class="col bright purple">Lanzoor</span>
                     </span>
-                </External>
+                </Ba>
 
-                <External
+                <Ba
                     href="https://steamcommunity.com/id/lanzoor/"
-                    showArrow={false}
-                    class="link"
+                    external={true}
                 >
                     <img src="/assets/icons/socials/steam.svg" alt="steam" />
 
                     <span class="handle">
                         <span class="col bright purple">Lanzoor</span>
                     </span>
-                </External>
+                </Ba>
 
-                <External
+                <Ba
                     href="https://www.youtube.com/@lanzoormakesvideos"
-                    showArrow={false}
-                    class="link"
+                    external={true}
                 >
                     <img
                         src="/assets/icons/socials/youtube.svg"
@@ -166,23 +153,15 @@
                         @<span class="col bright purple">lanzoor</span
                         >makesvideos
                     </span>
-                </External>
+                </Ba>
 
-                <!-- <External href="https://ko-fi.com/lanzoor" showArrow={false} class="link">
-                    <img src="/assets/icons/socials/ko-fi.svg" alt="Ko-fi" />
-
-                    <span class="handle">
-                        <span class="col bright purple">lanzoor</span>
-                    </span>
-                </External> -->
-
-                <a href="mailto:mail@lanzoor.dev" class="link">
+                <Ba href="mailto:mail@lanzoor.dev" external={true}>
                     <img src="/assets/icons/socials/email.svg" alt="Email" />
 
                     <span class="handle">
                         mail@<span class="col bright purple">lanzoor</span>.dev
                     </span>
-                </a>
+                </Ba>
             </div>
 
             <footer>
@@ -195,111 +174,124 @@
 </section>
 
 <style lang="css">
-    :root {
-        --footer-panel-bg: radial-gradient(
-            circle at 50% -25%,
-            #22054d 0%,
-            #000 100%
-        );
-    }
-
-    #footer-panel {
-        padding: auto 10%;
-        background: var(--footer-panel-bg);
-        border-top: 3px solid rgba(133, 91, 224, 0.5);
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 2%;
-
-        font-family: "JetBrains Mono";
-    }
-
-    #footer-panel section {
-        width: 100%;
-    }
-
-    #footer-panel #navigation {
-        padding: 4em;
-        border-bottom: 3px solid rgba(133, 91, 224, 0.5);
-    }
-
-    #footer-panel #navigation #navigation-links {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
-        gap: 2em;
-    }
-
-    @media (max-width: 1200px) {
-        #footer-panel #navigation #navigation-links {
-            grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    @layer component {
+        :root {
+            --footer-panel-bg: radial-gradient(
+                circle at 50% -25%,
+                #22054d 0%,
+                #000 100%
+            );
         }
-    }
 
-    #footer-panel #navigation #navigation-links .group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25em;
-    }
+        #footer-panel {
+            padding: auto 10%;
+            background: var(--footer-panel-bg);
+            border-top: 3px solid rgba(133, 91, 224, 0.5);
 
-    #footer-panel #navigation #navigation-links .group h2 {
-        margin: 0.25em 0 0.5em 0;
-        font-family: "JetBrains Mono";
-        font-size: 1.1em;
-        color: rgb(123, 61, 255);
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 2%;
 
-    #footer-panel #connections {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        column-gap: 1.5em;
-        row-gap: 0.5em;
+            font-family: "JetBrains Mono";
+        }
 
-        margin: 0 2em;
-    }
+        #footer-panel section {
+            width: 100%;
+        }
 
-    :global(#footer-panel #connections a:not(.plain):has(> img)) {
-        opacity: 0.75;
-        transition: opacity 500ms ease;
-    }
+        #footer-panel #navigation {
+            padding: 4em;
+            border-bottom: 3px solid rgba(133, 91, 224, 0.5);
+        }
 
-    :global(#footer-panel #connections a:not(.plain):has(> img):hover) {
-        opacity: 1;
-        text-decoration: none;
-    }
+        #footer-panel #navigation #navigation-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+            gap: 2em;
+        }
 
-    #footer-panel #connections .handle {
-        color: rgb(110, 55, 192);
-    }
+        @media (max-width: 1200px) {
+            #footer-panel #navigation #navigation-links {
+                grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+            }
+        }
 
-    #footer-panel footer {
-        font-size: 0.75em;
-        opacity: 0.5;
-        text-align: center;
-    }
+        #footer-panel #navigation #navigation-links .group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25em;
+        }
 
-    @media (max-width: 768px) {
-        :global(#footer-panel #connections a > img) {
-            width: 2em;
-            height: 2em;
+        #footer-panel #navigation #navigation-links .group h2 {
+            margin: 0.25em 0 0.5em 0;
+            font-family: "JetBrains Mono";
+            font-size: 1.1em;
+            color: rgb(123, 61, 255);
         }
 
         #footer-panel #connections {
-            justify-content: flex-start;
-            column-gap: 1em;
-            row-gap: 0.25em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            column-gap: 1.5em;
+            row-gap: 0.5em;
 
-            margin: 0;
+            margin: 0 2em;
+        }
+
+        :global(#footer-panel #connections .-block-anchor) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            opacity: 0.75;
+            gap: 0.5em;
+            transition: opacity 500ms ease;
+        }
+
+        :global(#footer-panel #connections .-block-anchor img) {
+            width: 1em;
+            height: 1em;
+        }
+
+        :global(#footer-panel #connections .-block-anchor:hover) {
+            opacity: 1;
+            text-decoration: none;
         }
 
         #footer-panel #connections .handle {
-            display: none;
+            color: rgb(110, 55, 192);
+        }
+
+        #footer-panel footer {
+            font-size: 0.75em;
+            opacity: 0.5;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            :global(#footer-panel #connections a > img) {
+                width: 2em;
+                height: 2em;
+            }
+
+            #footer-panel #connections {
+                justify-content: flex-start;
+                column-gap: 1em;
+                row-gap: 0.25em;
+
+                margin: 0;
+            }
+
+            #footer-panel #connections .handle {
+                display: none;
+            }
         }
     }
 </style>

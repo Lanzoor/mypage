@@ -16,32 +16,6 @@
     </header>
 </section>
 
-<section id="supporters">
-    <h1>Supporters</h1>
-
-    <p>
-        A huge thank-you to the <span class="col bright red"
-            >amazing supporters</span
-        > who has supported this project!
-    </p>
-
-    <div class="supporters">
-        <External href="https://github.com/Derukugis" showArrow={false}>
-            <img
-                src="/assets/contributors/derukugi.png"
-                alt="derukugi"
-                title="derukugi"
-            />
-        </External>
-
-        <img
-            src="/assets/contributors/default.png"
-            alt="conaxsilver"
-            title="conaxsilver"
-        />
-    </div>
-</section>
-
 <section id="amethyst">
     <h1>Amethyst Team</h1>
 
@@ -63,7 +37,10 @@
                 <h1>Lanzoor</h1>
 
                 <div class="roles">
-                    Founder · Developer · Professional Procrastinator
+                    Founder · Developer · <span
+                        title="start playing New World Order by Masafumi Takada"
+                        >Professional Procrastinator</span
+                    >
                 </div>
 
                 <p>
@@ -112,7 +89,9 @@
             <div class="description">
                 <h1>derukugi</h1>
 
-                <div class="roles">Security · Quality Assurance</div>
+                <div class="roles">
+                    Security · Quality Assurance · Supporter
+                </div>
 
                 <p>Gave inspirations and feedback for the website.</p>
 
@@ -140,6 +119,8 @@
 
             <div class="description">
                 <h1>conaxsilver</h1>
+
+                <div class="roles">Quality Assurance · Supporter</div>
 
                 <p>
                     A genius from Japan who gave some great quality assurance
@@ -208,37 +189,6 @@
 </section>
 
 <style lang="css">
-    #supporters {
-        background:
-            radial-gradient(
-                circle at top left,
-                rgba(112, 7, 37, 0.5),
-                transparent 40%
-            ),
-            black;
-    }
-
-    .supporters {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1em;
-    }
-
-    .supporters img {
-        width: 5em;
-        height: 5em;
-        border-radius: 2147483647px;
-
-        transition: transform 500ms ease;
-        user-select: none;
-    }
-
-    .supporters img:hover {
-        transform: scale(1.1) translateY(-4px);
-        cursor: pointer;
-    }
-
     #amethyst {
         background:
             radial-gradient(

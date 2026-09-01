@@ -1,4 +1,5 @@
 import { normalizePath } from "$lib/path";
+
 import { redirect, type Handle } from "@sveltejs/kit";
 
 type CoreRedirect = {
@@ -54,9 +55,28 @@ const redirects: CoreRedirect[] = [
         from: ["/projects/conlangs"],
         to: "/conlangs",
     },
+
+    // rickroll redirects
     {
         from: ["/it-all-begins"],
         to: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    },
+    {
+        from: ["/it-all-stops"],
+        to: "https://www.youtube.com/watch?v=xMHJGd3wwZk",
+    },
+    {
+        from: ["/it-all-japanese"],
+        to: "https://www.youtube.com/watch?v=RrESvSRNpeo",
+    },
+
+    {
+        from: ["/repo", "/source", "/source-code"],
+        to: "https://github.com/Lanzoor/core",
+    },
+    {
+        from: ["/repo-real"],
+        to: "https://github.com/Lanzoor/core",
     },
 ];
 
@@ -66,14 +86,16 @@ export const handle: Handle = async ({ event, resolve }) => {
     for (const entry of redirects) {
         const code = entry.permanent === true ? 308 : 307;
 
-        for (const from of entry.from) {
+        for (const rawFrom of entry.from) {
+            const from = normalizePath(rawFrom);
+
             if (pathname === from) {
                 throw redirect(code, entry.to);
             }
 
-            if (entry.preservePath && pathname.startsWith(from + "/")) {
+            if (entry.preservePath && pathname.startsWith(`${from}/`)) {
                 throw redirect(code, entry.to + pathname.slice(from.length));
-            }   
+            }
         }
     }
 

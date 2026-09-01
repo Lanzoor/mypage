@@ -1,0 +1,1 @@
+Do not go to /blog/2026/what/challenge and enter the number of z's that occur in the 700th entry of /blog/2026/what/diary.

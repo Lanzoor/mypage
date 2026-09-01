@@ -107,34 +107,6 @@
 
         <div class="project">
             <div class="header">
-                <div class="status wip">wip</div>
-
-                <h1>tzepak</h1>
-            </div>
-
-            <p class="description">
-                A strong deterministic password generator that creates unique,
-                reproducible passwords, written in Python.
-            </p>
-
-            <div class="information">
-                <div class="tags">
-                    <div class="tag program">program</div>
-                    <div class="tag cli">cli</div>
-                </div>
-
-                <div class="links">
-                    links:
-
-                    <External href="https://github.com/Lanzoor/tzepak"
-                        >source</External
-                    >
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="header">
                 <div class="status complete">complete</div>
 
                 <h1>BHOJ <span class="dim">(Bro Had One Job)</span></h1>

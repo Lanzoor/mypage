@@ -10,6 +10,6 @@ export function randInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function pickRandom<T>(array: T[]): T {
-    return array[randInt(0, array.length - 1)];
+export function pickRandom<const T>(array: readonly T[]): T {
+    return array[Math.floor(Math.random() * array.length)];
 }

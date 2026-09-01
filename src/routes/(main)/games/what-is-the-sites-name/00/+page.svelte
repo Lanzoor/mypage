@@ -121,7 +121,7 @@
         <h1>You failed!</h1>
 
         <p>
-            Remember: you are currently plaing on lanzoor.dev. <b
+            Remember: you are currently playing on lanzoor.dev. <b
                 >If you didn't ignore the warnings that is.</b
             >
         </p>

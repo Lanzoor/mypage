@@ -54,7 +54,7 @@
             <code>/legal/privacy-policy</code> -> <code>/legal/privacy</code>
         </li>
         <li>
-            <a href="/legal/terms">Terms Of Service</a>
+            <a href="/legal/terms">Terms Of Service</a>:
             <code>/legal/terms-of-service</code> -> <code>/legal/terms</code>
         </li>
     </ul>
