@@ -84,7 +84,7 @@ const redirects: CoreRedirect[] = [
     },
     {
         from: ["/projects/anti-lanzoor"],
-        to: "/projects/anti-lanzoor/index.html",
+        to: "https://archive.lanzoor.dev/anti-lanzoor",
     },
 ];
 
