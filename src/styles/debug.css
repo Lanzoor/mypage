@@ -1,14 +1,12 @@
-@layer overwrite {
-    :root {
-        --debug-primary: rgb(255, 0, 0);
-        --debug-secondary: rgb(255, 129, 129);
-    }
+:root {
+    --debug-primary: rgb(255, 0, 0);
+    --debug-secondary: rgb(255, 129, 129);
+}
 
-    * {
-        outline: 2px solid var(--debug-primary) !important;
-    }
+* {
+    outline: 2px solid var(--debug-primary) !important;
+}
 
-    *:not(div) {
-        outline: 2px solid var(--debug-secondary) !important;
-    }
+*:not(div) {
+    outline: 2px solid var(--debug-secondary) !important;
 }

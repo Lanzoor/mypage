@@ -45,7 +45,7 @@
 
 <section id="footer-panel" class="disable-padding">
     <section id="navigation">
-        <nav id="navigation-links">
+        <nav>
             <div class="group">
                 <h2>General</h2>
                 <a href="/">Frontpage</a>
@@ -167,131 +167,133 @@
             <footer>
                 © 2026 <External href="https://lanzaforge.org"
                     >Lanzaforge</External
-                > ⬩ built with ♡
+                > ⬩ Do not redistribute.<br />
+                Made with <External
+                    href="https://svelte.dev/docs/kit/introduction"
+                    >SvelteKit</External
+                > and ♡
             </footer>
         </div>
     </section>
 </section>
 
 <style lang="css">
-    @layer component {
-        :root {
-            --footer-panel-bg: radial-gradient(
-                circle at 50% -25%,
-                #22054d 0%,
-                #000 100%
-            );
+    :root {
+        --footer-panel-bg: radial-gradient(
+            circle at 50% -25%,
+            #22054d 0%,
+            #000 100%
+        );
+    }
+
+    #footer-panel {
+        padding: auto 10%;
+        background: var(--footer-panel-bg);
+        border-top: 3px solid rgba(133, 91, 224, 0.5);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2%;
+
+        font-family: "JetBrains Mono";
+    }
+
+    #footer-panel section {
+        width: 100%;
+    }
+
+    #footer-panel #navigation {
+        padding: 4em;
+        border-bottom: 3px solid rgba(133, 91, 224, 0.5);
+    }
+
+    #footer-panel #navigation nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+        gap: 2em;
+    }
+
+    @media (max-width: 1200px) {
+        #footer-panel #navigation nav {
+            grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
         }
+    }
 
-        #footer-panel {
-            padding: auto 10%;
-            background: var(--footer-panel-bg);
-            border-top: 3px solid rgba(133, 91, 224, 0.5);
+    #footer-panel #navigation nav .group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25em;
+    }
 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 2%;
+    #footer-panel #navigation nav .group h2 {
+        margin: 0.25em 0 0.5em 0;
+        font-family: "JetBrains Mono";
+        font-size: 1.1em;
+        color: rgb(123, 61, 255);
+    }
 
-            font-family: "JetBrains Mono";
-        }
+    #footer-panel #connections {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1.5em;
+        row-gap: 0.5em;
 
-        #footer-panel section {
-            width: 100%;
-        }
+        margin: 0 2em;
+    }
 
-        #footer-panel #navigation {
-            padding: 4em;
-            border-bottom: 3px solid rgba(133, 91, 224, 0.5);
-        }
+    :global(#footer-panel #connections .-block-anchor) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-        #footer-panel #navigation #navigation-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
-            gap: 2em;
-        }
+        opacity: 0.75;
+        gap: 0.5em;
+        transition: opacity 500ms ease;
+    }
 
-        @media (max-width: 1200px) {
-            #footer-panel #navigation #navigation-links {
-                grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-            }
-        }
+    :global(#footer-panel #connections .-block-anchor img) {
+        width: 1em;
+        height: 1em;
+    }
 
-        #footer-panel #navigation #navigation-links .group {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.25em;
-        }
+    :global(#footer-panel #connections .-block-anchor:hover) {
+        opacity: 1;
+        text-decoration: none;
+    }
 
-        #footer-panel #navigation #navigation-links .group h2 {
-            margin: 0.25em 0 0.5em 0;
-            font-family: "JetBrains Mono";
-            font-size: 1.1em;
-            color: rgb(123, 61, 255);
+    #footer-panel #connections .handle {
+        color: rgb(110, 55, 192);
+    }
+
+    #footer-panel footer {
+        font-size: 0.75em;
+        opacity: 0.5;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        :global(#footer-panel #connections a > img) {
+            width: 2em;
+            height: 2em;
         }
 
         #footer-panel #connections {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            column-gap: 1.5em;
-            row-gap: 0.5em;
+            justify-content: flex-start;
+            column-gap: 1em;
+            row-gap: 0.25em;
 
-            margin: 0 2em;
-        }
-
-        :global(#footer-panel #connections .-block-anchor) {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            opacity: 0.75;
-            gap: 0.5em;
-            transition: opacity 500ms ease;
-        }
-
-        :global(#footer-panel #connections .-block-anchor img) {
-            width: 1em;
-            height: 1em;
-        }
-
-        :global(#footer-panel #connections .-block-anchor:hover) {
-            opacity: 1;
-            text-decoration: none;
+            margin: 0;
         }
 
         #footer-panel #connections .handle {
-            color: rgb(110, 55, 192);
-        }
-
-        #footer-panel footer {
-            font-size: 0.75em;
-            opacity: 0.5;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            :global(#footer-panel #connections a > img) {
-                width: 2em;
-                height: 2em;
-            }
-
-            #footer-panel #connections {
-                justify-content: flex-start;
-                column-gap: 1em;
-                row-gap: 0.25em;
-
-                margin: 0;
-            }
-
-            #footer-panel #connections .handle {
-                display: none;
-            }
+            display: none;
         }
     }
 </style>

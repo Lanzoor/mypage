@@ -105,75 +105,73 @@
 </div>
 
 <style lang="css">
-    @layer component {
-        #warp {
-            position: fixed;
-            inset: 0;
+    #warp {
+        position: fixed;
+        inset: 0;
 
-            opacity: 0;
-            pointer-events: none;
-            z-index: 2147483648;
-        }
+        opacity: 0;
+        pointer-events: none;
+        z-index: 2147483648;
+    }
 
-        #warp.open {
-            opacity: 1;
-            pointer-events: auto;
+    #warp.open {
+        opacity: 1;
+        pointer-events: auto;
 
-            transition: 0.5s ease;
-        }
+        transition: 0.5s ease;
+    }
 
-        #warp .bg {
-            background: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            height: 100%;
+    #warp .bg {
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
 
-            cursor: pointer;
-        }
+        cursor: pointer;
+    }
 
-        #warp .panel {
-            background: #111;
-            border: 2px solid #222;
-            border-radius: 2em;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    #warp .panel {
+        background: #111;
+        border: 2px solid #222;
+        border-radius: 2em;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
 
-            padding: 2em;
-            font-size: 0.75em;
+        padding: 2em;
+        font-size: 0.75em;
 
-            align-items: center;
-            text-align: center;
+        align-items: center;
+        text-align: center;
 
-            overflow: auto;
-            cursor: default;
-        }
+        overflow: auto;
+        cursor: default;
+    }
 
-        #warp .panel .search-bar input[type="text"] {
-            width: 30em;
-            max-width: 75vw;
-        }
+    #warp .panel .search-bar input[type="text"] {
+        width: 30em;
+        max-width: 75vw;
+    }
 
-        #warp .panel .search-bar {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-        }
+    #warp .panel .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
 
-        #warp .panel .search-bar button {
-            background: #7155ff;
-            color: white;
+    #warp .panel .search-bar button {
+        background: #7155ff;
+        color: white;
 
-            padding: 0.5em 1em;
+        padding: 0.5em 1em;
 
-            transition: 0.5s ease;
-        }
+        transition: 0.5s ease;
+    }
 
-        #warp .panel .search-bar button:hover {
-            background: #aa91ff;
-        }
+    #warp .panel .search-bar button:hover {
+        background: #aa91ff;
     }
 </style>

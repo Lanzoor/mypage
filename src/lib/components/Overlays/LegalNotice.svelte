@@ -127,75 +127,73 @@
 </div>
 
 <style lang="css">
-    @layer component {
-        #legal-notice {
-            position: fixed;
-            inset: 4%;
+    #legal-notice {
+        position: fixed;
+        inset: 4%;
 
-            background: rgba(20, 0, 0, 0.95);
-            box-shadow: 0 10px 50px rgba(150, 0, 0, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 60, 60, 0.3);
-            border-radius: 8px;
+        background: rgba(20, 0, 0, 0.95);
+        box-shadow: 0 10px 50px rgba(150, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 60, 60, 0.3);
+        border-radius: 8px;
 
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
 
-            gap: 1.5em;
-            padding: 2em;
-            font-size: 1em;
+        gap: 1.5em;
+        padding: 2em;
+        font-size: 1em;
 
-            opacity: 0;
-            pointer-events: none;
+        opacity: 0;
+        pointer-events: none;
 
-            overflow-y: auto;
-            transition: opacity 0.3s ease;
-            z-index: 2147483649;
-        }
+        overflow-y: auto;
+        transition: opacity 0.3s ease;
+        z-index: 2147483649;
+    }
 
-        #legal-notice.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
+    #legal-notice.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-        #legal-notice.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
+    #legal-notice.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-        #legal-notice button {
-            background: transparent;
-            padding: 0.5em 1em;
+    #legal-notice button {
+        background: transparent;
+        padding: 0.5em 1em;
 
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 2147483647px;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2147483647px;
 
-            transition: 0.25s ease;
-        }
+        transition: 0.25s ease;
+    }
 
-        #legal-notice button:hover {
-            color: rgb(20, 0, 0);
-            background: white;
-            box-shadow: 0 0 20px white;
-        }
+    #legal-notice button:hover {
+        color: rgb(20, 0, 0);
+        background: white;
+        box-shadow: 0 0 20px white;
+    }
 
-        #legal-notice h1 {
-            color: rgba(255, 150, 150);
-            margin: 10px 0;
-        }
+    #legal-notice h1 {
+        color: rgba(255, 150, 150);
+        margin: 10px 0;
+    }
 
-        #legal-notice .bye {
-            text-align: center;
-        }
+    #legal-notice .bye {
+        text-align: center;
+    }
 
-        #legal-notice .bye p {
-            margin: 1em 0;
-            font-size: 0.8em;
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
+    #legal-notice .bye p {
+        margin: 1em 0;
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 </style>

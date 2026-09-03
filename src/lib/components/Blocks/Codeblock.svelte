@@ -20,7 +20,7 @@
         </div>
 
         <button onclick={() => navigator.clipboard.writeText(code)}>
-            yoink
+            Copy
         </button>
     </div>
 

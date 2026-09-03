@@ -24,6 +24,10 @@ const redirects: CoreRedirect[] = [
         to: "/blog",
     },
     {
+        from: ["/docs/shitter"],
+        to: "/docs/shitter/intro",
+    },
+    {
         from: ["/site-map"],
         to: "/map",
     },
@@ -77,6 +81,10 @@ const redirects: CoreRedirect[] = [
     {
         from: ["/repo-real"],
         to: "https://github.com/Lanzoor/core",
+    },
+    {
+        from: ["/projects/anti-lanzoor"],
+        to: "/projects/anti-lanzoor/index.html",
     },
 ];
 
