@@ -88,6 +88,7 @@
         "I like command-line interfaces more than I probably should.",
         "I have a Python program that backs up my workspace folder.",
         "I once spent 2 hours debugging an issue while editing a project,<br>until I realized I was in the wrong directory.",
+        "I make webpage games to study and memorize stuff for my tests.",
 
         // Languages
         "Contrary to popular belief, my favorite language is actually English.",

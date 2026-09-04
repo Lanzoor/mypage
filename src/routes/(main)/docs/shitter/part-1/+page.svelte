@@ -1,12 +1,13 @@
 <script>
     import Break from "$lib/components/Break.svelte";
+    import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
     import EditorsNote from "../EditorsNote.svelte";
 </script>
 
 <section>
     <h1>PART 1: NO SOUND, NO MEMORY</h1>
 
-    <h2>1-1: Immiscible Discord (late 2023 - early 2024)</h2>
+    <h2>1-1: Start of the Journey (late 2023 - early 2024)</h2>
 
     <p class="col bright red">
         NOTE: All of this data is based off of the results of asking the people
@@ -16,14 +17,17 @@
     </p>
 
     <p>
-        This is the start of the journey. A journey where Shitter becomes <b
-            >shitter, shittier, and the shittiest.</b
-        >
+        This is the start of the journey.
+
+        <b>
+            A journey where Shitter becomes shitter, shittier, and the
+            shittiest.
+        </b>
     </p>
 
     <p>
         Shitter's alias at this time was JHoCoSP. Before this the same account
-        was known as WMWMWM…WMKWM...WMWMWM but this was prior to the following
+        was known as WMWMWM...WMKWM...WMWMWM but this was prior to the following
         incidents.
     </p>
 
@@ -129,7 +133,7 @@
         their puzzles.
     </p>
 
-    <h2>1-3: Get over it. (Mid 2024)</h2>
+    <h2>1-3: bread👍 (Mid 2024)</h2>
 
     <blockquote>
         The following section is written by Lanzoor. All first-person references
@@ -152,11 +156,11 @@
 
     <p>
         And you know what's funny? While all of this was happening, <b
-            >Katherine was ""secretly""" helping out The Gang™ solve his OWN
-            ARG.</b
-        > YEAH. BRO WAS HELPING TO SOLVE HIS OWN ARG LMAOOO WHAT A DUMBASS (this proves
-        how ahh his arg is btw - kekeee)
+            >Katherine was ""secretly"" helping out the group solve his OWN ARG.</b
+        > YEAH. BRO WAS HELPING TO SOLVE HIS OWN ARG LMAOOO WHAT A DUMBASS
     </p>
+
+    <p class="dim">(this proves how ahh his arg is btw - kekeee)</p>
 
     <p>
         <b>
@@ -167,29 +171,16 @@
 
         This is how it was possible for Shitter to doublecross his own ARG.
         Caden claimed he knew about Katherine being Shitter, but he did not have
-        concrete proof, thus being unable to come to a solid conclusion. (death
-        note ahh situation 😭)
+        concrete proof, thus being unable to come to a solid conclusion.
+        <span class="dim">(death note ahh situation 😭)</span>
     </p>
 
     <p>
         Well, one day, Katherine blocked me because he just kind of crashed out.
     </p>
 
-    <h2>1-4: That Day, the Sky was Far Away (mid 2024 - late 2024)</h2>
-
-    <p>
-        Around the time the first Shitter ARG got solved, another Shitter alt,
-        now named EduAku (or <code>educationaccount</code>) joined Lanzoor's
-        server and literally BEGGED for forgiveness from Lanzoor and other
-        members as well. He tried justifying his actions by making excuses
-        around his poor living conditions. Of course, Lanzoor forgave him, but
-        that would be one of the worst mistakes we ever made.
-    </p>
-
-    <p>So yeah. About two to three months later, Shitter crashed out, AGAIN.</p>
-
-    <p>
-        Of course we get super fucking mad. And then. Do you know what Shitter
-        does?
-    </p>
+    <DocumentNavigation
+        previous={{ href: "/docs/shitter/part-0", title: "Part 0" }}
+        next={{ href: "/docs/shitter/part-2", title: "Part 2" }}
+    />
 </section>

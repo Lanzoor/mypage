@@ -38,31 +38,6 @@
         content: ">";
     }
 
-    pre:not(.plain) {
-        overflow-x: auto;
-
-        margin: 1.25rem 0;
-        padding: 1.25rem;
-
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0.75rem;
-
-        background: #1a1b26;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-
-        user-select: text;
-    }
-
-    pre:not(.plain) code {
-        display: block;
-
-        width: max-content;
-        min-width: 100%;
-
-        font-size: 0.9em;
-        line-height: 1.65;
-    }
-
     a.-block-anchor,
     a.plain {
         color: inherit;

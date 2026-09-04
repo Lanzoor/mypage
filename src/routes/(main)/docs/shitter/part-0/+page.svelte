@@ -1,3 +1,7 @@
+<script>
+    import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
+</script>
+
 <section>
     <h1>PART 0: A SHOT IN THE DARK</h1>
 
@@ -30,4 +34,9 @@
         Unfortunately, detailed information about the rebrands above are
         unavailable. Refer to the rest of the document for the other rebrands.
     </p>
+
+    <DocumentNavigation
+        previous={{ href: "/docs/shitter/intro", title: "Introduction" }}
+        next={{ href: "/docs/shitter/part-1", title: "Part 1" }}
+    />
 </section>

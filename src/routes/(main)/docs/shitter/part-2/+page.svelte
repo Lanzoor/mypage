@@ -1,42 +1,71 @@
 <script>
     import Break from "$lib/components/Break.svelte";
+    import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
+    import shittyARG from "../assets/image17.png";
 </script>
 
 <section>
     <h1>PART 2: SHIP OF FOOLS</h1>
 
-    <h2>2-1: Imprisoned Marionette (late 2024 - early 2025)</h2>
+    <h2>2-1: Field of Hopes and Despairs (mid 2024 - early 2025)</h2>
+
+    <p>
+        Around the time the first Shitter ARG got solved,
+        <b>
+            another Shitter alt, now named EduAku (or <code
+                >educationaccount</code
+            >) joined Lanzoor's server, and literally BEGGED for forgiveness
+            from Lanzoor and other members as well.
+        </b>
+
+        He tried justifying his actions by making excuses around his poor living
+        conditions. Of course, Lanzoor forgave him, but that would be one of the
+        worst mistakes we ever made.
+    </p>
+
+    <p>So yeah. About two to three months later, Shitter crashed out, AGAIN.</p>
+
+    <p>
+        Of course we get super fucking mad. And then. Do you know what Shitter
+        does?
+    </p>
 
     <Break height="50vh" />
 
-    <p>You guessed correctly.</p>
+    <p>...yup. You guessed correctly.</p>
 
-    <h1 style="font-size: 5em">HE MAKES <i>ANOTHER</i> ARG.</h1>
+    <h1 style="font-size: 5em">HE MAKES <i>ANOTHER</i> DUMBFUCK ARG.</h1>
 
     <p>
-        Yeah. This dude literally has no self regret or remorse. This time it's
-        somehow even shittier. He is literally living up to his own name.
+        Yeah. This dude literally has no remorse. This time it's somehow even
+        shittier. He is literally living up to his own name.
     </p>
 
     <p>
-        First up, Shitter created <b
-            >SO MANY WAR CRIMES AND MISTAKES WITH THIS ARG.</b
-        >
-        He fucked up Japanese (HE IDOLIZES JAPAN) which made the group members PISSED
-        AS FUCK. Lanzoor knows more Japanese than this guy even though he's Korean
-        just because he TRIES, while SHITTER DOESN'T EVEN TRY.
+        <b>
+            Shitter committed SO MANY WAR CRIMES AND MISTAKES WITH THIS ARG.
+        </b>
     </p>
 
     <p>
-        And the worst part? <b
-            >HE LITERALLY TOOK A PICTURE OF HIS CLASS, WITH ALL HIS CLASSMATES,
-            <i>WITHOUT ANY PERMISSION WHATSOEVER,</i> USED A FREE PHOTOMOSH FILTER,
-            PUT DISTORTED INSTANCES OF HAN CHARACTERS ON THEIR FACES, AND POSTED IT.</b
-        > Last I checked teenagers didn't want to be used as a tool to fuel someone's
-        weird ass desires, right? (Shitter also kinda doxxed himself in his school
-        after this and we managed to track down the school he goes to, but we're not
-        revealing it because.. jail is just a room right?? 😭😭)
+        <b>
+            HE LITERALLY TOOK A PICTURE OF HIS CLASS, WITH ALL HIS CLASSMATES,
+            <i
+                ><u style="font-size: 1.5em"
+                    >WITHOUT ANY PERMISSION WHATSOEVER,</u
+                ></i
+            > USED A FREE PHOTOMOSH FILTER, PUT DISTORTED INSTANCES OF HAN CHARACTERS
+            ON THEIR FACES, AND POSTED IT.
+        </b>
+
+        Last time I checked teenagers didn't want to be used as a tool to fuel
+        someone's weird ass desires, right? (Shitter also kinda doxxed himself
+        in his school after this 😭😭)
     </p>
+
+    <p>Here is the picture.</p>
+
+    <img src={shittyARG} alt="Shitty ARG made by Shitter" style="width: 40em" />
 
     <span class="dim"
         >(editors note: WHAT UNFORTUNATE SOUL DID BRO HAVE TO NAME “HORSE” IN
@@ -46,9 +75,20 @@
     <p>
         There were also some diagrams like this made by Shitter himself, but
         they are now lost to history. Shitter also tried to get under disguise
-        under the account <code>@item_poleggik</code> to spy on Lanzoor's server,
-        but it quickly got noticed and handled. It would be later revealed this account
-        was owned both by Shitter and Venda.
+        under the account <code>@item_poleggik</code> to spy on Lanzoor's
+        server, but it quickly got noticed and handled.
+
+        <b>
+            It would be later revealed this account was owned both by Shitter
+            and Venda, one of his "friends".
+        </b>
+    </p>
+
+    <p>
+        He also just fucked up Japanese (HE IDOLIZES JAPAN) which made the group
+        members PISSED AS FUCK. Lanzoor knows more Japanese than this guy even
+        though he's Korean just because he TRIES, while SHITTER DOESN'T EVEN
+        TRY.
     </p>
 
     <p>
@@ -93,7 +133,7 @@
 
     <p>
         He came back with the nickname "furofuro", which later got changed to
-        "Pℓ4y3r". Lanzoor found Shitter in the Celestial Stronghold server,
+        "Pℓ4y3r". Lanzoor found Shitter in the Celestial Stronghold server
         (owned by Digamma) and furofuro literally begged Lanzoor for
         forgiveness. Do you know the funniest thing here?
     </p>
@@ -112,7 +152,7 @@
         to forgive him after thinking for a while, while kekeee and TheCasualGuy
         took longer to forgive him for obvious reasons. Lanzoor even tried to
         negotiate kekeee into believing that he should forgive him because
-        Lanzoor was in his dumbfuck arc. (oh my god why did i do this 😭)
+        Lanzoor was in his dumbfuck arc. (oh my god why did i even do this 😭)
     </p>
 
     <p>
@@ -129,4 +169,9 @@
     </p>
 
     <p class="dim">...okay I think you know the deal already-</p>
+
+    <DocumentNavigation
+        previous={{ href: "/docs/shitter/part-1", title: "Part 1" }}
+        next={{ href: "/docs/shitter/part-3", title: "Part 3" }}
+    />
 </section>

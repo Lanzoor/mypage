@@ -1,7 +1,17 @@
+<script>
+    import ContentWarning from "$lib/components/Information/ContentWarning.svelte";
+    import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
+</script>
+
 <section>
     <h1>Shitter Explained, For Real!!</h1>
 
     <blockquote>Last updated September 3, 2026 - v3.0</blockquote>
+
+    <ContentWarning>
+        This document and other related documents contain intense profanity and
+        discuss themes related to suicidal thoughts and intentions.
+    </ContentWarning>
 
     <h2>
         Please note that much of this was made by Shitter in a very bad mental
@@ -10,10 +20,10 @@
     </h2>
 
     <p>
-        Over the past two years, a Discord user by the name of P. F [actual name
-        redacted, yes we know], and known by his many online aliases as <b
-            >Annette Katherine Ellington, EduAku, Pl4y3r, and <i>MUCH MORE</i
-            >,</b
+        Over the past {new Date().getFullYear() - 2024} years, a Discord user by the
+        name of P. F [actual name redacted, yes we know], and known by his many online
+        aliases as
+        <b>Annette Katherine Ellington, EduAku, Pl4y3r, and <i>MUCH MORE</i>,</b
         >
         but whom we will refer to as just "Shitter", has been
         <b>psychopathically tracking and spying on us,</b> even going so far as
@@ -57,7 +67,7 @@
         </li>
         <li>
             Discord user <code>@lanzoor</code> - Henceforth mentioned as
-            <b>"Lanzoor" or "lanzoor"</b>
+            <b>"Lanzoor"</b>
         </li>
         <li>
             Discord user <code>@caden3269</code> - <b>Caden Tan</b>, henceforth
@@ -83,13 +93,16 @@
 
     <ul>
         <li>
-            Shitter himself, of course. Usually we shall refer to him as
-            Shitter, but his other aliases may become appropriate in specific
-            situations.
+            <b>Shitter himself, of course.</b> Usually we shall refer to him as Shitter,
+            but his other aliases may become appropriate in specific situations.
         </li>
         <li>
             Side characters include Venda (Shitter's apparent """best friend"""
             ever since he was young, how does he have any friends)
         </li>
     </ul>
+
+    <DocumentNavigation
+        next={{ href: "/docs/shitter/part-0", title: "Part 0" }}
+    />
 </section>
