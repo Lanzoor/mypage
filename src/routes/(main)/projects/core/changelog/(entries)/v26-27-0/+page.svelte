@@ -1,5 +1,5 @@
 <script lang="ts">
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
 
     export const metadata = {
         title: "Overly Overhauled Overlays",
@@ -35,7 +35,7 @@
         <li>
             <span class="col bright green">+</span>
             Added a link to
-            <External href="https://www.lanzoor.xyz">core-xyz</External>
+            <Ia href="https://www.lanzoor.xyz" external>core-xyz</Ia>
             within the <a href="/projects">projects</a> page.
         </li>
         <li>
