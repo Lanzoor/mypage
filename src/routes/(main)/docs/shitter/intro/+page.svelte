@@ -84,7 +84,7 @@
         </li>
         <li>
             "lfyz" / "WildWhail" <span class="dim"
-                >(he changes his Discord username every 2.7 yoctoseconds 😭)</span
+                >(they change their Discord username every 2.7 yoctoseconds 😭)</span
             >
         </li>
     </ul>
