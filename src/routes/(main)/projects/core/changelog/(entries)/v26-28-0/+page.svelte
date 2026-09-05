@@ -1,6 +1,4 @@
 <script lang="ts">
-    import External from "$lib/components/Links/External.svelte";
-
     export const metadata = {
         title: "Finale",
         published: new Date("2026-08-13T00:00:00+09:00"),
