@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
     import { LegalInfo } from "$lib/legal";
 
@@ -68,9 +68,9 @@
     </p>
 
     <p>
-        <External href="https://www.cloudflare.com/privacypolicy/">
+        <Ia href="https://www.cloudflare.com/privacypolicy/" external>
             Cloudflare's privacy policy
-        </External>.
+        </Ia>.
     </p>
     <p>
         <b>This website is hosted via Vercel.</b><br />
@@ -80,11 +80,12 @@
 
     <p>
         For more information, please refer to
-        <External
+        <Ia
             href="https://vercel.com/legal/privacy-notice#how-we-use-info"
+            external
         >
             Vercel's privacy policy
-        </External>.
+        </Ia>.
     </p>
 
     <h3>Google Fonts</h3>
@@ -95,8 +96,8 @@
 
     <p>
         For more information, please refer to
-        <External href="https://developers.google.com/fonts/faq/privacy">
+        <Ia href="https://developers.google.com/fonts/faq/privacy" external>
             Google Fonts' privacy policy
-        </External>.
+        </Ia>.
     </p>
 </section>

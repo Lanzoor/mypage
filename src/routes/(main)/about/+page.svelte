@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
@@ -28,7 +28,7 @@
         This website is maintained by
         <span class="col bright purple">Lanzoor</span>, an individual developer
         from Korea, as part of the organization
-        <External href="https://www.lanzaforge.org/">Lanzaforge</External>. For
+        <Ia href="https://www.lanzaforge.org/" external>Lanzaforge</Ia>. For
         more information about myself, consider checking my
         <a href="/profile">profile</a> page out!
     </p>
@@ -37,13 +37,16 @@
 
     <p>
         The website is currently hosted on
-        <External href="https://vercel.com">Vercel</External>
+        <Ia href="https://vercel.com" external>Vercel</Ia>
         and built using
-        <External href="https://svelte.dev/docs/kit/introduction"
-            >SvelteKit</External
-        >. The <a href="/domains">domain</a> itself is registered via <External
-            href="https://porkbun.com">Porkbun</External
+        <Ia href="https://svelte.dev/docs/kit/introduction" external
+            >SvelteKit</Ia
         >.
+    </p>
+
+    <p>
+        The <a href="/domains">domain</a> itself is registered via
+        <Ia href="https://porkbun.com" external>Porkbun</Ia>.
     </p>
 
     <h2>Why was it created?</h2>
@@ -58,7 +61,7 @@
 
     <p>
         Unless otherwise stated, the content on this website belongs to
-        <External href="https://www.lanzaforge.org">Lanzaforge</External>, and
+        <Ia href="https://www.lanzaforge.org" external>Lanzaforge</Ia>, and
         primarily Lanzoor. Please ask for permission before redistributing or
         modifying personal works.
     </p>

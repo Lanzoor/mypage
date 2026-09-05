@@ -1,9 +1,8 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { page } from "$app/state";
-    import External from "../Links/External.svelte";
     import { navigationOverlay } from "$lib/overlays.svelte";
-    import { Ba } from "../Links";
+    import { Ba, Ia } from "../Links";
 
     type TopPanelDestination = {
         href: string;
@@ -58,12 +57,13 @@
     <nav class="links">
         {#each topPanelDestinations as destination}
             {#if destination.external}
-                <External
+                <Ia
                     href={destination.href}
                     class={isCurrent(destination) ? "current" : ""}
+                    external
                 >
                     [ {destination.name} ]
-                </External>
+                </Ia>
             {:else}
                 <a
                     href={destination.href}

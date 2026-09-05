@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
@@ -18,12 +18,13 @@
 
     <blockquote class="warning">
         <b class="col bright yellow">Note:</b>
-        If you believe your inquiry is more related to <External
-            href="https://www.lanzaforge.org/contact">Lanzaforge</External
-        > than to me personally, please consider using the contact methods listed
+        If you believe your inquiry is more related to <Ia
+            href="https://www.lanzaforge.org/contact"
+            external>Lanzaforge</Ia
+        > than to me personally, then please consider using the contact methods listed
         on
-        <External href="https://www.lanzaforge.org/contact"
-            >Lanzaforge's contact page</External
+        <Ia href="https://www.lanzaforge.org/contact" external
+            >Lanzaforge's contact page</Ia
         >.
     </blockquote>
 
@@ -71,8 +72,8 @@
             <h3>
                 Reddit -
 
-                <External href="https://www.reddit.com/user/Lanzoor/"
-                    >u/Lanzoor</External
+                <Ia href="https://www.reddit.com/user/Lanzoor/" external
+                    >u/Lanzoor</Ia
                 >
             </h3>
         </li>

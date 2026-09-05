@@ -4,9 +4,9 @@
 </script>
 
 <section>
-    <h1>Shitter Explained, For Real!!</h1>
+    <h1 style="font-size: 3em">Shitter Explained, For Real!!</h1>
 
-    <blockquote>Last updated September 3, 2026 - v3.0</blockquote>
+    <blockquote><b>Last updated on September 5th, 2026</b> - v4.0</blockquote>
 
     <ContentWarning>
         This document and other related documents contain intense profanity and

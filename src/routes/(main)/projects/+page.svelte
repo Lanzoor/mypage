@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
     import { getPageData } from "$lib/map";
 </script>
@@ -35,8 +35,8 @@
 
                     <a href="/"> project </a>
                     <a href="/projects/core/changelog"> changelog </a>
-                    <External href="https://github.com/Lanzoor/core"
-                        >source</External
+                    <Ia href="https://github.com/Lanzoor/core" external
+                        >source</Ia
                     >
                 </div>
             </div>
@@ -63,12 +63,12 @@
                 <div class="links">
                     links:
 
-                    <External href="https://api.lanzoor.dev">project</External>
-                    <External href="/projects/core-api/changelog"
-                        >changelog</External
+                    <Ia href="https://api.lanzoor.dev" external>project</Ia>
+                    <Ia href="/projects/core-api/changelog" external
+                        >changelog</Ia
                     >
-                    <External href="https://github.com/Lanzoor/core-api"
-                        >source</External
+                    <Ia href="https://github.com/Lanzoor/core-api" external
+                        >source</Ia
                     >
                 </div>
             </div>
@@ -95,11 +95,9 @@
                 <div class="links">
                     links:
 
-                    <External href="https://archive.lanzoor.dev"
-                        >project</External
-                    >
-                    <External href="https://github.com/Lanzoor/core-archive"
-                        >source</External
+                    <Ia href="https://archive.lanzoor.dev" external>project</Ia>
+                    <Ia href="https://github.com/Lanzoor/core-archive" external
+                        >source</Ia
                     >
                 </div>
             </div>
@@ -125,8 +123,8 @@
                 <div class="links">
                     links:
 
-                    <External href="https://github.com/Lanzoor/BHOJ"
-                        >source</External
+                    <Ia href="https://github.com/Lanzoor/BHOJ" external
+                        >source</Ia
                     >
                 </div>
             </div>
@@ -136,8 +134,7 @@
     <p>
         For archived projects (such as <code>periodica</code> and
         <code>profile-old</code>), please refer to
-        <External href="https://legacy.lanzoor.dev">legacy.lanzoor.dev</External
-        >.
+        <Ia href="https://legacy.lanzoor.dev" external>legacy.lanzoor.dev</Ia>.
     </p>
 </section>
 

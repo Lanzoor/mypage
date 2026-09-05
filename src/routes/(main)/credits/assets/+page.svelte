@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ba, Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
@@ -11,21 +11,17 @@
     <p>
         This section contains the credits for all of the icons used in this
         website.<br />
-        <b
-            >Thank you <External
-                href="https://www.svgrepo.com/"
-                target="_blank"
-                rel="noopener noreferrer">SVG Repo</External
-            >
+        <b>
+            Thank you <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
             and
-            <External href="https://svgstack.com/">SVG Stack</External> for providing
-            the icons below,</b
-        >
+            <Ia href="https://svgstack.com/" external>SVG Stack</Ia>
+
+            for providing the icons below,
+        </b>
         they are both great sources!<br />
         <i>Click on an icon to warp into their links.</i>
-        If you have any concerns, feel free to <External href="#connections">
-            get in touch
-        </External>.<br />
+        If you have any concerns, feel free to
+        <a href="/contact"> get in touch </a>.<br />
     </p>
 
     <blockquote>
@@ -51,78 +47,62 @@
     <h1 class="toc-track" id="country-icons">Country Icons</h1>
 
     <div class="icon-group">
-        <External
+        <Ba
             href="https://www.svgrepo.com/svg/401752/flag-for-south-korea"
-            showArrow={false}
+            external
         >
             <img src="/assets/icons/countries/south-korea.svg" />
-        </External>
-        <External
-            href="https://www.svgrepo.com/svg/401755/flag-for-spain"
-            showArrow={false}
-        >
+        </Ba>
+        <Ba href="https://www.svgrepo.com/svg/401755/flag-for-spain" external>
             <img src="/assets/icons/countries/spain.svg" />
-        </External>
-        <External
+        </Ba>
+        <Ba
             href="https://www.svgrepo.com/svg/401788/flag-for-united-kingdom"
-            showArrow={false}
+            external
         >
             <img src="/assets/icons/countries/united-kingdom.svg" />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
-            Platform: <External
-                href="https://www.svgrepo.com/"
-                target="_blank"
-                rel="noopener noreferrer">SVG Repo</External
-            >
+            Platform: <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
-            Author: <External
+            Author: <Ia
                 href="https://github.com/joypixels/emojione?ref=svgrepo.com"
-                >Joypixels</External
+                external>Joypixels</Ia
             >
         </li>
         <li>
-            License: <External
+            License: <Ia
                 href="https://www.svgrepo.com/page/licensing/#MIT"
-                >MIT License</External
+                external>MIT License</Ia
             >
         </li>
     </ul>
 
     <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/242294/japan"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/242294/japan" external>
             <img src="/assets/icons/countries/japan.svg" />
-        </External>
+        </Ba>
 
-        <External
-            href="https://www.svgrepo.com/svg/242353/china"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/242353/china" external>
             <img src="/assets/icons/countries/china.svg" />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
-            Platform: <External href="https://www.svgrepo.com/"
-                >SVG Repo</External
-            >
+            Platform: <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
-            Author: <External href="https://www.svgrepo.com/">SVG Repo</External
-            >
+            Author: <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
-            License: <External
+            License: <Ia
                 href="https://www.svgrepo.com/page/licensing/#CC0"
-                >Public Domain / CC0 License</External
+                external>Public Domain / CC0 License</Ia
             >
         </li>
     </ul>
@@ -132,123 +112,105 @@
     <h1 id="interactive-icons">Interactive Icons</h1>
 
     <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/458610/color-mode"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/458610/color-mode" external>
             <img src="/assets/icons/color-mode.svg" />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
             Platform:
-            <External href="https://www.svgrepo.com/">SVG Repo</External>
+            <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
             Author:
-            <External href="https://www.figma.com/@leonid?ref=svgrepo.com">
+            <Ia href="https://www.figma.com/@leonid?ref=svgrepo.com" external>
                 Leonid Tsvetkov
-            </External>
+            </Ia>
         </li>
         <li>
             License:
-            <External
+            <Ia
                 href="https://www.svgrepo.com/page/licensing/#CC%20Attribution"
+                external
             >
                 CC Attribution License
-            </External>
+            </Ia>
         </li>
     </ul>
 
     <span id="krystonschwarze"></span>
 
     <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/511004/hamburger-md"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/511004/hamburger-md" external>
             <img src="/assets/icons/hamburger.svg" />
-        </External>
+        </Ba>
 
-        <External
-            href="https://www.svgrepo.com/svg/510924/close-md"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/510924/close-md" external>
             <img src="/assets/icons/close.svg" />
-        </External>
+        </Ba>
 
-        <External
-            href="https://www.svgrepo.com/svg/511122/settings"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/511122/settings" external>
             <img src="/assets/icons/settings.svg" />
-        </External>
+        </Ba>
 
-        <External
-            href="https://www.svgrepo.com/svg/510874/caret-down-md"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/510874/caret-down-md" external>
             <img src="/assets/icons/caret-down.svg" />
-        </External>
+        </Ba>
 
-        <External
-            href="https://www.svgrepo.com/svg/510970/external-link"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/510970/external-link" external>
             <img src="/assets/icons/external-link.svg" />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
             Platform:
-            <External href="https://www.svgrepo.com/">SVG Repo</External>
+            <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
             Author:
-            <External
+            <Ia
                 href="https://github.com/krystonschwarze/coolicons?ref=svgrepo.com"
+                external
             >
                 Krystonschwarze
-            </External>
+            </Ia>
         </li>
         <li>
             License:
-            <External
+            <Ia
                 href="https://www.svgrepo.com/page/licensing/#CC%20Attribution"
+                external
             >
                 CC Attribution License
-            </External>
+            </Ia>
         </li>
     </ul>
 
     <span id="noah-jacobus"></span>
 
     <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/535437/home"
-            showArrow={false}
-        >
+        <Ba href="https://www.svgrepo.com/svg/535437/home" external>
             <img src="/assets/icons/home.svg" />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
             Platform:
-            <External href="https://www.svgrepo.com/">SVG Repo</External>
+            <Ia href="https://www.svgrepo.com/" external>SVG Repo</Ia>
         </li>
         <li>
             Author:
-            <External href="https://noahjacob.us/?ref=svgrepo.com"
-                >Noah Jacobus</External
+            <Ia href="https://noahjacob.us/?ref=svgrepo.com" external
+                >Noah Jacobus</Ia
             >
         </li>
         <li>
             License:
-            <External href="https://www.svgrepo.com/page/licensing#PD"
-                >PD License</External
+            <Ia href="https://www.svgrepo.com/page/licensing#PD" external
+                >PD License</Ia
             >
         </li>
     </ul>
@@ -256,114 +218,68 @@
     <h1 class="toc-track" id="social-icons">Social Icons</h1>
 
     <div class="icon-group">
-        <External
-            href="https://svgstack.com/icon/outline-reddit-logo-468"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/outline-reddit-logo-468" external>
             <img
                 src="/assets/icons/socials/reddit.svg"
                 alt="Reddit"
                 title="Reddit"
             />
-        </External>
+        </Ba>
 
-        <External
-            href="https://svgstack.com/icon/github-logo-5036"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/github-logo-5036" external>
             <img
                 src="/assets/icons/socials/github.svg"
                 alt="GitHub"
                 title="GitHub"
             />
-        </External>
+        </Ba>
 
-        <External
-            href="https://svgstack.com/icon/steam-logo-3053"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/steam-logo-3053" external>
             <img
                 src="/assets/icons/socials/steam.svg"
                 alt="Steam"
                 title="Steam"
             />
-        </External>
+        </Ba>
 
-        <External
-            href="https://svgstack.com/icon/youtube-outline-logo-471"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/youtube-outline-logo-471" external>
             <img
                 src="/assets/icons/socials/youtube.svg"
                 alt="YouTube"
                 title="YouTube"
             />
-        </External>
+        </Ba>
 
-        <External
-            href="https://svgstack.com/icon/outline-discord-logo-508"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/outline-discord-logo-508" external>
             <img
                 src="/assets/icons/socials/discord.svg"
                 alt="Discord"
                 title="Discord"
             />
-        </External>
+        </Ba>
 
-        <External
-            href="https://svgstack.com/icon/email-icon-1629"
-            showArrow={false}
-        >
+        <Ba href="https://svgstack.com/icon/email-icon-1629" external>
             <img
                 src="/assets/icons/socials/email.svg"
                 alt="Email"
                 title="Email"
             />
-        </External>
+        </Ba>
     </div>
 
     <ul>
         <li>
-            Platform: <External href="https://svgstack.com">SVG Stack</External>
+            Platform: <Ia href="https://svgstack.com" external>SVG Stack</Ia>
         </li>
         <li>
-            Author: <External href="https://svgstack.com">SVG Stack</External>
+            Author: <Ia href="https://svgstack.com" external>SVG Stack</Ia>
         </li>
         <li>
-            License: <External href="https://svgstack.com/page/license"
-                >Creative Commons BY 4.0 license</External
+            License: <Ia href="https://svgstack.com/page/license" external
+                >Creative Commons BY 4.0 license</Ia
             >
         </li>
     </ul>
-
-    <!--
-    <div class="icon-group">
-        <External
-            href="https://www.svgrepo.com/svg/341974/ko-fi"
-            showArrow={false}
-        >
-            <img src="/assets/icons/socials/ko-fi.svg" alt="Ko-Fi" />
-        </External>
-    </div>
-
-    <ul>
-        <li>
-            Platform:
-            <External href="https://www.svgrepo.com/">SVG Repo</External>
-        </li>
-        <li>
-            Author: <External href="https://www.svgrepo.com/author/coreui/"
-                >coreui</External
-            >
-        </li>
-        <li>
-            License: <External
-                href="https://www.svgrepo.com/page/licensing/#GPL"
-                >GPL license</External
-            >
-        </li>
-    </ul> -->
 </section>
 
 <style>

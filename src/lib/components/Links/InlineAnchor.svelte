@@ -2,35 +2,34 @@
     import type { HTMLAnchorAttributes } from "svelte/elements";
 
     let {
-        external = true,
+        external = false,
         showArrow = external,
-        plain = false,
+
         href,
         class: className,
         children,
+
         ...props
     }: HTMLAnchorAttributes & {
         external?: boolean;
         showArrow?: boolean;
-        plain?: boolean;
     } = $props();
 </script>
 
 <a
     {href}
-    class:plain
-    class={`-external-link ${className}`}
+    class={external ? `-external-link ${className ?? ""}` : className}
     target={external ? "_blank" : undefined}
     rel={external ? "noopener noreferrer" : undefined}
     {...props}
 >
     {@render children?.()}
 
-    {#if showArrow}
+    {#if external && showArrow}
         <img
             class="arrow"
             aria-hidden="true"
-            alt="↗"
+            alt=""
             src="/assets/icons/external-link.svg"
         />
     {/if}
@@ -38,23 +37,19 @@
 
 <style>
     :global(.-external-link) {
+        color: #fff;
         display: inline-flex;
-        flex-direction: row;
-        align-items: center;
+        align-items: baseline;
         justify-content: center;
         gap: 0.5em;
-
-        color: white;
     }
 
     :global(.-external-link:hover) {
-        text-decoration: none;
         color: #ddd;
     }
 
-    :global(.-external-link > img) {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
+    :global(.-external-link > .arrow) {
+        width: 0.8em;
+        height: 0.8em;
     }
 </style>

@@ -5,7 +5,7 @@
 <section>
     <h1>PART 0: A SHOT IN THE DARK</h1>
 
-    <h2>0-1: Nocturne Interlude (before late 2023)</h2>
+    <h2>0-1: The Timeline Before Everything (before late 2023)</h2>
 
     <p>
         Shitter has confirmed to have been undergoing <b

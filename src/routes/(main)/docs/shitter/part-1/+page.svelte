@@ -1,5 +1,5 @@
 <script>
-    import Break from "$lib/components/Break.svelte";
+    import Break from "$lib/components/Blocks/Break.svelte";
     import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
     import EditorsNote from "../EditorsNote.svelte";
 </script>
@@ -7,7 +7,7 @@
 <section>
     <h1>PART 1: NO SOUND, NO MEMORY</h1>
 
-    <h2>1-1: Start of the Journey (late 2023 - early 2024)</h2>
+    <h2>1-1: The Calm Before the Storm (late 2023 - early 2024)</h2>
 
     <p class="col bright red">
         NOTE: All of this data is based off of the results of asking the people
@@ -60,7 +60,7 @@
         fine. But all of that is about to change.
     </p>
 
-    <h2>1-2: Unreliable Notes (early 2024 - mid 2024)</h2>
+    <h2>1-2: bread👍 (early 2024 - mid 2024)</h2>
 
     <p class="col bright red">
         <b>CONTENT WARNING!</b> This story contains themes and discussion of
@@ -133,7 +133,11 @@
         their puzzles.
     </p>
 
-    <h2>1-3: bread👍 (Mid 2024)</h2>
+    <h2>
+        1-3: <span class="col bright yellow jetbrains-mono"
+            >Lanzoor joined the game</span
+        > (Mid 2024)
+    </h2>
 
     <blockquote>
         The following section is written by Lanzoor. All first-person references

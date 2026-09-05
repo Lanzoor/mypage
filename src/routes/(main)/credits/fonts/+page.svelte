@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
@@ -22,43 +22,48 @@
     <ul>
         <li>
             <b>JetBrains Mono</b> -
-            <External
+            <Ia
                 href="https://www.lanzaforge.org/attribution/fonts#jetbrains-mono"
+                external
             >
                 attribution link
-            </External>
+            </Ia>
         </li>
         <li>
             <b>Fira Code</b> -
-            <External
+            <Ia
                 href="https://www.lanzaforge.org/attribution/fonts#fira-code"
+                external
             >
                 attribution link
-            </External>
+            </Ia>
         </li>
         <li>
             <b>Noto Sans</b> -
-            <External
+            <Ia
                 href="https://www.lanzaforge.org/attribution/fonts#noto-sans"
+                external
             >
                 attribution link
-            </External>
+            </Ia>
         </li>
         <li>
             <b>Noto Sans Mono</b> -
-            <External
+            <Ia
                 href="https://www.lanzaforge.org/attribution/fonts#noto-sans-mono"
+                external
             >
                 attribution link
-            </External>
+            </Ia>
         </li>
         <li>
             <b>Sawarabi Gothic</b> -
-            <External
+            <Ia
                 href="https://www.lanzaforge.org/attribution/fonts#sawarabi-gothic"
+                external
             >
                 attribution link
-            </External>
+            </Ia>
         </li>
     </ul>
 </section>

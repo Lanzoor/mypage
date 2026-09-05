@@ -1,5 +1,5 @@
 <script>
-    import Break from "$lib/components/Break.svelte";
+    import Break from "$lib/components/Blocks/Break.svelte";
     import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
     import shittyARG from "../assets/image17.png";
 </script>
@@ -124,7 +124,7 @@
         this point
     </p>
 
-    <h2>2-2: Insatiable Pale Color (early 2025 - mid 2025)</h2>
+    <h2>2-2: Eat. Sleep. Shit. Repeat. (early 2025 - mid 2025)</h2>
 
     <p>
         Yeah. <b>HE LITERALLY COMES BACK. <i>AGAIN.</i></b> OH MY FUCKING GOD I WANT

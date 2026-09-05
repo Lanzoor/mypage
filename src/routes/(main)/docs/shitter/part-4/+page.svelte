@@ -9,7 +9,7 @@
 <section>
     <h1>PART 4: DEATH AT 20,000 VOLTS</h1>
 
-    <h2>4-1: To One Day Reach That Flowery Stage (late 2025)</h2>
+    <h2>4-1: To Fake a Suicide (again) (AGAIN) (final) (1) (late 2025)</h2>
 
     <p>
         Yep. Sooooo unpredictable I know. This is like the gazillionth time and

@@ -1,5 +1,5 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
+    import { Ia } from "$lib/components/Links";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 
@@ -51,10 +51,9 @@
     <h2>Registrar</h2>
 
     <p>
-        <b
-            >All of my domains are registered via <External
-                href="https://porkbun.com/">Porkbun</External
-            >.</b
-        >
+        <b>
+            All of my domains are registered via
+            <Ia href="https://porkbun.com/" external>Porkbun</Ia>.
+        </b>
     </p>
 </section>

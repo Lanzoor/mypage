@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import External from "../Links/External.svelte";
-    import { Ba } from "../Links";
+    import { Ba, Ia } from "../Links";
 
     let frontendVersion: string = $state("...");
     let backendVersion: string = $state("...");
@@ -56,7 +55,7 @@
                 <h2>Projects</h2>
                 <a href="/projects">Projects</a>
                 <a href="/tools">Tools</a>
-                <External href="/projects/videos">Videos</External>
+                <Ia href="/projects/videos" external>Videos</Ia>
                 <a href="/projects/conlangs">Conlangs</a>
             </div>
             <div class="group">
@@ -102,7 +101,7 @@
 
         <div id="footer" class="enable-spacing">
             <div id="connections">
-                <Ba href="https://www.discord.com" external={true}>
+                <Ba href="https://www.discord.com" external>
                     <img
                         src="/assets/icons/socials/discord.svg"
                         alt="Discord"
@@ -113,7 +112,7 @@
                     </span>
                 </Ba>
 
-                <Ba href="https://www.reddit.com/user/Lanzoor/" external={true}>
+                <Ba href="https://www.reddit.com/user/Lanzoor/" external>
                     <img src="/assets/icons/socials/reddit.svg" alt="Reddit" />
 
                     <span class="handle">
@@ -121,7 +120,7 @@
                     </span>
                 </Ba>
 
-                <Ba href="https://github.com/Lanzoor" external={true}>
+                <Ba href="https://github.com/Lanzoor" external>
                     <img src="/assets/icons/socials/github.svg" alt="GitHub" />
 
                     <span class="handle">
@@ -129,10 +128,7 @@
                     </span>
                 </Ba>
 
-                <Ba
-                    href="https://steamcommunity.com/id/lanzoor/"
-                    external={true}
-                >
+                <Ba href="https://steamcommunity.com/id/lanzoor/" external>
                     <img src="/assets/icons/socials/steam.svg" alt="steam" />
 
                     <span class="handle">
@@ -140,10 +136,7 @@
                     </span>
                 </Ba>
 
-                <Ba
-                    href="https://www.youtube.com/@lanzoormakesvideos"
-                    external={true}
-                >
+                <Ba href="https://www.youtube.com/@lanzoormakesvideos" external>
                     <img
                         src="/assets/icons/socials/youtube.svg"
                         alt="YouTube"
@@ -155,7 +148,7 @@
                     </span>
                 </Ba>
 
-                <Ba href="mailto:mail@lanzoor.dev" external={true}>
+                <Ba href="mailto:mail@lanzoor.dev" external>
                     <img src="/assets/icons/socials/email.svg" alt="Email" />
 
                     <span class="handle">
@@ -165,12 +158,12 @@
             </div>
 
             <footer>
-                © 2026 <External href="https://lanzaforge.org"
-                    >Lanzaforge</External
-                > ⬩ Do not redistribute.<br />
-                Made with <External
+                © 2026
+                <Ia href="https://lanzaforge.org" external>Lanzaforge</Ia> ⬩ Do not
+                redistribute.<br />
+                Made with <Ia
                     href="https://svelte.dev/docs/kit/introduction"
-                    >SvelteKit</External
+                    external>SvelteKit</Ia
                 > and ♡
             </footer>
         </div>

@@ -56,46 +56,48 @@
 
     <h3>Normal Vowels</h3>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Letter</th>
-                <th>Letter name in Lanzavel</th>
-                <th>IPA Pronunciation</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td><b>Aa</b></td>
-                <td><code>Aref</code></td>
-                <td>[a]</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><b>Ee</b></td>
-                <td><code>Eref</code></td>
-                <td>[e]</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><b>Ii</b></td>
-                <td><code>Iref</code></td>
-                <td>[i]</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><b>Oo</b></td>
-                <td><code>Oref</code></td>
-                <td>[o]</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><b>Uu</b></td>
-                <td><code>Uref</code></td>
-                <td>[u]</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="scrollable">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Letter</th>
+                    <th>Letter name in Lanzavel</th>
+                    <th>IPA Pronunciation</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><b>Aa</b></td>
+                    <td><code>Aref</code></td>
+                    <td>[a]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Ee</b></td>
+                    <td><code>Eref</code></td>
+                    <td>[e]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Ii</b></td>
+                    <td><code>Iref</code></td>
+                    <td>[i]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Oo</b></td>
+                    <td><code>Oref</code></td>
+                    <td>[o]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>Uu</b></td>
+                    <td><code>Uref</code></td>
+                    <td>[u]</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <h3 class="lt-track" id="1-2-2">1-2-2. Consonants</h3>
 </section>

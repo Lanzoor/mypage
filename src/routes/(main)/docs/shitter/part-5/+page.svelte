@@ -85,5 +85,6 @@
 
     <DocumentNavigation
         previous={{ href: "/docs/shitter/part-4", title: "Part 4" }}
+        next={{ href: "/docs/shitter/appendix", title: "Appendix" }}
     />
 </section>

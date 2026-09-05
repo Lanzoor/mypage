@@ -1,5 +1,4 @@
 <script>
-    import External from "$lib/components/Links/External.svelte";
     import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
 </script>
 

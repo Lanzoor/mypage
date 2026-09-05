@@ -1,7 +1,7 @@
 <script lang="ts">
     import { navigationOverlay, warpOverlay } from "$lib/overlays.svelte";
     import { onMount } from "svelte";
-    import External from "../Links/External.svelte";
+    import { Ia } from "../Links";
 
     onMount(() => {
         const listener = (event: KeyboardEvent) => {
@@ -92,14 +92,15 @@
                                     <a href="/tools">Tools</a>
                                 </li>
                                 <li>
-                                    <External
+                                    <Ia
+                                        external
                                         href="https://www.youtube.com/@lanzoormakesvideos"
                                     >
                                         Videos
-                                    </External>
+                                    </Ia>
                                 </li>
                                 <li>
-                                    <a href="/tools">Conlangs</a>
+                                    <a href="/conlangs">Conlangs</a>
                                 </li>
                             </ul>
                         </details>

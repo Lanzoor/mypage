@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Break from "$lib/components/Break.svelte";
+    import Break from "$lib/components/Blocks/Break.svelte";
     import DocumentNavigation from "$lib/components/Navigation/DocumentNavigation.svelte";
     import walcImage from "../assets/image16.png";
     import surrender from "../assets/image6.png";
@@ -8,7 +8,7 @@
 <section>
     <h1>PART 3: THE WITLESS</h1>
 
-    <h2>3-1: To Catch a Shitter (mid 2026)</h2>
+    <h2>3-1: To Catch a Shitter (mid 2025)</h2>
 
     <p class="col bright red">
         WARNING: here's a very walc picture made by the group members. the
@@ -47,7 +47,7 @@
         WHAT NOW? <i>IS HELPING TO GET RID OF BAD THINGS NOT ALLOWED???</i> 😭
     </p>
 
-    <h2>3-2: Shitter's Shitty Ahh Rebellion (mid 2025 - late 2025)</h2>
+    <h2>3-2: Shitter's Shitty Rebellion (mid 2025 - late 2025)</h2>
 
     <p>he left again lmfao</p>
 
@@ -94,9 +94,15 @@
     </p>
 
     <p>
-        Also, when Lanzoor tried to spy on Shitter's server with his alt
-        accounts, Shitter noticed it very quickly and banned two of Lanzoor's
-        accounts.
+        Lanzoor also tried to spy on Shitter's server with his alt accounts.
+        Although Lanzoor was able to gather some information, Shitter noticed it
+        pretty quickly and banned two of Lanzoor's accounts.
+    </p>
+
+    <p>
+        In March 2025, Discord user <code>@klyburn_ii</code> joined Lanzoor's server.
+        Since they were also in Shitter's server the moderators suspended and eventually
+        banned him.
     </p>
 
     <p>
@@ -131,13 +137,14 @@
     </p>
 
     <p>
-        Now I think it's the part where he begs for forgiveness again and tries
-        to find a way out-
+        Now I think it's the part where he comes back and literally begs for
+        forgiveness (again)-
     </p>
 
     <h2>
-        3-3: The Part Where He Begs for Forgiveness <i>Again</i> and Tries to Find
-        a Way Out (late 2025)
+        3-3: The Part Where He Comes Back And Literally Begs for Forgiveness <i
+            >(Again)</i
+        > (late 2025)
     </h2>
 
     <p>
