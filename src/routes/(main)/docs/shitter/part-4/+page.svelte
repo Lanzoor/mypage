@@ -114,29 +114,49 @@
 
     <div class="display">
         <code>
-            4301501303403301401503502404304403101504403404402301501303404202403304402302401103304302102402104402301302301103504401504204301504501503304401501503304402304501504204301543015013034033014015035024043044031015044034044023015013034042024033044023024011033043021024021044023013023011035044015042043015045015033044015015033044023045015042043015</code
+            r1u93ol1ob3ug4is36b4om4of1u93oq2ol4of2o73ir26g26s2i92i73us1uq4ib4ub3is1ub3is2it1uq4ibr1u93ol1ob3ug4is36b4om4of1u93oq2ol4of2o73ir26g26s2i92i73us1uq4ib4ub3is1ub3is2it1uq4ib</code
         >
     </div>
 
-    <EditorsNote>
-        (that's not what the image says though? - kekeee) wait what -lanzoor
-    </EditorsNote>
-
-    <p>converted from base 36 (as hinted by XXXVI) to base 6 gives:</p>
+    <p>
+        Converting the long string from base 36 (as hinted by XXXVI) to base 6
+        gives:
+    </p>
 
     <div class="display">
-        <code>SECONDEPISTLETOTHECORINTHIANSFIFTHCHAPTERSEUENTEENTHUERSE </code>
+        <code
+            >4301501303403301401503502404304403101504403404402301501303404202403304402302401103304302102402104402301302301103504401504204301504501503304401501503304402304501504204301543015013034033014015035024043044031015044034044023015013034042024033044023024011033043021024021044023013023011035044015042043015045015033044015015033044023045015042043015
+        </code>
     </div>
 
-    <p>Sanitizing the output and swapping the u's with v's gives:</p>
+    <p>
+        Decoding the Polybius Cipher with separator <code>0</code> and the
+        encryption key <code>ABCDEFGHIKLMNOPQRSTUWXYZ</code> gives:
+    </p>
+
+    <div class="display">
+        <code>
+            SECONDEPISTLETOTHECORINTHIANSFIFTHCHAPTERSEUENTEENTHUERSESECONDEPISTLETOTHECORINTHIANSFIFTHCHAPTERSEUENTEENTHUERSE
+        </code>
+    </div>
+
+    <p>Sanitizing the output and removing the redundant part gives:</p>
+
+    <div class="display">
+        <code
+            >SECOND EPISTLE TO THE CORINTHIANS FIFTH CHAPTER SEUENTEENTH UERSE</code
+        >
+    </div>
+
+    <p>Swapping the u's with v's gives:</p>
 
     <div class="display">
         <b>
-            <code
-                >SECOND EPISTLE TO THE CORINTHIANS FIFTH CHAPTER SEVENTEENTH
-                VERSE</code
-            ></b
-        >
+            <code>
+                SECOND EPISTLE TO THE CORINTHIANS FIFTH CHAPTER SEVENTEENTH
+                VERSE
+            </code>
+        </b>
     </div>
 
     <p>This verse (2 Corinthians 5:17) reads:</p>
@@ -155,17 +175,16 @@
         to Mormonism.
     </p>
 
-    <p>Also, the Latin at the bottom says:</p>
+    <p>Also, the text at the bottom:</p>
 
     <div class="display"><code>mio voti magno tu omnia vωſon</code></div>
 
     <p>
-        This sentence basically translates into: <b
-            >I wish great things to you.</b
-        >
+        This is a Latin sort of conlang. We couldn't get the exact meaning, but
+        it roughly means something like: <b>I wish great things to you.</b>
     </p>
 
-    <p>(probably not lmfao)</p>
+    <p>(he probably doesn't lmfao)</p>
 
     <h2>4-2: How a Shitter becomes a Criminal (early 2026)</h2>
 

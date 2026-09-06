@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
 
     const messages = [
-        [30_000, "Still there?"],
+        [30_000, "You sstill there?"],
         [60_000, "You can take your time."],
         [90_000, "You really like this page, huh."],
         [120_000, "Okay, seriously. I think you forgot to close this tab."],
@@ -14,7 +14,7 @@
         [182_400, "Welcome! 👋"],
     ] as const;
 
-    let greeting = $state("Welcome! 👋");
+    let message = $state("Welcome! 👋");
 
     onMount(() => {
         let timers: ReturnType<typeof setTimeout>[] = [];
@@ -24,11 +24,11 @@
                 clearTimeout(timer);
             }
 
-            greeting = "Welcome! 👋";
+            message = "Welcome! 👋";
 
             timers = messages.map(([delay, message]) =>
                 setTimeout(() => {
-                    greeting = message;
+                    message = message;
                 }, delay),
             );
         }
@@ -59,7 +59,10 @@
     });
 </script>
 
-<section class="disable-initial-padding disable-padding" id="iris-bg">
+<section
+    class="disable-initial-padding disable-padding disable-layout"
+    id="iris-bg"
+>
     <section class="enable-initial-padding fixed-bg centered" id="intro">
         <header>
             <h1 class="logo">
@@ -81,7 +84,7 @@
             </p>
 
             <p>
-                <b class="egg">{greeting}</b><br />
+                <b class="egg">{message}</b><br />
                 My name is <span class="col bright purple">Lanzoor</span>, a
                 student from South Korea who likes
                 <span class="col green">programming</span>,
@@ -99,7 +102,9 @@
                 <span class="col bright purple">have fun!</span> ♥
             </b>
         </p>
+    </section>
 
+    <section id="quick-links">
         <div class="enable-spacing quick-links">
             <h1>Quick Links</h1>
 
@@ -167,7 +172,8 @@
         background-attachment: fixed;
     }
 
-    #intro {
+    #intro,
+    #quick-links {
         background: rgba(0, 0, 0, 0.8);
     }
 

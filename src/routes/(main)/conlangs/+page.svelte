@@ -17,15 +17,6 @@
         </p>
     </header>
 
-    <blockquote class="error">
-        <b class="col bright red"
-            >I am currently taking a break from conlang development.</b
-        ><br />
-        I haven't made any progress in my conlangs, and I do not intend to do so until
-        this website is somewhat completed.<br />
-        Please do note that the documents below haven't been maintained.
-    </blockquote>
-
     <ul>
         <li>
             Proto Lanzavel - <a href="/conlangs/proto-lanzavel/"

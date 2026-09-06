@@ -2,4 +2,4 @@
     import GoBack from "./GoBack.svelte";
 </script>
 
-<GoBack target="blogs" />
+<GoBack target="blogs" href="/docs/blog" />

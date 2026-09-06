@@ -16,15 +16,6 @@ html {
     font-optical-sizing: auto;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
 :root {
     --bg: #111;
     --text: #ccc;
@@ -89,56 +80,6 @@ hr {
     border: none;
     height: 0.1em;
     background-color: var(--hr-bg);
-}
-
-section {
-    position: relative;
-
-    max-height: none;
-
-    flex: none;
-
-    overflow: hidden;
-    padding: 3em;
-}
-
-section.fixed-bg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-section.stretched {
-    min-height: calc(100vh);
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 2em;
-    }
-}
-
-main section:not(.disable-layout),
-main section header:not(.disable-layout) {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-}
-
-main section:not(.disable-spacing),
-main section header:not(.disable-spacing) {
-    gap: 1em;
-}
-
-main > section:first-of-type:not(.disable-initial-padding),
-main section.enable-initial-padding {
-    padding-top: calc(20vh + 4em);
-}
-
-main section.enable-padding {
-    padding: 4em;
 }
 
 .logo {
@@ -472,11 +413,11 @@ button:not(.initial) {
     border-radius: 2147483647px;
 }
 
-.example {
-    width: 100%;
-    text-align: center;
-    border: 2px solid #777;
-    border-radius: 0.5em;
-    padding: 1em;
-    background: #222;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

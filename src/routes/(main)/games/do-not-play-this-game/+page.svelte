@@ -16,7 +16,7 @@
                 alert("Do not press start again.");
                 hasSeen = true;
             } else {
-                alert("Do not append 'game' to the end of the url.");
+                alert("Do not append '/game' to the end of the url.");
             }
         }}
     >
@@ -26,7 +26,7 @@
     <p class="dim">
         Note: this is sort of a meta game where you'll have to go back and forth
         and gather clues. There aren't any saving features, and this game is
-        quite <span title={`Do not append 'd/o/n/o/t' do the end of the url.`}
+        quite <span title={`Do not append '/d/o/n/o/t' do the end of the url.`}
             >long</span
         >. Your goal is to solve everything in one go, as fast as possible. Good
         luck!

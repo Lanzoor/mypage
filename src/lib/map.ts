@@ -152,11 +152,11 @@ export const sitemap: Page[] = [
                         description: "My documents related to English.",
                         children: [
                             {
-                                path: "/docs/linguistics/english/past-tenses",
-                                title: "About Past Tenses in English",
+                                path: "/docs/linguistics/english/prepositions",
+                                title: "Prepositions",
 
                                 description:
-                                    "An analysis of past tenses in English.",
+                                    "My analysis on English prepositions.",
                             },
                         ],
                     },

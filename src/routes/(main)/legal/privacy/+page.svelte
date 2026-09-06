@@ -68,10 +68,14 @@
     </p>
 
     <p>
-        <Ia href="https://www.cloudflare.com/privacypolicy/" external>
+        For more information, please refer to <Ia
+            href="https://www.cloudflare.com/privacypolicy/"
+            external
+        >
             Cloudflare's privacy policy
         </Ia>.
     </p>
+
     <p>
         <b>This website is hosted via Vercel.</b><br />
         As part of normal operation, Vercel may collect technical information such

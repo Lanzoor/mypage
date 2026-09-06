@@ -1,9 +1,9 @@
 <script>
-    import Breadcrumbs from "$lib/components/Navigation/Breadcrumbs.svelte";
+    import GoBack from "$lib/components/Navigation/GoBack.svelte";
 </script>
 
 <section>
-    <Breadcrumbs />
+    <GoBack target="English" href="/docs/linguistics/english" />
 
     <h1>About Past Tenses in English</h1>
 
@@ -19,7 +19,7 @@
         cases that can melt the brain of a new learner. Here's an example:
     </p>
 
-    <div class="example">
+    <div class="display text-align--center">
         <i>Could</i> you get me some water?
     </div>
 
@@ -36,7 +36,7 @@
         at this sentence:
     </p>
 
-    <div class="example">
+    <div class="display text-align--center">
         If I <i>had</i> known about this earlier, I <i>would</i> have been going places
         now.
     </div>
@@ -70,7 +70,7 @@
         sentence:
     </p>
 
-    <div class="example">
+    <div class="display text-align--center">
         I <i>ate</i> a hamburger.
     </div>
 
@@ -85,7 +85,7 @@
 
     <p>Take a look at this sentence again:</p>
 
-    <div class="example">
+    <div class="display text-align--center">
         <i>Could</i> you get me some water?
     </div>
 
@@ -104,7 +104,7 @@
 
     <h3>Psychological Distance</h3>
 
-    <div class="example">
+    <div class="display text-align--center">
         I <i>wanted</i> to ask you something.<br />
         I <i>was</i> wondering if I <i>could</i> ask you something.
     </div>
@@ -120,7 +120,7 @@
 
     <p>Remember the sentence from earlier?</p>
 
-    <div class="example">
+    <div class="display text-align--center">
         If I <i>had</i> known about this earlier, I <i>would</i> have been going places
         now.
     </div>
@@ -133,7 +133,7 @@
 
     <p>Here are a few more examples:</p>
 
-    <div class="example">
+    <div class="display text-align--center">
         If you <i>had</i> a million dollars, what <i>would</i> you buy first?<br
         />
         If you <i>could</i> only speak one language from now on, which language
@@ -148,7 +148,7 @@
 
     <h3>Narrative Distance</h3>
 
-    <div class="example">
+    <div class="display text-align--center">
         Once upon a time, there <i>was</i> a beast named Lanzoor.
     </div>
 

@@ -14,9 +14,8 @@
 
     <ul>
         <li>
-            <a href="/docs/linguistics/english/past-tenses">Past Tenses</a> - {getPageData(
-                "/docs/linguistics/english/past-tenses",
-            )?.description}
+            <a href="/docs/linguistics/english/past-tenses">Past Tenses</a> - An analysis
+            of Past Tenses in English.
         </li>
     </ul>
 </section>
